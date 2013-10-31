@@ -1,0 +1,67 @@
+Product this is for
+Firefox / Cloud Services / Firefox Accounts
+
+Name of Idea
+Personify
+
+Summary
+    In line with personalization, Personify aims to create an interactive web that is tailored to an individual user.
+
+What's Wrong with the Present?
+    Currently, we expect users to be quite deliberate about what they do on the web: go to X site, Google X, open X amount of tabs that are related by Y, on X day at Y time check Z site.
+
+Motivation?
+    A web is series of lines that are interwoven and connected by nodes often forming a pattern. We started thinking ... What if browsers could leverage user data and predict what the values for X, Y, and Z were going to be for that user? What if browsers empowered users with knowlegde and control of how it was accomplishing this? I believe that Firefox has the tools to accomplish this; it just needs to connect the data collecting services together: Bookmarks, History, Sync, Group Tabs, Pinned Tabs, Download history, awesome bar/search history, Multiple Search Queries 
+
+The Implication?
+    I'm going tos get even more abstract for a moment. There will be a time where the use case of browsing the web will radically change. What if we didn't manually type keys of a URL into a text field? What if we didn't type keywords into search engines and sift through a list of text and links? How would Personify change the way we interact with the web? In my opinion, every web user should have their own star map of where they have navigated in the web universe. But not just a map of where the user has navigated, but when, why, and how they did it.  Furthermore, this map should include borders that define the edges of current reach. Those borders should not act like walled gardens limiting further exploration, but as guides of what to do next.
+
+How does this work?
+
+    What the browser sees
+        It all starts with Firefox Accounts. Sure, doing this on the client would be great but we are talking about a personalized experience for an individual user here. Firefox Accounts is the perfect place for Firefox to become aware of user habits. It stores information on history, bookmarks, pinned tabs, tabbed groups, search strings, and duration stats on web activity. This data is then used to create usage patterns. It draws the lines, creates nodes, and defines the edges. In other words, it draws the map.
+
+    What the user sees
+        The details of this will be explored in design/implementation below but as an overview, the core of this map is exposed when a new tab is opened. New tab is perfect for this.  It is here where the whole map is shown and focuses on what it thinks the user wants to do next. There will also be a side pull out menu while a user is already on a web page in a tab. More on both of these in further sections.
+
+Let's whet the appetite
+    Thus far we have only really discussed from either an abstract or overview perspective. I wish to dive deeper into real world examples that demonstrate what we are imagining. Let's take a few users with individual use cases where their browsing experience is enhanced by Personify.
+
+    Who:
+        John the Fantasy Football addict
+    Scenario:
+        It's Sunday Morning and the NFL is about to start. John sits on his couch, opens his laptop and loads a new tab in Firefox. He sees his regular map but there is a focus on certain pages. There are links for his Yahoo fantasy football home site, his streaming service Sunday Football Pass, his favorite sports news site, and fantasy football point tracking site. Firefox knows it is about this time that all of these sites are viewed so there is an option to click on these pages individually or all at once (a group of tabs).
+
+    Who:
+        Mary the curious shopper
+    Scenario:
+        Mary loves Amazon. But Mary also loves a good deal. On her new tab page her map shows a number of things but she is about to start shopping. She scrolls down to her shopping section where Amazon is the first link. She and Firefox know she is going to look there when she starts her shopping hunt. She opens amazon and looks for that perfect espresso machine. She finds one and reads all the reviews. She is about to click on the 'one click buy option' when her curosity stops her. She pulls open her side menu of personify and  Ebay, Walmart, and Best Buy are all there with a query beside it for the espresso machine she is currently looking at (this side menu is similar to FOOBAR but expands on it by having dynamic sites to jump to depending on the activity. She opens them all at once in new tabs.
+
+    Who:
+        Jen the traveller
+    Scenario:
+        Jen loves holidays. She is planning an African safari but that's all she has planned. Because she loves travelling, she naturally has a travel "galaxy" (category) on her map. She goes to that and opens up her lonely planet link. Here she searches for top 10 African safaris. She finds one she wants to do in South Africa. On a new tab page all her travel sites are focused and she goes to trip advisor to find a hostel, to Yelp to start finding restaurants, and to Kayak.com for flights. But now something interesting has happend. Firefox has recognized Jen's keen interest in South Africa. She is also at a border in her navigated web space. Her map now suggests where to go next. There is a link for South Africa news, a National Geographic link to a South African wildlife article, and a blog post on the top things to do in South Africa. She is now surfing a wave tailored for her on unfamiliar water... 
+
+    Who:
+        Kevin the workaholic (a Mozillian):
+    Scenario:
+        Kevin loves to work. He works from home and accomplishes most his tasks from his laptop. At 8am, his usual start time, the first thing he likes to do is check his email.  Opening a new tab highlights on his work email web client. At 10am, he has his first meeting. Opening a new tab at this time he is presented with a link to meeting notes and video conferencing provider. He pops open both of those. As his day progresses, many of his work regular domains he visits are all front and center. But kevin likes to shut her down at a certain time of day. At 9pm on Monday night, himself and his girlfriend watch Breaking Bad on Netflix. Ofcourse netflix is focused at this time. When he goes to bed at night he finishes up with checking out a few critical reviews of the most recent Breaking Bad episode. Ya, you guessed it, his review sites for that episode are ready for him waiting...
+
+
+Challenges
+    I don't think this should replace URL bars or any of our other current web browsing habits. If anything, our goal was to enable the user with a way to interact with the web when he/she wants to. This should not replace anything of Firefox. Granted it would modify the new tab page. Below are three goals of Personify
+
+    User Control
+        The extent and fine grain abilities of how Personify assists users should be controlled by the individual user.
+
+    Openness
+        Explicitly describing what and how Personify is working is key to success. The data is shared to the user and not anyone else. Mozilla could be at the forefront for demonstrating the benefit of storing personal data. Personify, by being open about tracking data, can bring consciousness to users about how other companies store data behind the scenes and do not always benefit the user themselves.
+
+    Simplicity
+        This would not be tailored to power users with advanced abilitiies. I'd like to think of this as giving casual users power abilities.
+
+OK, so what exactly does this look like?
+    So I was trying to imagine a visual tool that looked like a star map and expanded, contracted, and zoomed while you surfed the interwebs. What came into my head is inspired by Collusion and Tabbed Groups. So the new tab interface would have a search box top center and below that these sort collusion (ish) nodes and lines that make up certain clusters (tabbed groups). Focus to these clusters/nodes would change based on your habits or by typing in the search box.
+
+In Conclusion
+    That's pretty much it. This can be viewed as a browser tool that creates the web I want. A web that is interactive and posseses a map to navigate with. A web that educates users about personal data and walled gardens by exposing them to open tools. Tools that are controllable and optional, and only visable to the user themself.

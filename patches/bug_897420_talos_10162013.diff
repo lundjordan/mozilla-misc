@@ -1,0 +1,157 @@
+diff --git a/talos/PerfConfigurator.py b/talos/PerfConfigurator.py
+index 2a27f19..57126b8 100755
+--- a/talos/PerfConfigurator.py
++++ b/talos/PerfConfigurator.py
+@@ -36,6 +36,8 @@ class PerfConfigurator(Configuration):
+         ('browser_path', {'help': "path to executable we are testing",
+                           'flags': ['-e', '--executablePath']
+                           }),
++        ('immersive_mode_path', {'help': "launches tests in immersive browser",
++                                 'flags': ['--metro-immersive-path']}),
+         ('title', {'help': 'Title of the test run',
+                    'default': 'qm-pxp01',
+                    'flags': ['-t', '--title']}),
+diff --git a/talos/pageloader/chrome/pageloader.js b/talos/pageloader/chrome/pageloader.js
+index efbd9c2..d19fd36 100644
+--- a/talos/pageloader/chrome/pageloader.js
++++ b/talos/pageloader/chrome/pageloader.js
+@@ -60,10 +60,12 @@ var gIOS = null;
+ 
+ // metro immersive environment helper
+ function isImmersive() {
++  // dumpLine("JLUND @m.o/win-metro: " + Cc["@mozilla.org/windows-metroutils;1"]);
+   if (!Cc["@mozilla.org/windows-metroutils;1"])
+     return false;
+   let metroUtils = Cc["@mozilla.org/windows-metroutils;1"]
+                              .createInstance(Ci.nsIWinMetroUtils);
++  // dumpLine("JLUND metroUtils: " + metroUtils);
+   if (!metroUtils)
+     return false;
+   return metroUtils.immersive;
+@@ -81,6 +83,8 @@ function plInit() {
+   // Tracks if we are running in a background tab in the metro browser
+   let metroTabbedChromeRun = false;
+ 
++  dumpLine("JLUND waiting 5 seconds...")
++  setTimeout(function(){
+   try {
+     var args;
+     
+@@ -102,6 +106,20 @@ function plInit() {
+     // In metro chrome runs, the browser window has our cmdline arguments. In
+     // every other case they are on window.
+     let toplevelwin = Services.wm.getMostRecentWindow("navigator:browser");
++    // toplevelwin_args_props = ''
++    // toplevelwin_args_0 = ''
++    // for(var key in toplevelwin) {
++    //     //toplevelwin_args_props += '| Key: ' + key + ' Value: ' + toplevelwin[key] + ' |'
++    //     toplevelwin_args_props += '| Key: ' + key + ' |'
++    // }
++    // for(var key in toplevelwin.arguments[0]) {
++    //     toplevelwin_args_0 += '| Key: ' + key + ' Value: ' + toplevelwin.arguments[0][key] + ' |'
++    // }
++    dumpLine("JLUND isImmersive(): " + isImmersive());
++    dumpLine("JLUND toplevelwin: " + toplevelwin.arguments[0]);
++    // dumpLine("toplevelwin props: " + toplevelwin_args_props);
++    // dumpLine("toplevelwin args 0 props: " + toplevelwin_args_0);
++
+     if (isImmersive() && toplevelwin.arguments[0].wrappedJSObject) {
+       args = toplevelwin.arguments[0].wrappedJSObject;
+       if (!args.useBrowserChrome) {
+@@ -272,6 +290,9 @@ function plInit() {
+     dumpLine("pageloader exception: " + e);
+     plStop(true);
+   }
++
++  }, 5000);
++  dumpLine("JLUND done waiting 5 seconds...")
+ }
+ 
+ function plPageFlags() {
+@@ -672,6 +693,7 @@ function plStopAll(force) {
+         content.messageManager.removeMessageListener('PageLoader:MozAfterPaint', plPaintHandler);
+ 
+       content.messageManager.loadFrameScript("data:,removeEventListener('load', _contentLoadHandler, true);", false);
++      content.messageManager.loadFrameScript("data:,removeEventListener('load', _contentLoadHandler, true);", false);
+     }
+   }
+ 
+diff --git a/talos/pageloader/components/tp-cmdline.js b/talos/pageloader/components/tp-cmdline.js
+index a185b66..b4dc50d 100644
+--- a/talos/pageloader/components/tp-cmdline.js
++++ b/talos/pageloader/components/tp-cmdline.js
+@@ -114,11 +114,16 @@ PageLoaderCmdLineHandler.prototype =
+       return;
+     }
+ 
++
+     let chromeURL = "chrome://pageloader/content/pageloader.xul";
+ 
+     // In metro we load pageloader into a tab when running with chrome since we
+     // don't have multiple desktop windows to play with.
++    // dump('args.useBrowserChrome: ' + args.useBrowserChrome);
++    // dump('isImmersive(): ' + isImmersive());
+     if (args.useBrowserChrome && isImmersive()) {
++        dump("args.useBrowserChrome and is isImmersive() are true");
++        dump("\n");
+       args.pageloadURL = chromeURL;
+       chromeURL = "chrome://browser/content/browser.xul";
+     }
+@@ -129,6 +134,9 @@ PageLoaderCmdLineHandler.prototype =
+ 
+     // Don't pass command line to the default app processor
+     cmdLine.preventDefault = true;
++
++    dump("made it to line after: cmdLine.preventDefault = true;");
++    dump("\n");
+   },
+ 
+   helpInfo :
+diff --git a/talos/run_tests.py b/talos/run_tests.py
+index 4e6eda5..0a26d07 100755
+--- a/talos/run_tests.py
++++ b/talos/run_tests.py
+@@ -192,6 +192,14 @@ def run_tests(configurator):
+   # set browser_config
+   browser_config=configurator.browser_config()
+ 
++  # if immersive-mode: set up metro browser launch
++  if config.get('immersive_mode_path'):
++      # TODO assert win 8
++      # mozharness cuts off the exe but metrotestharness needs it?
++      appPath = '-firefoxpath %s.exe' % (browser_config['browser_path'],)
++      browser_config['extra_args'] += appPath
++      browser_config['browser_path'] = config.get('immersive_mode_path')
++
+   #set defaults
+   title = config.get('title', '')
+   testdate = config.get('testdate', '')
+diff --git a/talos/ttest.py b/talos/ttest.py
+index b4ef29c..27b5ee2 100644
+--- a/talos/ttest.py
++++ b/talos/ttest.py
+@@ -363,7 +363,13 @@ class TTest(object):
+ 
+                 b_cmd = self._ffprocess.GenerateBControllerCommandLine(command_line, browser_config, test_config)
+                 try:
+-                    process = subprocess.Popen(b_cmd, universal_newlines=True, bufsize=0, env=os.environ)
++                    # process = subprocess.Popen(b_cmd, universal_newlines=True, bufsize=0, env=os.environ)
++                    process = subprocess.Popen(b_cmd,
++                                               universal_newlines=True,
++                                               bufsize=0,
++                                               env=os.environ,
++                                               stdout=subprocess.PIPE,
++                                               stderr=subprocess.STDOUT)
+                 except:
+                     raise talosError("error executing browser command line '%s': %s" % (subprocess.list2cmdline(b_cmd), sys.exc_info()[0]))
+ 
+@@ -399,6 +405,9 @@ class TTest(object):
+                         val = cm.getCounterValue(count_type)
+                         if val:
+                             counter_results[count_type].append(val)
++                    line = process.stdout.readline()
++                    if line:
++                        utils.info(line)
+                     if process.poll() != None: #browser_controller completed, file now full
+                         break
+ 

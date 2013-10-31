@@ -1,0 +1,13 @@
+diff --git a/process/factory.py b/process/factory.py
+index b2c2a11..d338f1e 100644
+--- a/process/factory.py
++++ b/process/factory.py
+@@ -8327,7 +8327,7 @@ def extractProperties(rv, stdout, stderr):
+ class ScriptFactory(BuildFactory):
+     def __init__(self, scriptRepo, scriptName, cwd=None, interpreter=None,
+             extra_data=None, extra_args=None,
+-            script_timeout=1200, script_maxtime=None, log_eval_func=None,
++            script_timeout=7200, script_maxtime=None, log_eval_func=None,
+             reboot_command=None, hg_bin='hg', platform=None):
+         BuildFactory.__init__(self)
+         self.script_timeout = script_timeout

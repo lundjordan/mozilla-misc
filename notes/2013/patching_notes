@@ -1,0 +1,68 @@
+# Pushing to M-I without MQ
+
+clone m-i if you don't already have it
+hg clone http://hg.mozilla.org/integration/mozilla-inbound/
+
+in your m-i/.hg/hgrc file add this if you dont have it:
+[paths]
+default = https://hg.mozilla.org/integration/mozilla-inbound
+inbound = ssh://hg.mozilla.org/integration/mozilla-inbound
+
+
+1) update m-i:
+hg pull -u
+2) apply your patch:
+hg import --no-commit /path/to/patch.diff
+3) check what you are going to commit
+hg status
+hg diff
+4) commit with meaningful message:
+hg commit -m 'bug 12345 - this fixed all the bugs, r=SOME_REVIEWER_NICK'
+5) make sure you are about to push what you want
+hg outgoing
+6)
+hg push inbound
+
+if something goes wrong it means someone pushed something before you :O. now
+merge, backout, pop, or cry (in all seriousness though, try MQ's to do this for you so you do not create a merge commit)
+see here: https://developer.mozilla.org/en/docs/Mercurial_FAQ <- Using Mercurial queues
+A way to solve your problem without leaving a merge commit is to import your commit into mq control, pop it off the queue, update, and then commit it again before pushing:
+% hg log -l 5
+415[tip]   d1accb6ee840   2008-04-30 09:57 -0700   vladimir
+  b=430873; fast path drawImage with a canvas as source
+414   3a3ecbb4873e   2008-04-30 09:55 -0700   vladimir
+  cvs sync
+% hg qimport -r 415
+Turn the new commit you made into a MQ patch
+% hg qtop
+415.diff
+% hg qpop
+Patch queue now empty
+Pop the MQ patch off the stack. At this point, the tip of your tree is also in the remote repository
+% hg pull -u
+... various pull/update messages ...
+% hg qpush
+applying 415.diff
+Now at: 415.diff
+Fix up conficts as necessary; if you fixed up any, run hg qrefresh first
+% hg incoming
+comparing with ssh://hg.mozilla.org/mozilla-central/
+searching for changes
+no changes found
+Make sure   nobody pushed while you were merging. Otherwise, qpop, pull and qpush again
+% hg qfinish 415.diff
+Turn the MQ patch into a regular revision
+% hg log -l 5
+verify that the log looks good, with your commit on top
+% hg push
+
+
+
+eg:
+hg pull -u
+hg import --no-commit $PAT/bug_897420_mc_1024.diff
+hg status
+hg diff
+hg commit -m 'Bug 897420 - gives talos.json metro talos keys/values, r=armenzg'
+hg outgoing
+hg push inbound

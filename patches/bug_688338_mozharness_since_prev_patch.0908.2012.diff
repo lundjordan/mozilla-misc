@@ -1,0 +1,217 @@
+diff --git a/417b1c0:mozharness/base/log.py b/153dc38:mozharness/base/log.py
+index bf4a58c..c053873 100755
+--- a/417b1c0:mozharness/base/log.py
++++ b/153dc38:mozharness/base/log.py
+@@ -12,7 +12,6 @@ TODO:
+ """
+ 
+ from datetime import datetime
+-from collections import deque
+ import logging
+ import os
+ import sys
+@@ -26,6 +25,11 @@ logging.addLevelName(FATAL_LEVEL, 'FATAL')
+ DEBUG, INFO, WARNING, ERROR, CRITICAL, FATAL, IGNORE = (
+     'debug', 'info', 'warning', 'error', 'critical', 'fatal', 'ignore')
+ 
++CONTEXT_WARN_MESSAGE = "Warning: missing context. Current "\
++    "%(type)s buffer size: %(buffer)d, Requested %(type)s context lines:"\
++    " %(context)d. Setting context length to: %(buffer)d\n"\
++    "The match was found near the start and/or finish of output from command"
++
+ 
+ # LogMixin {{{1
+ class LogMixin(object):
+@@ -98,11 +102,6 @@ class LogMixin(object):
+         self.log(message, level=FATAL, exit_code=exit_code)
+ 
+ 
+-CONTEXT_WARN_MESSAGE = "Warning: missing context. Current "\
+-    "%(type)s buffer size: %(buffer)d, Requested %(type)s context lines:"\
+-    " %(context)d. Setting context length to: %(buffer)d"
+-
+-
+ # OutputParser {{{1
+ class OutputParser(LogMixin):
+     """ Helper object to parse command output.
+@@ -123,22 +122,29 @@ otherwise store a list of dictionaries in self.context_buffer that is
+ buffered up to self.num_pre_context_lines (set to the largest
+ pre-context-line setting in error_list.)
+ """
+-    def __init__(self, config=None, log_obj=None, error_list=None,
+-                 log_output=True):
++    def __init__(self, config=None, log_obj=None, error_list=None, log_output=True):
+         self.config = config
+         self.log_obj = log_obj
+         self.error_list = error_list or []
+         self.log_output = log_output
+         self.num_errors = 0
+-        self.buffer_limit = 21  # gives 10 contexts lines on either side
+-        self.context_buffer = deque(maxlen=self.buffer_limit)
+-        # TODO set self.error_level to the worst error level hit
+-        # (WARNING, ERROR, CRITICAL, FATAL)
+-        # self.error_level = INFO
++        self.num_warnings = 0
++        self.worst_log_level = INFO
++        self.use_buffer = False
++
++        max_context_length = None
++        for error_check in self.error_list:
++            if error_check.get('context_lines'):
++                self.use_buffer = True
++                max_context_length = max([max_context_length] +
++                                         error_check.get('context_lines').values())
++        if self.use_buffer:
++            self.context_buffer = []
++            self.buffer_limit = (max_context_length * 2) + 1
++            self.match_strings = dict(match='---->', context='>')
+ 
+     def parse_single_line(self, line, buffer_index=None):
+         for error_check in self.error_list:
+-            # TODO buffer for context_lines.
+             match = False
+             if 'substr' in error_check:
+                 if error_check['substr'] in line:
+@@ -150,27 +156,30 @@ pre-context-line setting in error_list.)
+                 self.warning("error_list: 'substr' and 'regex' not in %s" %
+                              error_check)
+             if match:
+-                level = error_check.get('level', INFO)
++                log_level = error_check.get('level', INFO)
+                 if self.log_output:
+                     message = ' %s' % line
+                     if error_check.get('explanation'):
+                         message += '\n %s' % error_check['explanation']
+                     if error_check.get('summary'):
+-                        self.add_summary(message, level=level)
++                        self.add_summary(message, level=log_level)
+                     else:
+                         if self.use_buffer:
+                             # we don't log anything, just modify the buffer
+-                            self.context_buffer[buffer_index] = (message, level)
++                            self.context_buffer[buffer_index]['message'] = message
++                            self.context_buffer[buffer_index]['level'] = log_level
++                            self.context_buffer[buffer_index]['match'] = True
+                             if error_check.get('context_lines'):
+                                 limits = error_check['context_lines']
+-                                self.generate_context_lines(buffer_index, level,
+-                                                            limits)
++                                self.generate_context_lines(buffer_index, limits)
+                         else:
+-                            self.log(message, level=level)
+-                if level in (ERROR, CRITICAL, FATAL):
++                            self.log(message, level=log_level)
++                if log_level in (ERROR, CRITICAL, FATAL):
+                     self.num_errors += 1
+-                # TODO set self.error_status (or something)
+-                # that sets the worst error level hit.
++                if log_level == WARNING:
++                    self.num_warnings += 1
++                self.worst_log_level = self.worst_level(log_level,
++                                                        self.worst_log_level)
+                 break
+         else:
+             if self.use_buffer:
+@@ -186,16 +195,6 @@ pre-context-line setting in error_list.)
+         return line.decode("utf-8").rstrip()
+ 
+     def add_lines(self, output):
+-        self.use_buffer = False
+-        # allows us to enable context_buffer by simply adding
+-        # 'context_lines' to any error at any point in the future
+-        # This allows OutputParser to be optimized for the occasion
+-        # but no flags need to be passed to inform OutputParser to
+-        # use a buffer
+-        for error_check in self.error_list:
+-            if error_check.get('context_lines'):
+-                self.use_buffer = True
+-                break
+         if isinstance(output, basestring):
+             output = [output]
+         if self.use_buffer:
+@@ -211,19 +210,19 @@ pre-context-line setting in error_list.)
+                 self.parse_single_line(line) if line else None
+ 
+     def append_to_buffer_and_parse(self, line):
+-        message_and_level = line, INFO
++        message_dict_elem = dict(message=line, level=INFO, match=False)
+         if len(self.context_buffer) == self.buffer_limit:
+             # buffer is full, start parsing middle elem and
+             # then behave like a queue FIFO
+             middle_elem = self.buffer_limit / 2
+-            line_to_parse = self.context_buffer[middle_elem][0]
++            line_to_parse = self.context_buffer[middle_elem]['message']
+             self.parse_single_line(line_to_parse, buffer_index=middle_elem)
+-            log_message, log_level = self.context_buffer.popleft()
+-            self.log(log_message, log_level)
++            line_to_log = self.context_buffer.pop(0)
++            self.log(line_to_log['message'], line_to_log['level'])
+         # keep adding new lines to the buffer
+-        self.context_buffer.append(message_and_level)
++        self.context_buffer.append(message_dict_elem)
+ 
+-    def generate_context_lines(self, target_index, target_level, limits):
++    def generate_context_lines(self, target_index, limits):
+         # check that the requested pre and post context lengths are doable
+         warn_message = ""
+         if limits.get('pre') > target_index:
+@@ -237,40 +236,46 @@ pre-context-line setting in error_list.)
+                 'type': 'post', 'context': limits['post']}
+             limits['post'] = len(self.context_buffer) - target_index - 1
+ 
++        match_error_level = self.context_buffer[target_index]['level']
+         pre = target_index - limits['pre']
+         post = target_index + limits['post'] + 1
+-        context_lines = list(self.context_buffer)[pre:post]
+-        for i, message_and_level in enumerate(context_lines):
++        context_lines = self.context_buffer[pre:post]
++        for i, elem in enumerate(context_lines):
+             buffer_index = i + pre
+-            message, log_level = message_and_level
++            message, level = elem['message'], elem['level']
+             if buffer_index == target_index:
+-                message = "$ %s" % message.lstrip()
++                # if this is already is context, remove the identifier
++                message = message.replace(self.match_strings['context'] + '  ', '')
++                # now add the match identifier
++                message = "%s %s" % (self.match_strings['match'], message)
+                 if warn_message:
+                     message += warn_message
+             else:  # context
+-                if message.startswith('$'):
++                if message.startswith(self.match_strings['match']):
+                     continue  # ignore other regex's that want context
+-                message = ">  %s" % message
+-                log_level = self.worst_level(target_level, log_level)
+-            self.context_buffer[buffer_index] = (message, log_level)
++                message = "%s %s" % (self.match_strings['context'], message)
++                level = self.worst_level(match_error_level, level)
++            self.context_buffer[buffer_index]['message'] = message
++            self.context_buffer[buffer_index]['level'] = level
++            self.context_buffer[buffer_index]['match'] = True
+ 
+     def flush_buffer_and_parse(self):
+         # behave like append_to_buffer_and_parse but continue in a
+-        # loop until buffer is empty and always taking the middle
++        # loop until buffer is empty and always take the middle
+         # elem of the buffer to maximize remaining context lines
+         while self.context_buffer:
+             middle_elem = len(self.context_buffer) / 2
+-            line_to_parse = self.context_buffer[middle_elem][0]
++            line_to_parse = self.context_buffer[middle_elem]['message']
+             self.parse_single_line(line_to_parse, buffer_index=middle_elem)
+-            log_message, log_level = self.context_buffer.popleft()
+-            self.log(log_message, log_level)
++            line_to_log = self.context_buffer.pop(0)
++            self.log(line_to_log['message'], line_to_log['level'])
+ 
+     def worst_level(self, target_level, existing_level, levels=None):
+         """returns either existing_level or target level.
+         This depends on which is closest to levels[0]
+         By default, levels is the list of log levels"""
+         if not levels:
+-            levels = [IGNORE, FATAL, CRITICAL, ERROR, WARNING, INFO, DEBUG]
++            levels = [FATAL, CRITICAL, ERROR, WARNING, INFO, DEBUG, IGNORE]
+         if target_level not in levels:
+             self.fatal("'%s' not in %s'." % (target_level, levels))
+         for l in levels:

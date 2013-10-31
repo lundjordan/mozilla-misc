@@ -1,0 +1,8 @@
+1) option for displaying all config overide options for each type of test
+
+
+
+
+Q's
+
+1) Do we always want to run all the mochitests? For example should the user be able to override how the chunks are organized? Should we be able to specify --no--chrome-mochi_tests

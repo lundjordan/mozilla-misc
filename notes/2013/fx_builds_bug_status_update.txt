@@ -1,0 +1,115 @@
+Linux mozilla-central_dep SigningScriptFactory
+Linux mozilla-central leak test_dep ScriptFactory
+Linux x86-64 mozilla-central_dep SigningScriptFactory
+Linux x86-64 mozilla-central asan_dep ScriptFactory
+Linux x86-64 mozilla-central debug asan_dep ScriptFactory
+Linux x86-64 mozilla-central leak test_dep ScriptFactory
+Linux x86-64 mozilla-central debug static analysis_dep ScriptFactory
+
+
+Linux mozilla-central pgo-build NightlyBuildFactory
+Linux mozilla-central nightly NightlyBuildFactory
+Firefox mozilla-central linux l10n nightly NightlyRepackFactory
+Firefox mozilla-central linux l10n dep NightlyRepackFactory
+Linux mozilla-central xulrunner nightly NightlyBuildFactory
+Linux x86-64 mozilla-central pgo-build NightlyBuildFactory
+Linux x86-64 mozilla-central nightly NightlyBuildFactory
+Firefox mozilla-central linux64 l10n nightly NightlyRepackFactory
+Linux x86-64 mozilla-central valgrind ScriptFactory
+Firefox mozilla-central linux64 l10n dep NightlyRepackFactory
+Linux x86-64 mozilla-central hsts preload update ScriptFactory
+Linux x86-64 mozilla-central xulrunner nightly NightlyBuildFactory
+Linux x86-64 mozilla-central asan nightly NightlyBuildFactory
+Linux x86-64 mozilla-central debug asan nightly NightlyBuildFactory
+
+
+======================================= Status Update:
+
+The following Linux Mozilla-central Builder variants *have* been ported to Mozharness:
+    * Linux mozilla-central
+    * Linux mozilla-central leak test
+    * Linux x86-64 mozilla-central
+    * Linux x86-64 mozilla-central asan
+    * Linux x86-64 mozilla-central debug asan
+    * Linux x86-64 mozilla-central leak test
+    * Linux x86-64 mozilla-central debug static analysis
+
+The following *have not* been ported
+    * Linux mozilla-central pgo-build
+    * Linux mozilla-central nightly
+    * Firefox mozilla-central linux l10n nightly
+    * Firefox mozilla-central linux l10n dep
+    * Linux mozilla-central xulrunner nightly
+    * Linux x86-64 mozilla-central pgo-build
+    * Linux x86-64 mozilla-central nightly
+    * Firefox mozilla-central linux64 l10n nightly
+    * Linux x86-64 mozilla-central valgrind
+    * Firefox mozilla-central linux64 l10n dep
+    * Linux x86-64 mozilla-central hsts preload update
+    * Linux x86-64 mozilla-central xulrunner nightly
+    * Linux x86-64 mozilla-central asan nightly
+    * Linux x86-64 mozilla-central debug asan nightly
+
+I will be publishing several blogs explaining the port process and how mozharness replaces the fx_build factories/steps in buildbot but for this update, I'll summarize:
+
+Fx Mozharness Build logic can still be tracked here:
+    https://github.com/lundjordan/mozharness/tree/fx-desktop-builds
+
+Mozharness files:
+    scripts/fx_desktop_build.py
+    mozharness/mozilla/building
+    ├── buildbase.py
+    configs/builds
+    ├── releng_base_linux_32_builds.py
+    ├── releng_base_linux_64_builds.py
+    └── releng_sub_linux_configs
+        ├── 32_debug.py
+        ├── 64_asan_and_debug.py
+        ├── 64_asan.py
+        ├── 64_debug.py
+        └── 64_stat_and_debug.py
+
+Explanation of above config files: releng_base_linux_64_builds.py is used for all linux 64 bit builds. Additional configs from the releng_sub_linux_configs dir can be added to this (eg: 64_asan_and_debug.py). These sub configs should only contain keys/values that replace releng_base_linux_64_builds keys/values.
+
+Buildbot uses either ScriptFactory or SigningScriptFactory objects in buildbotcustom/misc.py to handle the invocation of 'scripts/fx_desktop_build.py'
+
+The arguments for this mozharness script are defined in buildbot-configs/mozilla/config.py. An example of this would be:
+'linux64-asan': {
+    'mozharness_config': {
+        'script_name': 'scripts/fx_desktop_build.py',
+        'extra_args': [
+            '--config', 'builds/releng_base_linux_64_builds.py',
+            '--custom-build-type', 'asan',
+        ],
+        'reboot_command': ['scripts/external_tools/count_and_reboot.py',
+                           '-f', '../reboot_count.txt','-n', '1', '-z'],
+    }
+}
+
+The above '--custom-build-type' is explained by the help string:
+  --custom-build-type=BUILD_TYPE
+                        Sets the build type and will determine appropriate
+                        additional config to use. Examples include: ['debug',
+                        'asan', 'stat-and-debug', 'asan-and-debug']
+
+More build-types will be implemented as builders are added. The motivation for this option was to remove the need to specify every config needed, thus cleaning up and simplifying the arg list. To combat against losing explicity, mozharness will be more verbose in what configs are driving the script and how 'self.config' is ultimately formed. More on that to come.
+
+What's next?
+    I see three possible options.
+        1) Continue implementing the builders in the m-c branch that have yet to be ported (ie: pgo, nightly, xulrunner, etc).
+        2) Start implementing Builders in other platforms (ie: mac, win)
+        3) Implement the builders that have been completed in m-c, in other branches (ie: m-r, try, mozilla-esr24, etc).
+
+Does anyone have any suggestions which would be best (or preferable if they were to do it)?
+
+Will post today's latest logs in next comment, later tonight.
+
+
+
+Log examples of this in action:
+
+    Builder: Linux mozilla-central
+    Logs: 
+
+    Builder: Linux x86-64 mozilla-central debug asan
+    Logs: 

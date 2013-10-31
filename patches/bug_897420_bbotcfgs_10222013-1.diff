@@ -1,0 +1,53 @@
+diff -r 43f7c7e3a885 mozilla-tests/config.py
+--- a/mozilla-tests/config.py	Tue Oct 22 12:16:15 2013 -0700
++++ b/mozilla-tests/config.py	Tue Oct 22 21:09:23 2013 -0700
+@@ -206,6 +206,7 @@
+ NO_MAC = get_talos_slave_platforms(PLATFORMS, platforms=('linux', 'linux64', 'win32'))
+ MAC_ONLY = get_talos_slave_platforms(PLATFORMS, platforms=('macosx64',))
+ WIN7_ONLY = ['win7-ix']
++WIN8_ONLY = ['win8']
+ 
+ SUITES = {
+     'xperf': {
+@@ -248,6 +249,27 @@
+         'suites': GRAPH_CONFIG + ['--activeTests', 'tresize', '--mozAfterPaint', '--filter', 'ignore_first:5', '--filter', 'median'],
+         'options': ({}, ALL_TALOS_PLATFORMS),
+     },
++     # now let's add the metro talos suites
++    'tp5o-metro': {
++        'enable_by_default': False,
++        'suites': [],  # suite + args are governed by talos.json
++        'options': ({}, WIN8_ONLY),
++    },
++    'other-metro': {
++        'enable_by_default': False,
++        'suites': [],  # suite + args are governed by talos.json
++        'options': ({}, WIN8_ONLY),
++    },
++    'svgr-metro': {
++        'enable_by_default': False,
++        'suites': [],  # suite + args are governed by talos.json
++        'options': ({}, WIN8_ONLY),
++    },
++    'dromaeojs-metro': {
++        'enable_by_default': False,
++        'suites': [],  # suite + args are governed by talos.json
++        'options': ({}, WIN8_ONLY),
++    },
+ }
+ 
+ BRANCH_UNITTEST_VARS = {
+diff -r 43f7c7e3a885 mozilla/project_branches.py
+--- a/mozilla/project_branches.py	Tue Oct 22 12:16:15 2013 -0700
++++ b/mozilla/project_branches.py	Tue Oct 22 21:09:23 2013 -0700
+@@ -181,6 +181,10 @@
+         'enable_talos': True,
+         'talos_suites': {
+             'xperf': 1,
++            'tp5o-metro': 1,
++            'other-metro': 1,
++            'svgr-metro': 1,
++            'dromaeojs-metro': 1,
+         },
+         'blob_upload': True,
+         'enable_nightly': True,

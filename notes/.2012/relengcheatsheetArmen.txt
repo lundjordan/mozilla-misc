@@ -1,0 +1,768 @@
+
+
+    Tricks
+    Buildduty
+
+        Restart a master and munin
+
+    Gathering talos numbers
+    VMWare Infrastructure Client
+    Repos
+    User repos
+    Releases
+
+        Fake releases
+        Normal releases
+
+    Package management
+
+        Yum
+        rpm
+
+    Puppet
+
+        Convert plist to XML
+        How to deploy into productionhg
+        Troubleshooting
+        Certificate signing
+        Important files
+        Apache server is not running
+        Restart puppet service
+        Test changes
+        How to deploy binaries with puppet (No configuration changes)
+        Testing on mac slaves (which do not have root access)
+        Deployment posts and bugs
+        Troubleshoot
+
+    OPSI
+
+        Windows 7 slaves
+
+    Slaves administration (trouble shooting)
+
+        Login to multiple slaves from a Mac (csshX)
+        Test disk access speed (hdparm)
+        More slave operations
+        Kill
+
+    Basic usage
+
+        create partition and mount /builds
+        user repo
+        tar
+        wget
+        apt-get and apt-cache
+        OpenVpn
+
+    Buildbot
+
+        How to upgrade a master buildbot
+        Create a slave
+        Sendchanges
+        Troubleshooting
+
+    Mercurial
+
+        mercurial queues
+
+            Making a patch final
+            Synchronizing with upstream
+            Re-ordering patches
+
+
+
+
+This cheat sheet helps me not forget about things that I might just do once and it might help for some people getting started.
+MySQL
+
+    Connect from cruncher
+    mysql -u buildbot_reader -h tm-b01-slave01.mozilla.org -p buildbot_schedulers
+    mysql -h host_ip -u buildslaves -p buildslaves
+    use buildbot;
+    SHOW TABLES;
+    describe slaves;
+    select * from changes where revision LIKE '%19a458b7ab573236d78af4812383a9a566c52949%';
+
+Tricks
+
+    for i in `jot 40 10`; do echo talos-r3-leopard-0$i; done
+    for file in `hg st -un`; do rm $file; done
+    grep -r "what I want to search in my checkout" .
+    wget -O- http://build.mozilla.org/builds/last-job-per-slave.txt | grep day | grep r3 | sed 's|^.*\(t.*r3-.*-[0-9][0-9][0-9]\).*$|\1|' > slaves && for host in `cat slaves`; do ping -c 1 -t 1 $host > /dev/null; echo "$? $host"; done | sort
+    python -c 'import simplejson as json, sys; json.dump(json.load(sys.stdin), sys.stdout, indent=2)' < builds-2011-10-02.js > armen
+
+Testing techniques
+
+ cd ~/repos/buildbot-configs
+
+ ~/repos/releng/braindump/buildbot-related/dump_masters.sh -8 > old
+
+ # apply your patches
+
+ ~/repos/releng/braindump/buildbot-related/dump_masters.sh -8 > new
+
+ diff -pU 8 old new
+
+ # or
+ vimdiff old new
+Buildduty
+/usr/sbin/squidclient -m purge "http://......
+md5sum on stage and what was downloaded
+
+
+Loan machine
+Host: win32-slave54.build.mozilla.org / 10.2.90.43
+username: cltbld
+password: dfo8s71zpq
+You should connect using VNC using the password above (Chicken of the VNC is decent on Mac),
+over the MPT VPN. You can tunnel via mpt-vpn.mozilla.com to port 5900 on the slave.
+The cltbld user account uses the same password if you reboot it.
+Let us know when you're all done or have any problems.
+Cheers, Nick
+Restart a master and munin
+service munin-node start
+chkconfig --list munin-node
+Gathering talos numbers
+* choose a master that does not receive sendchanges
+* modify the master to only serve talos jobs
+* add only one slave (only one) for that platform that has the change
+* do a talos sendchange and visit http://tinderbox.mozilla.org/showbuilds.cgi?tree=MozillaTest
+* copy/paste the results on a spreadsheet
+* go to http://tbpl.mozilla.org/?tree=Firefox
+* click on each T for that platform and copy/paste the results into the spreadsheet
+* compare with the eye and highlight those numbers that vary significantly
+VMWare Infrastructure Client
+admin.b.m.o (mpt) (VNC) cltbld 10.2.90.6
+    * open VI client, use the same IP and your credentials (maybe nm-ops03.build.mozilla.org)
+    * armenzg/LDAP password
+    * if it fails restart your password since it has expired
+10.2.71.6 (rdp) to change password
+    * 10.2.72.6 as an alternative
+    * do not use domain name
+    * you can reuse same password
+SQL
+
+    update machines SET os_id=21 WHERE MATCH(name) AGAINST ('talos-r3-snow-');
+    update slaves set purposeid=4, trustid=4, envid=2, poolid=11 where notes like 'repurposed rev3' and name like '%leopard%';
+
+Repos
+ref-platforms cvs repo; there's a checkout of it on bm-xserve05, in ~cltbld/tmp/ref-platform
+cvs -d:ext:cltbld@cvs.mozilla.org:/mofo co ref-platforms/win32
+Access admin.build.mozilla.org
+use -kb to commit binary files!
+Check linux-ix-slave15 ~cltbld/ref-platforms
+User repos
+
+    https://developer.mozilla.org/en/Publishing_Mercurial_Clones
+
+    ssh hg.mozilla.org clone buildduty-arsenal (you will get an interactive console)
+
+Releases
+Fake releases
+
+    The "repo_setup" factory takes care of recreating repos under http://hg.mozilla.org/users/stage-ffxbld
+
+buildbot sendchange --username=armenzg --master=localhost:9010 --branch=users/stage-ffxbld/mozilla-1.9.2
+
+                                  -p script_repo_revision:FIREFOX_3_6_14_RELEASE
+
+                                  -p release_config:mozilla/staging_release-firefox-mozilla-1.9.2.py gogogo
+
+    if you want to recreate a locale:
+
+        log-in to one of the staging slaves and type
+        ssh -l stage-ffxbld -i ~cltbld/.ssh/ffxbld_dsa hg.mozilla.org edit fr delete YES;
+        ssh -l stage-ffxbld -i ~cltbld/.ssh/ffxbld_dsa hg.mozilla.org clone fr releases/l10n-mozilla-1.9.2/fr
+        ssh hg.mozilla.org edit mozilla-central delete YES;
+        ssh hg.mozilla.org clone mozilla-central mozilla-central;
+        ssh hg.mozilla.org clone partner-repacks build/partner-repacks
+        ssh hg.mozilla.org clone
+        ssh hg.mozilla.org clone tools build/tools (NOTE $destination $source)
+            Please wait.  Cloning /build/tools to /users/armenzg_mozilla.com/tools
+
+
+Normal releases
+The signing machines name is: cm-keymaster01.m.o
+
+For final verification 404 messages use this:
+while [[ 2 > 1 ]]; do
+  curl -sI  http://mozilla.cdn.cacheboy.net/firefox/releases/3.5.10/update/win32/en-US/firefox-3.5.10.complete.mar | grep ^HTTP;
+done
+Package management
+Yum
+ find /etc/yum.repos.d -name "*updates*.repo" -exec sed -i -e 's/^enabled=1$/enabled=0/' '{}' \;
+yum remove "*-devel"
+yum search kmod-nvidia
+yum install kmod-nvidia-`uname -r`
+yum -q whatprovides ixf86configmodule.so
+yum --enablerepo=fedora-updates install xf86config
+yum remove xorg-x11-drv-nvidia
+yum erase mercurial
+yum search *merc*
+yum --enablerepo updates  update gtk2
+yum --enablerepo updates downgrade gtk2 2.18.3-19.fc12
+yum info gtk2
+yum install gtk2-2.18.9-3.fc12.i686.rpm
+rpm
+rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
+rpm -ql livna-config-display
+rpm -evh livna-config-display
+rpm -e --no-deps livna-config-display
+rpm -ql livna-config-display
+rpm -qi kmod-nvidia\*
+rpm -qpR gtk2-2.18.3-*
+rpm --list
+rpm -e --test gtk2
+rpm --whatrequires gtk2
+rpm -q --whatprovides gtk2-immodule-xim-2.18.3-19.fc12.i686
+
+Puppet
+Convert plist to XML
+plutil -convert xml1 some_file.plist
+How to deploy into production
+
+    puppetd --test --server production-puppet.build.mozilla.org to check that the package gets installed properly
+    check on the puppet master the puppet log: "/var/log/messages"
+
+Troubleshooting
+err: //Node[talos-r3-fed-001.build.mozilla.org]/talos_fedora/File[/home/cltbld/.fonts.conf]: Failed to retrieve current state of resource: Fileserver module 'talos' not mounted Could not describe /talos/linux/fonts.conf: Fileserver module 'talos' not mounted at /etc/puppet/manifests/os/talos_fedora.pp:21
+
+Add the module "talos" to:
+/etc/puppet/fileserver.conf
+and restart the service:
+service puppetmaster restart
+
+#############
+
+* Where they get their puppet master's hostname
+cat .config/autostart/gnome.desktop
+/Library/LaunchDaemons/com.reductivelabs.puppet.plist
+
+#############
+
+[root@moz2-linux-slave04 ~]# puppetd --test --server staging-puppet.build.mozilla.org
+err: Could not retrieve catalog: Could not connect to staging-puppet.build.mozilla.org on port 8140
+warning: Not using cache on failed catalog
+It seems that the
+netstat -van | grep 8140
+ps aux | grep http
+
+############
+Certificate signing
+
+NOTE: You don't want to run "hg st" and see .orig and .rej files. Remove them or you will get duplicated variables messages.
+
+tail -f /var/log/puppet/masterhttp.log
+
+puppetca --list
+puppetca --sign hostname.build.mozilla.org
+http://www.devco.net/archives/2009/08/19/tips_and_tricks_for_puppet_debugging.php
+puppet --debug --verbose test.pp
+Important files
+/var/puppet/log/puppet.{err,out} -- log file on macs
+/etc/puppet/ssl
+/etc/puppet/manifests
+/etc/puppet/fileserver.conf
+/etc/sysconfig/puppetmaster <- where the ports are specified
+
+############
+
+warning: Certificate validation failed; consider using the certname configuration option
+err: Could not retrieve catalog: Certificates were not trusted: certificate verify failed
+rm -rf /etc/puppet/ssl <- MAC
+rm -rf /var/lib/puppet/ssl   <- LINUX
+
+NOTE: You can use facter on the slaves
+
+############
+
+[root@moz2-linux64-test01 ~]#  puppetd --test --server production-puppet.build.mozilla.org
+warning: peer certificate won't be verified in this SSL session
+notice: Did not receive certificate
+notice: Set to run 'one time'; exiting with no certificate
+PROBLEM: The machine hostname has changed. We have to correct it.
+you can find the correct hostname in site-production.pp, and edit /etc/sysconfig/network to change it -- which will require a reboot
+
+############
+
+err: //Node[linux64-ref-platform.build.mozilla.org]/buildslave/File[/etc/sysconfig/puppet]: Failed to retrieve current state of resource: Cannot access mount[centos5] Could not describe /centos5/etc/sysconfig/puppet: Cannot access mount[centos5] at /etc/puppet/manifests/classes/buildslave.pp:22
+notice: //Node[linux64-ref-platform.build.mozilla.org]/buildslave/buildbot/Service[buildbot-tac]/ensure: ensure changed 'stopped' to 'running'
+err: //Node[linux64-ref-platform.build.mozilla.org]/base/centos5/File[/etc/init.d/puppet]: Failed to retrieve current state of resource: Cannot access mount[centos5] Could not describe /centos5/etc/init.d/puppet: Cannot access mount[centos5] at /etc/puppet/manifests/os/centos.pp:49
+
+PROBLEM: /N is mounted but the machine's IP is not listed on /etc/puppet/fileserver.conf
+SOLUTION: Find out the IP and add it
+
+Apache server is not running
+https://bugzilla.mozilla.org/show_bug.cgi?id=557835
+ps auxwww | grep http
+check under /etc/init.d/httpd
+check under /etc/httpd/conf{.d}
+chkconfig --list | grep httpd
+/etc/sysconfig/puppetmaster
+service start httpd
+service start puppetmaster
+Restart puppet service
+service puppetmaster restart
+Test changes
+puppetd --test --server staging-puppet.build.mozilla.org
+How to deploy binaries with puppet (No configuration changes)
+- login to one of the slaves
+- copy new files to correct place
+
+    check devtools.pp to see the correct path (in my case ${centos5root}/usr/local/bin/jscoverage)
+    I copied them to /N/puppet-files/centos5/usr/local/bin (/N is a shared drive between staging and production so be careful)
+
+- test that the slave picks the changes up "puppetd --test --server staging-puppet.build.mozilla.org" (as root)
+- once the change has been picked up check that the md5sum of the server and the client match
+- on the server check in the changed files
+
+    you have to do this as "root"
+    cvs up
+    cvs diff
+    cvs status <path_if_needed>
+    cvs -q update -dP //Best command ever if you are adding new file!
+    cvs ci -m "blah blah" <specify_files>
+
+Testing on mac slaves (which do not have root access)
+
+    tail -f /var/puppet/log/puppet.out in another window
+    sudo launchctl unload -w /Library/LaunchDaemons/com.reductivelabs.puppet.plist
+    sudo launchctl unload -w /Library/LaunchDaemons/com.reductivelabs.puppet.plist
+
+Deployment posts and bugs
+
+    http://armenzg.blogspot.com/2009/10/puppet-installing-library-for.html
+    https://bugzilla.mozilla.org/show_bug.cgi?id=520562#c6
+    https://bugzilla.mozilla.org/show_bug.cgi?id=528189
+    https://bugzilla.mozilla.org/show_bug.cgi?id=529462
+
+
+Troubleshoot
+
+    Check var/log/messages had AssertErrors
+
+OPSI
+* open the OPSI.jar
+* staging-opsi.build
+* root/currentRootPassword
+* for installations
+
+    run all "as administrator"
+    disable DEP
+
+Windows 7 slaves
+We need to disable UAC
+runas /user:cltbld "C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f"
+We can us "runas"
+runas /user:cltbld "msiexec /i /quiet C:\Users\cltbld\Desktop\Microsoft_VC80_DebugCRT_x86.msi"
+
+msiexec /passive /i “C:\Users\cltbld\Desktop\wpt_x86.msi” /log wpt_x86.log WPFPERFDIR=C:\perftools
+msiexec /uninstall wpt_x86.msi
+
+http://msdn.microsoft.com/en-us/library/aa367988%28v=vs.85%29.aspx
+Slaves administration (trouble shooting)
+Login to multiple slaves from a Mac (csshX)
+
+csshX --login cltbld --config ~/moz/cx_config linux_prod_10
+Test disk access speed (hdparm)
+hdparm -tT /dev/sda
+More slave operations
+
+    dhcp
+    reboot slave
+    remote desktop
+    nagios
+    kill
+    disk usage
+
+
+- refresh dhcp settings
+ifup eth0
+
+- reboot, restart a slave
+
+      su -
+      reboot
+
+or
+
+    sudo shutdown -r now
+
+
+
+- ssh/connect to a slave
+A) connect to mpt first
+    1) ssh mpt-vpn.mozilla.com (you have to have your key in that machine)
+    2) ssh machine.build.mozilla.org -l cltbld
+B) use OpenVPN (windows) or TunnelBlick (mac) to connect to the VPN
+    1) ssh machine.build.mozilla.org -l cltbld
+C) linux is a mess
+
+- transfer local patch to a specific slave
+scp factory.v1.diff cltbld@staging-master.build.mozilla.com:~/armen
+
+- remote desktop
+ssh -L3389:moz2-win32-slave03.build.mozilla.org:3389 mpt-vpn.mozilla.com
+rdesktop localhost:3389 -u cltbld
+
+- acknowledge nagios
+If there's something you want to acknowledge in nagios then you can do that on IRC (helpful if you don't have access set up to nagios.m.o). For example, in response to a message like
+[31] moz2-win32-slave1.build:disk - E is WARNING: WARNING: E:: Total: 30G - Used: 28.1G (93%) - Free: 1.87G (7%) warning
+in #build, say
+nagios: ack 31 disk space is cheap, lets buy some
+or
+/msg nagios ack 31 disk space is cheap, lets buy some
+
+- status check for nagios
+nagios: status mw32-ix-slave17.build:*
+Kill
+
+kill -9 process_id // hard kill
+
+Disk Usage
+"du -s *|sort -n" to find the biggest directories. Start at the root and move down
+du -sh FOLDER
+du -scm *
+du -hcd 1
+df -h  - Disk usage per partitions
+df -hi - iNodes
+http://www.marzocca.net/linux/baobab/baobab-usage.html#baobab-remotescan //Garphical interface to scan folders remotely
+Basic usage
+create partition and mount /builds
+fdisk -l /dev/sda
+user repo
+
+    ssh hg.mozilla.org clone scripts - it will start an interactive session to create a new repo
+
+tar
+tar xvfz file-1.0.tar.gz - for a gzip compress tar file (.tgz or .tar.gz)
+tar xvfj file-1.0.tar.bz2 - for a bzip2 compressed tar file (.tbz or .tar.bz2)
+tar xvf file-1.0.tar - for uncompressed tar file (.tar)
+
+* To compress
+tar cvfz myfile.tar.gz file1 file2
+wget
+use --no-check-certificate for certain cases
+apt-get and apt-cache
+apt-cache search <package_name>
+OpenVpn
+sudo openvpn --daemon --config /etc/openvpn/Mozilla-MPT.ovpn
+tail /var/log/syslog
+cat /etc/resolv.conf - You should see "# Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)"
+/etc/init.d/networking restart - if you need to restart your connections -
+
+
+
+Buildbot
+
+
+How to upgrade a master buildbot
+
+su -
+export PYTHONPATH=".:/tools/zope-interface/lib/python2.5/site-packages/:/tools/twisted-core/lib/python2.5/site-packages:/tools/twisted/lib/python2.5/site-packages/:$PYTHONPATH"
+export PYTHONHOME="/tools/python"
+export PATH="/tools/python/bin:/tools/twisted/bin:/tools/twisted-core/bin:$PATH"
+cd /tools & mv buildbot /root
+hg clone http://hg.mozilla.org/build/buildbot
+cd buildbot
+hg up -r BUILDBOT_PRODUCTION
+python setup.py install --prefix=/tools/buildbot-production
+cd ..
+rm -rf buildbot
+ln -s buildbot-production buildbot
+How to create a dev master
+make -f Makefile.setup \
+MASTER_NAME=pm01-builder \
+BASEDIR=/builds/buildbot/armenzg/build \
+PYTHON=/tools/python/bin/python \
+VIRTUALENV=/tools/python/bin/virtualenv \
+BUILDBOTCUSTOM_BRANCH=default \
+BUILDBOTCONFIGS_BRANCH=default \
+virtualenv deps install-buildbot master master-makefile
+Create a slave
+buildbot create-slave slave localhost:9010 moz2-linux-slave17 password
+Sendchanges
+buildbot sendchange --master='localhost:9010' --branch=mozilla-central-linux-opt-unittest --revision=85fe77e1b558 --comment='' --user=sendchange-unittest 'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-linux/1268329194/firefox-3.7a3pre.en-US.linux-i686.tar.bz2'
+
+buildbot sendchange --master talos-master.mozilla.org:9010 --username sendchange --branch electrolysis-linux --revision 3cc0b56a0519077a197c2e026d200d9ecb2becae http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/electrolysis-linux/1279657391/firefox-4.0b2pre.en-US.linux-i686.tar.bz2
+Troubleshooting
+
+    The twistd.log has become old; nothing is being appended
+
+Mercurial
+
+mercurial queues
+hg qinit -c
+hg qnew -m "Message" firstHandler
+hg qrefresh
+hg qapplied
+Making a patch final
+hg qrefresh -m "blah"
+hg qfinish -a (--applied finish all applied patches)
+hg out
+Synchronizing with upstream
+
+    hg qpop -a - remove the patches
+    hg pull -u - update
+    hg qpush -a - reapply patches
+
+Re-ordering patches
+This is a very safe way to do it:
+
+    Execute hg qpop -a to remove all patches from the stack
+    Reorder patches in .hg/patches/series file
+    Execute hg qpush -a or hg qpush for patches that you want to re-apply
+
+
+
+
+
+Buildbot tricks
+from buildbot.steps.dummy import Dummy
+from buildbot.process.factory import BuildFactory
+from buildbot.steps import trigger
+
+mozilla2_nightly_factory = BuildFactory()
+mozilla2_nightly_factory.addStep(Dummy())
+
+if triggeredSchedulers is not None:
+    for triggeredScheduler in triggeredSchedulers:
+       mozilla2_nightly_factory.addStep(trigger.Trigger(
+          schedulerNames=[triggeredScheduler],
+          waitForFinish=False))
+
+
+
+## Python - Buildbot
+####################
+from twistd.python import log
+- log.msg("Armen")
+- log.msg(obj.__dict__) //It gives better results than dir() since it gives the values of the attributes - BTW it does not work with strings
+- log.msg(dir(self))
+- from apihelper import info --> info(self)
+
+# determine site-packages
+ python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"
+
+How to run test with twisted:
+
+> trial buildbotcustom.test
+
+## Tinderbox - Boostrap
+######################
+mkdir -p /builds/tinderbox
+cd /builds/tinderbox
+mkdir Fx-Mozilla1.8-Nightly
+cvs co mozilla/tools/tinderbox
+cd Fx-Mozilla1.8-Nightly
+../mozilla/tools/tinderbox/install-links
+rm post-mozilla.pl; ln -s post-mozilla-rel.pl post-mozilla.pl
+## tinderbox-configs
+
+## Vim editor
+:%s/string1/string2/c 'y' to accept, 'n' to next
+
+## How to update the cvs mirror
+######################
+./update_cvsmirror.sh
+https://bugzilla.mozilla.org/show_bug.cgi?id=467720#c5
+The script might *only* update cvsmirror.clean, therefore substitute cvsmirror with it
+
+## Set up cvs mirror
+#########################
+mkdir /builds/cvsmirror
+mkdir -p /builds/cvsmirror/mozilla/tools/tinderbox-configs
+
+
+#it might work - partial mirroring
+rsync -a --delete-after --exclude=CVSROOT/config --exclude=CVSROOT/loginfo cvs-mirror.mozilla.org::mozilla/mozilla/tools/tinderbox-configs/ /builds/cvsmirror/cvsroot/mozilla/tools/tinderbox-configs/
+#does checkout everything
+rsync -av --delete-after --exclude=CVSROOT/config --exclude=CVSROOT/loginfo cvs-mirror.mozilla.org::mozilla/mozilla/ /builds/cvsmirror/cvsroot
+
+
+### This is the right one - twice the word mozilla
+cat >/builds/rsync-excludes <<EOF
+CVSROOT/passwd
+CVSROOT/writers
+CVSROOT/history
+CVSROOT/history*
+EOF
+rsync -avr --delete-after --exclude-from=/builds/rsync-excludes cvs-mirror.mozilla.org::mozilla/mozilla/tools/tinderbox-configs /builds/cvsmirror/cvsroot/mozilla/tools/
+touch /builds/cvsmirror/cvsroot/CVSROOT
+cd /builds/tinderbox/Fx-Mozilla1.8-Nightly/
+cvs -d /builds/cvsmirror/ co -d tinderbox-configs -r MOZILLA_1_8_BRANCH mozilla/tools/tinderbox-configs/firefox/macosx/
+ln -s tinderbox-configs/mozconfig .; ln -s tinderbox-configs/tinder-config.pl .
+ssh cvs.mozilla.org ---> type "yes" and cancel
+
+configs/fx-moz18-nightly-staging-bootstrap.cfg
+Bootstrap/Step.pm
+cvsroot in master.cfg
+mkdir -p /builds/cvsmirror/CVSROOT??? wow
+build-seamonkey-util.pm #964
+* modified boostrap to point to my cvs-mirror
+* modify build-seamonkey to allow setting MOZ_CO_DATE from outside
+
+
+##configs/fx-moz18-nightly-staging-bootstrap.cfg
+mozillaCvsroot = localhost:/builds/cvsmirror/cvsroot
+36 l10nCvsroot = staging-1.8-master.build.mozilla.org:/builds/cvsmirror/l10n
+37 mofoCvsroot = staging-1.8-master.build.mozilla.org:/builds/cvsmirror/mofo
+
+## Make foo
+make echo-variable-MOZ_BRANDING_DIRECTORY
+
+
+## Build:l10n
+#####################
+cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot co -r HEAD -d build mozilla/tools/release
+perl ./release -v -o Repack //inside of build
+
+cat file | grep -v "^U mozilla/" | grep -v "^U l10n/" | grep -v "^/tools/gcc/bin/gcc" > file2
+
+:%s/search_string/replacement_string/g
+
+
+## Staging
+##############
+to checkout on the staging machines
+cvs -d cvs.mozilla.org:/cvsroot co -d botrunner mozilla/tools/botrunner.py //Pay attention that I do not specify any user
+-- No cvs-MIRROR
+
+cvs -d staging-1.9-master:/builds/cvsmirror/cvsroot // Without a user
+
+## Hg
+####################
+sudo port install mercurial or easy_install -U mercurial
+sudo port install autoconf213
+
+vi .hgrc
+
+[ui]
+
+username = Your Real Name <user@example.com>
+
+merge = diff
+
+[diff]
+
+git = 1
+
+[defaults]
+
+diff=-p -U 8
+
+[web]
+
+config = /var/hg/hgweb.config
+
+[extensions]
+
+hgext.mq =
+
+## Hg queues - https://developer.mozilla.org/en/Mercurial_Queues
+
+    Make some changes in your working directory.
+    Use hg qnew -f bug-155443 to turn those changes into a patch. This is kinda like committing, only the commit isn't permanent.
+    Continue editing. Use hg qrefresh periodically to put those new changes into the patch, and hg qcommit -m "backup" to make a permanent record of your work.
+    Use hg qdiff to review your changes so far.
+    When the patch is complete and reviewed, use hg qrefresh -e to give it a commit message, then hg qdelete -r bug-155443 to turn the patch into a permanent changeset.
+    Finally, hg push your patch to a public repository.
+
+
+hg status - really important
+hg pull <-- hg incoming
+hg commit <-- hg diff -- commit to local repo
+hg push <-- hg outgoing -- what would be committed if pushed
+
+* to create a patch - UNIVERSAL parameter is set in .hgrc
+hg diff > ../patch
+
+* Overwrite your local changes
+hg update --clean //same as -C
+
+hg pull/hg merge/hg commit/hg push -- if there are conflicts - you can do this when you have commit access
+
+
+## Patches - CVS
+##############
+- Patches for NEW FILES
+cvsdo add newfile
+cvs diff -N > file.patch
+
+- To create a patch
+cvs diff -u8p . > file.patch
+
+- To revert a patch
+patch -Rp0 < staging-pacifica-vm02-v0.1.patch
+
+- To apply a patch
+patch -p0 < staging-pacifica-vm02-v0.1.patch
+
+## Gary's stuff
+#####################
+Checkout Trunk:
+cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot co mozilla/client.mk
+then for Firefox:
+cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot co mozilla/browser/config/mozconfig
+then for Thunderbird
+cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot co mozilla/mail/config/mozconfig
+
+Checkout Branch:
+cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot co -r MOZILLA_1_8_BRANCH mozilla/client.mk
+then for Firefox:
+cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot co -r MOZILLA_1_8_BRANCH mozilla/browser/config/mozconfig
+then for Thunderbird
+cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot co -r MOZILLA_1_8_BRANCH mozilla/mail/config/mozconfig
+
+Checkout Branch:
+cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot co -r SUNBIRD_0_8_BRANCH mozilla/client.mk
+
+http://developer.mozilla.org/en/docs/CVS_Tags
+
+For l10n issues, see
+http://developer.mozilla.org/en/docs/Patching_a_Localization
+
+To build debug Trunk builds from CVS:
+Remove the existing objdir folders first.
+cd ~/Desktop/Mozilla/cvs-mozilla1.8/mozilla/
+cd ~/Desktop/Mozilla/cvs/mozilla/
+time make -f client.mk checkout MOZ_CO_PROJECT=browser,mail,calendar && date
+time make -f client.mk build MOZ_CURRENT_PROJECT=browser && date
+time make -f client.mk build MOZ_CURRENT_PROJECT=mail && date
+time make -f client.mk build MOZ_CURRENT_PROJECT=calendar && date
+
+cd ~/Desktop/Mozilla/cvs-sunbird0.8/mozilla/ && make -f client.mk l10n-checkout MOZ_CO_PROJECT=calendar MOZ_CO_LOCALES=ka LOCALES_CO_TAG=HEAD
+
+cd ~/Desktop/Mozilla/cvs/mozilla/ && make -f client.mk build MOZ_CURRENT_PROJECT=calendar && make -f client.mk build MOZ_CURRENT_PROJECT=mail && time make -f client.mk build MOZ_CURRENT_PROJECT=browser && date && cd ~/Desktop/Mozilla/cvs-mozilla1.8/mozilla/ && make -f client.mk build MOZ_CURRENT_PROJECT=calendar && make -f client.mk build MOZ_CURRENT_PROJECT=mail && time make -f client.mk build MOZ_CURRENT_PROJECT=browser && date
+
+cd ~/Desktop/Mozilla/cvs/mozilla/ && make -f client.mk checkout MOZ_CO_PROJECT=browser,mail,calendar && cd ~/Desktop/Mozilla/cvs/mozilla/ && make -f client.mk build MOZ_CURRENT_PROJECT=browser && time make -f client.mk build MOZ_CURRENT_PROJECT=mail && date
+
+
+
+======
+
+
+
+# Sample .mozconfig
+mk_add_options MOZ_MAKE_FLAGS="-j3"
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/../objdir/
+mk_add_options MOZ_BUILD_PROJECTS="browser mail calendar"
+mk_add_options MOZ_CO_PROJECT="browser mail calendar"
+# For debugging, enable if necessary
+#mk_add_options MOZ_CO_MODULE="mozilla/tools/trace-malloc"
+#ac_add_options --enable-trace-malloc
+# To enable multi-app compilation from one .mozconfig
+ac_add_app_options browser --enable-application=browser
+ac_add_app_options mail --enable-application=mail
+ac_add_app_options calendar --enable-application=calendar
+# Compilation options
+ac_add_options --disable-optimize
+ac_add_options --enable-debug
+ac_add_options --disable-static
+ac_add_options --enable-shared
+ac_add_options --with-macos-sdk=/Developer/SDKs/MacOSX10.4u.sdk
+# Build Thunderbird with preinstalled Lightning if needed.
+ac_add_options --enable-extensions=default,lightning
+
+

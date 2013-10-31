@@ -1,0 +1,2034 @@
+17:24:17     INFO - MultiFileLogger online at 20130911 17:24:17 in C:\slave\test
+17:24:17     INFO - Run as scripts/scripts/talos_script.py --suite svgr-metro --add-option --webServer,localhost --branch-name Cedar --system-bits 32 --cfg talos/windows_config.py --download-symbols ondemand --use-talos-json
+17:24:17     INFO - Downloading http://people.mozilla.org/~jlund/talos.json to C:\slave\test\build\talos.json
+17:24:17     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('http://people.mozilla.org/~jlund/talos.json', 'C:\\slave\\test\\build\\talos.json'), kwargs: {}, attempt #1
+17:24:17     INFO - Downloaded 6949 bytes.
+17:24:17     INFO - made it herehttp://people.mozilla.org/~jlund/talos.json
+17:24:17     INFO - self.talos_jsonC:\slave\test\build\talos.json
+17:24:17     INFO - {u'global': {u'talos_repo': u'http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/',
+17:24:17     INFO -              u'talos_revision': u'69bb62b25f11'},
+17:24:17     INFO -  u'suites': {u'chromez': {u'talos_options': [u'--mozAfterPaint',
+17:24:17     INFO -                                              u'--filter',
+17:24:17     INFO -                                              u'ignore_first:5',
+17:24:17     INFO -                                              u'--filter',
+17:24:17     INFO -                                              u'median'],
+17:24:17     INFO -                           u'tests': [u'tresize']},
+17:24:17     INFO -              u'dirtypaint': {u'talos_addons': [u'http://build.mozilla.org/talos/profiles/dirtyDBs.zip',
+17:24:17     INFO -                                                u'http://build.mozilla.org/talos/profiles/dirtyMaxDBs.zip'],
+17:24:17     INFO -                              u'talos_options': [u'--setPref',
+17:24:17     INFO -                                                 u'hangmonitor.timeout=0',
+17:24:17     INFO -                                                 u'--mozAfterPaint'],
+17:24:17     INFO -                              u'tests': [u'tspaint_places_generated_med',
+17:24:17     INFO -                                         u'tspaint_places_generated_max']},
+17:24:17     INFO -              u'dromaeojs': {u'tests': [u'dromaeo_css',
+17:24:17     INFO -                                        u'dromaeo_dom',
+17:24:17     INFO -                                        u'kraken:v8_7']},
+17:24:17     INFO -              u'dromaeojs-metro': {u'tests': [u'dromaeo_css',
+17:24:17     INFO -                                              u'dromaeo_dom',
+17:24:17     INFO -                                              u'kraken:v8_7']},
+17:24:17     INFO -              u'other': {u'talos_options': [u'--mozAfterPaint',
+17:24:17     INFO -                                            u'--filter',
+17:24:17     INFO -                                            u'ignore_first:5',
+17:24:17     INFO -                                            u'--filter',
+17:24:17     INFO -                                            u'median'],
+17:24:17     INFO -                         u'tests': [u'tscrollr',
+17:24:17     INFO -                                    u'a11yr',
+17:24:17     INFO -                                    u'ts_paint',
+17:24:17     INFO -                                    u'tpaint']},
+17:24:17     INFO -              u'other-metro': {u'talos_options': [u'--mozAfterPaint',
+17:24:17     INFO -                                                  u'--filter',
+17:24:17     INFO -                                                  u'ignore_first:5',
+17:24:17     INFO -                                                  u'--filter',
+17:24:17     INFO -                                                  u'median'],
+17:24:17     INFO -                               u'tests': [u'tscrollr', u'a11yr', u'ts_paint']},
+17:24:17     INFO -              u'rafx': {u'talos_options': [u'--filter',
+17:24:17     INFO -                                           u'ignore_first:5',
+17:24:17     INFO -                                           u'--filter',
+17:24:17     INFO -                                           u'median'],
+17:24:17     INFO -                        u'tests': [u'tscrollx', u'tsvgx', u'tcanvasmark']},
+17:24:17     INFO -              u'rafx-metro': {u'talos_options': [u'--filter',
+17:24:17     INFO -                                                 u'ignore_first:5',
+17:24:17     INFO -                                                 u'--filter',
+17:24:17     INFO -                                                 u'median'],
+17:24:17     INFO -                              u'tests': [u'tscrollx']},
+17:24:17     INFO -              u'svgr': {u'talos_options': [u'--filter',
+17:24:17     INFO -                                           u'ignore_first:5',
+17:24:17     INFO -                                           u'--filter',
+17:24:17     INFO -                                           u'median'],
+17:24:17     INFO -                        u'tests': [u'tsvgr', u'tsvgr_opacity']},
+17:24:17     INFO -              u'svgr-metro': {u'talos_options': [u'--filter',
+17:24:17     INFO -                                                 u'ignore_first:5',
+17:24:17     INFO -                                                 u'--filter',
+17:24:17     INFO -                                                 u'median'],
+17:24:17     INFO -                              u'tests': [u'tsvgr', u'tsvgr_opacity']},
+17:24:17     INFO -              u'tp5o': {u'pagesets_manifest_path': u'talos/page_load_test/tp5n/tp5o.manifest',
+17:24:17     INFO -                        u'pagesets_parent_dir_path': u'talos/page_load_test/',
+17:24:17     INFO -                        u'pagesets_url': u'http://build.mozilla.org/talos/zips/tp5n.zip',
+17:24:17     INFO -                        u'plugins': {u'32': u'http://build.mozilla.org/talos/zips/flash32_10_3_183_5.zip',
+17:24:17     INFO -                                     u'64': u'http://build.mozilla.org/talos/zips/flash64_11_0_d1_98.zip'},
+17:24:17     INFO -                        u'talos_options': [u'--mozAfterPaint',
+17:24:17     INFO -                                           u'--responsiveness',
+17:24:17     INFO -                                           u'--filter',
+17:24:17     INFO -                                           u'ignore_first:5',
+17:24:17     INFO -                                           u'--filter',
+17:24:17     INFO -                                           u'median',
+17:24:17     INFO -                                           u'--test_timeout',
+17:24:17     INFO -                                           u'3600'],
+17:24:17     INFO -                        u'tests': [u'tp5o']},
+17:24:17     INFO -              u'tp5o-metro': {u'pagesets_manifest_path': u'talos/page_load_test/tp5n/tp5o.manifest',
+17:24:17     INFO -                              u'pagesets_parent_dir_path': u'talos/page_load_test/',
+17:24:17     INFO -                              u'pagesets_url': u'http://build.mozilla.org/talos/zips/tp5n.zip',
+17:24:17     INFO -                              u'plugins': {u'32': u'http://build.mozilla.org/talos/zips/flash32_10_3_183_5.zip',
+17:24:17     INFO -                                           u'64': u'http://build.mozilla.org/talos/zips/flash64_11_0_d1_98.zip'},
+17:24:17     INFO -                              u'talos_options': [u'--mozAfterPaint',
+17:24:17     INFO -                                                 u'--responsiveness',
+17:24:17     INFO -                                                 u'--filter',
+17:24:17     INFO -                                                 u'ignore_first:5',
+17:24:17     INFO -                                                 u'--filter',
+17:24:17     INFO -                                                 u'median',
+17:24:17     INFO -                                                 u'--test_timeout',
+17:24:17     INFO -                                                 u'3600'],
+17:24:17     INFO -                              u'tests': [u'tp5o']},
+17:24:17     INFO -              u'tpn': {u'pagesets_manifest_path': u'talos/page_load_test/tp5n/tp5n.manifest',
+17:24:17     INFO -                       u'pagesets_parent_dir_path': u'talos/page_load_test/',
+17:24:17     INFO -                       u'pagesets_url': u'http://build.mozilla.org/talos/zips/tp5n.zip',
+17:24:17     INFO -                       u'plugins': {u'32': u'http://build.mozilla.org/talos/zips/flash32_10_3_183_5.zip',
+17:24:17     INFO -                                    u'64': u'http://build.mozilla.org/talos/zips/flash64_11_0_d1_98.zip'},
+17:24:17     INFO -                       u'talos_options': [u'--mozAfterPaint',
+17:24:17     INFO -                                          u'--responsiveness',
+17:24:17     INFO -                                          u'--filter',
+17:24:17     INFO -                                          u'ignore_first:5',
+17:24:17     INFO -                                          u'--filter',
+17:24:17     INFO -                                          u'median',
+17:24:17     INFO -                                          u'--test_timeout',
+17:24:17     INFO -                                          u'3600'],
+17:24:17     INFO -                       u'tests': [u'tp5n']},
+17:24:17     INFO -              u'tpn-metro': {u'pagesets_manifest_path': u'talos/page_load_test/tp5n/tp5n.manifest',
+17:24:17     INFO -                             u'pagesets_parent_dir_path': u'talos/page_load_test/',
+17:24:17     INFO -                             u'pagesets_url': u'http://build.mozilla.org/talos/zips/tp5n.zip',
+17:24:17     INFO -                             u'plugins': {u'32': u'http://build.mozilla.org/talos/zips/flash32_10_3_183_5.zip',
+17:24:17     INFO -                                          u'64': u'http://build.mozilla.org/talos/zips/flash64_11_0_d1_98.zip'},
+17:24:17     INFO -                             u'talos_options': [u'--mozAfterPaint',
+17:24:17     INFO -                                                u'--responsiveness',
+17:24:17     INFO -                                                u'--filter',
+17:24:17     INFO -                                                u'ignore_first:5',
+17:24:17     INFO -                                                u'--filter',
+17:24:17     INFO -                                                u'median',
+17:24:17     INFO -                                                u'--test_timeout',
+17:24:17     INFO -                                                u'3600'],
+17:24:17     INFO -                             u'tests': [u'tp5n']},
+17:24:17     INFO -              u'xperf': {u'pagesets_manifest_path': u'talos/page_load_test/tp5n/tp5n.manifest',
+17:24:17     INFO -                         u'pagesets_parent_dir_path': u'talos/page_load_test/',
+17:24:17     INFO -                         u'pagesets_url': u'http://build.mozilla.org/talos/zips/tp5n.zip',
+17:24:17     INFO -                         u'plugins': {u'32': u'http://build.mozilla.org/talos/zips/flash32_10_3_183_5.zip',
+17:24:17     INFO -                                      u'64': u'http://build.mozilla.org/talos/zips/flash64_11_0_d1_98.zip'},
+17:24:17     INFO -                         u'talos_options': [u'--mozAfterPaint',
+17:24:17     INFO -                                            u'--xperf_path',
+17:24:17     INFO -                                            u'"c:/Program Files/Microsoft Windows Performance Toolkit/xperf.exe"',
+17:24:17     INFO -                                            u'--filter',
+17:24:17     INFO -                                            u'ignore_first:5',
+17:24:17     INFO -                                            u'--filter',
+17:24:17     INFO -                                            u'median',
+17:24:17     INFO -                                            u'C:/slave/talos-data/talos/xperf.config'],
+17:24:17     INFO -                         u'tests': [u'tp5n']}},
+17:24:17     INFO -  u'talos.zip': {u'path': u'',
+17:24:17     INFO -                 u'url': u'http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/archive/talos.69bb62b25f11.zip'}}
+17:24:17     INFO - Dumping config to C:\slave\test\logs\localconfig.json.
+17:24:17     INFO - {'append_to_log': False,
+17:24:17     INFO -  'base_work_dir': 'C:\\slave\\test',
+17:24:17     INFO -  'branch': 'Cedar',
+17:24:17     INFO -  'buildbot_json_path': 'buildprops.json',
+17:24:17     INFO -  'config_files': ['talos/windows_config.py'],
+17:24:17     INFO -  'datazilla_urls': ['https://datazilla.mozilla.org/talos'],
+17:24:17     INFO -  'default_actions': ['clobber',
+17:24:17     INFO -                      'read-buildbot-config',
+17:24:17     INFO -                      'download-and-extract',
+17:24:17     INFO -                      'clone-talos',
+17:24:17     INFO -                      'create-virtualenv',
+17:24:17     INFO -                      'install',
+17:24:17     INFO -                      'run-tests'],
+17:24:17     INFO -  'distribute_url': 'http://repos/python/packages/distribute-0.6.26.tar.gz',
+17:24:17     INFO -  'download_symbols': 'ondemand',
+17:24:17     INFO -  'exes': {'easy_install': ['C:\\slave\\test\\build/venv/scripts/python',
+17:24:17     INFO -                            'C:\\slave\\test\\build/venv/scripts/easy_install-2.7-script.py'],
+17:24:17     INFO -           'hg': 'c:/mozilla-build/hg/hg',
+17:24:17     INFO -           'mozinstall': ['C:\\slave\\test\\build/venv/scripts/python',
+17:24:17     INFO -                          'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py'],
+17:24:17     INFO -           'python': 'c:/mozilla-build/python27/python.exe',
+17:24:17     INFO -           'virtualenv': ['c:/mozilla-build/python27/python.exe',
+17:24:17     INFO -                          'c:/mozilla-build/buildbotve/virtualenv.py']},
+17:24:17     INFO -  'find_links': ['http://repos/python/packages/'],
+17:24:17     INFO -  'installer_path': 'installer.exe',
+17:24:17     INFO -  'log_level': 'info',
+17:24:17     INFO -  'log_name': 'talos',
+17:24:17     INFO -  'log_to_console': True,
+17:24:17     INFO -  'metro_harness_dir': 'bin',
+17:24:17     INFO -  'metro_test_harness_exe': 'metrotestharness.exe',
+17:24:17     INFO -  'opt_config_files': [],
+17:24:17     INFO -  'pip_index': False,
+17:24:17     INFO -  'pip_url': 'http://repos/python/packages/pip-0.8.2.tar.gz',
+17:24:17     INFO -  'populate_webroot': True,
+17:24:17     INFO -  'pypi_url': 'http://repos/python/packages/',
+17:24:17     INFO -  'python_webserver': False,
+17:24:17     INFO -  'pywin32_url': 'http://repos/python/packages/pywin32-216.win32-py2.7.exe',
+17:24:17     INFO -  'results_url': 'http://graphs.mozilla.org/server/collect.cgi',
+17:24:17     INFO -  'suite': 'svgr-metro',
+17:24:17     INFO -  'system_bits': '32',
+17:24:17     INFO -  'talos_extra_options': ['--webServer', 'localhost'],
+17:24:17     INFO -  'talos_json_url': 'http://people.mozilla.org/~jlund/talos.json',
+17:24:17     INFO -  'talos_url': 'http://hg.mozilla.org/build/talos/archive/tip.tar.gz',
+17:24:17     INFO -  'tests': [],
+17:24:17     INFO -  'title': 'T-W864-IX-042',
+17:24:17     INFO -  'use_talos_json': True,
+17:24:17     INFO -  'virtualenv_modules': ['pywin32', 'talos', 'mozinstall'],
+17:24:17     INFO -  'virtualenv_path': 'C:\\slave\\test\\build/venv',
+17:24:17     INFO -  'virtualenv_python_dll': 'c:/mozilla-build/python27/python27.dll',
+17:24:17     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+17:24:17     INFO -  'webroot': 'c:/slave/talos-data',
+17:24:17     INFO -  'webroot_extract_cmd': 'c:/mozilla-build/msys/bin/bash -c "PATH=/c/mozilla-build/msys/bin:$PATH tar zx --strip-components=1 -f \'%(tarball)s\' --wildcards \'**/talos/\'"',
+17:24:17     INFO -  'work_dir': 'build'}
+17:24:17     INFO - #####
+17:24:17     INFO - ##### Running clobber step.
+17:24:17     INFO - #####
+17:24:17     INFO - Running pre-action listener: _resource_record_pre_action
+17:24:17     INFO - Running main action method: clobber
+17:24:17     INFO - rmtree: C:\slave\test\build
+17:24:17     INFO - Using _rmtree_windows ...
+17:24:17     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('C:\\slave\\test\\build',), kwargs: {}, attempt #1
+17:26:00     INFO - Running post-action listener: _resource_record_post_action
+17:26:00     INFO - #####
+17:26:00     INFO - ##### Running read-buildbot-config step.
+17:26:00     INFO - #####
+17:26:00     INFO - Running pre-action listener: _resource_record_pre_action
+17:26:00     INFO - Running main action method: read_buildbot_config
+17:26:00     INFO - {
+17:26:00     INFO -     "properties": {
+17:26:00     INFO -         "buildnumber": 22, 
+17:26:00     INFO -         "product": "firefox", 
+17:26:00     INFO -         "script_repo_revision": "default", 
+17:26:00     INFO -         "builddir": "cedar_win8_test-svgr-metro", 
+17:26:00     INFO -         "repository": "", 
+17:26:00     INFO -         "buildername": "WINNT 6.2 cedar talos svgr-metro", 
+17:26:00     INFO -         "stage_platform": "win32", 
+17:26:00     INFO -         "basedir": "C:\\slave\\test", 
+17:26:00     INFO -         "project": "", 
+17:26:00     INFO -         "platform": "win8", 
+17:26:00     INFO -         "master": "http://dev-master01.build.scl1.mozilla.com:8038/", 
+17:26:00     INFO -         "slavebuilddir": "test", 
+17:26:00     INFO -         "scheduler": "tests-cedar-win32-talos", 
+17:26:00     INFO -         "branch": "cedar", 
+17:26:00     INFO -         "slavename": "t-w864-ix-042", 
+17:26:00     INFO -         "revision": "default"
+17:26:00     INFO -     }, 
+17:26:00     INFO -     "sourcestamp": {
+17:26:00     INFO -         "repository": "", 
+17:26:00     INFO -         "hasPatch": false, 
+17:26:00     INFO -         "project": "", 
+17:26:00     INFO -         "branch": "cedar-win32-talos", 
+17:26:00     INFO -         "changes": [
+17:26:00     INFO -             {
+17:26:00     INFO -                 "category": null, 
+17:26:00     INFO -                 "files": [
+17:26:00     INFO -                     {
+17:26:00     INFO -                         "url": null, 
+17:26:00     INFO -                         "name": "http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.tests.zip"
+17:26:00     INFO -                     }, 
+17:26:00     INFO -                     {
+17:26:00     INFO -                         "url": null, 
+17:26:00     INFO -                         "name": "http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.zip"
+17:26:00     INFO -                     }
+17:26:00     INFO -                 ], 
+17:26:00     INFO -                 "repository": "", 
+17:26:00     INFO -                 "rev": "default", 
+17:26:00     INFO -                 "who": "sendchange", 
+17:26:00     INFO -                 "when": 1378945445.560518, 
+17:26:00     INFO -                 "number": 120, 
+17:26:00     INFO -                 "comments": "", 
+17:26:00     INFO -                 "project": "", 
+17:26:00     INFO -                 "at": "Wed 11 Sep 2013 17:24:05", 
+17:26:00     INFO -                 "branch": "cedar-win32-talos", 
+17:26:00     INFO -                 "revlink": "", 
+17:26:00     INFO -                 "properties": [], 
+17:26:00     INFO -                 "revision": "default"
+17:26:00     INFO -             }
+17:26:00     INFO -         ], 
+17:26:00     INFO -         "revision": "default"
+17:26:00     INFO -     }
+17:26:00     INFO - }
+17:26:00     INFO - Found test url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.tests.zip.
+17:26:00     INFO - Found installer url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.zip.
+17:26:00     INFO - Running post-action listener: _resource_record_post_action
+17:26:00     INFO - #####
+17:26:00     INFO - ##### Running download-and-extract step.
+17:26:00     INFO - #####
+17:26:00     INFO - Running pre-action listener: _resource_record_pre_action
+17:26:00     INFO - Running main action method: download_and_extract
+17:26:00     INFO - mkdir: C:\slave\test\build
+17:26:01     INFO - Downloading http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.tests.zip to C:\slave\test\build\firefox-26.0a1.en-US.win32.tests.zip
+17:26:01     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.tests.zip', 'C:\\slave\\test\\build\\firefox-26.0a1.en-US.win32.tests.zip'), kwargs: {}, attempt #1
+17:26:02     INFO - Downloaded 86205972 bytes.
+17:26:02     INFO - mkdir: C:\slave\test\build\tests
+17:26:02     INFO - Running command: ['unzip', '-q', '-o', 'C:\\slave\\test\\build\\firefox-26.0a1.en-US.win32.tests.zip'] in C:\slave\test\build\tests
+17:26:02     INFO - Copy/paste: unzip -q -o C:\slave\test\build\firefox-26.0a1.en-US.win32.tests.zip
+17:27:18     INFO - Return code: 0
+17:27:18     INFO - Dumping config to C:\slave\test\logs\treeconfig.json.
+17:27:18     INFO - {'append_to_log': False,
+17:27:18     INFO -  'base_work_dir': 'C:\\slave\\test',
+17:27:18     INFO -  'branch': 'Cedar',
+17:27:18     INFO -  'buildbot_json_path': 'buildprops.json',
+17:27:18     INFO -  'config_files': ['talos/windows_config.py'],
+17:27:18     INFO -  'datazilla_urls': ['https://datazilla.mozilla.org/talos'],
+17:27:18     INFO -  'default_actions': ['clobber',
+17:27:18     INFO -                      'read-buildbot-config',
+17:27:18     INFO -                      'download-and-extract',
+17:27:18     INFO -                      'clone-talos',
+17:27:18     INFO -                      'create-virtualenv',
+17:27:18     INFO -                      'install',
+17:27:18     INFO -                      'run-tests'],
+17:27:18     INFO -  'distribute_url': 'http://repos/python/packages/distribute-0.6.26.tar.gz',
+17:27:18     INFO -  'download_symbols': 'ondemand',
+17:27:18     INFO -  'exes': {'easy_install': ['C:\\slave\\test\\build/venv/scripts/python',
+17:27:18     INFO -                            'C:\\slave\\test\\build/venv/scripts/easy_install-2.7-script.py'],
+17:27:18     INFO -           'hg': 'c:/mozilla-build/hg/hg',
+17:27:18     INFO -           'mozinstall': ['C:\\slave\\test\\build/venv/scripts/python',
+17:27:18     INFO -                          'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py'],
+17:27:18     INFO -           'python': 'c:/mozilla-build/python27/python.exe',
+17:27:18     INFO -           'virtualenv': ['c:/mozilla-build/python27/python.exe',
+17:27:18     INFO -                          'c:/mozilla-build/buildbotve/virtualenv.py']},
+17:27:18     INFO -  'find_links': ['http://repos/python/packages/'],
+17:27:18     INFO -  'installer_path': 'installer.exe',
+17:27:18     INFO -  'log_level': 'info',
+17:27:18     INFO -  'log_name': 'talos',
+17:27:18     INFO -  'log_to_console': True,
+17:27:18     INFO -  'metro_harness_dir': 'bin',
+17:27:18     INFO -  'metro_test_harness_exe': 'metrotestharness.exe',
+17:27:18     INFO -  'opt_config_files': [],
+17:27:18     INFO -  'pip_index': False,
+17:27:18     INFO -  'pip_url': 'http://repos/python/packages/pip-0.8.2.tar.gz',
+17:27:18     INFO -  'populate_webroot': True,
+17:27:18     INFO -  'pypi_url': 'http://repos/python/packages/',
+17:27:18     INFO -  'python_webserver': False,
+17:27:18     INFO -  'pywin32_url': 'http://repos/python/packages/pywin32-216.win32-py2.7.exe',
+17:27:18     INFO -  'results_url': 'http://graphs.mozilla.org/server/collect.cgi',
+17:27:18     INFO -  'suite': 'svgr-metro',
+17:27:18     INFO -  'system_bits': '32',
+17:27:18     INFO -  'talos_extra_options': ['--webServer', 'localhost'],
+17:27:18     INFO -  'talos_json_url': 'http://people.mozilla.org/~jlund/talos.json',
+17:27:18     INFO -  'talos_url': 'http://hg.mozilla.org/build/talos/archive/tip.tar.gz',
+17:27:18     INFO -  'tests': [],
+17:27:18     INFO -  'title': 'T-W864-IX-042',
+17:27:18     INFO -  'use_talos_json': True,
+17:27:18     INFO -  'virtualenv_modules': ['pywin32', 'talos', 'mozinstall'],
+17:27:18     INFO -  'virtualenv_path': 'C:\\slave\\test\\build/venv',
+17:27:18     INFO -  'virtualenv_python_dll': 'c:/mozilla-build/python27/python27.dll',
+17:27:18     INFO -  'volatile_config': {'actions': None, 'add_actions': None, 'no_actions': None},
+17:27:18     INFO -  'webroot': 'c:/slave/talos-data',
+17:27:18     INFO -  'webroot_extract_cmd': 'c:/mozilla-build/msys/bin/bash -c "PATH=/c/mozilla-build/msys/bin:$PATH tar zx --strip-components=1 -f \'%(tarball)s\' --wildcards \'**/talos/\'"',
+17:27:18     INFO -  'work_dir': 'build'}
+17:27:18     INFO - Downloading http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.zip to C:\slave\test\build\firefox-26.0a1.en-US.win32.zip
+17:27:18     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.zip', 'C:\\slave\\test\\build\\firefox-26.0a1.en-US.win32.zip'), kwargs: {}, attempt #1
+17:27:19     INFO - Downloaded 34139128 bytes.
+17:27:19     INFO - Setting buildbot property build_url to http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.zip
+17:27:19     INFO - mkdir: C:\slave\test\properties
+17:27:19     INFO - Writing buildbot properties ['build_url'] to C:\slave\test\properties\build_url
+17:27:19     INFO - Writing to file C:\slave\test\properties\build_url
+17:27:19     INFO - Contents:
+17:27:19     INFO -  build_url:http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.zip
+17:27:19     INFO - Running post-action listener: _resource_record_post_action
+17:27:19     INFO - #####
+17:27:19     INFO - ##### Running clone-talos step.
+17:27:19     INFO - #####
+17:27:19     INFO - Running pre-action listener: _resource_record_pre_action
+17:27:19     INFO - Running main action method: clone_talos
+17:27:19     INFO - Populating webroot c:/slave/talos-data...
+17:27:19     INFO - rmtree: c:/slave/talos-data\talos
+17:27:19     INFO - Using _rmtree_windows ...
+17:27:19     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('c:/slave/talos-data\\talos',), kwargs: {}, attempt #1
+17:27:23     INFO - retry: Calling <bound method Talos._get_revision of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: (<mozharness.base.vcs.mercurial.MercurialVCS object at 0x029C5DB0>, 'C:\\slave\\test\\build\\talos_repo'), kwargs: {}, attempt #1
+17:27:23     INFO - Setting C:\slave\test\build\talos_repo to http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/ revision 69bb62b25f11.
+17:27:23     INFO - Cloning http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/ to C:\slave\test\build\talos_repo.
+17:27:23     INFO - Running command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'clone', u'http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/', 'C:\\slave\\test\\build\\talos_repo']
+17:27:23     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge clone http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/ C:\slave\test\build\talos_repo
+17:27:35     INFO -  requesting all changes
+17:27:35     INFO -  adding changesets
+17:27:35     INFO -  adding manifests
+17:27:35     INFO -  adding file changes
+17:27:35     INFO -  added 698 changesets with 3169 changes to 1588 files (+1 heads)
+17:27:35     INFO -  updating to branch default
+17:27:35     INFO -  600 files updated, 0 files merged, 0 files removed, 0 files unresolved
+17:27:35     INFO - Return code: 0
+17:27:35     INFO - Updating C:\slave\test\build\talos_repo.
+17:27:35     INFO - Getting output from command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'branch'] in C:\slave\test\build\talos_repo
+17:27:35     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge branch
+17:27:35     INFO - Reading from file tmpfile_stdout
+17:27:35     INFO - Output received:
+17:27:35     INFO -  default
+17:27:35     INFO - Using _rmtree_windows ...
+17:27:35     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x029C5DB0>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+17:27:35     INFO - Using _rmtree_windows ...
+17:27:35     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x029C5DB0>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+17:27:35     INFO - Running command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'update', '-C'] in C:\slave\test\build\talos_repo
+17:27:35     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge update -C
+17:27:35     INFO -  0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+17:27:35     INFO - Return code: 0
+17:27:35     INFO - Getting output from command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'parent', '--template', '{node|short}'] in C:\slave\test\build\talos_repo
+17:27:35     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge parent --template {node|short}
+17:27:35     INFO - Reading from file tmpfile_stdout
+17:27:35     INFO - Output received:
+17:27:35     INFO -  69bb62b25f11
+17:27:35     INFO - Using _rmtree_windows ...
+17:27:35     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x029C5DB0>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+17:27:35     INFO - Using _rmtree_windows ...
+17:27:35     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x029C5DB0>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+17:27:35     INFO - Updating C:\slave\test\build\talos_repo revision 69bb62b25f11.
+17:27:35     INFO - Running command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'update', '-C', '-r', u'69bb62b25f11'] in C:\slave\test\build\talos_repo
+17:27:35     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge update -C -r 69bb62b25f11
+17:27:36     INFO -  0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+17:27:36     INFO - Return code: 0
+17:27:36     INFO - Getting output from command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'parent', '--template', '{node|short}'] in C:\slave\test\build\talos_repo
+17:27:36     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge parent --template {node|short}
+17:27:36     INFO - Reading from file tmpfile_stdout
+17:27:36     INFO - Output received:
+17:27:36     INFO -  69bb62b25f11
+17:27:36     INFO - Using _rmtree_windows ...
+17:27:36     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x029C5DB0>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+17:27:36     INFO - Using _rmtree_windows ...
+17:27:36     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x029C5DB0>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+17:27:36     INFO - copying tree: C:\slave\test\build\talos_repo\talos to c:/slave/talos-data\talos
+17:27:36     INFO - rmtree: c:/slave/talos-data\talos
+17:27:36     INFO - Using _rmtree_windows ...
+17:27:36     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('c:/slave/talos-data\\talos',), kwargs: {}, attempt #1
+17:27:36     INFO - Running post-action listener: _resource_record_post_action
+17:27:36     INFO - #####
+17:27:36     INFO - ##### Running create-virtualenv step.
+17:27:36     INFO - #####
+17:27:36     INFO - Running pre-action listener: _resource_record_pre_action
+17:27:36     INFO - Running main action method: create_virtualenv
+17:27:36     INFO - ['pywin32', {'talos': 'C:\\slave\\test\\build\\talos_repo'}, 'mozinstall']
+17:27:36     INFO - Creating virtualenv C:\slave\test\build/venv
+17:27:36     INFO - mkdir: C:\slave\test\build\venv\Scripts
+17:27:36     INFO - Copying c:/mozilla-build/python27/python27.dll to C:\slave\test\build\venv\Scripts\python27.dll
+17:27:36  WARNING - Can't copy c:/mozilla-build/python27/python27.dll to C:\slave\test\build\venv\Scripts\python27.dll: [Errno 2] No such file or directory: 'c:/mozilla-build/python27/python27.dll'!
+17:27:36     INFO - Downloading http://repos/python/packages/distribute-0.6.26.tar.gz to C:\slave\test\build\distribute-0.6.26.tar.gz
+17:27:36     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('http://repos/python/packages/distribute-0.6.26.tar.gz', 'C:\\slave\\test\\build\\distribute-0.6.26.tar.gz'), kwargs: {}, attempt #1
+17:27:36     INFO - Downloaded 621193 bytes.
+17:27:36     INFO - Downloading http://repos/python/packages/pip-0.8.2.tar.gz to C:\slave\test\build\pip-0.8.2.tar.gz
+17:27:36     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('http://repos/python/packages/pip-0.8.2.tar.gz', 'C:\\slave\\test\\build\\pip-0.8.2.tar.gz'), kwargs: {}, attempt #1
+17:27:36     INFO - Downloaded 106126 bytes.
+17:27:36     INFO - Running command: ['c:/mozilla-build/python27/python.exe', 'c:/mozilla-build/buildbotve/virtualenv.py', '--no-site-packages', '--distribute', 'C:\\slave\\test\\build/venv'] in C:\slave\test\build
+17:27:36     INFO - Copy/paste: c:/mozilla-build/python27/python.exe c:/mozilla-build/buildbotve/virtualenv.py --no-site-packages --distribute C:\slave\test\build/venv
+17:27:37     INFO -  New python executable in C:\slave\test\build/venv\Scripts\python.exe
+17:27:39     INFO -  Installing distribute......................................................................................................................................................................................done.
+17:27:41     INFO - Return code: 0
+17:27:41     INFO - Installing pywin32 into virtualenv C:\slave\test\build/venv
+17:27:41     INFO - Running command: ['C:\\slave\\test\\build/venv/scripts/python', 'C:\\slave\\test\\build/venv/scripts/easy_install-2.7-script.py', '--find-links', 'http://repos/python/packages/', 'http://repos/python/packages/pywin32-216.win32-py2.7.exe'] in C:\slave\test\build
+17:27:41     INFO - Copy/paste: C:\slave\test\build/venv/scripts/python C:\slave\test\build/venv/scripts/easy_install-2.7-script.py --find-links http://repos/python/packages/ http://repos/python/packages/pywin32-216.win32-py2.7.exe
+17:27:41     INFO -  install_dir C:\slave\test\build\venv\Lib\site-packages\
+17:27:41     INFO -  Downloading http://repos/python/packages/pywin32-216.win32-py2.7.exe
+17:27:41     INFO -  Processing pywin32-216.win32-py2.7.exe
+17:27:42     INFO -  pywintypes: module references __file__
+17:27:42     INFO -  win32evtlogutil: module references __file__
+17:27:42     INFO -  win32serviceutil: module references __file__
+17:27:42     INFO -  win32timezone: module references __file__
+17:27:42     INFO -  Demos.win32rcparser_demo: module references __file__
+17:27:42     INFO -  Demos.security.sspi.validate_password: module references __file__
+17:27:42     INFO -  isapi.install: module references __file__
+17:27:42     INFO -  isapi.samples.advanced: module references __file__
+17:27:42     INFO -  isapi.samples.test: module references __file__
+17:27:42     INFO -  isapi.test.setup: module references __file__
+17:27:42     INFO -  pywin.framework.scriptutils: module references __file__
+17:27:42     INFO -  pywin.framework.startup: module references __path__
+17:27:43     INFO -  pywin.scintilla.config: module references __path__
+17:27:43     INFO -  pywin.scintilla.control: module references __file__
+17:27:43     INFO -  pywin.scintilla.IDLEenvironment: module references __file__
+17:27:43     INFO -  scripts.regsetup: module references __file__
+17:27:43     INFO -  scripts.setup_d: module references __file__
+17:27:43     INFO -  test.testall: module references __file__
+17:27:43     INFO -  test.test_clipboard: module references __file__
+17:27:43     INFO -  test.test_win32api: module references __file__
+17:27:43     INFO -  test.test_win32rcparser: module references __file__
+17:27:43     INFO -  C:\slave\test\build\venv\lib\site-packages\distribute-0.6.14-py2.7.egg\setuptools\command\bdist_egg.py:427: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+17:27:43     INFO -    symbols = dict.fromkeys(iter_symbols(code))
+17:27:43     INFO -  test.test_win32trace: module references __file__
+17:27:43     INFO -  win32com.__init__: module references __path__
+17:27:43     INFO -  win32com.server.register: module references __file__
+17:27:43     INFO -  win32com.server.register: module references __path__
+17:27:43     INFO -  win32com.test.GenTestScripts: module references __path__
+17:27:43     INFO -  win32com.test.pippo_server: module references __file__
+17:27:43     INFO -  win32com.test.testall: module references __file__
+17:27:43     INFO -  win32com.test.testAXScript: module references __path__
+17:27:43     INFO -  win32com.test.testDictionary: module references __file__
+17:27:43     INFO -  win32com.test.testPippo: module references __file__
+17:27:43     INFO -  win32com.test.testPyComTest: module references __file__
+17:27:43     INFO -  win32com.test.testServers: module references __file__
+17:27:43     INFO -  win32com.test.util: module references __file__
+17:27:43     INFO -  win32comext.adsi.__init__: module references __path__
+17:27:43     INFO -  win32comext.authorization.__init__: module references __path__
+17:27:43     INFO -  win32comext.axcontrol.__init__: module references __path__
+17:27:43     INFO -  win32comext.axdebug.codecontainer: module references __file__
+17:27:43     INFO -  win32comext.axdebug.debugger: module references __file__
+17:27:43     INFO -  win32comext.axdebug.__init__: module references __path__
+17:27:43     INFO -  win32comext.axscript.__init__: module references __path__
+17:27:43     INFO -  win32comext.bits.__init__: module references __path__
+17:27:43     INFO -  win32comext.directsound.__init__: module references __path__
+17:27:43     INFO -  win32comext.directsound.test.ds_test: module references __file__
+17:27:43     INFO -  win32comext.internet.__init__: module references __path__
+17:27:43     INFO -  win32comext.mapi.__init__: module references __path__
+17:27:43     INFO -  win32comext.shell.__init__: module references __path__
+17:27:43     INFO -  win32comext.shell.demos.servers.empty_volume_cache: module references __file__
+17:27:43     INFO -  win32comext.shell.demos.servers.folder_view: module references __file__
+17:27:43     INFO -  win32comext.taskscheduler.__init__: module references __path__
+17:27:43     INFO -  creating 'c:\users\cltbld~1.t-w\appdata\local\temp\easy_install-wogjwg\pywin32-216-py2.7-win32.egg' and adding 'c:\users\cltbld~1.t-w\appdata\local\temp\easy_install-wogjwg\pywin32-216-py2.7-win32.egg.tmp' to it
+17:27:44     INFO -  creating c:\slave\test\build\venv\lib\site-packages\pywin32-216-py2.7-win32.egg
+17:27:44     INFO -  Extracting pywin32-216-py2.7-win32.egg to c:\slave\test\build\venv\lib\site-packages
+17:27:45     INFO -  Adding pywin32 216 to easy-install.pth file
+17:27:45     INFO -  Installing pywin32_postinstall.py script to C:\slave\test\build\venv\Scripts
+17:27:45     INFO -  Installing pywin32_postinstall.pyc script to C:\slave\test\build\venv\Scripts
+17:27:45     INFO -  Installing pywin32_testall.py script to C:\slave\test\build\venv\Scripts
+17:27:45     INFO -  Installing pywin32_testall.pyc script to C:\slave\test\build\venv\Scripts
+17:27:45     INFO -  Installed c:\slave\test\build\venv\lib\site-packages\pywin32-216-py2.7-win32.egg
+17:27:45     INFO -  Processing dependencies for pywin32==216
+17:27:45     INFO -  Finished processing dependencies for pywin32==216
+17:27:52     INFO - Return code: 0
+17:27:52     INFO - Installing talos into virtualenv C:\slave\test\build/venv
+17:27:52     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--pypi-url', 'http://repos/python/packages/', '--no-index', '--find-links', 'http://repos/python/packages/', 'C:\\slave\\test\\build\\talos_repo'] in C:\slave\test\build
+17:27:52     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --pypi-url http://repos/python/packages/ --no-index --find-links http://repos/python/packages/ C:\slave\test\build\talos_repo
+17:27:56     INFO -  Ignoring indexes: http://repos/python/packages/
+17:27:56     INFO -  Unpacking c:\slave\test\build\talos_repo
+17:27:56     INFO -    Running setup.py egg_info for package from file:///c%7C%5Cslave%5Ctest%5Cbuild%5Ctalos_repo
+17:27:56     INFO -  Downloading/unpacking PyYAML (from talos)
+17:27:57     INFO -    Running setup.py egg_info for package PyYAML
+17:27:57     INFO -  Downloading/unpacking mozlog (from talos)
+17:27:57     INFO -    Downloading mozlog-1.2.tar.gz
+17:27:57     INFO -    Running setup.py egg_info for package mozlog
+17:27:57     INFO -  Downloading/unpacking mozcrash==0.5 (from talos)
+17:27:57     INFO -    Downloading mozcrash-0.5.tar.gz
+17:27:57     INFO -    Running setup.py egg_info for package mozcrash
+17:27:57     INFO -  Downloading/unpacking mozdevice==0.19 (from talos)
+17:27:57     INFO -    Running setup.py egg_info for package mozdevice
+17:27:57     INFO -  Downloading/unpacking mozhttpd==0.5 (from talos)
+17:27:57     INFO -    Downloading mozhttpd-0.5.tar.gz
+17:27:57     INFO -    Running setup.py egg_info for package mozhttpd
+17:27:57     INFO -  Downloading/unpacking mozinfo==0.4 (from talos)
+17:27:57     INFO -    Downloading mozinfo-0.4.tar.gz
+17:27:57     INFO -    Running setup.py egg_info for package mozinfo
+17:27:57     INFO -  Downloading/unpacking datazilla==1.4 (from talos)
+17:27:57     INFO -    Downloading datazilla-1.4.tar.gz
+17:27:57     INFO -    Running setup.py egg_info for package datazilla
+17:27:57     INFO -  Downloading/unpacking mozprocess==0.8 (from talos)
+17:27:57     INFO -    Downloading mozprocess-0.8.tar.gz
+17:27:57     INFO -    Running setup.py egg_info for package mozprocess
+17:27:57     INFO -  Downloading/unpacking httplib2 (from talos)
+17:28:26     INFO -    Running setup.py egg_info for package httplib2
+17:28:26     INFO -  Downloading/unpacking oauth2 (from talos)
+17:28:26     INFO -    Downloading oauth2-1.5.211.tar.gz
+17:28:26     INFO -    Running setup.py egg_info for package oauth2
+17:28:26     INFO -  Downloading/unpacking mozfile>=0.3 (from mozcrash==0.5->talos)
+17:28:26     INFO -    Downloading mozfile-0.9.tar.gz
+17:28:26     INFO -    Running setup.py egg_info for package mozfile
+17:28:26     INFO -  Installing collected packages: datazilla, httplib2, mozcrash, mozdevice, mozfile, mozhttpd, mozinfo, mozlog, mozprocess, oauth2, PyYAML, talos
+17:28:26     INFO -    Running setup.py install for datazilla
+17:28:26     INFO -    Running setup.py install for httplib2
+17:28:26     INFO -    Running setup.py install for mozcrash
+17:28:26     INFO -    Running setup.py install for mozdevice
+17:28:26     INFO -      Installing dm-script.py script to C:\slave\test\build\venv\Scripts
+17:28:26     INFO -      Installing dm.exe script to C:\slave\test\build\venv\Scripts
+17:28:26     INFO -    Running setup.py install for mozfile
+17:28:26     INFO -    Running setup.py install for mozhttpd
+17:28:26     INFO -      Installing mozhttpd-script.py script to C:\slave\test\build\venv\Scripts
+17:28:26     INFO -      Installing mozhttpd.exe script to C:\slave\test\build\venv\Scripts
+17:28:26     INFO -    Running setup.py install for mozinfo
+17:28:26     INFO -      Installing mozinfo-script.py script to C:\slave\test\build\venv\Scripts
+17:28:26     INFO -      Installing mozinfo.exe script to C:\slave\test\build\venv\Scripts
+17:28:26     INFO -    Running setup.py install for mozlog
+17:28:26     INFO -    Running setup.py install for mozprocess
+17:28:26     INFO -    Running setup.py install for oauth2
+17:28:26     INFO -    Running setup.py install for PyYAML
+17:28:26     INFO -      checking if libyaml is compilable
+17:28:26     INFO -      Unable to find vcvarsall.bat
+17:28:26     INFO -      skipping build_ext
+17:28:26     INFO -    Running setup.py install for talos
+17:28:26     INFO -      Installing PerfConfigurator-script.py script to C:\slave\test\build\venv\Scripts
+17:28:26     INFO -      Installing PerfConfigurator.exe script to C:\slave\test\build\venv\Scripts
+17:28:26     INFO -      Installing talos-script.py script to C:\slave\test\build\venv\Scripts
+17:28:26     INFO -      Installing talos.exe script to C:\slave\test\build\venv\Scripts
+17:28:26     INFO -      Installing talos-results-script.py script to C:\slave\test\build\venv\Scripts
+17:28:26     INFO -      Installing talos-results.exe script to C:\slave\test\build\venv\Scripts
+17:28:26     INFO -  Successfully installed datazilla httplib2 mozcrash mozdevice mozfile mozhttpd mozinfo mozlog mozprocess oauth2 PyYAML talos
+17:28:26     INFO -  Cleaning up...
+17:28:26     INFO - Return code: 0
+17:28:26     INFO - Installing mozinstall into virtualenv C:\slave\test\build/venv
+17:28:26     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--pypi-url', 'http://repos/python/packages/', '--no-index', '--find-links', 'http://repos/python/packages/', 'mozinstall'] in C:\slave\test\build
+17:28:26     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --pypi-url http://repos/python/packages/ --no-index --find-links http://repos/python/packages/ mozinstall
+17:28:27     INFO -  Ignoring indexes: http://repos/python/packages/
+17:28:27     INFO -  Downloading/unpacking mozinstall
+17:28:27     INFO -    Downloading mozInstall-1.6.tar.gz
+17:28:27     INFO -    Running setup.py egg_info for package mozinstall
+17:28:27     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozinfo>=0.4 in c:\slave\test\build\venv\lib\site-packages (from mozinstall)
+17:28:27     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozfile in c:\slave\test\build\venv\lib\site-packages (from mozinstall)
+17:28:27     INFO -  Installing collected packages: mozinstall
+17:28:27     INFO -    Running setup.py install for mozinstall
+17:28:27     INFO -      Installing moz_remove_from_system-script.py script to C:\slave\test\build\venv\Scripts
+17:28:27     INFO -      Installing moz_remove_from_system.exe script to C:\slave\test\build\venv\Scripts
+17:28:27     INFO -      Installing mozuninstall-script.py script to C:\slave\test\build\venv\Scripts
+17:28:27     INFO -      Installing mozuninstall.exe script to C:\slave\test\build\venv\Scripts
+17:28:27     INFO -      Installing mozinstall-script.py script to C:\slave\test\build\venv\Scripts
+17:28:27     INFO -      Installing mozinstall.exe script to C:\slave\test\build\venv\Scripts
+17:28:27     INFO -      Installing moz_add_to_system-script.py script to C:\slave\test\build\venv\Scripts
+17:28:27     INFO -      Installing moz_add_to_system.exe script to C:\slave\test\build\venv\Scripts
+17:28:27     INFO -  Successfully installed mozinstall
+17:28:27     INFO -  Cleaning up...
+17:28:27     INFO - Return code: 0
+17:28:27     INFO - Installing psutil==0.7.1 into virtualenv C:\slave\test\build/venv
+17:28:27     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--pypi-url', 'http://repos/python/packages/', '--no-index', '--find-links', 'http://repos/python/packages/', 'psutil==0.7.1'] in C:\slave\test\build
+17:28:27     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --pypi-url http://repos/python/packages/ --no-index --find-links http://repos/python/packages/ psutil==0.7.1
+17:28:27     INFO -  Ignoring indexes: http://repos/python/packages/
+17:28:27     INFO -  Downloading/unpacking psutil==0.7.1
+17:28:27     INFO -    Running setup.py egg_info for package psutil
+17:28:27     INFO -  Installing collected packages: psutil
+17:28:27     INFO -    Running setup.py install for psutil
+17:28:27     INFO -      building '_psutil_mswindows' extension
+17:28:27     INFO -      error: Unable to find vcvarsall.bat
+17:28:27     INFO -      Complete output from command C:\slave\test\build\venv\Scripts\python.exe -c "import setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)" install --single-version-externally-managed --record c:\users\cltbld~1.t-w\appdata\local\temp\pip-2erzgc-record\install-record.txt --install-headers C:\slave\test\build\venv\include\site\python2.7:
+17:28:27     INFO -      running install
+17:28:27     INFO -  running build
+17:28:27     INFO -  running build_py
+17:28:27     INFO -  creating build
+17:28:27     INFO -  creating build\lib.win32-2.7
+17:28:27     INFO -  creating build\lib.win32-2.7\psutil
+17:28:27     INFO -  copying psutil\error.py -> build\lib.win32-2.7\psutil
+17:28:27     INFO -  copying psutil\_common.py -> build\lib.win32-2.7\psutil
+17:28:27     INFO -  copying psutil\_compat.py -> build\lib.win32-2.7\psutil
+17:28:27     INFO -  copying psutil\_error.py -> build\lib.win32-2.7\psutil
+17:28:27     INFO -  copying psutil\_psbsd.py -> build\lib.win32-2.7\psutil
+17:28:27     INFO -  copying psutil\_pslinux.py -> build\lib.win32-2.7\psutil
+17:28:27     INFO -  copying psutil\_psmswindows.py -> build\lib.win32-2.7\psutil
+17:28:27     INFO -  copying psutil\_psosx.py -> build\lib.win32-2.7\psutil
+17:28:27     INFO -  copying psutil\_psposix.py -> build\lib.win32-2.7\psutil
+17:28:27     INFO -  copying psutil\__init__.py -> build\lib.win32-2.7\psutil
+17:28:27     INFO -  running build_ext
+17:28:27     INFO -  building '_psutil_mswindows' extension
+17:28:27     INFO -  error: Unable to find vcvarsall.bat
+17:28:27     INFO -  ----------------------------------------
+17:28:27     INFO -  Command C:\slave\test\build\venv\Scripts\python.exe -c "import setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)" install --single-version-externally-managed --record c:\users\cltbld~1.t-w\appdata\local\temp\pip-2erzgc-record\install-record.txt --install-headers C:\slave\test\build\venv\include\site\python2.7 failed with error code 1
+17:28:27     INFO -  Storing complete log in C:\Users\cltbld.T-W864-IX-042\AppData\Roaming\pip\pip.log
+17:28:27     INFO - Return code: 1
+17:28:27  WARNING - Unable to install optional package psutil==0.7.1.
+17:28:27     INFO - Installing mozsystemmonitor==0.0.0 into virtualenv C:\slave\test\build/venv
+17:28:27     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--pypi-url', 'http://repos/python/packages/', '--no-index', '--find-links', 'http://repos/python/packages/', 'mozsystemmonitor==0.0.0'] in C:\slave\test\build
+17:28:27     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --pypi-url http://repos/python/packages/ --no-index --find-links http://repos/python/packages/ mozsystemmonitor==0.0.0
+17:28:28     INFO -  Ignoring indexes: http://repos/python/packages/
+17:28:28     INFO -  Downloading/unpacking mozsystemmonitor==0.0.0
+17:28:28     INFO -    Downloading mozsystemmonitor-0.0.tar.gz
+17:28:28     INFO -    Running setup.py egg_info for package mozsystemmonitor
+17:28:28     INFO -  Downloading/unpacking psutil>=0.7.1 (from mozsystemmonitor==0.0.0)
+17:28:28     INFO -    Running setup.py egg_info for package psutil
+17:28:28     INFO -  Installing collected packages: mozsystemmonitor, psutil
+17:28:28     INFO -    Running setup.py install for mozsystemmonitor
+17:28:28     INFO -    Running setup.py install for psutil
+17:28:28     INFO -      building '_psutil_mswindows' extension
+17:28:28     INFO -      error: Unable to find vcvarsall.bat
+17:28:28     INFO -      Complete output from command C:\slave\test\build\venv\Scripts\python.exe -c "import setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)" install --single-version-externally-managed --record c:\users\cltbld~1.t-w\appdata\local\temp\pip-j_yw3b-record\install-record.txt --install-headers C:\slave\test\build\venv\include\site\python2.7:
+17:28:28     INFO -      running install
+17:28:28     INFO -  running build
+17:28:28     INFO -  running build_py
+17:28:28     INFO -  running build_ext
+17:28:28     INFO -  building '_psutil_mswindows' extension
+17:28:28     INFO -  error: Unable to find vcvarsall.bat
+17:28:28     INFO -  ----------------------------------------
+17:28:28     INFO -  Command C:\slave\test\build\venv\Scripts\python.exe -c "import setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)" install --single-version-externally-managed --record c:\users\cltbld~1.t-w\appdata\local\temp\pip-j_yw3b-record\install-record.txt --install-headers C:\slave\test\build\venv\include\site\python2.7 failed with error code 1
+17:28:28     INFO -  Storing complete log in C:\Users\cltbld.T-W864-IX-042\AppData\Roaming\pip\pip.log
+17:28:28     INFO - Return code: 1
+17:28:28  WARNING - Unable to install optional package mozsystemmonitor==0.0.0.
+17:28:28     INFO - Done creating virtualenv C:\slave\test\build/venv.
+17:28:28     INFO - Getting output from command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'freeze']
+17:28:28     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip freeze
+17:28:28     INFO - Reading from file tmpfile_stdout
+17:28:28     INFO - Using _rmtree_windows ...
+17:28:28     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+17:28:28     INFO - Using _rmtree_windows ...
+17:28:28     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+17:28:28     INFO - Current package versions:
+17:28:28     INFO -   PyYAML == 3.10
+17:28:28     INFO -   oauth2 == 1.5.211
+17:28:28     INFO -   mozInstall == 1.6
+17:28:28     INFO -   mozlog == 1.2
+17:28:28     INFO -   mozfile == 0.9
+17:28:28     INFO -   mozprocess == 0.8
+17:28:28     INFO -   distribute == 0.6.14
+17:28:28     INFO -   talos == 0.0
+17:28:28     INFO -   mozhttpd == 0.5
+17:28:28     INFO -   mozsystemmonitor == 0.0
+17:28:28     INFO -   mozdevice == 0.19
+17:28:28     INFO -   mozinfo == 0.4
+17:28:28     INFO -   mozcrash == 0.5
+17:28:28     INFO -   datazilla == 1.4
+17:28:28     INFO -   pywin32 == 216
+17:28:28     INFO -   httplib2 == 0.7.4
+17:28:28     INFO - Running post-action listener: _resource_record_post_action
+17:28:28     INFO - Running post-action listener: _start_resource_monitoring
+17:28:28     INFO - Starting resource monitoring.
+17:28:28     INFO - #####
+17:28:28     INFO - ##### Running install step.
+17:28:28     INFO - #####
+17:28:28     INFO - Running pre-action listener: _resource_record_pre_action
+17:28:28     INFO - Running main action method: install
+17:28:28     INFO - Getting output from command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'freeze']
+17:28:28     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip freeze
+17:28:28     INFO - Reading from file tmpfile_stdout
+17:28:28     INFO - Using _rmtree_windows ...
+17:28:28     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+17:28:28     INFO - Using _rmtree_windows ...
+17:28:28     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+17:28:28     INFO - Detecting whether we're running mozinstall >=1.0...
+17:28:28     INFO - Getting output from command: ['C:\\slave\\test\\build/venv/scripts/python', 'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py', '-h']
+17:28:28     INFO - Copy/paste: C:\slave\test\build/venv/scripts/python C:\slave\test\build/venv/scripts/mozinstall-script.py -h
+17:28:29     INFO - Reading from file tmpfile_stdout
+17:28:29     INFO - Output received:
+17:28:29     INFO -  Usage: mozinstall-script.py [options] installer
+17:28:29     INFO -  Options:
+17:28:29     INFO -    -h, --help            show this help message and exit
+17:28:29     INFO -    -d DEST, --destination=DEST
+17:28:29     INFO -                          Directory to install application into. [default:
+17:28:29     INFO -                          "C:\slave\test"]
+17:28:29     INFO -    --app=APP             Application being installed. [default: firefox]
+17:28:29     INFO - Using _rmtree_windows ...
+17:28:29     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+17:28:29     INFO - Using _rmtree_windows ...
+17:28:29     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+17:28:29     INFO - mkdir: C:\slave\test\build\application
+17:28:29     INFO - Getting output from command: ['C:\\slave\\test\\build/venv/scripts/python', 'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py', 'C:\\slave\\test\\build\\firefox-26.0a1.en-US.win32.zip', '--destination', 'C:\\slave\\test\\build\\application']
+17:28:29     INFO - Copy/paste: C:\slave\test\build/venv/scripts/python C:\slave\test\build/venv/scripts/mozinstall-script.py C:\slave\test\build\firefox-26.0a1.en-US.win32.zip --destination C:\slave\test\build\application
+17:28:29     INFO - Reading from file tmpfile_stdout
+17:28:29     INFO - Output received:
+17:28:29     INFO -  C:\slave\test\build\application\firefox\firefox.exe
+17:28:29     INFO - Using _rmtree_windows ...
+17:28:29     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+17:28:29     INFO - Using _rmtree_windows ...
+17:28:29     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x022C18D0>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+17:28:29     INFO - Running post-action listener: _resource_record_post_action
+17:28:29     INFO - #####
+17:28:29     INFO - ##### Running run-tests step.
+17:28:29     INFO - #####
+17:28:29     INFO - Running pre-action listener: _resource_record_pre_action
+17:28:29     INFO - Running main action method: run_tests
+17:28:29     INFO - Triggering Metro Browser Immersive Mode
+17:28:29     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\python', '--version']
+17:28:29     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\python --version
+17:28:29     INFO -  Python 2.7.3
+17:28:29     INFO - Return code: 0
+17:28:29     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\talos', '--noisy', '--debug', '-v', '--executablePath', 'C:\\slave\\test\\build\\application\\firefox\\firefox', '--title', 'T-W864-IX-042', '--symbolsPath', 'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.crashreporter-symbols.zip', '--activeTests', u'tsvgr:tsvgr_opacity', '--results_url', 'http://graphs.mozilla.org/server/collect.cgi', '--output', 'talos.yml', '--branchName', 'Cedar', '--datazilla-url', 'https://datazilla.mozilla.org/talos', '--metro-immersive-path', 'C:\\slave\\test\\build\\tests\\bin\\metrotestharness.exe', u'--filter', u'ignore_first:5', u'--filter', u'median', '--webServer', 'localhost'] in C:\slave\test\build
+17:28:29     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\talos --noisy --debug -v --executablePath C:\slave\test\build\application\firefox\firefox --title T-W864-IX-042 --symbolsPath http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.crashreporter-symbols.zip --activeTests tsvgr:tsvgr_opacity --results_url http://graphs.mozilla.org/server/collect.cgi --output talos.yml --branchName Cedar --datazilla-url https://datazilla.mozilla.org/talos --metro-immersive-path C:\slave\test\build\tests\bin\metrotestharness.exe --filter ignore_first:5 --filter median --webServer localhost
+17:28:30     INFO -  DEBUG : using testdate: 1378945710
+17:28:30     INFO -  DEBUG : actual date: 1378945710
+17:28:30     INFO -  INFO : browserInfo: 'C:\slave\test\build\tests\bin\application.ini' does not exist
+17:28:30     INFO -   - outputName = talos.yml
+17:28:30     INFO -  basetest:
+17:28:30     INFO -    cycles: 1
+17:28:30     INFO -    linux_counters: []
+17:28:30     INFO -    mac_counters: []
+17:28:30     INFO -    profile_path: ${talos}/base_profile
+17:28:30     INFO -    resolution: 1
+17:28:30     INFO -    responsiveness: false
+17:28:30     INFO -    rss: false
+17:28:30     INFO -    shutdown: false
+17:28:30     INFO -    timeout: 3600
+17:28:30     INFO -    tpchrome: true
+17:28:30     INFO -    tpcycles: 10
+17:28:30     INFO -    tploadaboutblank: false
+17:28:30     INFO -    tpmozafterpaint: false
+17:28:30     INFO -    tpnoisy: true
+17:28:30     INFO -    tppagecycles: 1
+17:28:30     INFO -    tprender: false
+17:28:30     INFO -    w7_counters: []
+17:28:30     INFO -    win_counters: []
+17:28:30     INFO -    xperf_counters: []
+17:28:30     INFO -  bcontroller_config: ${talos}/bcontroller.yml
+17:28:30     INFO -  branch_name: Cedar
+17:28:30     INFO -  browser_log: browser_output.txt
+17:28:30     INFO -  browser_path: C:\slave\test\build\application\firefox\firefox
+17:28:30     INFO -  browser_wait: 5
+17:28:30     INFO -  buildid: testbuildid
+17:28:30     INFO -  datazilla_urls:
+17:28:30     INFO -  - https://datazilla.mozilla.org/talos
+17:28:30     INFO -  develop: false
+17:28:30     INFO -  deviceport: 20701
+17:28:30     INFO -  dirs: {}
+17:28:30     INFO -  env:
+17:28:30     INFO -    NO_EM_RESTART: '1'
+17:28:30     INFO -  error_filename: C:\slave\test\build\browser_failures.txt
+17:28:30     INFO -  extensions:
+17:28:30     INFO -  - ${talos}/pageloader
+17:28:30     INFO -  extra_args: ''
+17:28:30     INFO -  filters:
+17:28:30     INFO -  - - ignore_first
+17:28:30     INFO -    - - 5
+17:28:30     INFO -  - - median
+17:28:30     INFO -    - []
+17:28:30     INFO -  immersive_mode_path: C:\slave\test\build\tests\bin\metrotestharness.exe
+17:28:30     INFO -  init_url: http://localhost/getInfo.html
+17:28:30     INFO -  preferences:
+17:28:30     INFO -    app.update.enabled: false
+17:28:30     INFO -    browser.EULA.override: true
+17:28:30     INFO -    browser.bookmarks.max_backups: 0
+17:28:30     INFO -    browser.cache.disk.smart_size.enabled: false
+17:28:30     INFO -    browser.cache.disk.smart_size.first_run: false
+17:28:30     INFO -    browser.chrome.dynamictoolbar: false
+17:28:30     INFO -    browser.display.overlaynavbuttons: false
+17:28:30     INFO -    browser.dom.window.dump.enabled: true
+17:28:30     INFO -    browser.link.open_newwindow: 2
+17:28:30     INFO -    browser.safebrowsing.gethashURL: http://127.0.0.1/safebrowsing-dummy/gethash
+17:28:30     INFO -    browser.safebrowsing.keyURL: http://127.0.0.1/safebrowsing-dummy/newkey
+17:28:30     INFO -    browser.safebrowsing.updateURL: http://127.0.0.1/safebrowsing-dummy/update
+17:28:30     INFO -    browser.shell.checkDefaultBrowser: false
+17:28:30     INFO -    browser.warnOnQuit: false
+17:28:30     INFO -    dom.allow_scripts_to_close_windows: true
+17:28:30     INFO -    dom.disable_open_during_load: false
+17:28:30     INFO -    dom.disable_window_flip: true
+17:28:30     INFO -    dom.disable_window_move_resize: true
+17:28:30     INFO -    dom.max_chrome_script_run_time: 0
+17:28:30     INFO -    dom.max_script_run_time: 0
+17:28:30     INFO -    extensions.autoDisableScopes: 10
+17:28:30     INFO -    extensions.blocklist.enabled: false
+17:28:30     INFO -    extensions.blocklist.url: http://127.0.0.1/extensions-dummy/blocklistURL
+17:28:30     INFO -    extensions.checkCompatibility: false
+17:28:30     INFO -    extensions.enabledScopes: 5
+17:28:30     INFO -    extensions.getAddons.get.url: http://127.0.0.1/extensions-dummy/repositoryGetURL
+17:28:30     INFO -    extensions.getAddons.getWithPerformance.url: http://127.0.0.1/extensions-dummy/repositoryGetWithPerformanceURL
+17:28:30     INFO -    extensions.getAddons.maxResults: 0
+17:28:30     INFO -    extensions.getAddons.search.browseURL: http://127.0.0.1/extensions-dummy/repositoryBrowseURL
+17:28:30     INFO -    extensions.getAddons.search.url: http://127.0.0.1/extensions-dummy/repositorySearchURL
+17:28:30     INFO -    extensions.hotfix.url: http://127.0.0.1/extensions-dummy/hotfixURL
+17:28:30     INFO -    extensions.update.background.url: http://127.0.0.1/extensions-dummy/updateBackgroundURL
+17:28:30     INFO -    extensions.update.enabled: false
+17:28:30     INFO -    extensions.update.notifyUser: false
+17:28:30     INFO -    extensions.update.url: http://127.0.0.1/extensions-dummy/updateURL
+17:28:30     INFO -    extensions.webservice.discoverURL: http://127.0.0.1/extensions-dummy/discoveryURL
+17:28:30     INFO -    hangmonitor.timeout: 0
+17:28:30     INFO -    network.proxy.http: localhost
+17:28:30     INFO -    network.proxy.http_port: 80
+17:28:30     INFO -    network.proxy.type: 1
+17:28:30     INFO -    plugins.update.url: http://127.0.0.1/plugins-dummy/updateCheckURL
+17:28:30     INFO -    security.enable_java: false
+17:28:30     INFO -    security.fileuri.strict_origin_policy: false
+17:28:30     INFO -    security.turn_off_all_security_so_that_viruses_can_take_over_this_computer: true
+17:28:30     INFO -    toolkit.telemetry.notifiedOptOut: 999
+17:28:30     INFO -    toolkit.telemetry.prompted: 999
+17:28:30     INFO -  remote: false
+17:28:30     INFO -  results_urls:
+17:28:30     INFO -  - http://graphs.mozilla.org/server/collect.cgi
+17:28:30     INFO -  symbols_path: http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.crashreporter-symbols.zip
+17:28:30     INFO -  test_timeout: 1200
+17:28:30     INFO -  tests:
+17:28:30     INFO -  - name: tsvgr
+17:28:30     INFO -    preferences:
+17:28:30     INFO -      layout.frame_rate: 10000
+17:28:30     INFO -    tpcycles: 1
+17:28:30     INFO -    tpmanifest: ${talos}/page_load_test/svg/svg.manifest
+17:28:30     INFO -    tppagecycles: 25
+17:28:30     INFO -  - filters:
+17:28:30     INFO -    - - ignore_first
+17:28:30     INFO -      - - 5
+17:28:30     INFO -    - - median
+17:28:30     INFO -      - []
+17:28:30     INFO -    name: tsvgr_opacity
+17:28:30     INFO -    tpcycles: 1
+17:28:30     INFO -    tpmanifest: ${talos}/page_load_test/svg_opacity/svg_opacity.manifest
+17:28:30     INFO -    tppagecycles: 25
+17:28:30     INFO -  title: T-W864-IX-042
+17:28:30     INFO -  webserver: localhost
+17:28:30     INFO -  T-W864-IX-042:
+17:28:30     INFO -         Started Wed, 11 Sep 2013 17:28:30
+17:28:30     INFO -  Running test tsvgr:
+17:28:30     INFO -         Started Wed, 11 Sep 2013 17:28:30
+17:28:30     INFO -  DEBUG : operating with platform_type : w8_
+17:28:30     INFO -  DEBUG : created profile
+17:28:34     INFO -  DEBUG : initialized metrotestharness.exe
+17:28:39     INFO -  DEBUG : command line: '"C:\slave\test\build\tests\bin\metrotestharness.exe" -firefoxpath C:\slave\test\build\application\firefox\firefox.exe -profile c:\\\users\\\cltbld~1.t-w\\\appdata\\\local\\\temp\\\tmphpndnp\\\profile -tp file:\C:\slave\test\build\venv\lib\site-packages\talos\page_load_test\svg\svg.manifest -tpchrome -tpnoisy -tpcycles 1 -tppagecycles 25'
+17:28:45     INFO -  INFO : INFO | metrotestharness.exe | Launching browser...
+17:28:45     INFO -  INFO | metrotestharness.exe | App model id='E4CFE2E6B75AA3A3'
+17:28:45     INFO -  INFO | metrotestharness.exe | Harness process id: 1368
+17:28:45     INFO -  INFO | metrotestharness.exe | Using bin path: 'C:\slave\test\build\application\firefox\firefox.exe'
+17:28:45     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to: 'C:\slave\test\build\application\firefox\tests.ini'
+17:28:45     INFO -  INFO | metrotestharness.exe | Browser command line args: 'C:\slave\test\build\application\firefox\firefox.exe -profile c:\\\users\\\cltbld~1.t-w\\\appdata\\\local\\\temp\\\tmphpndnp\\\profile -tp file:\C:\slave\test\build\venv\lib\site-packages\talos\page_load_test\svg\svg.manifest -tpchrome -tpnoisy -tpcycles 1 -tppagecycles 25'
+17:28:45     INFO -  INFO | metrotestharness.exe | Activation succeeded.
+17:28:45     INFO -  INFO | metrotestharness.exe | METRO_BROWSER_PROCESS=984
+17:28:45     INFO -  INFO | metrotestharness.exe | Waiting on child process...
+17:29:01     INFO -  INFO : XRE_MetroCoreApplicationRun: IsMainThread:0 ThreadId:878
+17:29:01     INFO -  mozilla::widget::winrt::FrameworkView::FrameworkView
+17:29:01     INFO -  mozilla::widget::winrt::MetroApp::CreateView
+17:29:01     INFO -  mozilla::widget::winrt::FrameworkView::Initialize
+17:29:01     INFO -  mozilla::widget::winrt::FrameworkView::SetWindow
+17:29:01     INFO -  mozilla::widget::winrt::FrameworkView::SetDpi
+17:29:01     INFO -  mozilla::widget::winrt::FrameworkView::OnActivated
+17:29:01     INFO -  Activation argument kind: Launch
+17:29:01     INFO -  mozilla::widget::winrt::FrameworkView::Run
+17:29:01     INFO -  mozilla::widget::winrt::MetroApp::Run: IsMainThread:0 ThreadId:F98
+17:29:01     INFO -  XPCOM startup initialization began
+17:29:01     INFO -  MetroAppShell::Init
+17:29:01     INFO -  MetroWidget::Create
+17:29:01     INFO -  eWindowType_invisible window requested, this doesn't actually exist!
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  args.useBrowserChrome and is isImmersive() are true
+17:29:01     INFO -  MetroWidget::Create
+17:29:01     INFO -  mozilla::widget::winrt::MetroApp::SetBaseWidget: IsMainThread:1 ThreadId:F98
+17:29:01     INFO -  mozilla::widget::winrt::FrameworkView::SetWidget
+17:29:01     INFO -  MetroWidget::FindMetroWindow
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  made it to line after: cmdLine.preventDefault = true;
+17:29:01     INFO -  MetroWidget::Create
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  ### Content.js loaded
+17:29:01     INFO -  ### FormHelper.js loaded
+17:29:01     INFO -  ### SelectionPrototype.js loaded
+17:29:01     INFO -  ### SelectionHandler.js loaded
+17:29:01     INFO -  ### ContextMenuHandler.js loaded
+17:29:01     INFO -  ### FindHandler.js loaded
+17:29:01     INFO -  ### ConsoleAPIObserver.js loaded
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  ### Content.js loaded
+17:29:01     INFO -  ### FormHelper.js loaded
+17:29:01     INFO -  ### SelectionPrototype.js loaded
+17:29:01     INFO -  ### SelectionHandler.js loaded
+17:29:01     INFO -  ### ContextMenuHandler.js loaded
+17:29:01     INFO -  ### FindHandler.js loaded
+17:29:01     INFO -  ### ConsoleAPIObserver.js loaded
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  MetroAppShell::Run
+17:29:01     INFO -  mozilla::widget::winrt::FrameworkView::ActivateView
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  mozilla::widget::winrt::MetroInput::MetroInput
+17:29:01     INFO -  mozilla::widget::winrt::FrameworkView::AddEventHandlers hr=0
+17:29:01     INFO -  mozilla::widget::winrt::FrameworkView::SetupContracts
+17:29:01     INFO -  * delay load started...
+17:29:01     INFO -  * delay load complete.
+17:29:01     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  JLUND done waiting 5 seconds...
+17:29:01     INFO -  JLUND isImmersive(): true
+17:29:01     INFO -  JLUND toplevelwin: [xpconnect wrapped nsISupports]
+17:29:01     INFO -  JLUND toplevelwin wrappedJSObject: [object Object]
+17:29:01     INFO -  ### Content.js loaded
+17:29:01     INFO -  ### FormHelper.js loaded
+17:29:01     INFO -  ### SelectionPrototype.js loaded
+17:29:01     INFO -  ### SelectionHandler.js loaded
+17:29:01     INFO -  ### ContextMenuHandler.js loaded
+17:29:01     INFO -  ### FindHandler.js loaded
+17:29:01     INFO -  ### ConsoleAPIObserver.js loaded
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  JLUND waiting 5 seconds...
+17:29:01     INFO -  RSS: Main: 99704832
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:01     INFO -  * delay load started...
+17:29:01     INFO -  * delay load complete.
+17:29:01     INFO -  RSS: Main: 114139136
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:01     INFO -  RSS: Main: 114733056
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:01     INFO -  RSS: Main: 115384320
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:01     INFO -  RSS: Main: 114483200
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:01     INFO -  RSS: Main: 114663424
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:01     INFO -  RSS: Main: 114794496
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:01     INFO -  RSS: Main: 114806784
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:01     INFO -  RSS: Main: 114749440
+17:29:01     INFO -  MetroWidget::GetDPI
+17:29:01     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:01     INFO -  R
+17:29:23     INFO -  INFO : SS: Main: 115380224
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 114946048
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 115597312
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 115359744
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 115273728
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 115490816
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 115707904
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 115802112
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 116391936
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 116387840
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 116199424
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 115888128
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 116322304
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 116162560
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 116178944
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 116563968
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+17:29:23     INFO -  RSS: Main: 116441088
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:23     INFO -  RSS: Main: 122658816
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:23     INFO -  RSS: Main: 122847232
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:23     INFO -  RSS: Main: 122978304
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:23     INFO -  RSS: Main: 123154432
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:23     INFO -  RSS: Main: 123379712
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:23     INFO -  RSS: Main: 123363328
+17:29:23     INFO -  MetroWidget::GetDPI
+17:29:23     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/composite-scale.sv
+17:29:31     INFO -  INFO : g (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123392000
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123408384
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123359232
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123359232
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123367424
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123355136
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123359232
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123367424
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123359232
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123351040
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123400192
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123543552
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123531264
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123613184
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123797504
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123817984
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123822080
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123858944
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+17:29:31     INFO -  RSS: Main: 123781120
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:31     INFO -  RSS: Main: 123895808
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:31     INFO -  RSS: Main: 123867136
+17:29:31     INFO -  MetroWidget::GetDPI
+17:29:31     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:31     INFO -  RSS: Main: 12392
+17:29:41     INFO -  INFO : 8576
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123867136
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123887616
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123858944
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123899904
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123957248
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123908096
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123908096
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123867136
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123920384
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123850752
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123899904
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123858944
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123932672
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 123871232
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 119738368
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 118710272
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 119005184
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 119209984
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 119697408
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:41     INFO -  RSS: Main: 119713792
+17:29:41     INFO -  MetroWidget::GetDPI
+17:29:41     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite
+17:29:50     INFO -  INFO : -scale-rotate.svg)
+17:29:50     INFO -  RSS: Main: 117878784
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+17:29:50     INFO -  RSS: Main: 118472704
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 118452224
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 118439936
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 120696832
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 120696832
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 120737792
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 120741888
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 119709696
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 119803904
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 119713792
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 119721984
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 119521280
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 119451648
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 119451648
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 119496704
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 119558144
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 119562240
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 119513088
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 119492608
+17:29:50     INFO -  MetroWidget::GetDPI
+17:29:50     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:29:50     INFO -  RSS: Main: 11
+17:30:01     INFO -  INFO : 9627776
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:30:01     INFO -  RSS: Main: 119623680
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:30:01     INFO -  RSS: Main: 119701504
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:30:01     INFO -  RSS: Main: 119672832
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:30:01     INFO -  RSS: Main: 119615488
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:30:01     INFO -  RSS: Main: 119623680
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+17:30:01     INFO -  RSS: Main: 119660544
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 117882880
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 118247424
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 118026240
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 117993472
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 118038528
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 118095872
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 118030336
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 118128640
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 118145024
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 118190080
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 111083520
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 111046656
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 111046656
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 111013888
+17:30:01     INFO -  MetroWidget::GetDPI
+17:30:01     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:30:01     INFO -  RSS: Main: 111058944
+17:30:01     INFO -  MetroWi
+17:34:14     INFO -  INFO : dget::GetDPI
+17:34:14     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:34:14     INFO -  RSS: Main: 111194112
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:34:14     INFO -  RSS: Main: 111149056
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:34:14     INFO -  RSS: Main: 111144960
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:34:14     INFO -  RSS: Main: 111198208
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:34:14     INFO -  RSS: Main: 111149056
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:34:14     INFO -  RSS: Main: 111198208
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:34:14     INFO -  RSS: Main: 111185920
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:34:14     INFO -  RSS: Main: 111157248
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:34:14     INFO -  RSS: Main: 111153152
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+17:34:14     INFO -  RSS: Main: 111194112
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:34:14     INFO -  RSS: Main: 107454464
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:34:14     INFO -  RSS: Main: 109813760
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:34:14     INFO -  RSS: Main: 110505984
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:34:14     INFO -  RSS: Main: 110878720
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:34:14     INFO -  RSS: Main: 110854144
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:34:14     INFO -  RSS: Main: 111566848
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:34:14     INFO -  RSS: Main: 111579136
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:34:14     INFO -  RSS: Main: 111476736
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:34:14     INFO -  RSS: Main: 111800320
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:34:14     INFO -  RSS: Main: 111296512
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:34:14     INFO -  RSS: Main: 111726592
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:34:14     INFO -  RSS: Main: 112513024
+17:34:14     INFO -  MetroWidget::GetDPI
+17:34:14     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:34:14     INFO -  RSS: Main: 112
+17:41:54     INFO -  INFO : 418816
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:41:54     INFO -  RSS: Main: 112566272
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:41:54     INFO -  RSS: Main: 112312320
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:41:54     INFO -  RSS: Main: 112750592
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:41:54     INFO -  RSS: Main: 112652288
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:41:54     INFO -  RSS: Main: 112332800
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:41:54     INFO -  RSS: Main: 112750592
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:41:54     INFO -  RSS: Main: 112848896
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:41:54     INFO -  RSS: Main: 112427008
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:41:54     INFO -  RSS: Main: 112963584
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:41:54     INFO -  RSS: Main: 112955392
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:41:54     INFO -  RSS: Main: 112455680
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+17:41:54     INFO -  RSS: Main: 112959488
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+17:41:54     INFO -  RSS: Main: 112984064
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+17:41:54     INFO -  RSS: Main: 113053696
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+17:41:54     INFO -  RSS: Main: 113803264
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+17:41:54     INFO -  RSS: Main: 113053696
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+17:41:54     INFO -  RSS: Main: 113471488
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+17:41:54     INFO -  RSS: Main: 113672192
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+17:41:54     INFO -  RSS: Main: 113164288
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+17:41:54     INFO -  RSS: Main: 113750016
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+17:41:54     INFO -  RSS: Main: 114155520
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+17:41:54     INFO -  RSS: Main: 113553408
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+17:41:54     INFO -  RSS: Main: 114343936
+17:41:54     INFO -  MetroWidget::GetDPI
+17:41:54     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+17:41:54     INFO -  RSS: Main: 114282496
+17:41:54     INFO -  MetroWidget::GetD
+18:28:44     INFO -  INFO : INFO | metrotestharness.exe | Launching browser...
+18:28:44     INFO -  INFO | metrotestharness.exe | App model id='E4CFE2E6B75AA3A3'
+18:28:44     INFO -  INFO | metrotestharness.exe | Harness process id: 1368
+18:28:44     INFO -  INFO | metrotestharness.exe | Using bin path: 'C:\slave\test\build\application\firefox\firefox.exe'
+18:28:44     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to: 'C:\slave\test\build\application\firefox\tests.ini'
+18:28:44     INFO -  INFO | metrotestharness.exe | Browser command line args: 'C:\slave\test\build\application\firefox\firefox.exe -profile c:\\\users\\\cltbld~1.t-w\\\appdata\\\local\\\temp\\\tmphpndnp\\\profile -tp file:\C:\slave\test\build\venv\lib\site-packages\talos\page_load_test\svg\svg.manifest -tpchrome -tpnoisy -tpcycles 1 -tppagecycles 25'
+18:28:44     INFO -  INFO | metrotestharness.exe | Activation succeeded.
+18:28:44     INFO -  INFO | metrotestharness.exe | METRO_BROWSER_PROCESS=984
+18:28:44     INFO -  INFO | metrotestharness.exe | Waiting on child process...
+18:28:44     INFO -  XRE_MetroCoreApplicationRun: IsMainThread:0 ThreadId:878
+18:28:44     INFO -  mozilla::widget::winrt::FrameworkView::FrameworkView
+18:28:44     INFO -  mozilla::widget::winrt::MetroApp::CreateView
+18:28:44     INFO -  mozilla::widget::winrt::FrameworkView::Initialize
+18:28:44     INFO -  mozilla::widget::winrt::FrameworkView::SetWindow
+18:28:44     INFO -  mozilla::widget::winrt::FrameworkView::SetDpi
+18:28:44     INFO -  mozilla::widget::winrt::FrameworkView::OnActivated
+18:28:44     INFO -  Activation argument kind: Launch
+18:28:44     INFO -  mozilla::widget::winrt::FrameworkView::Run
+18:28:44     INFO -  mozilla::widget::winrt::MetroApp::Run: IsMainThread:0 ThreadId:F98
+18:28:44     INFO -  XPCOM startup initialization began
+18:28:44     INFO -  MetroAppShell::Init
+18:28:44     INFO -  MetroWidget::Create
+18:28:44     INFO -  eWindowType_invisible window requested, this doesn't actually exist!
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  args.useBrowserChrome and is isImmersive() are true
+18:28:44     INFO -  MetroWidget::Create
+18:28:44     INFO -  mozilla::widget::winrt::MetroApp::SetBaseWidget: IsMainThread:1 ThreadId:F98
+18:28:44     INFO -  mozilla::widget::winrt::FrameworkView::SetWidget
+18:28:44     INFO -  MetroWidget::FindMetroWindow
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  made it to line after: cmdLine.preventDefault = true;
+18:28:44     INFO -  MetroWidget::Create
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  ### Content.js loaded
+18:28:44     INFO -  ### FormHelper.js loaded
+18:28:44     INFO -  ### SelectionPrototype.js loaded
+18:28:44     INFO -  ### SelectionHandler.js loaded
+18:28:44     INFO -  ### ContextMenuHandler.js loaded
+18:28:44     INFO -  ### FindHandler.js loaded
+18:28:44     INFO -  ### ConsoleAPIObserver.js loaded
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  ### Content.js loaded
+18:28:44     INFO -  ### FormHelper.js loaded
+18:28:44     INFO -  ### SelectionPrototype.js loaded
+18:28:44     INFO -  ### SelectionHandler.js loaded
+18:28:44     INFO -  ### ContextMenuHandler.js loaded
+18:28:44     INFO -  ### FindHandler.js loaded
+18:28:44     INFO -  ### ConsoleAPIObserver.js loaded
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  MetroAppShell::Run
+18:28:44     INFO -  mozilla::widget::winrt::FrameworkView::ActivateView
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  mozilla::widget::winrt::MetroInput::MetroInput
+18:28:44     INFO -  mozilla::widget::winrt::FrameworkView::AddEventHandlers hr=0
+18:28:44     INFO -  mozilla::widget::winrt::FrameworkView::SetupContracts
+18:28:44     INFO -  * delay load started...
+18:28:44     INFO -  * delay load complete.
+18:28:44     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  JLUND done waiting 5 seconds...
+18:28:44     INFO -  JLUND isImmersive(): true
+18:28:44     INFO -  JLUND toplevelwin: [xpconnect wrapped nsISupports]
+18:28:44     INFO -  JLUND toplevelwin wrappedJSObject: [object Object]
+18:28:44     INFO -  ### Content.js loaded
+18:28:44     INFO -  ### FormHelper.js loaded
+18:28:44     INFO -  ### SelectionPrototype.js loaded
+18:28:44     INFO -  ### SelectionHandler.js loaded
+18:28:44     INFO -  ### ContextMenuHandler.js loaded
+18:28:44     INFO -  ### FindHandler.js loaded
+18:28:44     INFO -  ### ConsoleAPIObserver.js loaded
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  JLUND waiting 5 seconds...
+18:28:44     INFO -  RSS: Main: 99704832
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  * delay load started...
+18:28:44     INFO -  * delay load complete.
+18:28:44     INFO -  RSS: Main: 114139136
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 114733056
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 115384320
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 114483200
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 114663424
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 114794496
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 114806784
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 114749440
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 115380224
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 114946048
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 115597312
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 115359744
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 115273728
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 115490816
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 115707904
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 115802112
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 116391936
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 116387840
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 116199424
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 115888128
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 116322304
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 116162560
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 116178944
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 116563968
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg/gearflowers.svg (next: http://localhost/page_load_test/svg/composite-scale.svg)
+18:28:44     INFO -  RSS: Main: 116441088
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 122658816
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 122847232
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 122978304
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123154432
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123379712
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123363328
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123392000
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123408384
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123359232
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123359232
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123367424
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123355136
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123359232
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123367424
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123359232
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123351040
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123400192
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123543552
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123531264
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123613184
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123797504
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123817984
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123822080
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123858944
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg/composite-scale.svg (next: http://localhost/page_load_test/svg/composite-scale-opacity.svg)
+18:28:44     INFO -  RSS: Main: 123781120
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123895808
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123867136
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123928576
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123867136
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123887616
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123858944
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123899904
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123957248
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123908096
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123908096
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123867136
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123920384
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123850752
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123899904
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123858944
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123932672
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 123871232
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 119738368
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 118710272
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 119005184
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 119209984
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 119697408
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 119713792
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 117878784
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg/composite-scale-opacity.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate.svg)
+18:28:44     INFO -  RSS: Main: 118472704
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 118452224
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 118439936
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 120696832
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 120696832
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 120737792
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 120741888
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119709696
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119803904
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119713792
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119721984
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119521280
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119451648
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119451648
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119496704
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119558144
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119562240
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119513088
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119492608
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119627776
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119623680
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119701504
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119672832
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119615488
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119623680
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg/composite-scale-rotate.svg (next: http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg)
+18:28:44     INFO -  RSS: Main: 119660544
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 117882880
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 118247424
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 118026240
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 117993472
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 118038528
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 118095872
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 118030336
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 118128640
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 118145024
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 118190080
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111083520
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111046656
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111046656
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111013888
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111058944
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111194112
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111149056
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111144960
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111198208
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111149056
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111198208
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111185920
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111157248
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111153152
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svg/hixie-001.xml)
+18:28:44     INFO -  RSS: Main: 111194112
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 107454464
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 109813760
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 110505984
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 110878720
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 110854144
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 111566848
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 111579136
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 111476736
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 111800320
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 111296512
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 111726592
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112513024
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112418816
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112566272
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112312320
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112750592
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112652288
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112332800
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112750592
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112848896
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112427008
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112963584
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112955392
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112455680
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg/hixie-001.xml (next: http://localhost/page_load_test/svg/hixie-002.xml)
+18:28:44     INFO -  RSS: Main: 112959488
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+18:28:44     INFO -  RSS: Main: 112984064
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+18:28:44     INFO -  RSS: Main: 113053696
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+18:28:44     INFO -  RSS: Main: 113803264
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+18:28:44     INFO -  RSS: Main: 113053696
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+18:28:44     INFO -  RSS: Main: 113471488
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+18:28:44     INFO -  RSS: Main: 113672192
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+18:28:44     INFO -  RSS: Main: 113164288
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+18:28:44     INFO -  RSS: Main: 113750016
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+18:28:44     INFO -  RSS: Main: 114155520
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+18:28:44     INFO -  RSS: Main: 113553408
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+18:28:44     INFO -  RSS: Main: 114343936
+18:28:44     INFO -  MetroWidget::GetDPI
+18:28:44     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg/hixie-002.xml (next: http://localhost/page_load_test/svg/hixie-003.xml)
+18:28:44     INFO -  RSS: Main: 114282496
+18:28:44     INFO -  MetroWidget::GetD
+18:28:44     INFO -  DEBUG : Terminating: metrotestharness.exe, plugin-container, crashreporter, dwwim
+18:28:44    ERROR -  DEBUG : unknown error during cleanup: Traceback (most recent call last):
+18:28:44     INFO -    File "C:\slave\test\build\venv\lib\site-packages\talos\ttest.py", line 227, in testCleanup
+18:28:44     INFO -      self.cleanupProfile(temp_dir)
+18:28:44     INFO -    File "C:\slave\test\build\venv\lib\site-packages\talos\ttest.py", line 123, in cleanupProfile
+18:28:44     INFO -      self._hostproc.removeDirectory(dir)
+18:28:44     INFO -    File "C:\slave\test\build\venv\lib\site-packages\talos\ffprocess.py", line 157, in removeDirectory
+18:28:44     INFO -      shutil.rmtree(dir)
+18:28:44     INFO -    File "c:\mozilla-build\python27\Lib\shutil.py", line 245, in rmtree
+18:28:44     INFO -      rmtree(fullname, ignore_errors, onerror)
+18:28:44     INFO -    File "c:\mozilla-build\python27\Lib\shutil.py", line 250, in rmtree
+18:28:44     INFO -      onerror(os.remove, fullname, sys.exc_info())
+18:28:44     INFO -    File "c:\mozilla-build\python27\Lib\shutil.py", line 248, in rmtree
+18:28:44     INFO -      os.remove(fullname)
+18:28:44     INFO -  WindowsError: [Error 32] The process cannot access the file because it is being used by another process: 'c:\\users\\cltbld~1.t-w\\appdata\\local\\temp\\tmphpndnp\\profile\\cert8.db'
+18:28:44     INFO -     Screen width/height:1600/1200
+18:28:44     INFO -     colorDepth:24
+18:28:44     INFO -     Browser inner width/height: 1600/1200
+18:28:44     INFO -  browser_name:undefined
+18:28:44     INFO -  browser_version:26.0a1
+18:28:44     INFO -  buildID:20130910113552
+18:28:44     INFO -  Failed tsvgr:
+18:28:44     INFO -         Stopped Wed, 11 Sep 2013 18:28:44
+18:28:44    ERROR -  Traceback (most recent call last):
+18:28:44     INFO -    File "C:\slave\test\build\venv\lib\site-packages\talos\run_tests.py", line 285, in run_tests
+18:28:44     INFO -      talos_results.add(mytest.runTest(browser_config, test))
+18:28:44     INFO -    File "C:\slave\test\build\venv\lib\site-packages\talos\ttest.py", line 407, in runTest
+18:28:44 CRITICAL -      raise talosError("timeout exceeded")
+18:28:44 CRITICAL -  talosError: 'timeout exceeded'
+18:28:44    ERROR - Return code: 2
+18:28:44     INFO - Running post-action listener: _resource_record_post_action
+18:28:44     INFO - Running post-run listener: _resource_record_post_run
+18:28:44     INFO - Copying logs to upload dir...
+18:28:44     INFO - mkdir: C:\slave\test\build\upload\logs

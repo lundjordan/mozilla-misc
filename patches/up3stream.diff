@@ -1,0 +1,1801 @@
+diff --git a/.hgignore b/.hgignore
+index e43713f..738648e 100644
+--- a/.hgignore
++++ b/.hgignore
+@@ -10,4 +10,6 @@ test.py
+ .coverage
+ coverage
+ htmlcov
+-venv
+\ No newline at end of file
++venv
++build/
++logs/
+diff --git a/.hgtags b/.hgtags
+index 8dc9b71..2dfe492 100644
+--- a/.hgtags
++++ b/.hgtags
+@@ -436,110 +436,3 @@ cd03a076e2962631e9900d9777e294f98685c09e FENNEC_14_0b1_RELEASE
+ 71c11a0213467ad3eedce407b49da6ee9aba3676 FENNEC_14_0b1_BUILD3
+ c8702015551fe8bc2bc7242bb345929df87aab65 THUNDERBIRD_13_0b2_RELEASE
+ c8702015551fe8bc2bc7242bb345929df87aab65 THUNDERBIRD_13_0b2_BUILD1
+-88494bc5d1169e897f9a65de3039a226582e7e0f FENNEC_13_0b2_RELEASE
+-5aa91ea06829f0e62b986440697f09a7bc52fbde FENNEC_13_0b2_RELEASE
+-5aa91ea06829f0e62b986440697f09a7bc52fbde FENNEC_13_0b2_BUILD2
+-261f3bca84ea876343845dc419e4dd56b3724d07 FENNEC_14_0b2_RELEASE
+-261f3bca84ea876343845dc419e4dd56b3724d07 FENNEC_14_0b2_BUILD1
+-5aa91ea06829f0e62b986440697f09a7bc52fbde FENNEC_13_0b2_RELEASE
+-ceaafe1bc20217b680735df6009df8d2af4903dd FENNEC_13_0b2_RELEASE
+-ceaafe1bc20217b680735df6009df8d2af4903dd FENNEC_13_0b2_BUILD3
+-9ea715392db15663463243b138b53bb9569b9a4f FIREFOX_13_0b4_RELEASE
+-9ea715392db15663463243b138b53bb9569b9a4f FIREFOX_13_0b4_BUILD1
+-742f2e432c9e5f400f883ac84ec00e704ce7ab4f THUNDERBIRD_13_0b3_RELEASE
+-742f2e432c9e5f400f883ac84ec00e704ce7ab4f THUNDERBIRD_13_0b3_BUILD1
+-b6fc32476fc645770431c37f7900a9714a96efd5 FENNEC_14_0b3_RELEASE
+-b6fc32476fc645770431c37f7900a9714a96efd5 FENNEC_14_0b3_BUILD1
+-b6fc32476fc645770431c37f7900a9714a96efd5 FENNEC_14_0b3_RELEASE
+-e92f2c2af57c7f0127bb83477b146c91ce1b5ae2 FENNEC_14_0b3_RELEASE
+-b6fc32476fc645770431c37f7900a9714a96efd5 FENNEC_14_0b3_BUILD1
+-e92f2c2af57c7f0127bb83477b146c91ce1b5ae2 FENNEC_14_0b3_BUILD1
+-f4b578bd2e9dd3d38658a764fd3a492c9e6d8b71 FIREFOX_13_0b5_RELEASE
+-f4b578bd2e9dd3d38658a764fd3a492c9e6d8b71 FIREFOX_13_0b5_BUILD1
+-e92f2c2af57c7f0127bb83477b146c91ce1b5ae2 FENNEC_14_0b3_RELEASE
+-3d51cdbaf23ce973b46f5f145a9f0a07c38a3bc2 FENNEC_14_0b3_RELEASE
+-3d51cdbaf23ce973b46f5f145a9f0a07c38a3bc2 FENNEC_14_0b3_BUILD2
+-daf618bd1c648c6611282a4b3d0e43690184480b FIREFOX_13_0b6_RELEASE
+-daf618bd1c648c6611282a4b3d0e43690184480b FIREFOX_13_0b6_BUILD1
+-a4c0bdcb2e61add63e6515c8903a77e9e853bade THUNDERBIRD_13_0b4_RELEASE
+-a4c0bdcb2e61add63e6515c8903a77e9e853bade THUNDERBIRD_13_0b4_BUILD1
+-da465fd95ebd5fa915c933b9ef101eefcd1c05d1 FENNEC_14_0b4_RELEASE
+-da465fd95ebd5fa915c933b9ef101eefcd1c05d1 FENNEC_14_0b4_BUILD1
+-636e0f7b6ab6234ebc5aca284095d415c94fe1c5 FIREFOX_13_0b7_RELEASE
+-636e0f7b6ab6234ebc5aca284095d415c94fe1c5 FIREFOX_13_0b7_BUILD1
+-c4ebfb176a7b7450d7343b86465012a24ec4890e FENNEC_10_0_5esr_RELEASE
+-c4ebfb176a7b7450d7343b86465012a24ec4890e FENNEC_10_0_5esr_BUILD1
+-8b93b147015d7f863ee49f5a5cad075947c636e6 FIREFOX_10_0_5esr_RELEASE
+-8b93b147015d7f863ee49f5a5cad075947c636e6 FIREFOX_10_0_5esr_BUILD1
+-1f412f7a62a6bd02502a75c903108991b92dc880 THUNDERBIRD_10_0_5esr_RELEASE
+-1f412f7a62a6bd02502a75c903108991b92dc880 THUNDERBIRD_10_0_5esr_BUILD1
+-1f412f7a62a6bd02502a75c903108991b92dc880 THUNDERBIRD_10_0_5esr_RELEASE
+-08fc146aa26f033297eaff6d52b2e05db49c79e9 THUNDERBIRD_10_0_5esr_RELEASE
+-08fc146aa26f033297eaff6d52b2e05db49c79e9 THUNDERBIRD_10_0_5esr_BUILD2
+-08fc146aa26f033297eaff6d52b2e05db49c79e9 THUNDERBIRD_10_0_5esr_RELEASE
+-df6663ff9c19bfbe9b6394d6e7e2f0ec0bb1b469 THUNDERBIRD_10_0_5esr_RELEASE
+-df6663ff9c19bfbe9b6394d6e7e2f0ec0bb1b469 THUNDERBIRD_10_0_5esr_BUILD3
+-e1cac56ed8d5386f8d87042e90541cca51b2c8f0 FIREFOX_13_0_RELEASE
+-e1cac56ed8d5386f8d87042e90541cca51b2c8f0 FIREFOX_13_0_BUILD1
+-1f51de83973729ca4ff30a69e123e5e3f62b6fe5 THUNDERBIRD_13_0_RELEASE
+-1f51de83973729ca4ff30a69e123e5e3f62b6fe5 THUNDERBIRD_13_0_BUILD1
+-244adee59a2367b0dfc898ad6da919f4bb0d6a56 FENNEC_14_0b5_RELEASE
+-244adee59a2367b0dfc898ad6da919f4bb0d6a56 FENNEC_14_0b5_BUILD1
+-e71f75b55f2e81dca7ca1c38fcc1d7fd63511203 FIREFOX_14_0b6_RELEASE
+-e71f75b55f2e81dca7ca1c38fcc1d7fd63511203 FIREFOX_14_0b6_BUILD1
+-e71f75b55f2e81dca7ca1c38fcc1d7fd63511203 FIREFOX_14_0b6_RELEASE
+-329991348e1592aa971747ec4cab67c73a43252e FIREFOX_14_0b6_RELEASE
+-329991348e1592aa971747ec4cab67c73a43252e FIREFOX_14_0b6_BUILD2
+-cf99fe273c10d02005f0a05c6853ddd467b78af3 FENNEC_14_0b6_RELEASE
+-cf99fe273c10d02005f0a05c6853ddd467b78af3 FENNEC_14_0b6_BUILD1
+-7d490d0e3466d6254f619beafdff1c6454b0abb1 THUNDERBIRD_14.0b1_RELEASE
+-7d490d0e3466d6254f619beafdff1c6454b0abb1 THUNDERBIRD_14.0b1_BUILD1
+-7d490d0e3466d6254f619beafdff1c6454b0abb1 THUNDERBIRD_14.0b1_RELEASE
+-d704161da2927d6a9cca41dbefc16e13e663c70b THUNDERBIRD_14.0b1_RELEASE
+-7d490d0e3466d6254f619beafdff1c6454b0abb1 THUNDERBIRD_14.0b1_BUILD1
+-d704161da2927d6a9cca41dbefc16e13e663c70b THUNDERBIRD_14.0b1_BUILD1
+-d704161da2927d6a9cca41dbefc16e13e663c70b THUNDERBIRD_14.0b1_RELEASE
+-b3d934dd899169cb81db6f327be7671cfe8c356d THUNDERBIRD_14.0b1_RELEASE
+-d704161da2927d6a9cca41dbefc16e13e663c70b THUNDERBIRD_14.0b1_BUILD1
+-b3d934dd899169cb81db6f327be7671cfe8c356d THUNDERBIRD_14.0b1_BUILD1
+-b3d934dd899169cb81db6f327be7671cfe8c356d THUNDERBIRD_14.0b1_RELEASE
+-a59b03fb959f05c44febf82ee8b9eb2cfcf199be THUNDERBIRD_14.0b1_RELEASE
+-b3d934dd899169cb81db6f327be7671cfe8c356d THUNDERBIRD_14.0b1_BUILD1
+-a59b03fb959f05c44febf82ee8b9eb2cfcf199be THUNDERBIRD_14.0b1_BUILD1
+-0ae39c691f129279eaa83f31bee4e1187e47bcb5 THUNDERBIRD_14_0b1_RELEASE
+-0ae39c691f129279eaa83f31bee4e1187e47bcb5 THUNDERBIRD_14_0b1_BUILD2
+-0ae39c691f129279eaa83f31bee4e1187e47bcb5 THUNDERBIRD_14_0b1_RELEASE
+-12393ec7eec50dbf7061e56c4397c2e7f41a11be THUNDERBIRD_14_0b1_RELEASE
+-0ae39c691f129279eaa83f31bee4e1187e47bcb5 THUNDERBIRD_14_0b1_BUILD2
+-12393ec7eec50dbf7061e56c4397c2e7f41a11be THUNDERBIRD_14_0b1_BUILD2
+-fd74ca3e535ffbfc137d25eab83dfa4707b65d94 THUNDERBIRD_14_0b2_RELEASE
+-fd74ca3e535ffbfc137d25eab83dfa4707b65d94 THUNDERBIRD_14_0b2_BUILD1
+-bb192e19595cd3bc862564c3091632d2dabc3e5b FENNEC_14_0b7_RELEASE
+-bb192e19595cd3bc862564c3091632d2dabc3e5b FENNEC_14_0b7_BUILD1
+-a1c9d313d7c3b20f8f04d8ee792fe1608ef56f2b FIREFOX_14_0b7_RELEASE
+-a1c9d313d7c3b20f8f04d8ee792fe1608ef56f2b FIREFOX_14_0b7_BUILD1
+-bb192e19595cd3bc862564c3091632d2dabc3e5b FENNEC_14_0b7_RELEASE
+-647acea570ef969e22d9585acc9758fa0b5f502d FENNEC_14_0b7_RELEASE
+-647acea570ef969e22d9585acc9758fa0b5f502d FENNEC_14_0b7_BUILD2
+-ccb4ca535a3d74d3967002fccd272ae20155a482 FIREFOX_13_0_1_RELEASE
+-ccb4ca535a3d74d3967002fccd272ae20155a482 FIREFOX_13_0_1_BUILD1
+-647acea570ef969e22d9585acc9758fa0b5f502d FENNEC_14_0b7_RELEASE
+-65c9f774223cb6727b252483a4175ed962a7b6e3 FENNEC_14_0b7_RELEASE
+-65c9f774223cb6727b252483a4175ed962a7b6e3 FENNEC_14_0b7_BUILD3
+-9cecee370c088173ca5390ced858c2bc201951f7 THUNDERBIRD_13_0_1_RELEASE
+-9cecee370c088173ca5390ced858c2bc201951f7 THUNDERBIRD_13_0_1_BUILD1
+-4e22ad802360f275da73a106fc936e26c5f63416 FENNEC_14_0_RELEASE
+-4e22ad802360f275da73a106fc936e26c5f63416 FENNEC_14_0_BUILD1
+-4e22ad802360f275da73a106fc936e26c5f63416 FENNEC_14_0_BUILD1
+-22fa10ae91774203c8fa92212476c715d1720e72 FENNEC_14_0_BUILD1
+-4e22ad802360f275da73a106fc936e26c5f63416 FENNEC_14_0_RELEASE
+-22fa10ae91774203c8fa92212476c715d1720e72 FENNEC_14_0_RELEASE
+-26f31feb0f68cf22caead1a449fe997c05b7a85c FENNEC_14_0b8_RELEASE
+-26f31feb0f68cf22caead1a449fe997c05b7a85c FENNEC_14_0b8_BUILD1
+-affba543fff626a3e38b9bcaa9a53e0d237d746f FIREFOX_14_0b8_RELEASE
+-affba543fff626a3e38b9bcaa9a53e0d237d746f FIREFOX_14_0b8_BUILD1
+-bdf6d5b36425c1573e5825eb76d5e3461076a9c9 THUNDERBIRD_14_0b3_RELEASE
+-bdf6d5b36425c1573e5825eb76d5e3461076a9c9 THUNDERBIRD_14_0b3_BUILD1
+-26f31feb0f68cf22caead1a449fe997c05b7a85c FENNEC_14_0b8_RELEASE
+-14182a4b1bb49b28b66bb67038a5bcb02e69cb8a FENNEC_14_0b8_RELEASE
+-14182a4b1bb49b28b66bb67038a5bcb02e69cb8a FENNEC_14_0b8_BUILD2
+diff --git a/configs/multi_locale/release_mozilla-release_android-xul.json b/configs/multi_locale/release_mozilla-release_android-xul.json
+index 81558c8..278dfc0 100644
+--- a/configs/multi_locale/release_mozilla-release_android-xul.json
++++ b/configs/multi_locale/release_mozilla-release_android-xul.json
+@@ -7,7 +7,7 @@
+     "locales_dir": "mobile/xul/locales",
+     "ignore_locales": ["en-US", "multi"],
+     "repos": [{
+-        "repo": "http://hg.mozilla.org/releases/mozilla-beta",
++        "repo": "http://hg.mozilla.org/releases/mozilla-release",
+         "dest": "build"
+     },{
+         "repo": "http://hg.mozilla.org/build/buildbot-configs",
+@@ -23,9 +23,9 @@
+         "repo": "http://hg.mozilla.org/build/buildbot-configs",
+         "dest": "build/configs"
+     }],
+-    "hg_l10n_base": "http://hg.mozilla.org/releases/l10n/mozilla-beta",
++    "hg_l10n_base": "http://hg.mozilla.org/releases/l10n/mozilla-release",
+     "required_config_vars": ["tag_override"],
+-    "l10n_dir": "mozilla-beta",
++    "l10n_dir": "mozilla-release",
+     "env": {
+         "JAVA_HOME": "/tools/jdk",
+         "PATH": "%(PATH)s:/tools/jdk/bin"
+diff --git a/configs/multi_locale/release_mozilla-release_android.json b/configs/multi_locale/release_mozilla-release_android.json
+index 26fda91..bd2cdbd 100644
+--- a/configs/multi_locale/release_mozilla-release_android.json
++++ b/configs/multi_locale/release_mozilla-release_android.json
+@@ -7,7 +7,7 @@
+     "locales_dir": "mobile/android/locales",
+     "ignore_locales": ["en-US", "multi"],
+     "repos": [{
+-        "repo": "http://hg.mozilla.org/releases/mozilla-beta",
++        "repo": "http://hg.mozilla.org/releases/mozilla-release",
+         "dest": "build"
+     },{
+         "repo": "http://hg.mozilla.org/build/buildbot-configs",
+@@ -23,9 +23,9 @@
+         "repo": "http://hg.mozilla.org/build/buildbot-configs",
+         "dest": "build/configs"
+     }],
+-    "hg_l10n_base": "http://hg.mozilla.org/releases/l10n/mozilla-beta",
++    "hg_l10n_base": "http://hg.mozilla.org/releases/l10n/mozilla-release",
+     "required_config_vars": ["tag_override"],
+-    "l10n_dir": "mozilla-beta",
++    "l10n_dir": "mozilla-release",
+     "env": {
+         "JAVA_HOME": "/tools/jdk",
+         "PATH": "%(PATH)s:/tools/jdk/bin"
+diff --git a/configs/multi_locale/standalone_mozilla-central.py b/configs/multi_locale/standalone_mozilla-central.py
+deleted file mode 100644
+index 51671f1..0000000
+--- a/configs/multi_locale/standalone_mozilla-central.py
++++ /dev/null
+@@ -1,50 +0,0 @@
+-import os
+-# The name of the directory we'll pull our source into.
+-BUILD_DIR = "mozilla-central"
+-# This is everything that comes after http://hg.mozilla.org/
+-# e.g. "releases/mozilla-aurora"
+-REPO_PATH = "mozilla-central"
+-# This is where the l10n repos are (everything after http://hg.mozilla.org/)
+-# for mozilla-central, that's "l10n-central".
+-# For mozilla-aurora, that's "releases/l10n/mozilla-aurora"
+-L10N_REPO_PATH = "l10n-central"
+-# Currently this is assumed to be a subdirectory of your build dir
+-OBJDIR = "objdir-droid"
+-# Set this to mobile/xul for XUL Fennec
+-ANDROID_DIR = "mobile/android"
+-# Absolute path to your mozconfig.
+-# By default it looks at "./mozconfig"
+-MOZCONFIG = os.path.join(os.getcwd(), "mozconfig")
+-
+-config = {
+-    "work_dir": ".",
+-    "log_name": "multilocale",
+-    "objdir": OBJDIR,
+-    "locales_file": "%s/%s/locales/maemo-locales" % (BUILD_DIR, ANDROID_DIR),
+-    "locales_dir": "%s/locales" % ANDROID_DIR,
+-    "ignore_locales": ["en-US", "multi"],
+-    "repos": [{
+-        "repo": "http://hg.mozilla.org/%s" % REPO_PATH,
+-        "tag": "default",
+-        "dest": BUILD_DIR,
+-    }],
+-    "l10n_repos": [{
+-        "repo": "http://hg.mozilla.org/build/compare-locales",
+-        "tag": "RELEASE_AUTOMATION"
+-    }],
+-    "hg_l10n_base": "http://hg.mozilla.org/%s" % L10N_REPO_PATH,
+-    "hg_l10n_tag": "default",
+-    "l10n_dir": "l10n",
+-    "merge_locales": True,
+-    "mozilla_dir": BUILD_DIR,
+-    "mozconfig": MOZCONFIG,
+-    "default_actions": [
+-        "pull-locale-source",
+-        "build",
+-        "package-en-US",
+-        "backup-objdir",
+-        "restore-objdir",
+-        "add-locales",
+-        "package-multi",
+-    ],
+-}
+diff --git a/configs/partner_repacks/staging_release_mozilla-release_android.py b/configs/partner_repacks/staging_release_mozilla-release_android.py
+index a5450eb..b94cbb0 100644
+--- a/configs/partner_repacks/staging_release_mozilla-release_android.py
++++ b/configs/partner_repacks/staging_release_mozilla-release_android.py
+@@ -1,4 +1,4 @@
+-FTP_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++FTP_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ FTP_USER = "ffxbld"
+ FTP_SSH_KEY = "~/.ssh/ffxbld_dsa"
+ FTP_UPLOAD_BASE_DIR = "/pub/mozilla.org/mobile/candidates/%(version)s-candidates/build%(buildnum)d"
+diff --git a/configs/signing/android_mozilla-aurora.py b/configs/signing/android_mozilla-aurora.py
+index 135b68b..82a4513 100644
+--- a/configs/signing/android_mozilla-aurora.py
++++ b/configs/signing/android_mozilla-aurora.py
+@@ -1,8 +1,7 @@
+ #!/usr/bin/env python
+ 
+ ADDITIONAL_LOCALES = ["en-US", "multi"]
+-# override tag for all repos
+-TAG = None
++TAG = "default"
+ #AUS_SERVER = "dev-stage01.build.mozilla.org"
+ AUS_SERVER = "aus3-staging.mozilla.org"
+ #FTP_SERVER = "dev-stage01.build.mozilla.org"
+@@ -110,10 +109,8 @@ config = {
+     "repos": [{
+         "repo": "http://hg.mozilla.org/%(user_repo_override)s/tools",
+         "dest": "tools",
+-        "revision": "default",
+     },{
+         "repo": "http://hg.mozilla.org/%(user_repo_override)s/buildbot-configs",
+         "dest": "buildbot-configs",
+-        "revision": "production",
+     }],
+ }
+diff --git a/configs/signing/android_mozilla-beta.py b/configs/signing/android_mozilla-beta.py
+index 29680be..5a1ab3a 100644
+--- a/configs/signing/android_mozilla-beta.py
++++ b/configs/signing/android_mozilla-beta.py
+@@ -1,8 +1,7 @@
+ #!/usr/bin/env python
+ 
+ ADDITIONAL_LOCALES = ["en-US", "multi"]
+-# override tag for all repos
+-TAG = None
++TAG = "default"
+ #AUS_SERVER = "dev-stage01.build.mozilla.org"
+ AUS_SERVER = "aus3-staging.mozilla.org"
+ #FTP_SERVER = "dev-stage01.build.mozilla.org"
+@@ -46,7 +45,7 @@ config = {
+     "locales_file": "buildbot-configs/mozilla/l10n-changesets_mobile-beta.json",
+     "release_config_file": "buildbot-configs/mozilla/release-fennec-mozilla-beta.py",
+ 
+-    "platforms": ['android-xul', 'android'],
++    "platforms": ['android-xul'],
+     "update_platforms": [],
+     "update_platform_map": {
+         'android': 'Android_arm-eabi-gcc3',
+@@ -110,10 +109,8 @@ config = {
+     "repos": [{
+         "repo": "http://hg.mozilla.org/%(user_repo_override)s/tools",
+         "dest": "tools",
+-        "revision": "default",
+     },{
+         "repo": "http://hg.mozilla.org/%(user_repo_override)s/buildbot-configs",
+         "dest": "buildbot-configs",
+-        "revision": "production",
+     }],
+ }
+diff --git a/configs/signing/android_mozilla-esr10.py b/configs/signing/android_mozilla-esr10.py
+index d5266a0..8fe7d9e 100644
+--- a/configs/signing/android_mozilla-esr10.py
++++ b/configs/signing/android_mozilla-esr10.py
+@@ -1,8 +1,7 @@
+ #!/usr/bin/env python
+ 
+ LOCALES = ["en-US", "multi"]
+-# override tag for all repos
+-TAG = None
++TAG = "default"
+ #AUS_SERVER = "dev-stage01.build.mozilla.org"
+ AUS_SERVER = "aus3-staging.mozilla.org"
+ #FTP_SERVER = "dev-stage01.build.mozilla.org"
+@@ -110,10 +109,8 @@ config = {
+     "repos": [{
+         "repo": "http://hg.mozilla.org/%(user_repo_override)s/tools",
+         "dest": "tools",
+-        "revision": "default",
+     },{
+         "repo": "http://hg.mozilla.org/%(user_repo_override)s/buildbot-configs",
+         "dest": "buildbot-configs",
+-        "revision": "production",
+     }],
+ }
+diff --git a/configs/signing/android_mozilla-release.py b/configs/signing/android_mozilla-release.py
+index 6eb7545..51a6ce0 100644
+--- a/configs/signing/android_mozilla-release.py
++++ b/configs/signing/android_mozilla-release.py
+@@ -1,8 +1,7 @@
+ #!/usr/bin/env python
+ 
+ ADDITIONAL_LOCALES = ["en-US", "multi"]
+-# override tag for all repos
+-TAG = None
++TAG = "default"
+ #AUS_SERVER = "dev-stage01.build.mozilla.org"
+ AUS_SERVER = "aus3-staging.mozilla.org"
+ #FTP_SERVER = "dev-stage01.build.mozilla.org"
+@@ -113,10 +112,8 @@ config = {
+     "repos": [{
+         "repo": "http://hg.mozilla.org/%(user_repo_override)s/tools",
+         "dest": "tools",
+-        "revision": "default",
+     },{
+         "repo": "http://hg.mozilla.org/%(user_repo_override)s/buildbot-configs",
+         "dest": "buildbot-configs",
+-        "revision": "production",
+     }],
+ }
+diff --git a/configs/single_locale/mozilla-aurora_android.py b/configs/single_locale/mozilla-aurora_android.py
+index 29e8032..cd99cae 100644
+--- a/configs/single_locale/mozilla-aurora_android.py
++++ b/configs/single_locale/mozilla-aurora_android.py
+@@ -4,12 +4,12 @@ MOZILLA_DIR = BRANCH
+ JAVA_HOME = "/tools/jdk6"
+ JARSIGNER = "tools/release/signing/mozpass.py"
+ OBJDIR = "obj-l10n"
+-EN_US_BINARY_URL = "http://stage.mozilla.org/pub/mozilla.org/mobile/nightly/latest-%s-android/en-US" % (BRANCH)
+-#STAGE_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++EN_US_BINARY_URL = "http://stage.mozilla.org/pub/mozilla.org/mobile/nightly/latest-%s-android" % (BRANCH)
++#STAGE_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ STAGE_SERVER = "stage.mozilla.org"
+ STAGE_USER = "ffxbld"
+ STAGE_SSH_KEY = "~/.ssh/ffxbld_dsa"
+-#AUS_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++#AUS_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ AUS_SERVER = "aus3-staging.mozilla.org"
+ AUS_USER = "ffxbld"
+ AUS_SSH_KEY = "~/.ssh/auspush"
+diff --git a/configs/single_locale/mozilla-central_android.py b/configs/single_locale/mozilla-central_android.py
+index c9ff1ab..ea62158 100644
+--- a/configs/single_locale/mozilla-central_android.py
++++ b/configs/single_locale/mozilla-central_android.py
+@@ -5,11 +5,11 @@ JAVA_HOME = "/tools/jdk6"
+ JARSIGNER = "tools/release/signing/mozpass.py"
+ OBJDIR = "obj-l10n"
+ EN_US_BINARY_URL = "http://stage.mozilla.org/pub/mozilla.org/mobile/nightly/latest-%s-android/en-US" % (BRANCH)
+-#STAGE_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++#STAGE_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ STAGE_SERVER = "stage.mozilla.org"
+ STAGE_USER = "ffxbld"
+ STAGE_SSH_KEY = "~/.ssh/ffxbld_dsa"
+-#AUS_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++#AUS_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ AUS_SERVER = "aus3-staging.mozilla.org"
+ AUS_USER = "ffxbld"
+ AUS_SSH_KEY = "~/.ssh/auspush"
+diff --git a/configs/single_locale/release_mozilla-aurora_android.py b/configs/single_locale/release_mozilla-aurora_android.py
+index b77402f..28ab4d3 100644
+--- a/configs/single_locale/release_mozilla-aurora_android.py
++++ b/configs/single_locale/release_mozilla-aurora_android.py
+@@ -5,7 +5,7 @@ JAVA_HOME = "/tools/jdk6"
+ JARSIGNER = "tools/release/signing/mozpass.py"
+ OBJDIR = "obj-l10n"
+ EN_US_BINARY_URL = "http://ftp.mozilla.org/pub/mozilla.org/mobile/candidates/%(version)s-candidates/build%(buildnum)d/unsigned/android/en-US"
+-#STAGE_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++#STAGE_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ STAGE_SERVER = "stage.mozilla.org"
+ STAGE_USER = "ffxbld"
+ STAGE_SSH_KEY = "~/.ssh/ffxbld_dsa"
+diff --git a/configs/single_locale/release_mozilla-beta_android.py b/configs/single_locale/release_mozilla-beta_android.py
+index 233c463..7f463ce 100644
+--- a/configs/single_locale/release_mozilla-beta_android.py
++++ b/configs/single_locale/release_mozilla-beta_android.py
+@@ -5,7 +5,7 @@ JAVA_HOME = "/tools/jdk6"
+ JARSIGNER = "tools/release/signing/mozpass.py"
+ OBJDIR = "obj-l10n"
+ EN_US_BINARY_URL = "http://ftp.mozilla.org/pub/mozilla.org/mobile/candidates/%(version)s-candidates/build%(buildnum)d/unsigned/android/en-US"
+-#STAGE_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++#STAGE_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ STAGE_SERVER = "stage.mozilla.org"
+ STAGE_USER = "ffxbld"
+ STAGE_SSH_KEY = "~/.ssh/ffxbld_dsa"
+diff --git a/configs/single_locale/release_mozilla-release_android.py b/configs/single_locale/release_mozilla-release_android.py
+index 7d25959..b6c382b 100644
+--- a/configs/single_locale/release_mozilla-release_android.py
++++ b/configs/single_locale/release_mozilla-release_android.py
+@@ -1,11 +1,11 @@
+-BRANCH = "mozilla-beta"
++BRANCH = "mozilla-release"
+ MOZ_UPDATE_CHANNEL = "release"
+ MOZILLA_DIR = BRANCH
+ JAVA_HOME = "/tools/jdk6"
+ JARSIGNER = "tools/release/signing/mozpass.py"
+ OBJDIR = "obj-l10n"
+ EN_US_BINARY_URL = "http://ftp.mozilla.org/pub/mozilla.org/mobile/candidates/%(version)s-candidates/build%(buildnum)d/unsigned/android/en-US"
+-#STAGE_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++#STAGE_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ STAGE_SERVER = "stage.mozilla.org"
+ STAGE_USER = "ffxbld"
+ STAGE_SSH_KEY = "~/.ssh/ffxbld_dsa"
+@@ -19,7 +19,7 @@ config = {
+     "locales_platform": "android",
+     "ignore_locales": ["en-US"],
+     "repos": [{
+-        "repo": "http://hg.mozilla.org/releases/mozilla-beta",
++        "repo": "http://hg.mozilla.org/releases/mozilla-release",
+         "revision": "default",
+         "dest": MOZILLA_DIR,
+     },{
+diff --git a/configs/single_locale/staging_mozilla-aurora_android.py b/configs/single_locale/staging_mozilla-aurora_android.py
+index 364a968..fbd3f97 100644
+--- a/configs/single_locale/staging_mozilla-aurora_android.py
++++ b/configs/single_locale/staging_mozilla-aurora_android.py
+@@ -5,11 +5,11 @@ JAVA_HOME = "/tools/jdk6"
+ JARSIGNER = "tools/release/signing/mozpass.py"
+ OBJDIR = "obj-l10n"
+ EN_US_BINARY_URL = "http://stage.mozilla.org/pub/mozilla.org/mobile/nightly/latest-%s-android/en-US" % (BRANCH)
+-STAGE_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++STAGE_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ #STAGE_SERVER = "stage.mozilla.org"
+ STAGE_USER = "ffxbld"
+ STAGE_SSH_KEY = "~/.ssh/ffxbld_dsa"
+-AUS_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++AUS_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ #AUS_SERVER = "aus3-staging.mozilla.org"
+ AUS_USER = "ffxbld"
+ #AUS_SSH_KEY = "~/.ssh/auspush"
+diff --git a/configs/single_locale/staging_mozilla-central_android.py b/configs/single_locale/staging_mozilla-central_android.py
+index b005dec..466eb03 100644
+--- a/configs/single_locale/staging_mozilla-central_android.py
++++ b/configs/single_locale/staging_mozilla-central_android.py
+@@ -5,11 +5,11 @@ JAVA_HOME = "/tools/jdk6"
+ JARSIGNER = "tools/release/signing/mozpass.py"
+ OBJDIR = "obj-l10n"
+ EN_US_BINARY_URL = "http://stage.mozilla.org/pub/mozilla.org/mobile/nightly/latest-%s-android/en-US" % (BRANCH)
+-STAGE_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++STAGE_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ #STAGE_SERVER = "stage.mozilla.org"
+ STAGE_USER = "ffxbld"
+ STAGE_SSH_KEY = "~/.ssh/ffxbld_dsa"
+-AUS_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++AUS_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ #AUS_SERVER = "aus3-staging.mozilla.org"
+ AUS_USER = "ffxbld"
+ #AUS_SSH_KEY = "~/.ssh/auspush"
+diff --git a/configs/single_locale/staging_release_mozilla-aurora_android.py b/configs/single_locale/staging_release_mozilla-aurora_android.py
+index 80a185c..f70159d 100644
+--- a/configs/single_locale/staging_release_mozilla-aurora_android.py
++++ b/configs/single_locale/staging_release_mozilla-aurora_android.py
+@@ -4,7 +4,7 @@ MOZILLA_DIR = BRANCH
+ JAVA_HOME = "/tools/jdk6"
+ JARSIGNER = "tools/release/signing/mozpass.py"
+ OBJDIR = "obj-l10n"
+-STAGE_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++STAGE_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ EN_US_BINARY_URL = "http://" + STAGE_SERVER + "/pub/mozilla.org/mobile/candidates/%(version)s-candidates/build%(buildnum)d/unsigned/android/en-US"
+ STAGE_USER = "ffxbld"
+ STAGE_SSH_KEY = "~/.ssh/ffxbld_dsa"
+diff --git a/configs/single_locale/staging_release_mozilla-beta_android.py b/configs/single_locale/staging_release_mozilla-beta_android.py
+index 41c4f40..76bf31e 100644
+--- a/configs/single_locale/staging_release_mozilla-beta_android.py
++++ b/configs/single_locale/staging_release_mozilla-beta_android.py
+@@ -4,7 +4,7 @@ MOZILLA_DIR = BRANCH
+ JAVA_HOME = "/tools/jdk6"
+ JARSIGNER = "tools/release/signing/mozpass.py"
+ OBJDIR = "obj-l10n"
+-STAGE_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++STAGE_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ EN_US_BINARY_URL = "http://" + STAGE_SERVER + "/pub/mozilla.org/mobile/candidates/%(version)s-candidates/build%(buildnum)d/unsigned/android/en-US"
+ STAGE_USER = "ffxbld"
+ STAGE_SSH_KEY = "~/.ssh/ffxbld_dsa"
+diff --git a/configs/single_locale/staging_release_mozilla-release_android.py b/configs/single_locale/staging_release_mozilla-release_android.py
+index 7446328..632a9bb 100644
+--- a/configs/single_locale/staging_release_mozilla-release_android.py
++++ b/configs/single_locale/staging_release_mozilla-release_android.py
+@@ -4,7 +4,7 @@ MOZILLA_DIR = BRANCH
+ JAVA_HOME = "/tools/jdk6"
+ JARSIGNER = "tools/release/signing/mozpass.py"
+ OBJDIR = "obj-l10n"
+-STAGE_SERVER = "dev-stage01.srv.releng.scl3.mozilla.com"
++STAGE_SERVER = "dev-stage01.build.sjc1.mozilla.com"
+ EN_US_BINARY_URL = "http://" + STAGE_SERVER + "/pub/mozilla.org/mobile/candidates/%(version)s-candidates/build%(buildnum)d/unsigned/android/en-US"
+ STAGE_USER = "ffxbld"
+ STAGE_SSH_KEY = "~/.ssh/ffxbld_dsa"
+diff --git a/configs/unittests/linux_unittest.py b/configs/unittests/linux_unittest.py
+new file mode 100644
+index 0000000..6ce2381
+--- /dev/null
++++ b/configs/unittests/linux_unittest.py
+@@ -0,0 +1,81 @@
++#### OS Specifics ####
++APP_NAME_DIR = "firefox"
++BINARY_PATH = "firefox-bin"
++INSTALLER_PATH = "installer.tar.bz2"
++XPCSHELL_NAME = "xpcshell"
++ADJUST_SCREEN_RESOLUTION = False
++DISABLE_SCREEN_SAVER = True
++#####
++config = {
++    "app_name_dir" : APP_NAME_DIR,
++    "installer_path" : INSTALLER_PATH,
++    "binary_path" : APP_NAME_DIR + "/" + BINARY_PATH,
++    "xpcshell_name" : XPCSHELL_NAME,
++    # TODO find out if I need simple_json_url
++    "buildbot_json_path": "buildprops.json",
++    "simplejson_url": "http://build.mozilla.org/talos/zips/simplejson-2.2.1.tar.gz",
++    "repos": [{
++        "repo": "http://hg.mozilla.org/build/tools",
++        "revision": "default",
++        "dest": "tools"
++    }],
++    "exes": {
++        'python': '/tools/buildbot/bin/python',
++        'virtualenv': ['/tools/buildbot/bin/python', '/tools/misc-python/virtualenv.py'],
++    },
++    "run_file_names" : {
++        "mochitest" : "runtests.py",
++        "reftest" : "runreftest.py",
++        "xpcshell" : "runxpcshelltests.py"
++    },
++    "minimum_tests_zip_dirs" : ["bin/*", "certs/*", "modules/*", "mozbase/*"],
++    "specific_tests_zip_dirs" : {
++        "mochitest" : ["mochitest/*"],
++        "reftest" : ["reftest/*", "jsreftest/*"],
++        "xpcshell" : ["xpcshell/*"]
++        },
++    "reftest_options" : [
++        "--appname=%(binary_path)s", "--utility-path=tests/bin",
++        "--extra-profile-file=tests/bin/plugins","--symbols-path=%(symbols_path)s"
++    ],
++    "mochitest_options" : [
++        "--appname=%(binary_path)s", "--utility-path=tests/bin",
++        "--extra-profile-file=tests/bin/plugins","--symbols-path=%(symbols_path)s",
++        "--certificate-path=tests/certs", "--autorun", "--close-when-done",
++        "--console-level=INFO"
++    ],
++    "xpcshell_options" : [
++        "--symbols-path=%(symbols_path)s"
++    ],
++    #local mochi suites
++    "all_mochitest_suites" : {
++        "plain1" : ["--total-chunks=5", "--this-chunk=1", "--chunk-by-dir=4"],
++        "plain2" : ["--total-chunks=5", "--this-chunk=2", "--chunk-by-dir=4"],
++        "plain3" : ["--total-chunks=5", "--this-chunk=3", "--chunk-by-dir=4"],
++        "plain4" : ["--total-chunks=5", "--this-chunk=4", "--chunk-by-dir=4"],
++        "plain5" : ["--total-chunks=5", "--this-chunk=5", "--chunk-by-dir=4"],
++        "chrome" : ["--chrome"],
++        "browser-chrome" : ["--browser-chrome"],
++        "a11y" : ["--a11y"],
++        "plugins" : ['--setpref=dom.ipc.plugins.enabled=false',
++                '--setpref=dom.ipc.plugins.enabled.x86_64=false',
++                '--ipcplugins']
++    },
++    #local reftests suites
++    "all_reftest_suites" : {
++        "reftest" : ["tests/reftest/tests/layout/reftests/reftest.list"],
++        "crashtest" : ["tests/reftest/tests/layout/reftests/crashtests.list"],
++        "jsreftest" : ["--extra-profile-file=tests/jsreftest/tests/user.js", "tests/jsreftests/jstests.list"],
++    },
++    "all_xpcshell_suites" : {
++        "xpcshell" : ["--manifest=tests/xpcshell/tests/all-test-dirs.list",
++            "application/" + APP_NAME_DIR + "/" + XPCSHELL_NAME]
++    },
++    "preflight_run_cmd_suites" : [
++            {
++                "name" : "disable_screen_saver",
++                "cmd" : ["xset", "s", "reset"],
++                "enabled" : DISABLE_SCREEN_SAVER
++            },
++    ],
++}
+diff --git a/configs/unittests/mac_unittest.py b/configs/unittests/mac_unittest.py
+new file mode 100644
+index 0000000..e676b5e
+--- /dev/null
++++ b/configs/unittests/mac_unittest.py
+@@ -0,0 +1,99 @@
++#### OS Specifics ####
++APP_NAME_DIR = "FirefoxNightly.app/Contents/MacOS"
++BINARY_PATH = "firefox-bin"
++INSTALLER_PATH = "installer.dmg"
++XPCSHELL_NAME = 'xpcshell'
++ADJUST_SCREEN_RESOLUTION = True
++DISABLE_SCREEN_SAVER = False
++#####
++config = {
++    "app_name_dir" : APP_NAME_DIR,
++    "installer_path" : INSTALLER_PATH,
++    "binary_path" : APP_NAME_DIR + "/" + BINARY_PATH,
++    "xpcshell_name" : XPCSHELL_NAME,
++    # TODO find out if I need simple_json_url
++    "buildbot_json_path": "buildprops.json",
++    "simplejson_url": "http://build.mozilla.org/talos/zips/simplejson-2.2.1.tar.gz",
++    "repos": [{
++        "repo": "http://hg.mozilla.org/build/tools",
++        "revision": "default",
++        "dest": "tools"
++    }],
++    "exes": {
++        'python': '/tools/buildbot/bin/python',
++        'virtualenv': ['/tools/buildbot/bin/python', '/tools/misc-python/virtualenv.py'],
++    },
++    "run_file_names" : {
++        "mochitest" : "runtests.py",
++        "reftest" : "runreftest.py",
++        "xpcshell" : "runxpcshelltests.py"
++    },
++    "minimum_tests_zip_dirs" : ["bin/*", "certs/*", "modules/*", "mozbase/*"],
++    "specific_tests_zip_dirs" : {
++        "mochitest" : ["mochitest/*"],
++        "reftest" : ["reftest/*", "jsreftest/*"],
++        "xpcshell" : ["xpcshell/*"]
++        },
++    "reftest_options" : [
++        "--appname=%(binary_path)s", "--utility-path=tests/bin",
++        "--extra-profile-file=tests/bin/plugins","--symbols-path=%(symbols_path)s"
++    ],
++    "mochitest_options" : [
++        "--appname=%(binary_path)s", "--utility-path=tests/bin",
++        "--extra-profile-file=tests/bin/plugins","--symbols-path=%(symbols_path)s",
++        "--certificate-path=tests/certs", "--autorun", "--close-when-done",
++        "--console-level=INFO"
++    ],
++    "xpcshell_options" : [
++        "--symbols-path=%(symbols_path)s"
++    ],
++    #local mochi suites
++    "all_mochitest_suites" : {
++        "plain1" : ["--total-chunks=5", "--this-chunk=1", "--chunk-by-dir=4"],
++        "plain2" : ["--total-chunks=5", "--this-chunk=2", "--chunk-by-dir=4"],
++        "plain3" : ["--total-chunks=5", "--this-chunk=3", "--chunk-by-dir=4"],
++        "plain4" : ["--total-chunks=5", "--this-chunk=4", "--chunk-by-dir=4"],
++        "plain5" : ["--total-chunks=5", "--this-chunk=5", "--chunk-by-dir=4"],
++        "chrome" : ["--chrome"],
++        "browser-chrome" : ["--browser-chrome"],
++        "plugins" : ['--setpref=dom.ipc.plugins.enabled=false',
++                '--setpref=dom.ipc.plugins.enabled.x86_64=false',
++                '--ipcplugins']
++    },
++    #local reftests suites
++    "all_reftest_suites" : {
++        "reftest" : ["tests/reftest/tests/layout/reftests/reftest.list"],
++        "crashtest" : ["tests/reftest/tests/layout/reftests/crashtests.list"],
++        "jsreftest" : ["--extra-profile-file=tests/jsreftest/tests/user.js", "tests/jsreftests/jstests.list"],
++    },
++    "all_xpcshell_suites" : {
++        "xpcshell" : ["--manifest=tests/xpcshell/tests/all-test-dirs.list",
++            "application/" + APP_NAME_DIR + "/" + XPCSHELL_NAME]
++    },
++    "preflight_run_cmd_suites" : [
++            # TODO find out why I have to split these commands up rather
++            # then running them with '&&' inbetween. also is this adjusting
++            # the resolution correctly?
++            {
++                "name" : "get_screen_resolution",
++                "cmd" : [
++                    "bash", "-c", "screenresolution", "get"                    ],
++                "enabled" : ADJUST_SCREEN_RESOLUTION
++            },
++            {
++                "name" : "list_screen_resolution",
++                "cmd" : [
++                    "bash", "-c", "screenresolution",
++                    "list"
++                ],
++                "enabled" : ADJUST_SCREEN_RESOLUTION
++            },
++            {
++                "name" : "system_profiler_spdisplay_data_type",
++                "cmd" : [
++                    "bash", "-c", "system_profiler", "SPDisplaysDataType"
++                ],
++                "enabled" : ADJUST_SCREEN_RESOLUTION
++            },
++    ],
++}
+diff --git a/configs/unittests/win_unittest.py b/configs/unittests/win_unittest.py
+new file mode 100644
+index 0000000..fa1802b
+--- /dev/null
++++ b/configs/unittests/win_unittest.py
+@@ -0,0 +1,85 @@
++#### OS Specifics ####
++APP_NAME_DIR = "firefox"
++BINARY_PATH = "firefox.exe"
++INSTALLER_PATH = "installer.tar.bz2"
++XPCSHELL_NAME = 'xpcshell.exe'
++ADJUST_SCREEN_RESOLUTION = False
++DISABLE_SCREEN_SAVER = False
++#####
++config = {
++    "app_name_dir" : APP_NAME_DIR,
++    "installer_path" : INSTALLER_PATH,
++    "binary_path" : APP_NAME_DIR + "/" + BINARY_PATH,
++    "xpcshell_name" : XPCSHELL_NAME,
++    # TODO find out if I need simple_json_url
++    "buildbot_json_path": "buildprops.json",
++    "simplejson_url": "http://build.mozilla.org/talos/zips/simplejson-2.2.1.tar.gz",
++    "virtualenv_path": 'c:/talos-slave/test/build/venv',
++    "virtualenv_python_dll": 'c:/mozilla-build/python25/python25.dll',
++    "distribute_url": "http://build.mozilla.org/talos/zips/distribute-0.6.24.tar.gz",
++    "pip_url": "http://build.mozilla.org/talos/zips/pip-1.0.2.tar.gz",
++    "repos": [{
++        "repo": "http://hg.mozilla.org/build/tools",
++        "revision": "default",
++        "dest": "tools"
++    }],
++    "exes": {
++        'python': 'c:/mozilla-build/python25/python',
++        'virtualenv': ['c:/mozilla-build/python25/python', 'c:/mozilla-build/buildbotve/virtualenv.py'],
++        'hg': 'c:/mozilla-build/hg/hg',
++    },
++    "run_file_names" : {
++        "mochitest" : "runtests.py",
++        "reftest" : "runreftest.py",
++        "xpcshell" : "runxpcshelltests.py"
++    },
++    "minimum_tests_zip_dirs" : ["bin/*", "certs/*", "modules/*", "mozbase/*"],
++    "specific_tests_zip_dirs" : {
++        "mochitest" : ["mochitest/*"],
++        "reftest" : ["reftest/*", "jsreftest/*"],
++        "xpcshell" : ["xpcshell/*"]
++        },
++    "reftest_options" : [
++        "--appname=%(binary_path)s", "--utility-path=tests/bin",
++        "--extra-profile-file=tests/bin/plugins","--symbols-path=%(symbols_path)s"
++    ],
++    "mochitest_options" : [
++        "--appname=%(binary_path)s", "--utility-path=tests/bin",
++        "--extra-profile-file=tests/bin/plugins","--symbols-path=%(symbols_path)s",
++        "--certificate-path=tests/certs", "--autorun", "--close-when-done",
++        "--console-level=INFO"
++    ],
++    "xpcshell_options" : [
++        "--symbols-path=%(symbols_path)s"
++    ],
++    #local mochi suites
++    "all_mochitest_suites" :
++    {
++        "plain1" : ["--total-chunks=5", "--this-chunk=1", "--chunk-by-dir=4"],
++        "plain2" : ["--total-chunks=5", "--this-chunk=2", "--chunk-by-dir=4"],
++        "plain3" : ["--total-chunks=5", "--this-chunk=3", "--chunk-by-dir=4"],
++        "plain4" : ["--total-chunks=5", "--this-chunk=4", "--chunk-by-dir=4"],
++        "plain5" : ["--total-chunks=5", "--this-chunk=5", "--chunk-by-dir=4"],
++        "chrome" : ["--chrome"],
++        "browser-chrome" : ["--browser-chrome"],
++        "a11y" : ["--a11y"],
++        "plugins" : ['--setpref=dom.ipc.plugins.enabled=false',
++                '--setpref=dom.ipc.plugins.enabled.x86_64=false',
++                '--ipcplugins']
++    },
++    #local reftests suites
++    "all_reftest_suites" :
++    {
++        "reftest" : ["tests/reftest/tests/layout/reftests/reftest.list"],
++        "crashtest" : ["tests/reftest/tests/layout/reftests/crashtests.list"],
++        "jsreftest" : ["--extra-profile-file=tests/jsreftest/tests/user.js", "tests/jsreftests/jstests.list"],
++    },
++    "all_xpcshell_suites" : {
++        "xpcshell" : ["--manifest=tests/xpcshell/tests/all-test-dirs.list",
++            "application/" + APP_NAME_DIR + "/" + XPCSHELL_NAME]
++    },
++    "preflight_run_cmd_suites" : [
++
++    ],
++}
++
+diff --git a/mozharness/base/errors.py b/mozharness/base/errors.py
+index a73a326..0a5dd97 100755
+--- a/mozharness/base/errors.py
++++ b/mozharness/base/errors.py
+@@ -78,7 +78,7 @@ VirtualenvErrorList = [
+ 
+ # We may need to have various MakefileErrorLists for differing amounts of
+ # warning-ignoring-ness.
+-MakefileErrorList = BaseErrorList + PythonErrorList + [
++MakefileErrorList = BaseErrorList + [
+  {'substr': r'''No rule to make target ''', 'level': ERROR},
+  {'regex': re.compile(r'''akefile.*was not found\.'''), 'level': ERROR},
+  {'regex': re.compile(r'''Stop\.$'''), 'level': ERROR},
+diff --git a/mozharness/base/python.py b/mozharness/base/python.py
+index f8ab2aa..faf100b 100755
+--- a/mozharness/base/python.py
++++ b/mozharness/base/python.py
+@@ -32,12 +32,6 @@ virtualenv_config_options = [[
+   "dest": "pypi_url",
+   "help": "Base URL of Python Package Index (default http://pypi.python.org/simple/)"
+   }
+-],
+-[["--find-links"],
+-{"action": "extend",
+- "dest": "find_links",
+- "help": "URL to look for packages at"
+-}
+ ]]
+ 
+ class VirtualenvMixin(object):
+@@ -135,7 +129,7 @@ class VirtualenvMixin(object):
+                      level=error_level)
+             return True
+ 
+-    def install_module(self, module, module_url=None, install_method=None):
++    def install_module(self, module, module_url=None):
+         """
+         Install module via pip.
+ 
+@@ -146,30 +140,18 @@ class VirtualenvMixin(object):
+         c = self.config
+         dirs = self.query_abs_dirs()
+         venv_path = self.query_virtualenv_path()
++        pip = self.query_python_path("pip")
+         self.info("Installing %s into virtualenv %s" % (module, venv_path))
+         if not module_url:
+             module_url = module
+-        if install_method in (None, 'pip'):
+-            pip = self.query_python_path("pip")
+-            command = [pip, "install"]
+-            pypi_url = c.get("pypi_url")
+-            if pypi_url:
+-                command += ["--pypi-url", pypi_url]
+-            virtualenv_cache_dir = c.get("virtualenv_cache_dir")
+-            if virtualenv_cache_dir:
+-                self.mkdir_p(virtualenv_cache_dir)
+-                command += ["--download-cache", virtualenv_cache_dir]
+-        elif install_method == 'easy_install':
+-            # Allow easy_install to be overridden by
+-            # self.config['exes']['easy_install']
+-            command = self.query_exe('easy_install', default=self.query_python_path('easy_install'), return_type="list")
+-        else:
+-            self.fatal("install_module() doesn't understand an install_method of %s!" % install_method)
+-
+-        # Add --find-links pages to look at
+-        for link in c.get('find_links', []):
+-            command.extend(["--find-links", link])
+-
++        command = [pip, "install"]
++        pypi_url = c.get("pypi_url")
++        if pypi_url:
++            command += ["--pypi-url", pypi_url]
++        virtualenv_cache_dir = c.get("virtualenv_cache_dir")
++        if virtualenv_cache_dir:
++            self.mkdir_p(virtualenv_cache_dir)
++            command += ["--download-cache", virtualenv_cache_dir]
+         # Allow for errors while building modules, but require a
+         # return status of 0.
+         if self.run_command(command + [module_url],
+@@ -245,11 +227,7 @@ class VirtualenvMixin(object):
+             if isinstance(module, dict):
+                 (module, module_url) = module.items()[0]
+             module_url = self.config.get('%s_url' % module, module_url)
+-            install_method = 'pip'
+-            if module in ('pywin32',):
+-                install_method = 'easy_install'
+-            self.install_module(module, module_url,
+-                                install_method=install_method)
++            self.install_module(module, module_url)
+         self.info("Done creating virtualenv %s." % venv_path)
+ 
+ 
+diff --git a/mozharness/base/script.py b/mozharness/base/script.py
+index d5af1ad..6a98527 100755
+--- a/mozharness/base/script.py
++++ b/mozharness/base/script.py
+@@ -156,7 +156,7 @@ class OSMixin(object):
+                      exit_code=exit_code)
+             return
+         except urllib2.URLError, e:
+-            self.log("URL Error: %s" % (url), level=error_level,
++            self.log("URL Error: %s %s" % (e.code, url), level=error_level,
+                      exit_code=exit_code)
+             return
+         return file_name
+@@ -189,6 +189,59 @@ class OSMixin(object):
+                                     level=error_level)
+                 return -1
+ 
++    def copytree(self, src, dest, overwrite='nothing', log_level=INFO,
++            error_level=ERROR):
++        """an implementation of shutil.copytree however it allows for
++        dest to exist and implements differen't overwrite levels.
++        overwrite uses:
++        'nothing' will keep all(any) existing files in destination tree
++        'update' will only overwrite destination paths that have
++                   the same path names relative to the root of the src and
++                   destination tree
++        'all' will replace the whole destination tree(clobber) if it exists"""
++
++        # TODO ask what is more appropriate then 'update'
++        # ie: 'reciprocal', 'correlative', 'coequal',  'akin', 'corresponding'
++
++        self.info('copying tree: %s to %s' % (src, dest))
++        try:
++            if overwrite == 'all':
++                self.rmtree(dest)
++                shutil.copytree(src, dest)
++            elif overwrite == 'nothing' or overwrite == 'update':
++                files = os.listdir(src)
++                for f in files:
++                    abs_src_f = os.path.join(src, f)
++                    abs_dest_f = os.path.join(dest, f)
++                    if not os.path.exists(abs_dest_f):
++                        if os.path.isdir(abs_src_f):
++                            self.mkdir_p(abs_dest_f)
++                            self.copytree(abs_src_f, abs_dest_f, overwrite='all')
++                        else:
++                            shutil.copy2(abs_src_f, abs_dest_f)
++                    elif overwrite == 'nothing': # and destination path exists
++                        if os.path.isdir(abs_src_f) and os.path.isdir(abs_dest_f):
++                            self.copytree(abs_src_f, abs_dest_f, overwrite='nothing')
++                        else:
++                            self.debug('ignoring path: %s as destination: \
++                                    %s exists' % (abs_src_f, abs_dest_f))
++                    else: # overwrite == 'update' and destination path exists
++                        self.debug('overwriting: %s with: %s' % (abs_dest_f, abs_src_f))
++                        self.rmtree(abs_dest_f)
++
++                        if os.path.isdir(abs_src_f):
++                            self.mkdir_p(abs_dest_f)
++                            self.copytree(abs_src_f, abs_dest_f, overwrite='update')
++                        else:
++                            shutil.copy2(abs_src_f, abs_dest_f)
++            else:
++                self.fatal("%s is not a valid argument for param overwrite" % (overwrite))
++        except (IOError, shutil.Error):
++            self.dump_exception("There was an error while copying %s to %s!" % (src, dest),
++                    level=error_level)
++            return -1
++
++
+     def write_to_file(self, file_path, contents, verbose=True,
+                       open_mode='w', create_parent_dir=False,
+                       error_level=ERROR):
+@@ -321,8 +374,7 @@ class ShellMixin(object):
+             self.env = env
+         return env
+ 
+-    def query_exe(self, exe_name, exe_dict='exes', default=None,
+-                  return_type=None, error_level=FATAL):
++    def query_exe(self, exe_name, exe_dict='exes'):
+         """One way to work around PATH rewrites.
+ 
+         By default, return exe_name, and we'll fall through to searching
+@@ -330,28 +382,9 @@ class ShellMixin(object):
+         However, if self.config[exe_dict][exe_name] exists, return that.
+         This lets us override exe paths via config file.
+ 
+-        'return_type' can be None (don't do anything to the value),
+-        'list' (return a list), or 'string' (return a string).
+-
+         If we need runtime setting, we can build in self.exes support later.
+         """
+-        if default is None:
+-            default = exe_name
+-        exe = self.config.get(exe_dict, {}).get(exe_name, default)
+-        if isinstance(exe, list):
+-            exe = exe[:]
+-        elif not isinstance(exe, str):
+-            self.log("query_exe: %s is not a string or list: %s!" % (exe_name, str(exe)), level=error_level)
+-            return exe
+-        if return_type == "list":
+-            if isinstance(exe, str):
+-                exe = [exe]
+-        elif return_type == "string":
+-            if isinstance(exe, list):
+-                exe = subprocess.list2cmdline(exe)
+-        elif return_type is not None:
+-            self.log("Unknown return_type type %s requested in query_exe!" % return_type, level=error_level)
+-        return exe
++        return self.config.get(exe_dict, {}).get(exe_name, exe_name)
+ 
+     def run_command(self, command, cwd=None, error_list=None, parse_at_end=False,
+                     halt_on_failure=False, success_codes=None,
+diff --git a/mozharness/mozilla/l10n/locales.py b/mozharness/mozilla/l10n/locales.py
+index c7fa9f7..072303d 100755
+--- a/mozharness/mozilla/l10n/locales.py
++++ b/mozharness/mozilla/l10n/locales.py
+@@ -125,11 +125,8 @@ class LocalesMixin(ChunkingMixin):
+             dirs['abs_l10n_dir'] = os.path.join(dirs['abs_work_dir'],
+                                                 c['l10n_dir'])
+         if 'objdir' in c:
+-            if os.path.isabs(c['objdir']):
+-                dirs['abs_objdir'] = c['objdir']
+-            else:
+-                dirs['abs_objdir'] = os.path.join(dirs['abs_mozilla_dir'],
+-                                                  c['objdir'])
++            dirs['abs_objdir'] = os.path.join(dirs['abs_mozilla_dir'],
++                                              c['objdir'])
+             dirs['abs_merge_dir'] = os.path.join(dirs['abs_objdir'],
+                                                  'merged')
+             dirs['abs_locales_dir'] = os.path.join(dirs['abs_objdir'],
+diff --git a/mozharness/mozilla/l10n/multi_locale_build.py b/mozharness/mozilla/l10n/multi_locale_build.py
+index 2d825e0..eca04b7 100755
+--- a/mozharness/mozilla/l10n/multi_locale_build.py
++++ b/mozharness/mozilla/l10n/multi_locale_build.py
+@@ -14,7 +14,7 @@ import sys
+ 
+ sys.path.insert(1, os.path.dirname(os.path.dirname(sys.path[0])))
+ 
+-from mozharness.base.errors import MakefileErrorList, SSHErrorList
++from mozharness.base.errors import MakefileErrorList
+ from mozharness.base.log import FATAL
+ from mozharness.base.vcs.vcsbase import MercurialScript
+ from mozharness.mozilla.l10n.locales import LocalesMixin
+@@ -96,8 +96,6 @@ class MultiLocaleBuild(LocalesMixin, MercurialScript):
+                                               'pull-locale-source',
+                                               'build', 'package-en-US',
+                                               'upload-en-US',
+-                                              'backup-objdir',
+-                                              'restore-objdir',
+                                               'add-locales', 'package-multi',
+                                               'upload-multi'],
+                                  require_config_file=require_config_file)
+@@ -135,10 +133,9 @@ class MultiLocaleBuild(LocalesMixin, MercurialScript):
+                       error_level=FATAL)
+         command = "make -f client.mk build"
+         env = self.query_env()
+-        if self._process_command(command=command,
+-                                 cwd=dirs['abs_mozilla_dir'],
+-                                 env=env, error_list=MakefileErrorList):
+-            self.fatal("Erroring out after the build failed.")
++        self._process_command(command=command, cwd=dirs['abs_mozilla_dir'],
++                              env=env, error_list=MakefileErrorList,
++                              halt_on_failure=True)
+ 
+     def add_locales(self):
+         c = self.config
+@@ -208,32 +205,6 @@ class MultiLocaleBuild(LocalesMixin, MercurialScript):
+         # TODO
+         self.info("Not written yet.")
+ 
+-    def backup_objdir(self):
+-        dirs = self.query_abs_dirs()
+-        if not os.path.isdir(dirs['abs_objdir']):
+-            self.warning("%s doesn't exist! Skipping..." % dirs['abs_objdir'])
+-            return
+-        rsync = self.query_exe('rsync')
+-        backup_dir = '%s-bak' % dirs['abs_objdir']
+-        self.rmtree(backup_dir)
+-        self.mkdir_p(backup_dir)
+-        self.run_command([rsync, '-a', '--delete', '--partial',
+-                          '%s/' % dirs['abs_objdir'],
+-                          '%s/' % backup_dir],
+-                         error_list=SSHErrorList)
+-
+-    def restore_objdir(self):
+-        dirs = self.query_abs_dirs()
+-        rsync = self.query_exe('rsync')
+-        backup_dir = '%s-bak' % dirs['abs_objdir']
+-        if not os.path.isdir(dirs['abs_objdir']) or not os.path.isdir(backup_dir):
+-            self.warning("Both %s and %s need to exist to restore the objdir! Skipping..." % dirs['abs_objdir'], backup_dir)
+-            return
+-        self.run_command([rsync, '-a', '--delete', '--partial',
+-                          '%s/' % backup_dir,
+-                          '%s/' % dirs['abs_objdir']],
+-                         error_list=SSHErrorList)
+-
+     def upload_multi(self):
+         # TODO
+         self.info("Not written yet.")
+diff --git a/mozharness/mozilla/testing/talos.py b/mozharness/mozilla/testing/talos.py
+index 51c16ab..1f1b70d 100755
+--- a/mozharness/mozilla/testing/talos.py
++++ b/mozharness/mozilla/testing/talos.py
+@@ -130,10 +130,6 @@ class Talos(TestingMixin, BaseScript):
+         for key, value in kw_options.items():
+             options.extend(['--%s' % key, value])
+ 
+-        # add datazilla results urls
+-        for url in self.config.get('datazilla_urls', []):
+-            options.extend(['--datazilla-url', url])
+-
+         # extra arguments
+         if args is None:
+             args = self.config.get('talos_options', [])
+@@ -169,6 +165,8 @@ class Talos(TestingMixin, BaseScript):
+         # https://bugzilla.mozilla.org/show_bug.cgi?id=704654
+         # is not fixed first
+         PerfConfigurator = self.query_python_path('PerfConfigurator')
++        if not os.path.exists(PerfConfigurator):
++            self.fatal("PerfConfigurator not found")
+ 
+         # get command line for PerfConfigurator
+         if options is None:
+@@ -190,6 +188,8 @@ class Talos(TestingMixin, BaseScript):
+ 
+         # run talos tests
+         talos = self.query_python_path('talos')
++        if not os.path.exists(talos):
++            self.fatal("talos script not found")
+         command = [talos, '--noisy', talos_conf_path]
+         self.return_code = self.run_command(command, cwd=self.workdir,
+                                             error_list=TalosErrorList)
+diff --git a/mozharness/mozilla/testing/testbase.py b/mozharness/mozilla/testing/testbase.py
+index 232f158..35392f6 100755
+--- a/mozharness/mozilla/testing/testbase.py
++++ b/mozharness/mozilla/testing/testbase.py
+@@ -130,15 +130,17 @@ You can set this by:
+                                     error_level=FATAL)
+         self.test_zip_path = os.path.realpath(source)
+ 
+-    def _extract_test_zip(self):
++    def _extract_test_zip(self, target_unzip_dirs=None):
+         dirs = self.query_abs_dirs()
+         unzip = self.query_exe("unzip")
+         test_install_dir = dirs.get('abs_test_install_dir',
+                                     os.path.join(dirs['abs_work_dir'], 'tests'))
+         self.mkdir_p(test_install_dir)
++        unzip_cmd = [unzip, self.test_zip_path]
++        if target_unzip_dirs:
++            unzip_cmd.extend(target_unzip_dirs)
+         # TODO error_list
+-        self.run_command([unzip, self.test_zip_path],
+-                         cwd=test_install_dir)
++        self.run_command(unzip_cmd, cwd=test_install_dir)
+ 
+     def _download_installer(self):
+         file_name = None
+@@ -149,11 +151,10 @@ You can set this by:
+                                     parent_dir=dirs['abs_work_dir'],
+                                     error_level=FATAL)
+         self.installer_path = os.path.realpath(source)
+-        self.set_buildbot_property("build_url", self.installer_url, write_to_file=True)
+ 
+     def download_and_extract(self):
+         """
+-        Create virtualenv and install dependencies
++        download and extract test zip / download installer
+         """
+         if self.test_url:
+             self._download_test_zip()
+@@ -165,10 +166,7 @@ You can set this by:
+ 
+     def preflight_install(self):
+         if not self.installer_path:
+-            if self.config.get('installer_path'):
+-                self.installer_path = self.config['installer_path']
+-            else:
+-                self.fatal("""installer_path isn't set!
++            self.fatal("""installer_path isn't set!
+ 
+ You can set this by:
+ 
+@@ -182,19 +180,13 @@ Did you run with --create-virtualenv? Is mozinstall in virtualenv_modules?""")
+     def install(self):
+         """ Dependent on mozinstall """
+         # install the application
+-        cmd = self.query_exe("mozinstall", default=self.query_python_path("mozinstall"), return_type="list")
+-        # Remove the below when we no longer need to support mozinstall 0.3
+-        self.info("Detecting whether we're running mozinstall >=1.0...")
+-        output = self.get_output_from_command(cmd + ['-h'])
+-        if '--source' in output:
+-            cmd.append('--source')
+-        # End remove
++        mozinstall = self.query_python_path("mozinstall")
+         dirs = self.query_abs_dirs()
+         target_dir = dirs.get('abs_app_install_dir',
+                               os.path.join(dirs['abs_work_dir'],
+                              'application'))
+         self.mkdir_p(target_dir)
+-        cmd.extend([self.installer_path,
+-                    '--destination', target_dir])
++        cmd = [mozinstall, '--source', self.installer_path]
++        cmd.extend(['--destination', target_dir])
+         # TODO we'll need some error checking here
+         self.binary_path = self.get_output_from_command(cmd)
+diff --git a/scripts/desktop_unittest.py b/scripts/desktop_unittest.py
+new file mode 100755
+index 0000000..55807d6
+--- /dev/null
++++ b/scripts/desktop_unittest.py
+@@ -0,0 +1,391 @@
++#!/usr/bin/env python
++# ***** BEGIN LICENSE BLOCK *****
++# This Source Code Form is subject to the terms of the Mozilla Public
++# License, v. 2.0. If a copy of the MPL was not distributed with this file,
++# You can obtain one at http://mozilla.org/MPL/2.0/.
++# ***** END LICENSE BLOCK *****
++"""desktop_unittest.py
++
++The goal of this is to extract the unittestng from buildbot's factory.py
++
++author: Jordan Lund
++"""
++
++import os, sys, copy
++import shutil
++
++# load modules from parent dir
++sys.path.insert(1, os.path.dirname(sys.path[0]))
++from mozharness.base.errors import PythonErrorList, BaseErrorList
++from mozharness.base.vcs.vcsbase import MercurialScript
++from mozharness.mozilla.testing.testbase import TestingMixin, testing_config_options
++from mozharness.mozilla.buildbot import TBPL_SUCCESS, TBPL_FAILURE, TBPL_WARNING
++from mozharness.base.log import INFO, ERROR, WARNING, DEBUG
++
++
++SUITE_CATEGORIES = ['mochitest', 'reftest', 'xpcshell']
++
++# DesktopUnittest {{{1
++class DesktopUnittest(TestingMixin, MercurialScript):
++
++
++    config_options = [
++        [['--mochitest-suite',],
++            {
++                "action" : "append",
++                "dest" : "specified_mochitest_suites",
++                "type": "string",
++                "help": """Specify which mochi suite to run.
++                Suites are defined in the config file.
++                Examples: 'all', 'plain1', 'plain5', 'chrome', or 'a11y'"""
++            }
++        ],
++        [['--reftest-suite',],
++            {
++                "action" : "append",
++                "dest" : "specified_reftest_suites",
++                "type": "string",
++                "help": """Specify which reftest suite to run.
++                Suites are defined in the config file.
++                Examples: 'all', 'crashplan', or 'jsreftest'"""
++            }
++        ],
++        [['--xpcshell-suite',],
++            {
++                "action" : "append",
++                "dest" : "specified_xpcshell_suites",
++                "type": "string",
++                "help": """Specify which xpcshell suite to run.
++                Suites are defined in the config file.
++                Examples: 'xpcshell'"""
++            }
++        ],
++        [['--run-all-suites',],
++            {
++                "action": "store_true",
++                "dest": "run_all_suites",
++                "default": False,
++                "help": """This will run all suites that are specified
++                        in the config file. You do not need to specify any other suites.
++                        Beware, this may take a while ;)""",
++                        }
++            ],
++        [['--disable-preflight-run-commands',],
++            {
++                "action": "store_true",
++                "dest": "preflight_run_commands_disabled",
++                "default": False,
++                "help": """This will disable any run commands that are specified
++in the config file under: preflight_run_cmd_suites""",
++            }
++        ]
++    ] + copy.deepcopy(testing_config_options)
++
++    error_list = [
++        {'substr': r'''UNITTEST TEST-UNEXPECTED-FAIL''', 'level': ERROR},
++        {'substr': r'''UNITTEST ERROR''', 'level': ERROR},
++        {'substr': r'''UNITTEST WARNING''', 'level': WARNING},
++        {'substr': r'''UNITTEST DEBUG''', 'level': DEBUG},
++    ]
++
++    virtualenv_modules = [
++     'simplejson',
++     {'mozlog': os.path.join('tests', 'mozbase', 'mozlog')},
++     {'mozinfo': os.path.join('tests', 'mozbase', 'mozinfo')},
++     {'mozhttpd': os.path.join('tests', 'mozbase', 'mozhttpd')},
++     {'mozinstall': os.path.join('tests', 'mozbase', 'mozinstall')},
++     {'manifestdestiny': os.path.join('tests', 'mozbase', 'manifestdestiny')},
++     {'mozprofile': os.path.join('tests', 'mozbase', 'mozprofile')},
++     {'mozprocess': os.path.join('tests', 'mozbase', 'mozprocess')},
++     {'mozrunner': os.path.join('tests', 'mozbase', 'mozrunner')},
++    ]
++
++    def __init__(self, require_config_file=True):
++
++        MercurialScript.__init__(self,
++                config_options=self.config_options,
++                all_actions=[
++                    'clobber',
++                    'read-buildbot-config',
++                    'download-and-extract',
++                    'pull',
++                    'create-virtualenv',
++                    'install',
++                    'run-tests',
++                    ],
++                require_config_file=require_config_file,
++                config={'virtualenv_modules': self.virtualenv_modules,
++                        'require_test_zip': True,})
++
++        c = self.config
++        self.global_test_options = []
++        self.abs_dirs = None
++
++        self.installer_url = c.get('installer_url')
++        self.test_url = c.get('test_url')
++        self.installer_path = c.get('installer_path')
++        self.binary_path = c.get('binary_path')
++        self.symbols_url = c.get('symbols_url')
++
++    ###### helper methods
++
++    def _pre_config_lock(self, rw_config):
++        c = self.config
++        if not c.get('run_all_suites'):
++            return # configs are valid
++
++        for category in SUITE_CATEGORIES:
++            specific_suites = c.get('specified_%s_suites' % (category))
++            if specific_suites:
++                if specific_suites != 'all':
++                    self.fatal("""Config options are not valid.
++Please ensure that if the '--run-all-suites' flag was enabled
++then do not specify to run only specific suites like '--mochitest-suite browser-chrome'""")
++
++
++    def query_abs_dirs(self):
++        if self.abs_dirs:
++            return self.abs_dirs
++        abs_dirs = super(DesktopUnittest, self).query_abs_dirs()
++
++        c = self.config
++        dirs = {}
++        dirs['abs_app_install_dir'] = os.path.join(abs_dirs['abs_work_dir'], 'application')
++
++        dirs['abs_app_dir'] = os.path.join(dirs['abs_app_install_dir'], c['app_name_dir'])
++        dirs['abs_app_plugins_dir'] = os.path.join(dirs['abs_app_dir'], 'plugins')
++        dirs['abs_app_components_dir'] = os.path.join(dirs['abs_app_dir'], 'components')
++
++        dirs['abs_test_install_dir'] = os.path.join(abs_dirs['abs_work_dir'], 'tests')
++        dirs['abs_test_bin_dir'] = os.path.join(dirs['abs_test_install_dir'], 'bin')
++        dirs['abs_test_bin_plugins_dir'] = os.path.join(dirs['abs_test_bin_dir'],
++                'plugins')
++        dirs['abs_test_bin_components_dir'] = os.path.join(dirs['abs_test_bin_dir'],
++                'components')
++
++        dirs['abs_mochitest_dir'] = os.path.join(dirs['abs_test_install_dir'], "mochitest")
++        dirs['abs_reftest_dir'] = os.path.join(dirs['abs_test_install_dir'], "reftest")
++        dirs['abs_xpcshell_dir'] = os.path.join(dirs['abs_test_install_dir'], "xpcshell")
++
++        if os.path.isabs(c['virtualenv_path']):
++            dirs['abs_virtualenv_dir'] = c['virtualenv_path']
++        else:
++            dirs['abs_virtualenv_dir'] = os.path.join(abs_dirs['abs_work_dir'],
++                c['virtualenv_path'])
++
++        abs_dirs.update(dirs)
++
++        self.abs_dirs = abs_dirs
++        return self.abs_dirs
++
++    def _query_symbols_url(self):
++        """query the full symbols URL based upon binary URL"""
++        # may break with name convention changes but is one less 'input' for script
++        if self.symbols_url:
++            return self.symbols_url
++
++        symbols_url = None
++        self.info("finding symbols_url based upon self.installer_url")
++        if self.installer_url:
++            for ext in ['.zip', '.dmg', '.tar.bz2']:
++                if ext in self.installer_url:
++                    symbols_url = self.installer_url.replace(
++                            ext, '.crashreporter-symbols.zip')
++            if not symbols_url:
++                self.fatal("self.installer_url was found but symbols_url could \
++                        not be determined")
++        else:
++            self.fatal("self.installer_url was not found in self.config") 
++        self.info("setting symbols_url as %s" % (symbols_url))
++        self.symbols_url = symbols_url
++        return self.symbols_url
++
++    def _query_abs_base_cmd(self, suite_category):
++        if self.binary_path:
++            c = self.config
++            dirs = self.query_abs_dirs()
++            options = []
++            run_file = c['run_file_names'][suite_category]
++            base_cmd = [self.query_python_path('python')]
++            # TODO in buildbot only xpcshell is run with the '-u' (force stdin)
++            # flag? should all unittests be run with this in mozharness?
++            if suite_category == 'xpcshell':
++                base_cmd.append('-u')
++            base_cmd.append(dirs["abs_%s_dir" % suite_category] + "/" + run_file)
++            str_format_values = {
++                'binary_path' : self.binary_path,
++                'symbols_path' : self._query_symbols_url()
++            }
++            if self.config['%s_options' % suite_category]:
++                for option in self.config['%s_options' % suite_category]:
++                    options.append(option % str_format_values)
++                abs_base_cmd = base_cmd + options
++                return abs_base_cmd
++            else:
++                self.warning("""Suite options for %s could not be determined.
++If you meant to have options for this suite, please make sure they are specified
++in your config under %s_options""" % suite_category, suite_category)
++        else:
++            self.fatal("""the 'appname' or 'binary_path' could not be determined.
++            This should be something like '/root/path/with/build/application/firefox/firefox-bin'
++            If you are running this script without the 'install' action (where binary_path is set),
++            Please make sure you are either:
++                    (1) specifing it in the config file under binary_path
++                    (2) specifing it on command line with the '--binary-path' flag""")
++
++
++    def _query_specified_suites(self, category):
++
++        # logic goes: if at least one '--{category}-suite' was given in the script
++        # then run only that(those) given suite(s). Elif, if no suites were
++        # specified and the --run-all-suites flag was given,
++        # run all {category} suites. Anything else, run no suites.
++
++        c = self.config
++        all_suites = c.get('all_%s_suites' % (category))
++        specified_suites = c.get('specified_%s_suites' % (category))
++        suites = None
++
++        if specified_suites:
++            if 'all' in specified_suites:
++                suites = [value for value in all_suites.values()]
++            else:
++                suites = [all_suites[key] for key in \
++                        all_suites.keys() if key in specified_suites]
++        else:
++            if c.get('run_all_suites'):
++                suites = [value for value in all_suites.values()]
++
++        return suites
++
++    # this is a new line
++
++    # Actions {{{2
++
++    # clobber defined in BaseScript and deletes mozharness/build if exists
++    # read_buildbot_config is in BuildbotMixin.
++    # postflight_read_buildbot_config is in TestingMixin.
++    # preflight_download_and_extract is in TestingMixin.
++    # create_virtualenv is in VirtualenvMixin.
++    # preflight_install is in TestingMixin.
++    # install is in TestingMixin.
++
++    def download_and_extract(self):
++        """
++        download and extract test zip / download installer
++        optimizes which subfolders to extract from tests zip
++        """
++        c = self.config
++        unzip_tests_dirs = None
++
++        if c['specific_tests_zip_dirs']:
++            unzip_tests_dirs = c['minimum_tests_zip_dirs']
++            for category in c['specific_tests_zip_dirs'].keys():
++                if c['run_all_suites'] or self._query_specified_suites(category) \
++                        or 'run-tests' not in self.actions:
++                    unzip_tests_dirs.extend(c['specific_tests_zip_dirs'][category])
++
++        if self.test_url:
++            self._download_test_zip()
++            self._extract_test_zip(target_unzip_dirs=unzip_tests_dirs)
++        self._download_installer()
++
++    def pull(self):
++        dirs = self.query_abs_dirs()
++        c = self.config
++
++        if c.get('repos'):
++            dirs = self.query_abs_dirs()
++            self.vcs_checkout_repos(c['repos'],
++                                    parent_dir=dirs['abs_work_dir'])
++
++    def preflight_run_tests(self):
++        """preflight commands for all tests"""
++        c = self.config
++        dirs = self.query_abs_dirs()
++
++        if not c.get('preflight_run_commands_disabled'):
++            for suite in c['preflight_run_cmd_suites']:
++                if suite['enabled']:
++                    self.info("Running pre test command %(name)s with '%(cmd)s'" % {
++                        'name' : suite['name'],
++                        'cmd' : ' '.join(suite['cmd'])})
++                    self.run_command(suite['cmd'],
++                            cwd=dirs['abs_work_dir'],
++                            error_list=BaseErrorList,
++                            halt_on_failure=False)
++        else:
++            self.warning("""Proceeding without running prerun test commands.
++These are often OS specific and disabling them may result in spurious test results!""")
++
++    def run_tests(self):
++        self.error_list.extend(PythonErrorList)
++
++        self._run_category_suites('mochitest')
++        self._run_category_suites('reftest')
++        self._run_category_suites('xpcshell',
++                preflight_run_method=self.preflight_xpcshell)
++
++    def preflight_xpcshell(self):
++        c = self.config
++        dirs = self.query_abs_dirs()
++
++        self.mkdir_p(dirs['abs_app_plugins_dir'])
++        self.info('copying %s to %s' % (os.path.join(dirs['abs_test_bin_dir'],
++            c['xpcshell_name']), os.path.join(dirs['abs_app_dir'], c['xpcshell_name'])))
++        shutil.copy2(os.path.join(dirs['abs_test_bin_dir'], c['xpcshell_name']),
++            os.path.join(dirs['abs_app_dir'], c['xpcshell_name']))
++        self.copytree(dirs['abs_test_bin_components_dir'],
++                dirs['abs_app_components_dir'], overwrite='update')
++        self.copytree(dirs['abs_test_bin_plugins_dir'], dirs['abs_app_plugins_dir'],
++                overwrite='update')
++
++    def _run_category_suites(self, suite_category, preflight_run_method=None):
++        """run suite(s) to a specific category"""
++        dirs = self.query_abs_dirs()
++
++        abs_base_cmd = self._query_abs_base_cmd(suite_category)
++        suites = self._query_specified_suites(suite_category)
++
++        if preflight_run_method:
++            preflight_run_method()
++
++        if suites:
++            self.info('#### Running %s suites' % suite_category)
++            for num in range(len(suites)):
++                cmd =  abs_base_cmd + suites[num]
++
++                # print cmd
++                # code = 0
++
++                code = self.run_command(cmd,
++                        cwd=dirs['abs_work_dir'],
++                        error_list=self.error_list)
++
++                tbpl_status = TBPL_SUCCESS
++                level = INFO
++                if code == 0:
++                    status = "success"
++                elif code == 1:
++                    status = "test failures"
++                    tbpl_status = TBPL_WARNING
++                else:
++                    status = "harness failure"
++                    tbpl_status = TBPL_FAILURE
++                    level = ERROR
++                self.add_summary("The %s suite: %s test ran with return code \
++                        %s: %s" % (suite_category, suites[num], code, status),
++                        level=level)
++
++                # TODO find out when I should be displaying tbpl status. Should
++                # this be done if its a developer running the script? how is this
++                # different from the add_summary above?
++                if 'read-buildbot-config' in self.actions:
++                    self.buildbot_status(tbpl_status)
++        else:
++            pass # no suites in that category
++
++# main {{{1
++if __name__ == '__main__':
++    desktop_unittest = DesktopUnittest()
++    desktop_unittest.run()
+diff --git a/scripts/jetperf.py b/scripts/jetperf.py
+index 6728c11..3091bbd 100755
+--- a/scripts/jetperf.py
++++ b/scripts/jetperf.py
+@@ -11,11 +11,14 @@ import os
+ import shutil
+ import sys
+ sys.path.insert(1, os.path.dirname(sys.path[0]))
+-from mozharness.base.vcs.vcsbase import MercurialScript
+-from mozharness.mozilla.buildbot import TBPL_SUCCESS, TBPL_WARNING
++from mozharness.base.script import BaseScript
++from mozharness.base.vcs.mercurial import MercurialVCS
+ from mozharness.mozilla.testing.talos import Talos
+ 
+-class JetPerf(Talos, MercurialScript):
++# globals
++repo = 'http://hg.mozilla.org/projects/addon-sdk' # addon-sdk repository
++
++class JetPerf(Talos, MercurialVCS):
+     """
+     - Download the latest Add-on SDK
+     - Download the test add-on sources
+@@ -25,6 +28,12 @@ class JetPerf(Talos, MercurialScript):
+     """
+ 
+     config_options = copy.deepcopy(Talos.config_options) + [
++        [["--repo"],
++         {'action': 'store',
++          'dest': 'repo',
++          'default': repo,
++          'help': 'url of (hg) jetpack addon-sdk repository'
++          }],
+         [["--addon"],
+          {'action': 'extend',
+           'dest': 'addon-directories',
+@@ -51,25 +60,13 @@ class JetPerf(Talos, MercurialScript):
+                        'create-virtualenv',
+                        'install',
+                        'test',
+-                       'baseline',
+-                       'report-tbpl-status'
+-                       ]
+-
+-    default_repos = [{
+-            "repo": 'http://hg.mozilla.org/projects/addon-sdk',
+-            "revision": "default",
+-            "dest": "addon-sdk"
+-            },{
+-            "repo": 'http://hg.mozilla.org/projects/addon-sdk-jetperf-tests/',
+-            "revision": "default",
+-            "dest": "addons_clone"
+-            }]
++                       'baseline']
+ 
+     def __init__(self, require_config_file=False):
+ 
+         # initialize parent class
+         Talos.__init__(self,
+-                       config={'tests': ['ts'], 'repos': self.default_repos},
++                       config={'tests': ['ts']},
+                        all_actions=self.actions,
+                        default_actions=self.default_actions,
+                        require_config_file=require_config_file)
+@@ -77,20 +74,14 @@ class JetPerf(Talos, MercurialScript):
+         # set instance defaults
+         self.addon_sdk = os.path.join(self.workdir, 'addon-sdk')
+         self.addonsdir = os.path.join(self.workdir, 'addons')
+-        self.test_addons_clone = os.path.join(self.workdir, 'addons_clone')
+ 
+         # ensure we have tests
+         self.preflight_generate_config()
+ 
+-    def results_filename(self):
+-        """return the results file path from self.results_url"""
+-        if not self.results_url.startswith('file://'):
+-            return None
+-        return self.results_url[len('file://'):]
+-
+     def pull(self):
+-        """clone the needed repositories"""
+-        self.vcs_checkout_repos(self.config['repos'])
++        """clone the jetpack repository"""
++
++        MercurialVCS.clone(self, self.config['repo'], self.addon_sdk)
+ 
+     def cfx(self):
+         """returns path to cfx"""
+@@ -99,17 +90,6 @@ class JetPerf(Talos, MercurialScript):
+             return None
+         return path
+ 
+-    def addons_from_directory(self, directory):
+-        """scans a directory for jetpack addon sources and returns a list"""
+-
+-        self.info("Scanning %s for addon directories" % directory)
+-        retval = [os.path.join(directory, i) for i in os.listdir(directory)
+-                  if not i.startswith('.')] # ignore dotfiles
+-        retval = [addon for addon in retval
+-                  if os.path.isdir(addon)] # directories only
+-        self.info("Found %s addon directories" % str(retval))
+-        return retval
+-
+     def build(self):
+         """Build each test add-on with the add-ons SDK"""
+ 
+@@ -118,13 +98,10 @@ class JetPerf(Talos, MercurialScript):
+             # clone the addon-sdk if needed
+             self.fatal("%s not found; make sure you clone the addon-sdk repo first" % cfx)
+ 
+-        # get addons
++        # TODO: pull from hg if specified
+         addons = self.config['addon-directories']
+-        if os.path.exists(self.test_addons_clone):
+-            addons.extend(self.addons_from_directory(self.test_addons_clone))
+         if not addons:
+             self.error("No addons supplied")
+-        self.info("Building addons: %s" % str(addons))
+ 
+         # ensure the addons are unique
+         basenames = set([os.path.basename(addon) for addon in addons])
+@@ -202,7 +179,7 @@ class JetPerf(Talos, MercurialScript):
+                 continue
+             if len(_xpis) > 1:
+                 self.warning("More than one addon found in %s: %s" % (path, _xpis))
+-            xpis.extend([os.path.join(self.addonsdir, directory, xpi) for xpi in _xpis])
++            xpis.extend([os.path.join(directory, xpi) for xpi in _xpis])
+         if not xpis:
+             self.fatal("No addons found in %s" % self.addonsdir)
+ 
+@@ -213,8 +190,8 @@ class JetPerf(Talos, MercurialScript):
+         self.run_talos('jetperf', *args)
+ 
+         # print the results file location if it is a file
+-        filename = self.results_filename()
+-        if filename:
++        if self.results_url.startswith('file://'):
++            filename = self.results_url[len('file://'):]
+             if not os.path.exists(filename):
+                 self.fatal("Results file not found: %s" % filename)
+ 
+@@ -223,6 +200,7 @@ class JetPerf(Talos, MercurialScript):
+ 
+     def baseline(self):
+         """run baseline ts tests"""
++        args = []
+         filename = self.baseline_results_filename()
+         if os.path.exists(filename):
+             self.rmtree(filename)
+@@ -230,20 +208,6 @@ class JetPerf(Talos, MercurialScript):
+         if not os.path.exists(filename):
+             self.fatal("Results file not found: %s" % filename)
+ 
+-    def report_tbpl_status(self):
+-        tbpl_status = TBPL_SUCCESS
+-        missing = []
+-        if 'test' in self.actions:
+-            filename = self.results_filename()
+-            if filename and not os.path.exists(filename):
+-                missing.append(filename)
+-        if 'baseline' in self.actions:
+-            if not os.path.exists(self.baseline_results_filename()):
+-                missing.append(filename)
+-        if missing:
+-            tbpl_status = TBPL_WARNING
+-            self.warning('Missing results files: %s' % ', '.join(missing))
+-        self.buildbot_status(tbpl_status)
+ 
+ def main(args=sys.argv[1:]):
+     """CLI entry point"""
+diff --git a/scripts/mobile_l10n.py b/scripts/mobile_l10n.py
+index 0543ffc..9662157 100755
+--- a/scripts/mobile_l10n.py
++++ b/scripts/mobile_l10n.py
+@@ -303,11 +303,11 @@ class MobileSingleLocale(LocalesMixin, ReleaseMixin, MobileSigningMixin,
+         dirs = self.query_abs_dirs()
+         env = self.query_repack_env()
+         make = self.query_exe("make")
+-        if self.run_command([make, "-f", "client.mk", "configure"],
+-                            cwd=dirs['abs_mozilla_dir'],
+-                            env=env,
+-                            error_list=MakefileErrorList):
+-            self.fatal("Configure failed!")
++        self.run_command([make, "-f", "client.mk", "configure"],
++                         cwd=dirs['abs_mozilla_dir'],
++                         env=env,
++                         error_list=MakefileErrorList,
++                         halt_on_failure=True)
+         for make_dir in c.get('make_dirs', []):
+             self.run_command([make],
+                              cwd=os.path.join(dirs['abs_objdir'], make_dir),
+diff --git a/unit.sh b/unit.sh
+index 41bde0d..50e4225 100755
+--- a/unit.sh
++++ b/unit.sh
+@@ -11,9 +11,6 @@
+ # extensions to fully test.
+ ###########################################################################
+ 
+-# this breaks mercurial unit tests
+-unset HG_SHARE_BASE_DIR
+-
+ COVERAGE_ARGS="--omit='/usr/*,/opt/*'"
+ OS_TYPE='linux'
+ uname -v | grep -q Darwin

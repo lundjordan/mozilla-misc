@@ -1,0 +1,125 @@
+So first we have mozharness calling desktop_unittest and passing mochitest-metro-chrome
+'c:/mozilla-build/python27/python' '-u' 'scripts/scripts/desktop_unittest.py' '--cfg' 'unittests/win_unittest.py' '--mochitest-suite' 'mochitest-metro-chrome' '--download-symbols' 'ondemand'
+c:/mozilla-build/python27/python -u scripts/scripts/desktop_unittest.py --cfg unittests/win_unittest.py --mochitest-suite mochitest-metro-chrome --download-symbols ondemand --no-read-buildbot-configs --installer-url http://ftp.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win64/1375128497/firefox-25.0a1.en-US.win64-x86_64.zip
+
+
+in tbpl logs from the desktop_unittests script we: 09:26:24     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\python', '-u', 'C:\\slave\\test\\build\\tests\\mochitest/runtests.py',
+'--appname=C:\\slave\\test\\build\\application\\firefox\\firefox.exe', '--utility-path=tests/bin', '--extra-profile-file=tests/bin/plugins',
+'--symbols-path=http://ftp.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32-pgo/1375448402/firefox-25.0a1.en-US.win32.crashreporter-symbols.zip',
+'--certificate-path=tests/certs', '--autorun', '--close-when-done', '--console-level=INFO', '--browser-chrome', '--metro-immersive'] in C:\slave\test\build
+
+talos
+
+'c:/mozilla-build/python27/python' '-u' 'scripts/scripts/desktop_unittest.py' '--cfg' 'unittests/win_unittest.py' '--mochitest-suite' 'browser-chrome' '--download-symbols' 'ondemand'
+
+c:/mozilla-build/python27/python -u scripts/scripts/talos_script.py --suite chromez --add-option --webServer,localhost --branch-name Firefox-Non-PGO --system-bits 32 --cfg talos/windows_config.py --download-symbols ondemand --use-talos-json --installer-url http://ftp.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win64/1375128497/firefox-25.0a1.en-US.win64-x86_64.zip --no-read-buildbot-config
+
+C:\\slave\\test\\build\\venv\\Scripts\\talos, --noisy, --debug, -v, --executablePath, C:\\slave\\test\\build\\application\\firefox\\firefox, --title, T-W864-IX-111, --symbolsPath, http://ftp.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1375446680/firefox-25.0a1.en-US.win32.crashreporter-symbols.zip, --activeTests, utresize, --results_url, http://graphs.mozilla.org/server/collect.cgi, --output, talos.yml, --branchName, Firefox-Non-PGO, --datazilla-url, https://datazilla.mozilla.org/talos, --authfile, C:\\slave\\test\\oauth.txt, u--mozAfterPaint, u--filter, uignore_first:5, u--filter, umedian, --webServer, localhost] in C:\slave\test\build
+
+
+
+--executablePath /T/Mozilla/MC-REL/dist/bin/metrotestharness.exe
+
+
+c:/mozilla-build/python27/python -u mozharness/scripts/talos_script.py --suite dromaeojs --add-option --webServer,localhost --branch-name Firefox-Non-PGO --system-bits 32 --cfg talos/windows_config.py --download-symbols ondemand --use-talos-json --installer-url http://ftp.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win64/1375525580/firefox-25.0a1.en-US.win64-x86_64.zip --test-url http://ftp.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win64/1375525580/firefox-25.0a1.en-US.win64-x86_64.tests.zip --metro-immersive --no-read-buildbot-config
+
+
+c:/mozilla-build/python27/python -u mozharness/scripts/talos_script.py --suite svgr-metro --add-option --webServer,localhost --branch-name Cedar --system-bits 32 --cfg talos/windows_config.py --download-symbols ondemand --use-talos-json --no-read-buildbot-config --test-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1376873117/firefox-26.0a1.en-US.win32.tests.zip --installer-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1376873117/firefox-26.0a1.en-US.win32.zip
+
+c:/mozilla-build/python27/python -u mozharness/scripts/talos_script.py --suite svgr-metro --add-option --webServer,localhost --branch-name Cedar --system-bits 32 --cfg talos/windows_config.py --download-symbols ondemand --use-talos-json --no-read-buildbot-config --test-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1376873117/firefox-26.0a1.en-US.win32.tests.zip --installer-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1376873117/firefox-26.0a1.en-US.win32.zip
+
+
+ c:/mozilla-build/python27/python c:/mozilla-build/buildbotve/virtualenv.py --no-site-packages --distribute C:\\slave\\test\\build/venv
+
+c:\\\\mozilla-build\\python27\\python c:\\\\mozilla-build\\buildbotve\\virtualenv.py --no-site-packages --distribute C:\\slave\\test\\build\\venv
+
+path from vnc: "C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\mozilla-build\python27;C:\mozilla-build\python27\Scripts;C:\mozilla-build\msys\bin;C:\mozilla-build\vim\vim72;C:\mozilla-build\wget;C:\mozilla-build\info-zip;C:\CoreUtils\bin;C:\mozilla-build\buildbotve\scripts;C:\mozilla-build\hg"
+
+caught OS error 8: %1 is not a valid Win32 application while running
+
+mozharness\scripts\talos_script.py --suite svgr-metro --add-option --webServer,localhost --branch-name Cedar --system-bits 32 --cfg talos/windows_config.py --download-symbols ondemand --use-talos-json --no-read-buildbot-config --test-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.tests.zip --installer-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.zip
+
+C:\slave\test\build\venv\Scripts\talos --noisy --debug -v --executablePath C:\slave\test\build\application\firefox\firefox --title T-W864-IX-042 --symbolsPath http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1378838152/firefox-26.0a1.en-US.win32.crashreporter-symbols.zip --activeTests tsvgr:tsvgr_opacity --results_url http://graphs.mozilla.org/server/collect.cgi --output talos.yml --branchName Cedar --datazilla-url https://datazilla.mozilla.org/talos --metro-immersive-path C:\slave\test\build\tests\bin\metrotestharness.exe --filter ignore_first:5 --filter median --webServer localhost
+
+c:/mozilla-build/python27/python -u scripts/scripts/talos_script.py --suite dromaeojs -metro --add-option --webServer,localhost --branch-name Cedar --system-bits 32 --cfg talos/windows_config.py --download-symbols ondemand --use-talos-json --no-read-buildbot-config --test-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.tests.zip --installer-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip
+
+CURRENT SUITE STATUS:
+tp5o - passed w mh
+other - passed w mh
+svgr - ?
+dromaeojs - ?
+
+
+
+
+
+
+
+
+
+
+================== Status Update
+
+Joel Maher will be looking into this tomorrow morning
+
+The following suites/args are the latest tests run: 
+        "dromaeojs-metro": {
+            "tests": ["dromaeo_css", "dromaeo_dom", "kraken", "v8_7"]
+        },
+        "other-metro": {
+            "tests": ["a11yr", "ts_paint"]
+        },
+        "svgr-metro": {
+            "tests": ["tsvgx", "tsvgr_opacity", "tscrollx"]
+        },
+        "tp5o-metro": {
+            "tests": ["tp5o"],
+            "pagesets_url": "http://talos-bundles.pvt.build.mozilla.org/zips/tp5n.zip",
+            "pagesets_parent_dir_path": "talos/page_load_test/",
+            "pagesets_manifest_path": "talos/page_load_test/tp5n/tp5o.manifest",
+            "plugins": {
+                "32": "http://talos-bundles.pvt.build.mozilla.org/zips/flash32_10_3_183_5.zip",
+                "64": "http://talos-bundles.pvt.build.mozilla.org/zips/flash64_11_0_d1_98.zip"
+            }
+        }
+
+The following are the logs from the above suites ran against latest m-c, talos, and mozharness (plus the addition of my patches):
+
+http://people.mozilla.org/~jlund/dromaeoMetro1015.txt
+timeout. here it looks like the browser failed to launch or output wasn't captured, or buffering issue
+
+http://people.mozilla.org/~jlund/otherMetro1015.txt
+looks to complete without barfing but many JS errors are printed throughout tests
+
+http://people.mozilla.org/~jlund/svgrMetro1015.txt
+runs many tests but eventually errors out
+
+http://people.mozilla.org/~jlund/tp5oMetro1015.txt
+timeout. either hung or there is an issue with buffering
+
+http://people.mozilla.org/~jlund/window_args1015.txt
+this error occasionally still creeps up. It seems there is still a timing issue
+
+This was run in automation. Since there are regressions (again), I am currently running this locally to see if there is any difference. One thing I reverted from the talos repo is the way we called Popen. Previously I had this:
+http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/rev/3ded2a2e76e6
+But I did not think it was doing much. Maybe this was helping with buffering issue?
+
+Joel, this can be replicated by cloning the following hg repo with the latest rev:
+http://hg.mozilla.org/users/jlund_mozilla.com/mozharness2/
+
+then running the script from within mozharness with the following args:
+c:/mozilla-build/python27/python -u mozharness/scripts/talos_script.py --suite other-metro --add-option --webServer,localhost --branch-name Cedar --system-bits 32 --cfg talos/windows_config.py --download-symbols ondemand --use-talos-json --no-read-buildbot-config --test-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.tests.zip --installer-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip
+
+**note: other-metro can be replaced with svgr-metro, etc
+
+This will end up using the following talos.json:
+http://people.mozilla.org/~jlund/talos.json
+
+and talos.json will use the latest talos repo here:
+http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/
+
+Hopefully it will be easier to play around with now that I am using all hg and not Git. Let me know if you have any questions! :)
+
+
+
+

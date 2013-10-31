@@ -1,0 +1,22 @@
+This is a proposed patch for my latest mozharness changes. This includes
+everything done this far. 
+
+For notes see 'working on/known issues' in:
+https://etherpad.mozilla.org/8IoZrTUXAG
+
+still WIP: 
+
+1) configs are unconsolidated so major redundancy. eventually, after we see if
+we need branch/arch/platformVersion specific configs, I could make an initial
+config file with the duplicate code.
+
+2) for buildbot-configs set mozharness unittests to be run on cedar
+
+3) after WIP #1 is addressed, I would like to figure out solution for developer
+configs. ATM we have a developer config for linux working but this needs to be
+run for any OS.
+
+for those with build vpn and are curious to see logs of this script running in
+    testing:
+    http://dev-master01.build.scl1.mozilla.com:8038/builders 
+

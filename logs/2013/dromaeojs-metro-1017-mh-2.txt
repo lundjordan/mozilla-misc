@@ -1,0 +1,2278 @@
+11:11:26     INFO - MultiFileLogger online at 20131017 11:11:26 in
+C:\slave\test
+11:11:26     INFO - Run as scripts/scripts/talos_script.py --suite
+dromaeojs-metro --add-option --webServer,localhost --branch-name Cedar
+--system-bits 32 --cfg talos/windows_config.py --download-symbols ondemand
+--use-talos-json --no-read-buildbot-config --test-url
+http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.tests.zip
+--installer-url
+http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip
+11:11:26     INFO - Downloading http://people.mozilla.org/~jlund/talos.json to
+C:\slave\test\build\talos.json
+11:11:26     INFO - retry: Calling <bound method Talos._download_file of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('http://people.mozilla.org/~jlund/talos.json',
+'C:\\slave\\test\\build\\talos.json'), kwargs: {}, attempt #1
+11:11:26     INFO - Downloaded 4078 bytes.
+11:11:26     INFO - made it herehttp://people.mozilla.org/~jlund/talos.json
+11:11:26     INFO - self.talos_jsonC:\slave\test\build\talos.json
+11:11:26     INFO - {u'global': {u'talos_repo':
+u'http://hg.mozilla.org/users/jmaher_mozilla.com/tpain',
+11:11:26     INFO -              u'talos_revision': u'a750995e0986'},
+11:11:26     INFO -  u'mobile-suites': {u'remote-tcanvasmark':
+{u'talos_options': [u'--noChrome'],
+11:11:26     INFO -                                             u'tests':
+[u'tcanvasmark']},
+11:11:26     INFO -                     u'remote-tp4m_nochrome': {u'tests':
+[u'tp4m']},
+11:11:26     INFO -                     u'remote-trobocheck2':
+{u'talos_options': [u'--fennecIDs',
+11:11:26     INFO -
+u'../fennec_ids.txt'],
+11:11:26     INFO -                                             u'tests':
+[u'tcheck2']},
+11:11:26     INFO -                     u'remote-trobopan': {u'talos_options':
+[u'--fennecIDs',
+11:11:26     INFO -
+u'../fennec_ids.txt'],
+11:11:26     INFO -                                          u'tests':
+[u'trobopan']},
+11:11:26     INFO -                     u'remote-troboprovider':
+{u'talos_options': [u'--fennecIDs',
+11:11:26     INFO -
+u'../fennec_ids.txt'],
+11:11:26     INFO -                                               u'tests':
+[u'tprovider']},
+11:11:26     INFO -                     u'remote-tspaint': {u'tests':
+[u'ts_paint']},
+11:11:26     INFO -                     u'remote-tsvgx': {u'talos_options':
+[u'--noChrome'],
+11:11:26     INFO -                                       u'tests':
+[u'tsvgx']}},
+11:11:26     INFO -  u'suites': {u'chromez': {u'tests': [u'tresize',
+u'tcanvasmark']},
+11:11:26     INFO -              u'dirtypaint': {u'talos_addons':
+[u'http://talos-bundles.pvt.build.mozilla.org/profiles/dirtyDBs.zip',
+11:11:26     INFO -
+u'http://talos-bundles.pvt.build.mozilla.org/profiles/dirtyMaxDBs.zip'],
+11:11:26     INFO -                              u'tests':
+[u'tspaint_places_generated_med',
+11:11:26     INFO -
+u'tspaint_places_generated_max']},
+11:11:26     INFO -              u'dromaeojs': {u'tests': [u'dromaeo_css',
+11:11:26     INFO -                                        u'dromaeo_dom',
+11:11:26     INFO -                                        u'kraken',
+11:11:26     INFO -                                        u'v8_7']},
+11:11:26     INFO -              u'dromaeojs-metro': {u'tests':
+[u'dromaeo_css',
+11:11:26     INFO -
+u'dromaeo_dom',
+11:11:26     INFO -                                              u'kraken',
+11:11:26     INFO -                                              u'v8_7']},
+11:11:26     INFO -              u'other': {u'tests': [u'a11yr', u'ts_paint',
+u'tpaint']},
+11:11:26     INFO -              u'other-metro': {u'tests': [u'a11yr',
+u'ts_paint']},
+11:11:26     INFO -              u'svgr': {u'tests': [u'tsvgx',
+11:11:26     INFO -                                   u'tsvgr_opacity',
+11:11:26     INFO -                                   u'tart',
+11:11:26     INFO -                                   u'tscrollx']},
+11:11:26     INFO -              u'svgr-metro': {u'tests': [u'tsvgx',
+u'tsvgr_opacity']},
+11:11:26     INFO -              u'tp5o': {u'pagesets_manifest_path':
+u'talos/page_load_test/tp5n/tp5o.manifest',
+11:11:26     INFO -                        u'pagesets_parent_dir_path':
+u'talos/page_load_test/',
+11:11:26     INFO -                        u'pagesets_url':
+u'http://talos-bundles.pvt.build.mozilla.org/zips/tp5n.zip',
+11:11:26     INFO -                        u'plugins': {u'32':
+u'http://talos-bundles.pvt.build.mozilla.org/zips/flash32_10_3_183_5.zip',
+11:11:26     INFO -                                     u'64':
+u'http://talos-bundles.pvt.build.mozilla.org/zips/flash64_11_0_d1_98.zip'},
+11:11:26     INFO -                        u'tests': [u'tp5o']},
+11:11:26     INFO -              u'tp5o-metro': {u'pagesets_manifest_path':
+u'talos/page_load_test/tp5n/tp5o.manifest',
+11:11:26     INFO -                              u'pagesets_parent_dir_path':
+u'talos/page_load_test/',
+11:11:26     INFO -                              u'pagesets_url':
+u'http://talos-bundles.pvt.build.mozilla.org/zips/tp5n.zip',
+11:11:26     INFO -                              u'plugins': {u'32':
+u'http://talos-bundles.pvt.build.mozilla.org/zips/flash32_10_3_183_5.zip',
+11:11:26     INFO -                                           u'64':
+u'http://talos-bundles.pvt.build.mozilla.org/zips/flash64_11_0_d1_98.zip'},
+11:11:26     INFO -                              u'tests': [u'tp5o']},
+11:11:26     INFO -              u'xperf': {u'pagesets_manifest_path':
+u'talos/page_load_test/tp5n/tp5n.manifest',
+11:11:26     INFO -                         u'pagesets_parent_dir_path':
+u'talos/page_load_test/',
+11:11:26     INFO -                         u'pagesets_url':
+u'http://talos-bundles.pvt.build.mozilla.org/zips/tp5n.zip',
+11:11:26     INFO -                         u'plugins': {u'32':
+u'http://talos-bundles.pvt.build.mozilla.org/zips/flash32_10_3_183_5.zip',
+11:11:26     INFO -                                      u'64':
+u'http://talos-bundles.pvt.build.mozilla.org/zips/flash64_11_0_d1_98.zip'},
+11:11:26     INFO -                         u'talos_options':
+[u'--xperf_path',
+11:11:26     INFO -                                            u'"c:/Program
+Files/Microsoft Windows Performance Toolkit/xperf.exe"',
+11:11:26     INFO -
+u'C:/slave/talos-data/talos/xperf.config'],
+11:11:26     INFO -                         u'tests': [u'tp5n']}},
+11:11:26     INFO -  u'talos.zip': {u'path': u'',
+11:11:26     INFO -                 u'url':
+u'http://hg.mozilla.org/users/jmaher_mozilla.com/tpain/archive/a750995e0986.zip'}}
+11:11:26     INFO - Dumping config to C:\slave\test\logs\localconfig.json.
+11:11:26     INFO - {'append_to_log': False,
+11:11:26     INFO -  'base_work_dir': 'C:\\slave\\test',
+11:11:26     INFO -  'branch': 'Cedar',
+11:11:26     INFO -  'buildbot_json_path': 'buildprops.json',
+11:11:26     INFO -  'config_files': ('talos/windows_config.py',),
+11:11:26     INFO -  'datazilla_urls':
+('https://datazilla.mozilla.org/talos',),
+11:11:26     INFO -  'default_actions': ('clobber',
+11:11:26     INFO -                      'read-buildbot-config',
+11:11:26     INFO -                      'download-and-extract',
+11:11:26     INFO -                      'clone-talos',
+11:11:26     INFO -                      'create-virtualenv',
+11:11:26     INFO -                      'install',
+11:11:26     INFO -                      'run-tests'),
+11:11:26     INFO -  'download_symbols': 'ondemand',
+11:11:26     INFO -  'exes': {'easy_install':
+('C:\\slave\\test\\build/venv/scripts/python',
+11:11:26     INFO -
+'C:\\slave\\test\\build/venv/scripts/easy_install-2.7-script.py'),
+11:11:26     INFO -           'hg': 'c:/mozilla-build/hg/hg',
+11:11:26     INFO -           'mozinstall':
+('C:\\slave\\test\\build/venv/scripts/python',
+11:11:26     INFO -
+'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py'),
+11:11:26     INFO -           'python':
+'c:/mozilla-build/python27/python.exe',
+11:11:26     INFO -           'virtualenv':
+('c:/mozilla-build/python27/python.exe',
+11:11:26     INFO -
+'c:/mozilla-build/buildbotve/virtualenv.py')},
+11:11:26     INFO -  'find_links': ('http://pypi.pvt.build.mozilla.org/pub',
+11:11:26     INFO -                 'http://pypi.pub.build.mozilla.org/pub'),
+11:11:26     INFO -  'installer_path': 'installer.exe',
+11:11:26     INFO -  'installer_url':
+'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip',
+11:11:26     INFO -  'log_level': 'info',
+11:11:26     INFO -  'log_name': 'talos',
+11:11:26     INFO -  'log_to_console': True,
+11:11:26     INFO -  'metro_harness_dir': 'bin',
+11:11:26     INFO -  'metro_test_harness_exe': 'metrotestharness.exe',
+11:11:26     INFO -  'opt_config_files': (),
+11:11:26     INFO -  'pip_index': False,
+11:11:26     INFO -  'populate_webroot': True,
+11:11:26     INFO -  'python_webserver': False,
+11:11:26     INFO -  'results_url':
+'http://graphs.mozilla.org/server/collect.cgi',
+11:11:26     INFO -  'suite': 'dromaeojs-metro',
+11:11:26     INFO -  'system_bits': '32',
+11:11:26     INFO -  'talos_extra_options': ('--webServer', 'localhost'),
+11:11:26     INFO -  'talos_json_url':
+'http://people.mozilla.org/~jlund/talos.json',
+11:11:26     INFO -  'talos_url':
+'http://hg.mozilla.org/build/talos/archive/tip.tar.gz',
+11:11:26     INFO -  'test_url':
+'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.tests.zip',
+11:11:26     INFO -  'tests': (),
+11:11:26     INFO -  'title': 'T-W864-IX-042',
+11:11:26     INFO -  'use_talos_json': True,
+11:11:26     INFO -  'virtualenv_modules': ('pywin32', 'talos', 'mozinstall'),
+11:11:26     INFO -  'virtualenv_path': 'C:\\slave\\test\\build/venv',
+11:11:26     INFO -  'virtualenv_python_dll':
+'c:/mozilla-build/python27/python27.dll',
+11:11:26     INFO -  'volatile_config': {'actions': None,
+11:11:26     INFO -                      'add_actions': None,
+11:11:26     INFO -                      'no_actions':
+('read-buildbot-config',)},
+11:11:26     INFO -  'webroot': 'c:/slave/talos-data',
+11:11:26     INFO -  'webroot_extract_cmd': 'c:/mozilla-build/msys/bin/bash -c
+"PATH=/c/mozilla-build/msys/bin:$PATH tar zx --strip-components=1 -f
+\'%(tarball)s\' --wildcards \'**/talos/\'"',
+11:11:26     INFO -  'work_dir': 'build'}
+11:11:26     INFO - #####
+11:11:26     INFO - ##### Running clobber step.
+11:11:26     INFO - #####
+11:11:26     INFO - Running pre-action listener: _resource_record_pre_action
+11:11:26     INFO - Running main action method: clobber
+11:11:26     INFO - rmtree: C:\slave\test\build
+11:11:26     INFO - Using _rmtree_windows ...
+11:11:26     INFO - retry: Calling <bound method Talos._rmtree_windows of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('C:\\slave\\test\\build',), kwargs: {}, attempt #1
+11:12:23     INFO - Running post-action listener: _resource_record_post_action
+11:12:23     INFO - #####
+11:12:23     INFO - ##### Skipping read-buildbot-config step.
+11:12:23     INFO - #####
+11:12:23     INFO - #####
+11:12:23     INFO - ##### Running download-and-extract step.
+11:12:23     INFO - #####
+11:12:23     INFO - Running pre-action listener: _resource_record_pre_action
+11:12:23     INFO - Running main action method: download_and_extract
+11:12:23     INFO - mkdir: C:\slave\test\build
+11:12:23     INFO - Downloading
+http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.tests.zip
+to C:\slave\test\build\firefox-27.0a1.en-US.win32.tests.zip
+11:12:23     INFO - retry: Calling <bound method Talos._download_file of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.tests.zip',
+'C:\\slave\\test\\build\\firefox-27.0a1.en-US.win32.tests.zip'), kwargs: {},
+attempt #1
+11:12:24     INFO - Downloaded 86849503 bytes.
+11:12:24     INFO - mkdir: C:\slave\test\build\tests
+11:12:24     INFO - Running command: ['unzip', '-q', '-o',
+'C:\\slave\\test\\build\\firefox-27.0a1.en-US.win32.tests.zip'] in
+C:\slave\test\build\tests
+11:12:24     INFO - Copy/paste: unzip -q -o
+C:\slave\test\build\firefox-27.0a1.en-US.win32.tests.zip
+11:13:36     INFO - Return code: 0
+11:13:36     INFO - Dumping config to C:\slave\test\logs\treeconfig.json.
+11:13:36     INFO - {'append_to_log': False,
+11:13:36     INFO -  'base_work_dir': 'C:\\slave\\test',
+11:13:36     INFO -  'branch': 'Cedar',
+11:13:36     INFO -  'buildbot_json_path': 'buildprops.json',
+11:13:36     INFO -  'config_files': ('talos/windows_config.py',),
+11:13:36     INFO -  'datazilla_urls':
+('https://datazilla.mozilla.org/talos',),
+11:13:36     INFO -  'default_actions': ('clobber',
+11:13:36     INFO -                      'read-buildbot-config',
+11:13:36     INFO -                      'download-and-extract',
+11:13:36     INFO -                      'clone-talos',
+11:13:36     INFO -                      'create-virtualenv',
+11:13:36     INFO -                      'install',
+11:13:36     INFO -                      'run-tests'),
+11:13:36     INFO -  'download_symbols': 'ondemand',
+11:13:36     INFO -  'exes': {'easy_install':
+('C:\\slave\\test\\build/venv/scripts/python',
+11:13:36     INFO -
+'C:\\slave\\test\\build/venv/scripts/easy_install-2.7-script.py'),
+11:13:36     INFO -           'hg': 'c:/mozilla-build/hg/hg',
+11:13:36     INFO -           'mozinstall':
+('C:\\slave\\test\\build/venv/scripts/python',
+11:13:36     INFO -
+'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py'),
+11:13:36     INFO -           'python':
+'c:/mozilla-build/python27/python.exe',
+11:13:36     INFO -           'virtualenv':
+('c:/mozilla-build/python27/python.exe',
+11:13:36     INFO -
+'c:/mozilla-build/buildbotve/virtualenv.py')},
+11:13:36     INFO -  'find_links': ('http://pypi.pvt.build.mozilla.org/pub',
+11:13:36     INFO -                 'http://pypi.pub.build.mozilla.org/pub'),
+11:13:36     INFO -  'installer_path': 'installer.exe',
+11:13:36     INFO -  'installer_url':
+'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip',
+11:13:36     INFO -  'log_level': 'info',
+11:13:36     INFO -  'log_name': 'talos',
+11:13:36     INFO -  'log_to_console': True,
+11:13:36     INFO -  'metro_harness_dir': 'bin',
+11:13:36     INFO -  'metro_test_harness_exe': 'metrotestharness.exe',
+11:13:36     INFO -  'opt_config_files': (),
+11:13:36     INFO -  'pip_index': False,
+11:13:36     INFO -  'populate_webroot': True,
+11:13:36     INFO -  'python_webserver': False,
+11:13:36     INFO -  'results_url':
+'http://graphs.mozilla.org/server/collect.cgi',
+11:13:36     INFO -  'suite': 'dromaeojs-metro',
+11:13:36     INFO -  'system_bits': '32',
+11:13:36     INFO -  'talos_extra_options': ('--webServer', 'localhost'),
+11:13:36     INFO -  'talos_json_url':
+'http://people.mozilla.org/~jlund/talos.json',
+11:13:36     INFO -  'talos_url':
+'http://hg.mozilla.org/build/talos/archive/tip.tar.gz',
+11:13:36     INFO -  'test_url':
+'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.tests.zip',
+11:13:36     INFO -  'tests': (),
+11:13:36     INFO -  'title': 'T-W864-IX-042',
+11:13:36     INFO -  'use_talos_json': True,
+11:13:36     INFO -  'virtualenv_modules': ('pywin32', 'talos', 'mozinstall'),
+11:13:36     INFO -  'virtualenv_path': 'C:\\slave\\test\\build/venv',
+11:13:36     INFO -  'virtualenv_python_dll':
+'c:/mozilla-build/python27/python27.dll',
+11:13:36     INFO -  'volatile_config': {'actions': None,
+11:13:36     INFO -                      'add_actions': None,
+11:13:36     INFO -                      'no_actions':
+('read-buildbot-config',)},
+11:13:36     INFO -  'webroot': 'c:/slave/talos-data',
+11:13:36     INFO -  'webroot_extract_cmd': 'c:/mozilla-build/msys/bin/bash -c
+"PATH=/c/mozilla-build/msys/bin:$PATH tar zx --strip-components=1 -f
+\'%(tarball)s\' --wildcards \'**/talos/\'"',
+11:13:36     INFO -  'work_dir': 'build'}
+11:13:36     INFO - Downloading
+http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip
+to C:\slave\test\build\firefox-27.0a1.en-US.win32.zip
+11:13:36     INFO - retry: Calling <bound method Talos._download_file of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip',
+'C:\\slave\\test\\build\\firefox-27.0a1.en-US.win32.zip'), kwargs: {}, attempt
+#1
+11:13:37     INFO - Downloaded 35582600 bytes.
+11:13:37     INFO - Setting buildbot property build_url to
+http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip
+11:13:37     INFO - Writing buildbot properties ['build_url'] to
+C:\slave\test\properties\build_url
+11:13:37     INFO - Writing to file C:\slave\test\properties\build_url
+11:13:37     INFO - Contents:
+11:13:37     INFO -
+build_url:http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip
+11:13:37     INFO - Running post-action listener: _resource_record_post_action
+11:13:37     INFO - #####
+11:13:37     INFO - ##### Running clone-talos step.
+11:13:37     INFO - #####
+11:13:37     INFO - Running pre-action listener: _resource_record_pre_action
+11:13:37     INFO - Running main action method: clone_talos
+11:13:37     INFO - Populating webroot c:/slave/talos-data...
+11:13:37     INFO - rmtree: c:/slave/talos-data\talos
+11:13:37     INFO - Using _rmtree_windows ...
+11:13:37     INFO - retry: Calling <bound method Talos._rmtree_windows of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('c:/slave/talos-data\\talos',), kwargs: {}, attempt #1
+11:14:15     INFO - retry: Calling <bound method Talos._get_revision of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+(<mozharness.base.vcs.mercurial.MercurialVCS object at 0x02914E70>,
+'C:\\slave\\test\\build\\talos_repo'), kwargs: {}, attempt #1
+11:14:15     INFO - Setting C:\slave\test\build\talos_repo to
+http://hg.mozilla.org/users/jmaher_mozilla.com/tpain revision a750995e0986.
+11:14:15     INFO - Cloning
+http://hg.mozilla.org/users/jmaher_mozilla.com/tpain to
+C:\slave\test\build\talos_repo.
+11:14:15     INFO - Running command: ['c:/mozilla-build/hg/hg', '--config',
+'ui.merge=internal:merge', 'clone',
+u'http://hg.mozilla.org/users/jmaher_mozilla.com/tpain',
+'C:\\slave\\test\\build\\talos_repo']
+11:14:15     INFO - Copy/paste: c:/mozilla-build/hg/hg --config
+ui.merge=internal:merge clone
+http://hg.mozilla.org/users/jmaher_mozilla.com/tpain
+C:\slave\test\build\talos_repo
+11:14:26     INFO -  requesting all changes
+11:14:26     INFO -  adding changesets
+11:14:26     INFO -  adding manifests
+11:14:26     INFO -  adding file changes
+11:14:26     INFO -  added 805 changesets with 3375 changes to 1590 files (+1
+heads)
+11:14:26     INFO -  updating to branch default
+11:14:26     INFO -  601 files updated, 0 files merged, 0 files removed, 0
+files unresolved
+11:14:26     INFO - Return code: 0
+11:14:26     INFO - Updating C:\slave\test\build\talos_repo.
+11:14:26     INFO - Getting output from command: ['c:/mozilla-build/hg/hg',
+'--config', 'ui.merge=internal:merge', 'branch'] in
+C:\slave\test\build\talos_repo
+11:14:26     INFO - Copy/paste: c:/mozilla-build/hg/hg --config
+ui.merge=internal:merge branch
+11:14:26     INFO - Reading from file tmpfile_stdout
+11:14:26     INFO - Output received:
+11:14:26     INFO -  default
+11:14:26     INFO - Using _rmtree_windows ...
+11:14:26     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows
+of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x02914E70>> with
+args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+11:14:26     INFO - Using _rmtree_windows ...
+11:14:26     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows
+of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x02914E70>> with
+args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+11:14:26     INFO - Running command: ['c:/mozilla-build/hg/hg', '--config',
+'ui.merge=internal:merge', 'update', '-C'] in C:\slave\test\build\talos_repo
+11:14:26     INFO - Copy/paste: c:/mozilla-build/hg/hg --config
+ui.merge=internal:merge update -C
+11:14:27     INFO -  0 files updated, 0 files merged, 0 files removed, 0 files
+unresolved
+11:14:27     INFO - Return code: 0
+11:14:27     INFO - Getting output from command: ['c:/mozilla-build/hg/hg',
+'--config', 'ui.merge=internal:merge', 'parent', '--template', '{node|short}']
+in C:\slave\test\build\talos_repo
+11:14:27     INFO - Copy/paste: c:/mozilla-build/hg/hg --config
+ui.merge=internal:merge parent --template {node|short}
+11:14:27     INFO - Reading from file tmpfile_stdout
+11:14:27     INFO - Output received:
+11:14:27     INFO -  a750995e0986
+11:14:27     INFO - Using _rmtree_windows ...
+11:14:27     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows
+of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x02914E70>> with
+args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+11:14:27     INFO - Using _rmtree_windows ...
+11:14:27     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows
+of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x02914E70>> with
+args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+11:14:27     INFO - Updating C:\slave\test\build\talos_repo revision
+a750995e0986.
+11:14:27     INFO - Running command: ['c:/mozilla-build/hg/hg', '--config',
+'ui.merge=internal:merge', 'update', '-C', '-r', u'a750995e0986'] in
+C:\slave\test\build\talos_repo
+11:14:27     INFO - Copy/paste: c:/mozilla-build/hg/hg --config
+ui.merge=internal:merge update -C -r a750995e0986
+11:14:27     INFO -  0 files updated, 0 files merged, 0 files removed, 0 files
+unresolved
+11:14:27     INFO - Return code: 0
+11:14:27     INFO - Getting output from command: ['c:/mozilla-build/hg/hg',
+'--config', 'ui.merge=internal:merge', 'parent', '--template', '{node|short}']
+in C:\slave\test\build\talos_repo
+11:14:27     INFO - Copy/paste: c:/mozilla-build/hg/hg --config
+ui.merge=internal:merge parent --template {node|short}
+11:14:27     INFO - Reading from file tmpfile_stdout
+11:14:27     INFO - Output received:
+11:14:27     INFO -  a750995e0986
+11:14:27     INFO - Using _rmtree_windows ...
+11:14:27     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows
+of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x02914E70>> with
+args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+11:14:27     INFO - Using _rmtree_windows ...
+11:14:27     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows
+of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x02914E70>> with
+args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+11:14:27     INFO - copying tree: C:\slave\test\build\talos_repo\talos to
+c:/slave/talos-data\talos
+11:14:27     INFO - rmtree: c:/slave/talos-data\talos
+11:14:27     INFO - Using _rmtree_windows ...
+11:14:27     INFO - retry: Calling <bound method Talos._rmtree_windows of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('c:/slave/talos-data\\talos',), kwargs: {}, attempt #1
+11:14:27     INFO - Running post-action listener: _resource_record_post_action
+11:14:27     INFO - #####
+11:14:27     INFO - ##### Running create-virtualenv step.
+11:14:27     INFO - #####
+11:14:27     INFO - Running pre-action listener: _resource_record_pre_action
+11:14:27     INFO - Running main action method: create_virtualenv
+11:14:27     INFO - [{'global_options': ['--without-libyaml'], 'name':
+'PyYAML', 'url': None},
+11:14:27     INFO -  'pywin32',
+11:14:27     INFO -  {'global_options': [],
+11:14:27     INFO -   'name': 'talos',
+11:14:27     INFO -   'url': 'C:\\slave\\test\\build\\talos_repo'},
+11:14:27     INFO -  'mozinstall']
+11:14:27     INFO - Creating virtualenv C:\slave\test\build/venv
+11:14:27     INFO - mkdir: C:\slave\test\build\venv\Scripts
+11:14:27     INFO - Copying c:/mozilla-build/python27/python27.dll to
+C:\slave\test\build\venv\Scripts\python27.dll
+11:14:27  WARNING - Can't copy c:/mozilla-build/python27/python27.dll to
+C:\slave\test\build\venv\Scripts\python27.dll: [Errno 2] No such file or
+directory: 'c:/mozilla-build/python27/python27.dll'!
+11:14:27     INFO - Running command: ['c:/mozilla-build/python27/python.exe',
+'c:/mozilla-build/buildbotve/virtualenv.py', '--no-site-packages',
+'--distribute', 'C:\\slave\\test\\build/venv'] in C:\slave\test\build
+11:14:27     INFO - Copy/paste: c:/mozilla-build/python27/python.exe
+c:/mozilla-build/buildbotve/virtualenv.py --no-site-packages --distribute
+C:\slave\test\build/venv
+11:14:28     INFO -  New python executable in
+C:\slave\test\build/venv\Scripts\python.exe
+11:14:30     INFO -  Installing
+distribute......................................................................................................................................................................................done.
+11:14:31     INFO - Return code: 0
+11:14:31     INFO - Installing PyYAML into virtualenv C:\slave\test\build/venv
+11:14:31     INFO - Running command:
+['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--download-cache',
+'C:\\slave\\test\\build/venv\\cache', '--no-index', '--global-option',
+'--without-libyaml', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub',
+'--find-links', 'http://pypi.pub.build.mozilla.org/pub', 'PyYAML'] in
+C:\slave\test\build
+11:14:31     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install
+--download-cache C:\slave\test\build/venv\cache --no-index --global-option
+--without-libyaml --find-links http://pypi.pvt.build.mozilla.org/pub
+--find-links http://pypi.pub.build.mozilla.org/pub PyYAML
+11:14:32     INFO -  Ignoring indexes: http://pypi.python.org/simple/
+11:14:32     INFO -  Downloading/unpacking PyYAML
+11:14:32     INFO -  Creating supposed download cache at
+C:\slave\test\build/venv\cache
+11:14:32     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fpyyaml-3.10.tar.gz
+11:14:32     INFO -    Running setup.py egg_info for package PyYAML
+11:14:32     INFO -  Installing collected packages: PyYAML
+11:14:32     INFO -    Running setup.py install for PyYAML
+11:14:32     INFO -  Successfully installed PyYAML
+11:14:32     INFO -  Cleaning up...
+11:14:32     INFO - Return code: 0
+11:14:32     INFO - Installing pywin32 into virtualenv
+C:\slave\test\build/venv
+11:14:32     INFO - Running command:
+['C:\\slave\\test\\build/venv/scripts/python',
+'C:\\slave\\test\\build/venv/scripts/easy_install-2.7-script.py',
+'--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links',
+'http://pypi.pub.build.mozilla.org/pub', 'pywin32'] in C:\slave\test\build
+11:14:32     INFO - Copy/paste: C:\slave\test\build/venv/scripts/python
+C:\slave\test\build/venv/scripts/easy_install-2.7-script.py --find-links
+http://pypi.pvt.build.mozilla.org/pub --find-links
+http://pypi.pub.build.mozilla.org/pub pywin32
+11:14:32     INFO -  install_dir C:\slave\test\build\venv\Lib\site-packages\
+11:14:32     INFO -  Searching for pywin32
+11:14:32     INFO -  Reading http://pypi.pub.build.mozilla.org/pub
+11:14:33     INFO -  Best match: pywin32 216
+11:14:33     INFO -  Downloading
+http://pypi.pub.build.mozilla.org/pub/pywin32-216.win32-py2.7.exe
+11:14:33     INFO -  Processing pywin32-216.win32-py2.7.exe
+11:14:34     INFO -  pywintypes: module references __file__
+11:14:34     INFO -  win32evtlogutil: module references __file__
+11:14:34     INFO -  win32serviceutil: module references __file__
+11:14:34     INFO -  win32timezone: module references __file__
+11:14:34     INFO -  Demos.win32rcparser_demo: module references __file__
+11:14:34     INFO -  Demos.security.sspi.validate_password: module references
+__file__
+11:14:34     INFO -  isapi.install: module references __file__
+11:14:34     INFO -  isapi.samples.advanced: module references __file__
+11:14:34     INFO -  isapi.samples.test: module references __file__
+11:14:34     INFO -  isapi.test.setup: module references __file__
+11:14:34     INFO -  pywin.framework.scriptutils: module references __file__
+11:14:34     INFO -  pywin.framework.startup: module references __path__
+11:14:34     INFO -  pywin.scintilla.config: module references __path__
+11:14:34     INFO -  pywin.scintilla.control: module references __file__
+11:14:34     INFO -  pywin.scintilla.IDLEenvironment: module references
+__file__
+11:14:34     INFO -  scripts.regsetup: module references __file__
+11:14:34     INFO -  scripts.setup_d: module references __file__
+11:14:34     INFO -  test.testall: module references __file__
+11:14:34     INFO -  test.test_clipboard: module references __file__
+11:14:34     INFO -  test.test_win32api: module references __file__
+11:14:34     INFO -  test.test_win32rcparser: module references __file__
+11:14:34     INFO -
+C:\slave\test\build\venv\lib\site-packages\distribute-0.6.14-py2.7.egg\setuptools\command\bdist_egg.py:427:
+UnicodeWarning: Unicode equal comparison failed to convert both arguments to
+Unicode - interpreting them as being unequal
+11:14:34     INFO -    symbols = dict.fromkeys(iter_symbols(code))
+11:14:34     INFO -  test.test_win32trace: module references __file__
+11:14:34     INFO -  win32com.__init__: module references __path__
+11:14:34     INFO -  win32com.server.register: module references __file__
+11:14:34     INFO -  win32com.server.register: module references __path__
+11:14:34     INFO -  win32com.test.GenTestScripts: module references __path__
+11:14:34     INFO -  win32com.test.pippo_server: module references __file__
+11:14:34     INFO -  win32com.test.testall: module references __file__
+11:14:34     INFO -  win32com.test.testAXScript: module references __path__
+11:14:34     INFO -  win32com.test.testDictionary: module references __file__
+11:14:34     INFO -  win32com.test.testPippo: module references __file__
+11:14:34     INFO -  win32com.test.testPyComTest: module references __file__
+11:14:34     INFO -  win32com.test.testServers: module references __file__
+11:14:34     INFO -  win32com.test.util: module references __file__
+11:14:34     INFO -  win32comext.adsi.__init__: module references __path__
+11:14:34     INFO -  win32comext.authorization.__init__: module references
+__path__
+11:14:34     INFO -  win32comext.axcontrol.__init__: module references
+__path__
+11:14:34     INFO -  win32comext.axdebug.codecontainer: module references
+__file__
+11:14:34     INFO -  win32comext.axdebug.debugger: module references __file__
+11:14:34     INFO -  win32comext.axdebug.__init__: module references __path__
+11:14:34     INFO -  win32comext.axscript.__init__: module references __path__
+11:14:34     INFO -  win32comext.bits.__init__: module references __path__
+11:14:34     INFO -  win32comext.directsound.__init__: module references
+__path__
+11:14:34     INFO -  win32comext.directsound.test.ds_test: module references
+__file__
+11:14:34     INFO -  win32comext.internet.__init__: module references __path__
+11:14:34     INFO -  win32comext.mapi.__init__: module references __path__
+11:14:34     INFO -  win32comext.shell.__init__: module references __path__
+11:14:34     INFO -  win32comext.shell.demos.servers.empty_volume_cache:
+module references __file__
+11:14:34     INFO -  win32comext.shell.demos.servers.folder_view: module
+references __file__
+11:14:34     INFO -  win32comext.taskscheduler.__init__: module references
+__path__
+11:14:34     INFO -  creating
+'c:\users\cltbld~1.t-w\appdata\local\temp\easy_install-gg20fi\pywin32-216-py2.7-win32.egg'
+and adding
+'c:\users\cltbld~1.t-w\appdata\local\temp\easy_install-gg20fi\pywin32-216-py2.7-win32.egg.tmp'
+to it
+11:14:36     INFO -  creating
+c:\slave\test\build\venv\lib\site-packages\pywin32-216-py2.7-win32.egg
+11:14:36     INFO -  Extracting pywin32-216-py2.7-win32.egg to
+c:\slave\test\build\venv\lib\site-packages
+11:14:37     INFO -  Adding pywin32 216 to easy-install.pth file
+11:14:37     INFO -  Installing pywin32_postinstall.py script to
+C:\slave\test\build\venv\Scripts
+11:14:37     INFO -  Installing pywin32_postinstall.pyc script to
+C:\slave\test\build\venv\Scripts
+11:14:37     INFO -  Installing pywin32_testall.py script to
+C:\slave\test\build\venv\Scripts
+11:14:37     INFO -  Installing pywin32_testall.pyc script to
+C:\slave\test\build\venv\Scripts
+11:14:37     INFO -  Installed
+c:\slave\test\build\venv\lib\site-packages\pywin32-216-py2.7-win32.egg
+11:14:37     INFO -  Processing dependencies for pywin32
+11:14:37     INFO -  Finished processing dependencies for pywin32
+11:14:41     INFO - Return code: 0
+11:14:41     INFO - Installing talos into virtualenv C:\slave\test\build/venv
+11:14:41     INFO - Running command:
+['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--download-cache',
+'C:\\slave\\test\\build/venv\\cache', '--no-index', '--find-links',
+'http://pypi.pvt.build.mozilla.org/pub', '--find-links',
+'http://pypi.pub.build.mozilla.org/pub', 'C:\\slave\\test\\build\\talos_repo']
+in C:\slave\test\build
+11:14:41     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install
+--download-cache C:\slave\test\build/venv\cache --no-index --find-links
+http://pypi.pvt.build.mozilla.org/pub --find-links
+http://pypi.pub.build.mozilla.org/pub C:\slave\test\build\talos_repo
+11:14:45     INFO -  Ignoring indexes: http://pypi.python.org/simple/
+11:14:45     INFO -  Unpacking c:\slave\test\build\talos_repo
+11:14:45     INFO -    Running setup.py egg_info for package from
+file:///c%7C%5Cslave%5Ctest%5Cbuild%5Ctalos_repo
+11:14:45     INFO -  Requirement already satisfied (use --upgrade to upgrade):
+PyYAML in c:\slave\test\build\venv\lib\site-packages (from talos)
+11:14:45     INFO -  Downloading/unpacking mozlog (from talos)
+11:14:45     INFO -    Downloading mozlog-1.2.tar.gz
+11:14:45     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozlog-1.2.tar.gz
+11:14:45     INFO -    Running setup.py egg_info for package mozlog
+11:14:45     INFO -  Downloading/unpacking mozcrash==0.5 (from talos)
+11:14:45     INFO -    Downloading mozcrash-0.5.tar.gz
+11:14:45     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozcrash-0.5.tar.gz
+11:14:45     INFO -    Running setup.py egg_info for package mozcrash
+11:14:45     INFO -  Downloading/unpacking mozdevice==0.19 (from talos)
+11:14:46     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozdevice-0.19.tar.gz
+11:14:46     INFO -    Running setup.py egg_info for package mozdevice
+11:14:46     INFO -  Downloading/unpacking mozhttpd==0.5 (from talos)
+11:14:46     INFO -    Downloading mozhttpd-0.5.tar.gz
+11:14:46     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozhttpd-0.5.tar.gz
+11:14:46     INFO -    Running setup.py egg_info for package mozhttpd
+11:14:46     INFO -  Downloading/unpacking mozinfo==0.4 (from talos)
+11:14:46     INFO -    Downloading mozinfo-0.4.tar.gz
+11:14:46     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozinfo-0.4.tar.gz
+11:14:46     INFO -    Running setup.py egg_info for package mozinfo
+11:14:46     INFO -  Downloading/unpacking datazilla==1.4 (from talos)
+11:14:46     INFO -    Downloading datazilla-1.4.tar.gz
+11:14:46     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fdatazilla-1.4.tar.gz
+11:14:46     INFO -    Running setup.py egg_info for package datazilla
+11:14:46     INFO -  Downloading/unpacking mozprocess==0.8 (from talos)
+11:14:46     INFO -    Downloading mozprocess-0.8.tar.gz
+11:14:46     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozprocess-0.8.tar.gz
+11:14:46     INFO -    Running setup.py egg_info for package mozprocess
+11:14:46     INFO -  Downloading/unpacking httplib2 (from talos)
+11:15:04     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fhttplib2-0.7.4.tar.gz
+11:15:04     INFO -    Running setup.py egg_info for package httplib2
+11:15:04     INFO -  Downloading/unpacking oauth2 (from talos)
+11:15:04     INFO -    Downloading oauth2-1.5.211.tar.gz
+11:15:04     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2foauth2-1.5.211.tar.gz
+11:15:04     INFO -    Running setup.py egg_info for package oauth2
+11:15:04     INFO -  Downloading/unpacking mozfile>=0.3 (from
+mozcrash==0.5->talos)
+11:15:04     INFO -    Downloading mozfile-0.9.tar.gz
+11:15:04     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozfile-0.9.tar.gz
+11:15:04     INFO -    Running setup.py egg_info for package mozfile
+11:15:04     INFO -  Installing collected packages: datazilla, httplib2,
+mozcrash, mozdevice, mozfile, mozhttpd, mozinfo, mozlog, mozprocess, oauth2,
+talos
+11:15:04     INFO -    Running setup.py install for datazilla
+11:15:04     INFO -    Running setup.py install for httplib2
+11:15:04     INFO -    Running setup.py install for mozcrash
+11:15:04     INFO -    Running setup.py install for mozdevice
+11:15:04     INFO -      Installing dm-script.py script to
+C:\slave\test\build\venv\Scripts
+11:15:04     INFO -      Installing dm.exe script to
+C:\slave\test\build\venv\Scripts
+11:15:04     INFO -    Running setup.py install for mozfile
+11:15:04     INFO -    Running setup.py install for mozhttpd
+11:15:04     INFO -      Installing mozhttpd-script.py script to
+C:\slave\test\build\venv\Scripts
+11:15:04     INFO -      Installing mozhttpd.exe script to
+C:\slave\test\build\venv\Scripts
+11:15:04     INFO -    Running setup.py install for mozinfo
+11:15:04     INFO -      Installing mozinfo-script.py script to
+C:\slave\test\build\venv\Scripts
+11:15:04     INFO -      Installing mozinfo.exe script to
+C:\slave\test\build\venv\Scripts
+11:15:04     INFO -    Running setup.py install for mozlog
+11:15:04     INFO -    Running setup.py install for mozprocess
+11:15:04     INFO -    Running setup.py install for oauth2
+11:15:04     INFO -    Running setup.py install for talos
+11:15:04     INFO -      Installing PerfConfigurator-script.py script to
+C:\slave\test\build\venv\Scripts
+11:15:04     INFO -      Installing PerfConfigurator.exe script to
+C:\slave\test\build\venv\Scripts
+11:15:04     INFO -      Installing talos-script.py script to
+C:\slave\test\build\venv\Scripts
+11:15:04     INFO -      Installing talos.exe script to
+C:\slave\test\build\venv\Scripts
+11:15:04     INFO -      Installing talos-results-script.py script to
+C:\slave\test\build\venv\Scripts
+11:15:04     INFO -      Installing talos-results.exe script to
+C:\slave\test\build\venv\Scripts
+11:15:04     INFO -  Successfully installed datazilla httplib2 mozcrash
+mozdevice mozfile mozhttpd mozinfo mozlog mozprocess oauth2 talos
+11:15:04     INFO -  Cleaning up...
+11:15:04     INFO - Return code: 0
+11:15:04     INFO - Installing mozinstall into virtualenv
+C:\slave\test\build/venv
+11:15:04     INFO - Running command:
+['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--download-cache',
+'C:\\slave\\test\\build/venv\\cache', '--no-index', '--find-links',
+'http://pypi.pvt.build.mozilla.org/pub', '--find-links',
+'http://pypi.pub.build.mozilla.org/pub', 'mozinstall'] in C:\slave\test\build
+11:15:04     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install
+--download-cache C:\slave\test\build/venv\cache --no-index --find-links
+http://pypi.pvt.build.mozilla.org/pub --find-links
+http://pypi.pub.build.mozilla.org/pub mozinstall
+11:15:05     INFO -  Ignoring indexes: http://pypi.python.org/simple/
+11:15:05     INFO -  Downloading/unpacking mozinstall
+11:15:05     INFO -    Downloading mozInstall-1.6.tar.gz
+11:15:05     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozinstall-1.6.tar.gz
+11:15:05     INFO -    Running setup.py egg_info for package mozinstall
+11:15:05     INFO -  Requirement already satisfied (use --upgrade to upgrade):
+mozinfo>=0.4 in c:\slave\test\build\venv\lib\site-packages (from mozinstall)
+11:15:05     INFO -  Requirement already satisfied (use --upgrade to upgrade):
+mozfile in c:\slave\test\build\venv\lib\site-packages (from mozinstall)
+11:15:05     INFO -  Installing collected packages: mozinstall
+11:15:05     INFO -    Running setup.py install for mozinstall
+11:15:05     INFO -      Installing moz_remove_from_system-script.py script to
+C:\slave\test\build\venv\Scripts
+11:15:05     INFO -      Installing moz_remove_from_system.exe script to
+C:\slave\test\build\venv\Scripts
+11:15:05     INFO -      Installing mozuninstall-script.py script to
+C:\slave\test\build\venv\Scripts
+11:15:05     INFO -      Installing mozuninstall.exe script to
+C:\slave\test\build\venv\Scripts
+11:15:05     INFO -      Installing mozinstall-script.py script to
+C:\slave\test\build\venv\Scripts
+11:15:05     INFO -      Installing mozinstall.exe script to
+C:\slave\test\build\venv\Scripts
+11:15:05     INFO -      Installing moz_add_to_system-script.py script to
+C:\slave\test\build\venv\Scripts
+11:15:05     INFO -      Installing moz_add_to_system.exe script to
+C:\slave\test\build\venv\Scripts
+11:15:05     INFO -  Successfully installed mozinstall
+11:15:05     INFO -  Cleaning up...
+11:15:05     INFO - Return code: 0
+11:15:05     INFO - Installing psutil==0.7.1 into virtualenv
+C:\slave\test\build/venv
+11:15:05     INFO - Running command:
+['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--download-cache',
+'C:\\slave\\test\\build/venv\\cache', '--no-index', '--find-links',
+'http://pypi.pvt.build.mozilla.org/pub', '--find-links',
+'http://pypi.pub.build.mozilla.org/pub', 'psutil==0.7.1'] in
+C:\slave\test\build
+11:15:05     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install
+--download-cache C:\slave\test\build/venv\cache --no-index --find-links
+http://pypi.pvt.build.mozilla.org/pub --find-links
+http://pypi.pub.build.mozilla.org/pub psutil==0.7.1
+11:15:06     INFO -  Ignoring indexes: http://pypi.python.org/simple/
+11:15:06     INFO -  Downloading/unpacking psutil==0.7.1
+11:15:06     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fpsutil-0.7.1.tar.gz
+11:15:06     INFO -    Running setup.py egg_info for package psutil
+11:15:06     INFO -  Installing collected packages: psutil
+11:15:06     INFO -    Running setup.py install for psutil
+11:15:06     INFO -      building '_psutil_mswindows' extension
+11:15:06     INFO -      error: Unable to find vcvarsall.bat
+11:15:06     INFO -      Complete output from command
+C:\slave\test\build\venv\Scripts\python.exe -c "import
+setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)"
+install --single-version-externally-managed --record
+c:\users\cltbld~1.t-w\appdata\local\temp\pip-btvzbr-record\install-record.txt
+--install-headers C:\slave\test\build\venv\include\site\python2.7:
+11:15:06     INFO -      running install
+11:15:06     INFO -  running build
+11:15:06     INFO -  running build_py
+11:15:06     INFO -  creating build
+11:15:06     INFO -  creating build\lib.win32-2.7
+11:15:06     INFO -  creating build\lib.win32-2.7\psutil
+11:15:06     INFO -  copying psutil\error.py -> build\lib.win32-2.7\psutil
+11:15:06     INFO -  copying psutil\_common.py -> build\lib.win32-2.7\psutil
+11:15:06     INFO -  copying psutil\_compat.py -> build\lib.win32-2.7\psutil
+11:15:06     INFO -  copying psutil\_error.py -> build\lib.win32-2.7\psutil
+11:15:06     INFO -  copying psutil\_psbsd.py -> build\lib.win32-2.7\psutil
+11:15:06     INFO -  copying psutil\_pslinux.py -> build\lib.win32-2.7\psutil
+11:15:06     INFO -  copying psutil\_psmswindows.py ->
+build\lib.win32-2.7\psutil
+11:15:06     INFO -  copying psutil\_psosx.py -> build\lib.win32-2.7\psutil
+11:15:06     INFO -  copying psutil\_psposix.py -> build\lib.win32-2.7\psutil
+11:15:06     INFO -  copying psutil\__init__.py -> build\lib.win32-2.7\psutil
+11:15:06     INFO -  running build_ext
+11:15:06     INFO -  building '_psutil_mswindows' extension
+11:15:06     INFO -  error: Unable to find vcvarsall.bat
+11:15:06     INFO -  ----------------------------------------
+11:15:06     INFO -  Command C:\slave\test\build\venv\Scripts\python.exe -c
+"import
+setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)"
+install --single-version-externally-managed --record
+c:\users\cltbld~1.t-w\appdata\local\temp\pip-btvzbr-record\install-record.txt
+--install-headers C:\slave\test\build\venv\include\site\python2.7 failed with
+error code 1
+11:15:06     INFO -  Storing complete log in
+C:\Users\cltbld.T-W864-IX-042\AppData\Roaming\pip\pip.log
+11:15:06     INFO - Return code: 1
+11:15:06  WARNING - Unable to install optional package psutil==0.7.1.
+11:15:06     INFO - Installing mozsystemmonitor==0.0.0 into virtualenv
+C:\slave\test\build/venv
+11:15:06     INFO - Running command:
+['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--download-cache',
+'C:\\slave\\test\\build/venv\\cache', '--no-index', '--find-links',
+'http://pypi.pvt.build.mozilla.org/pub', '--find-links',
+'http://pypi.pub.build.mozilla.org/pub', 'mozsystemmonitor==0.0.0'] in
+C:\slave\test\build
+11:15:06     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install
+--download-cache C:\slave\test\build/venv\cache --no-index --find-links
+http://pypi.pvt.build.mozilla.org/pub --find-links
+http://pypi.pub.build.mozilla.org/pub mozsystemmonitor==0.0.0
+11:15:07     INFO -  Ignoring indexes: http://pypi.python.org/simple/
+11:15:07     INFO -  Downloading/unpacking mozsystemmonitor==0.0.0
+11:15:07     INFO -    Downloading mozsystemmonitor-0.0.tar.gz
+11:15:07     INFO -    Storing download in cache at
+c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozsystemmonitor-0.0.tar.gz
+11:15:07     INFO -    Running setup.py egg_info for package mozsystemmonitor
+11:15:07     INFO -  Downloading/unpacking psutil>=0.7.1 (from
+mozsystemmonitor==0.0.0)
+11:15:07     INFO -    Running setup.py egg_info for package psutil
+11:15:07     INFO -  Installing collected packages: mozsystemmonitor, psutil
+11:15:07     INFO -    Running setup.py install for mozsystemmonitor
+11:15:07     INFO -    Running setup.py install for psutil
+11:15:07     INFO -      building '_psutil_mswindows' extension
+11:15:07     INFO -      error: Unable to find vcvarsall.bat
+11:15:07     INFO -      Complete output from command
+C:\slave\test\build\venv\Scripts\python.exe -c "import
+setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)"
+install --single-version-externally-managed --record
+c:\users\cltbld~1.t-w\appdata\local\temp\pip-o68zgm-record\install-record.txt
+--install-headers C:\slave\test\build\venv\include\site\python2.7:
+11:15:07     INFO -      running install
+11:15:07     INFO -  running build
+11:15:07     INFO -  running build_py
+11:15:07     INFO -  running build_ext
+11:15:07     INFO -  building '_psutil_mswindows' extension
+11:15:07     INFO -  error: Unable to find vcvarsall.bat
+11:15:07     INFO -  ----------------------------------------
+11:15:07     INFO -  Command C:\slave\test\build\venv\Scripts\python.exe -c
+"import
+setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)"
+install --single-version-externally-managed --record
+c:\users\cltbld~1.t-w\appdata\local\temp\pip-o68zgm-record\install-record.txt
+--install-headers C:\slave\test\build\venv\include\site\python2.7 failed with
+error code 1
+11:15:07     INFO -  Storing complete log in
+C:\Users\cltbld.T-W864-IX-042\AppData\Roaming\pip\pip.log
+11:15:07     INFO - Return code: 1
+11:15:07  WARNING - Unable to install optional package
+mozsystemmonitor==0.0.0.
+11:15:07     INFO - Done creating virtualenv C:\slave\test\build/venv.
+11:15:07     INFO - Getting output from command:
+['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'freeze']
+11:15:07     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip freeze
+11:15:07     INFO - Reading from file tmpfile_stdout
+11:15:07     INFO - Using _rmtree_windows ...
+11:15:07     INFO - retry: Calling <bound method Talos._rmtree_windows of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('tmpfile_stderr',), kwargs: {}, attempt #1
+11:15:07     INFO - Using _rmtree_windows ...
+11:15:07     INFO - retry: Calling <bound method Talos._rmtree_windows of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('tmpfile_stdout',), kwargs: {}, attempt #1
+11:15:07     INFO - Current package versions:
+11:15:07     INFO -   PyYAML == 3.10
+11:15:07     INFO -   oauth2 == 1.5.211
+11:15:07     INFO -   mozInstall == 1.6
+11:15:07     INFO -   mozlog == 1.2
+11:15:07     INFO -   mozfile == 0.9
+11:15:07     INFO -   mozprocess == 0.8
+11:15:07     INFO -   distribute == 0.6.14
+11:15:07     INFO -   talos == 0.0
+11:15:07     INFO -   mozhttpd == 0.5
+11:15:07     INFO -   mozsystemmonitor == 0.0
+11:15:07     INFO -   mozdevice == 0.19
+11:15:07     INFO -   mozinfo == 0.4
+11:15:07     INFO -   mozcrash == 0.5
+11:15:07     INFO -   datazilla == 1.4
+11:15:07     INFO -   pywin32 == 216
+11:15:07     INFO -   httplib2 == 0.7.4
+11:15:07     INFO - Running post-action listener: _resource_record_post_action
+11:15:07     INFO - Running post-action listener: _start_resource_monitoring
+11:15:07     INFO - Starting resource monitoring.
+11:15:07     INFO - #####
+11:15:07     INFO - ##### Running install step.
+11:15:07     INFO - #####
+11:15:07     INFO - Running pre-action listener: _resource_record_pre_action
+11:15:07     INFO - Running main action method: install
+11:15:07     INFO - Getting output from command:
+['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'freeze']
+11:15:07     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip freeze
+11:15:07     INFO - Reading from file tmpfile_stdout
+11:15:07     INFO - Using _rmtree_windows ...
+11:15:07     INFO - retry: Calling <bound method Talos._rmtree_windows of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('tmpfile_stderr',), kwargs: {}, attempt #1
+11:15:07     INFO - Using _rmtree_windows ...
+11:15:07     INFO - retry: Calling <bound method Talos._rmtree_windows of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('tmpfile_stdout',), kwargs: {}, attempt #1
+11:15:07     INFO - Detecting whether we're running mozinstall >=1.0...
+11:15:07     INFO - Getting output from command:
+['C:\\slave\\test\\build/venv/scripts/python',
+'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py', '-h']
+11:15:07     INFO - Copy/paste: C:\slave\test\build/venv/scripts/python
+C:\slave\test\build/venv/scripts/mozinstall-script.py -h
+11:15:07     INFO - Reading from file tmpfile_stdout
+11:15:07     INFO - Output received:
+11:15:07     INFO -  Usage: mozinstall-script.py [options] installer
+11:15:07     INFO -  Options:
+11:15:07     INFO -    -h, --help            show this help message and exit
+11:15:07     INFO -    -d DEST, --destination=DEST
+11:15:07     INFO -                          Directory to install application
+into. [default:
+11:15:07     INFO -                          "C:\slave\test"]
+11:15:07     INFO -    --app=APP             Application being installed.
+[default: firefox]
+11:15:07     INFO - Using _rmtree_windows ...
+11:15:07     INFO - retry: Calling <bound method Talos._rmtree_windows of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('tmpfile_stderr',), kwargs: {}, attempt #1
+11:15:07     INFO - Using _rmtree_windows ...
+11:15:07     INFO - retry: Calling <bound method Talos._rmtree_windows of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('tmpfile_stdout',), kwargs: {}, attempt #1
+11:15:07     INFO - mkdir: C:\slave\test\build\application
+11:15:07     INFO - Getting output from command:
+['C:\\slave\\test\\build/venv/scripts/python',
+'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py',
+'C:\\slave\\test\\build\\firefox-27.0a1.en-US.win32.zip', '--destination',
+'C:\\slave\\test\\build\\application']
+11:15:07     INFO - Copy/paste: C:\slave\test\build/venv/scripts/python
+C:\slave\test\build/venv/scripts/mozinstall-script.py
+C:\slave\test\build\firefox-27.0a1.en-US.win32.zip --destination
+C:\slave\test\build\application
+11:15:08     INFO - Reading from file tmpfile_stdout
+11:15:08     INFO - Output received:
+11:15:08     INFO -  C:\slave\test\build\application\firefox\firefox.exe
+11:15:08     INFO - Using _rmtree_windows ...
+11:15:08     INFO - retry: Calling <bound method Talos._rmtree_windows of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('tmpfile_stderr',), kwargs: {}, attempt #1
+11:15:08     INFO - Using _rmtree_windows ...
+11:15:08     INFO - retry: Calling <bound method Talos._rmtree_windows of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('tmpfile_stdout',), kwargs: {}, attempt #1
+11:15:08     INFO - Triggering Metro Browser Immersive Mode
+11:15:08     INFO - Copying C:\slave\test\build\tests\bin\metrotestharness.exe
+to C:\slave\test\build\application\firefox\metrotestharness.exe
+11:15:08     INFO - Running post-action listener: _resource_record_post_action
+11:15:08     INFO - #####
+11:15:08     INFO - ##### Running run-tests step.
+11:15:08     INFO - #####
+11:15:08     INFO - Running pre-action listener: _resource_record_pre_action
+11:15:08     INFO - Running main action method: run_tests
+11:15:08     INFO - Running command:
+['C:\\slave\\test\\build\\venv\\Scripts\\python', '--version']
+11:15:08     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\python
+--version
+11:15:08     INFO -  Python 2.7.3
+11:15:08     INFO - Return code: 0
+11:15:08     INFO - Getting output from command:
+['C:\\slave\\test\\build\\venv\\Scripts\\python', '-c', 'from
+distutils.sysconfig import get_python_lib; print(get_python_lib())']
+11:15:08     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\python -c
+"from distutils.sysconfig import get_python_lib; print(get_python_lib())"
+11:15:08     INFO - Reading from file tmpfile_stdout
+11:15:08     INFO - Output received:
+11:15:08     INFO -  C:\slave\test\build\venv\Lib\site-packages
+11:15:08     INFO - Using _rmtree_windows ...
+11:15:08     INFO - retry: Calling <bound method Talos._rmtree_windows of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('tmpfile_stderr',), kwargs: {}, attempt #1
+11:15:08     INFO - Using _rmtree_windows ...
+11:15:08     INFO - retry: Calling <bound method Talos._rmtree_windows of
+<mozharness.mozilla.testing.talos.Talos object at 0x022619F0>> with args:
+('tmpfile_stdout',), kwargs: {}, attempt #1
+11:15:08     INFO - Running command:
+['C:\\slave\\test\\build\\venv\\Scripts\\python', '-u',
+'C:\\slave\\test\\build\\talos_repo\\talos\\run_tests.py', '--noisy',
+'--debug', '-v', '--executablePath',
+'C:\\slave\\test\\build\\application\\firefox\\metrotestharness', '--title',
+'T-W864-IX-042', '--symbolsPath',
+'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.crashreporter-symbols.zip',
+'--activeTests', u'dromaeo_css:dromaeo_dom:kraken:v8_7', '--results_url',
+'http://graphs.mozilla.org/server/collect.cgi', '--output', 'talos.yml',
+'--branchName', 'Cedar', '--datazilla-url',
+'https://datazilla.mozilla.org/talos', '--webServer', 'localhost'] in
+C:\slave\test\build
+11:15:08     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\python -u
+C:\slave\test\build\talos_repo\talos\run_tests.py --noisy --debug -v
+--executablePath C:\slave\test\build\application\firefox\metrotestharness
+--title T-W864-IX-042 --symbolsPath
+http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.crashreporter-symbols.zip
+--activeTests dromaeo_css:dromaeo_dom:kraken:v8_7 --results_url
+http://graphs.mozilla.org/server/collect.cgi --output talos.yml --branchName
+Cedar --datazilla-url https://datazilla.mozilla.org/talos --webServer
+localhost
+11:15:08     INFO - Calling ['C:\\slave\\test\\build\\venv\\Scripts\\python',
+'-u', 'C:\\slave\\test\\build\\talos_repo\\talos\\run_tests.py', '--noisy',
+'--debug', '-v', '--executablePath',
+'C:\\slave\\test\\build\\application\\firefox\\metrotestharness', '--title',
+'T-W864-IX-042', '--symbolsPath',
+'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.crashreporter-symbols.zip',
+'--activeTests', u'dromaeo_css:dromaeo_dom:kraken:v8_7', '--results_url',
+'http://graphs.mozilla.org/server/collect.cgi', '--output', 'talos.yml',
+'--branchName', 'Cedar', '--datazilla-url',
+'https://datazilla.mozilla.org/talos', '--webServer', 'localhost'] with
+output_timeout 3600
+11:15:08     INFO -   - outputName = talos.yml
+11:15:09     INFO -  basetest:
+11:15:09     INFO -    cleanup: null
+11:15:09     INFO -    cycles: 1
+11:15:09     INFO -    linux_counters: []
+11:15:09     INFO -    mac_counters: []
+11:15:09     INFO -    profile_path: ${talos}/base_profile
+11:15:09     INFO -    resolution: 1
+11:15:09     INFO -    responsiveness: false
+11:15:09     INFO -    rss: false
+11:15:09     INFO -    setup: null
+11:15:09     INFO -    shutdown: false
+11:15:09     INFO -    timeout: 3600
+11:15:09     INFO -    tpchrome: true
+11:15:09     INFO -    tpcycles: 10
+11:15:09     INFO -    tploadaboutblank: false
+11:15:09     INFO -    tpmozafterpaint: false
+11:15:09     INFO -    tpnoisy: true
+11:15:09     INFO -    tppagecycles: 1
+11:15:09     INFO -    tprender: false
+11:15:09     INFO -    w7_counters: []
+11:15:09     INFO -    win_counters: []
+11:15:09     INFO -    xperf_counters: []
+11:15:09     INFO -  bcontroller_config: ${talos}/bcontroller.yml
+11:15:09     INFO -  branch_name: Cedar
+11:15:09     INFO -  browser_log: browser_output.txt
+11:15:09     INFO -  browser_path:
+C:\slave\test\build\application\firefox\metrotestharness
+11:15:09     INFO -  browser_wait: 5
+11:15:09     INFO -  buildid: testbuildid
+11:15:09     INFO -  datazilla_urls:
+11:15:09     INFO -  - https://datazilla.mozilla.org/talos
+11:15:09     INFO -  develop: false
+11:15:09     INFO -  deviceport: 20701
+11:15:09     INFO -  dirs: {}
+11:15:09     INFO -  env:
+11:15:09     INFO -    NO_EM_RESTART: '1'
+11:15:09     INFO -  error_filename: C:\slave\test\build\browser_failures.txt
+11:15:09     INFO -  extensions:
+11:15:09     INFO -  - ${talos}/pageloader
+11:15:09     INFO -  extra_args: ''
+11:15:09     INFO -  filters:
+11:15:09     INFO -  - - ignore_max
+11:15:09     INFO -    - []
+11:15:09     INFO -  - - median
+11:15:09     INFO -    - []
+11:15:09     INFO -  init_url: http://localhost/getInfo.html
+11:15:09     INFO -  preferences:
+11:15:09     INFO -    app.update.enabled: false
+11:15:09     INFO -    browser.EULA.override: true
+11:15:09     INFO -    browser.bookmarks.max_backups: 0
+11:15:09     INFO -    browser.cache.disk.smart_size.enabled: false
+11:15:09     INFO -    browser.cache.disk.smart_size.first_run: false
+11:15:09     INFO -    browser.chrome.dynamictoolbar: false
+11:15:09     INFO -    browser.display.overlaynavbuttons: false
+11:15:09     INFO -    browser.dom.window.dump.enabled: true
+11:15:09     INFO -    browser.link.open_newwindow: 2
+11:15:09     INFO -    browser.safebrowsing.gethashURL:
+http://127.0.0.1/safebrowsing-dummy/gethash
+11:15:09     INFO -    browser.safebrowsing.keyURL:
+http://127.0.0.1/safebrowsing-dummy/newkey
+11:15:09     INFO -    browser.safebrowsing.updateURL:
+http://127.0.0.1/safebrowsing-dummy/update
+11:15:09     INFO -    browser.shell.checkDefaultBrowser: false
+11:15:09     INFO -    browser.warnOnQuit: false
+11:15:09     INFO -    dom.allow_scripts_to_close_windows: true
+11:15:09     INFO -    dom.disable_open_during_load: false
+11:15:09     INFO -    dom.disable_window_flip: true
+11:15:09     INFO -    dom.disable_window_move_resize: true
+11:15:09     INFO -    dom.max_chrome_script_run_time: 0
+11:15:09     INFO -    dom.max_script_run_time: 0
+11:15:09     INFO -    dom.send_after_paint_to_content: true
+11:15:09     INFO -    extensions.autoDisableScopes: 10
+11:15:09     INFO -    extensions.blocklist.enabled: false
+11:15:09     INFO -    extensions.blocklist.url:
+http://127.0.0.1/extensions-dummy/blocklistURL
+11:15:09     INFO -    extensions.checkCompatibility: false
+11:15:09     INFO -    extensions.enabledScopes: 5
+11:15:09     INFO -    extensions.getAddons.get.url:
+http://127.0.0.1/extensions-dummy/repositoryGetURL
+11:15:09     INFO -    extensions.getAddons.getWithPerformance.url:
+http://127.0.0.1/extensions-dummy/repositoryGetWithPerformanceURL
+11:15:09     INFO -    extensions.getAddons.maxResults: 0
+11:15:09     INFO -    extensions.getAddons.search.browseURL:
+http://127.0.0.1/extensions-dummy/repositoryBrowseURL
+11:15:09     INFO -    extensions.getAddons.search.url:
+http://127.0.0.1/extensions-dummy/repositorySearchURL
+11:15:09     INFO -    extensions.hotfix.url:
+http://127.0.0.1/extensions-dummy/hotfixURL
+11:15:09     INFO -    extensions.update.background.url:
+http://127.0.0.1/extensions-dummy/updateBackgroundURL
+11:15:09     INFO -    extensions.update.enabled: false
+11:15:09     INFO -    extensions.update.notifyUser: false
+11:15:09     INFO -    extensions.update.url:
+http://127.0.0.1/extensions-dummy/updateURL
+11:15:09     INFO -    extensions.webservice.discoverURL:
+http://127.0.0.1/extensions-dummy/discoveryURL
+11:15:09     INFO -    hangmonitor.timeout: 0
+11:15:09     INFO -    network.proxy.http: localhost
+11:15:09     INFO -    network.proxy.http_port: 80
+11:15:09     INFO -    network.proxy.type: 1
+11:15:09     INFO -    plugins.update.url:
+http://127.0.0.1/plugins-dummy/updateCheckURL
+11:15:09     INFO -    security.enable_java: false
+11:15:09     INFO -    security.fileuri.strict_origin_policy: false
+11:15:09     INFO -
+security.turn_off_all_security_so_that_viruses_can_take_over_this_computer:
+true
+11:15:09     INFO -    toolkit.telemetry.notifiedOptOut: 999
+11:15:09     INFO -    toolkit.telemetry.prompted: 999
+11:15:09     INFO -  remote: false
+11:15:09     INFO -  results_urls:
+11:15:09     INFO -  - http://graphs.mozilla.org/server/collect.cgi
+11:15:09     INFO -  symbols_path:
+http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.crashreporter-symbols.zip
+11:15:09     INFO -  test_timeout: 1200
+11:15:09     INFO -  tests:
+11:15:09     INFO -  - filters: &id001
+11:15:09     INFO -    - - dromaeo
+11:15:09     INFO -      - []
+11:15:09     INFO -    name: dromaeo_css
+11:15:09     INFO -    tpcycles: 1
+11:15:09     INFO -    tpmanifest:
+${talos}/page_load_test/dromaeo/css.manifest
+11:15:09     INFO -  - filters: *id001
+11:15:09     INFO -    name: dromaeo_dom
+11:15:09     INFO -    tpcycles: 1
+11:15:09     INFO -    tpmanifest:
+${talos}/page_load_test/dromaeo/dom.manifest
+11:15:09     INFO -  - filters:
+11:15:09     INFO -    - - mean
+11:15:09     INFO -      - []
+11:15:09     INFO -    name: kraken
+11:15:09     INFO -    tpcycles: 1
+11:15:09     INFO -    tpmanifest:
+${talos}/page_load_test/kraken/kraken.manifest
+11:15:09     INFO -    tppagecycles: 1
+11:15:09     INFO -  - name: v8_7
+11:15:09     INFO -    resolution: 20
+11:15:09     INFO -    tpcycles: 1
+11:15:09     INFO -    tpmanifest: ${talos}/page_load_test/v8_7/v8.manifest
+11:15:09     INFO -  title: T-W864-IX-042
+11:15:09     INFO -  webserver: localhost
+11:15:09     INFO -  DEBUG : using testdate: 1382033709
+11:15:09     INFO -  DEBUG : actual date: 1382033709
+11:15:09     INFO -  INFO : Reading 'browser_version' from
+C:\slave\test\build\application\firefox\application.ini => 27.0a1
+11:15:09     INFO -  INFO : Reading 'browser_name' from
+C:\slave\test\build\application\firefox\application.ini => Firefox
+11:15:09     INFO -  INFO : Reading 'repository' from
+C:\slave\test\build\application\firefox\application.ini =>
+http://hg.mozilla.org/mozilla-central
+11:15:09     INFO -  INFO : Reading 'sourcestamp' from
+C:\slave\test\build\application\firefox\application.ini => 21793156b6ea
+11:15:09     INFO -  T-W864-IX-042:
+11:15:09     INFO -         Started Thu, 17 Oct 2013 11:15:09
+11:15:09     INFO -  Running test dromaeo_css:
+11:15:09     INFO -         Started Thu, 17 Oct 2013 11:15:09
+11:15:09     INFO -  DEBUG : operating with platform_type : w8_
+11:15:09     INFO -  DEBUG : created profile
+11:15:09     INFO -  DEBUG : command line:
+C:\slave\test\build\application\firefox\metrotestharness -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpmcmqfq\profile
+http://localhost/getInfo.html
+11:15:09     INFO -  INFO | metrotestharness.exe | Launching browser...
+11:15:09     INFO -  INFO | metrotestharness.exe | App model
+id='E4CFE2E6B75AA3A3'
+11:15:09     INFO -  INFO | metrotestharness.exe | Harness process id: 3772
+11:15:09     INFO -  INFO | metrotestharness.exe | Using bin path:
+'C:\slave\test\build\application\firefox\firefox.exe'
+11:15:09     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to:
+'C:\slave\test\build\application\firefox\tests.ini'
+11:15:09     INFO -  INFO | metrotestharness.exe | Browser command line args:
+'C:\slave\test\build\application\firefox\firefox.exe -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpmcmqfq\profile
+http://localhost/getInfo.html'
+11:15:10     INFO -  INFO | metrotestharness.exe | Activation succeeded.
+11:15:10     INFO -  INFO | metrotestharness.exe | METRO_BROWSER_PROCESS=216
+11:15:10     INFO -  INFO | metrotestharness.exe | Waiting on child process...
+11:15:12     INFO -  XRE_MetroCoreApplicationRun: IsMainThread:0 ThreadId:D4C
+11:15:12     INFO -  mozilla::widget::winrt::FrameworkView::FrameworkView
+11:15:12     INFO -  mozilla::widget::winrt::MetroApp::CreateView
+11:15:12     INFO -  mozilla::widget::winrt::FrameworkView::Initialize
+11:15:12     INFO -  mozilla::widget::winrt::FrameworkView::SetWindow
+11:15:12     INFO -  mozilla::widget::winrt::FrameworkView::SetDpi
+11:15:12     INFO -  mozilla::widget::winrt::FrameworkView::OnActivated
+11:15:12     INFO -  Activation argument kind: Launch
+11:15:12     INFO -  mozilla::widget::winrt::FrameworkView::Run
+11:15:12     INFO -  mozilla::widget::winrt::MetroApp::Run: IsMainThread:0
+ThreadId:43C
+11:15:12     INFO -  XPCOM startup initialization began
+11:15:12     INFO -  MetroAppShell::Init
+11:15:12     INFO -  MetroWidget::Create
+11:15:12     INFO -  eWindowType_invisible window requested, this doesn't
+actually exist!
+11:15:12     INFO -  MetroWidget::Create
+11:15:12     INFO -  mozilla::widget::winrt::MetroApp::SetBaseWidget:
+IsMainThread:1 ThreadId:43C
+11:15:12     INFO -  mozilla::widget::winrt::FrameworkView::SetWidget
+11:15:12     INFO -  MetroWidget::FindMetroWindow
+11:15:12     INFO -  ### Content.js loaded
+11:15:12     INFO -  ### FormHelper.js loaded
+11:15:12     INFO -  ### SelectionPrototype.js loaded
+11:15:12     INFO -  ### SelectionHandler.js loaded
+11:15:12     INFO -  ### ContextMenuHandler.js loaded
+11:15:12     INFO -  ### FindHandler.js loaded
+11:15:12     INFO -  ### ConsoleAPIObserver.js loaded
+11:15:12     INFO -  MetroAppShell::Run
+11:15:12     INFO -  mozilla::widget::winrt::FrameworkView::ActivateView
+11:15:12     INFO -  mozilla::widget::winrt::MetroInput::MetroInput
+11:15:12     INFO -  mozilla::widget::winrt::FrameworkView::AddEventHandlers
+hr=0
+11:15:12     INFO -  mozilla::widget::winrt::FrameworkView::SetupContracts
+11:15:12     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+11:15:12     INFO -  __browserInfo
+11:15:12     INFO -  browser_name:undefined
+11:15:12     INFO -  browser_version:27.0a1
+11:15:12     INFO -  buildID:20131015012729
+11:15:12     INFO -  __browserInfo__metricsScreen width/heigh   t:1600/1200
+11:15:12     INFO -     colorDepth:24
+11:15:12     INFO -     Browser inner width/height: 1600/1200
+11:15:12     INFO -  __metrics[5062630] MetroWidget::Destroy mWnd=30222 type=0
+11:15:12     INFO -
+************************************************************
+11:15:12     INFO -  * Call to xpconnect wrapped JSObject produced this error:
+*
+11:15:12     INFO -  [Exception... "'[JavaScript Error: "this._isGridBound is
+not a function" {file: "chrome://browser/content/bindings/urlbar.xml" line:
+731}]' when calling method: [nsIBrowserSearchInitObserver::onInitComplete]"
+nsresult: "0x80570021 (NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS)"  location:
+"JS frame :: resource://gre/components/nsSearchService.js :: onSuccess :: line
+3211"  data: yes]
+11:15:12     INFO -
+************************************************************
+11:15:12     INFO -  mozilla::widget::winrt::MetroApp::ShutdownXPCOM:
+IsMainThread:1 ThreadId:43C
+11:15:12     INFO -  mozilla::widget::winrt::FrameworkView::ShutdownXPCOM
+11:15:12     INFO -  mozilla::widget::winrt::MetroInput::~MetroInput
+11:15:12     INFO -  [5062310] MetroWidget::Destroy mWnd=0 type=4
+11:15:12     INFO -  [5062310] MetroWidget::~MetroWidget
+11:15:12     INFO -  [5062630] MetroWidget::~MetroWidget
+11:15:12     INFO -  mozilla::widget::winrt::MetroApp::CoreExit
+11:15:12     INFO -  XPCOM startup initialization complete
+11:15:12     INFO -  Exiting FrameworkView::Run()
+11:15:12     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+11:15:12     INFO -  Exiting CoreApplication::Run
+11:15:12     INFO -  INFO | metrotestharness.exe | Exiting.
+11:15:12     INFO -  INFO | metrotestharness.exe | Deleting
+C:\slave\test\build\application\firefox\tests.ini
+11:15:17     INFO -  browser_name:undefined
+11:15:17     INFO -  browser_version:27.0a1
+11:15:17     INFO -  buildID:20131015012729
+11:15:17     INFO -  DEBUG : initialized metrotestharness
+11:15:17     INFO -  DEBUG : command line:
+C:\slave\test\build\application\firefox\metrotestharness -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpmcmqfq\profile -tp
+file:\C:\slave\test\build\talos_repo\talos\page_load_test\dromaeo\css.manifest
+-tpchrome -tpnoisy -tpcycles 1 -tppagecycles 1
+11:15:17     INFO -  INFO | metrotestharness.exe | Launching browser...
+11:15:17     INFO -  INFO | metrotestharness.exe | App model
+id='E4CFE2E6B75AA3A3'
+11:15:17     INFO -  INFO | metrotestharness.exe | Harness process id: 3916
+11:15:17     INFO -  INFO | metrotestharness.exe | Using bin path:
+'C:\slave\test\build\application\firefox\firefox.exe'
+11:15:17     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to:
+'C:\slave\test\build\application\firefox\tests.ini'
+11:15:17     INFO -  INFO | metrotestharness.exe | Browser command line args:
+'C:\slave\test\build\application\firefox\firefox.exe -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpmcmqfq\profile -tp
+file:\C:\slave\test\build\talos_repo\talos\page_load_test\dromaeo\css.manifest
+-tpchrome -tpnoisy -tpcycles 1 -tppagecycles 1'
+11:15:17     INFO -  INFO | metrotestharness.exe | Activation succeeded.
+11:15:17     INFO -  INFO | metrotestharness.exe | METRO_BROWSER_PROCESS=3076
+11:15:17     INFO -  INFO | metrotestharness.exe | Waiting on child process...
+11:55:44     INFO -  XRE_MetroCoreApplicationRun: IsMainThread:0 ThreadId:C74
+11:55:44     INFO -  mozilla::widget::winrt::FrameworkView::FrameworkView
+11:55:44     INFO -  mozilla::widget::winrt::MetroApp::CreateView
+11:55:44     INFO -  mozilla::widget::winrt::FrameworkView::Initialize
+11:55:44     INFO -  mozilla::widget::winrt::FrameworkView::SetWindow
+11:55:44     INFO -  mozilla::widget::winrt::FrameworkView::SetDpi
+11:55:44     INFO -  mozilla::widget::winrt::FrameworkView::OnActivated
+11:55:44     INFO -  Activation argument kind: Launch
+11:55:44     INFO -  mozilla::widget::winrt::FrameworkView::Run
+11:55:44     INFO -  mozilla::widget::winrt::MetroApp::Run: IsMainThread:0
+ThreadId:2D8
+11:55:44     INFO -  XPCOM startup initialization began
+11:55:44     INFO -  MetroAppShell::Init
+11:55:44     INFO -  MetroWidget::Create
+11:55:44     INFO -  eWindowType_invisible window requested, this doesn't
+actually exist!
+11:55:44     INFO -  MetroWidget::Create
+11:55:44     INFO -  mozilla::widget::winrt::MetroApp::SetBaseWidget:
+IsMainThread:1 ThreadId:2D8
+11:55:44     INFO -  mozilla::widget::winrt::FrameworkView::SetWidget
+11:55:44     INFO -  MetroWidget::FindMetroWindow
+11:55:44     INFO -  MetroWidget::Create
+11:55:44     INFO -  ### Content.js loaded
+11:55:44     INFO -  ### FormHelper.js loaded
+11:55:44     INFO -  ### SelectionPrototype.js loaded
+11:55:44     INFO -  ### SelectionHandler.js loaded
+11:55:44     INFO -  ### ContextMenuHandler.js loaded
+11:55:44     INFO -  ### FindHandler.js loaded
+11:55:44     INFO -  ### ConsoleAPIObserver.js loaded
+11:55:44     INFO -  ### Content.js loaded
+11:55:44     INFO -  ### FormHelper.js loaded
+11:55:44     INFO -  ### SelectionPrototype.js loaded
+11:55:44     INFO -  ### SelectionHandler.js loaded
+11:55:44     INFO -  ### ContextMenuHandler.js loaded
+11:55:44     INFO -  ### FindHandler.js loaded
+11:55:44     INFO -  ### ConsoleAPIObserver.js loaded
+11:55:44     INFO -  MetroAppShell::Run
+11:55:44     INFO -  mozilla::widget::winrt::FrameworkView::ActivateView
+11:55:44     INFO -  mozilla::widget::winrt::MetroInput::MetroInput
+11:55:44     INFO -  mozilla::widget::winrt::FrameworkView::AddEventHandlers
+hr=0
+11:55:44     INFO -  mozilla::widget::winrt::FrameworkView::SetupContracts
+11:55:44     INFO -  * delay load started...
+11:55:44     INFO -  * delay load complete.
+11:55:44     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+11:55:44     INFO -  ### Content.js loaded
+11:55:44     INFO -  ### FormHelper.js loaded
+11:55:44     INFO -  ### SelectionPrototype.js loaded
+11:55:44     INFO -  ### SelectionHandler.js loaded
+11:55:44     INFO -  ### ContextMenuHandler.js loaded
+11:55:44     INFO -  ### FindHandler.js loaded
+11:55:44     INFO -  ### ConsoleAPIObserver.js loaded
+11:55:44     INFO -  RSS: Main: 97099776
+11:55:44     INFO -  * delay load started...
+11:55:44     INFO -  * delay load complete.
+11:55:44     INFO -
+************************************************************
+11:55:44     INFO -  * Call to xpconnect wrapped JSObject produced this error:
+*
+11:55:44     INFO -  [Exception... "Component returned failure code:
+0x8000ffff (NS_ERROR_UNEXPECTED) [nsIPrefBranch.getBoolPref]"  nsresult:
+"0x8000ffff (NS_ERROR_UNEXPECTED)"  location: "JS frame ::
+resource://gre/modules/NewTabUtils.jsm :: <TOP_LEVEL> :: line 223"  data: no]
+11:55:44     INFO -
+************************************************************
+11:55:44     INFO -
+************************************************************
+11:55:44     INFO -  * Call to xpconnect wrapped JSObject produced this error:
+*
+11:55:44     INFO -  [Exception... "Component returned failure code:
+0x8000ffff (NS_ERROR_UNEXPECTED) [nsIPrefBranch.getBoolPref]"  nsresult:
+"0x8000ffff (NS_ERROR_UNEXPECTED)"  location: "JS frame ::
+resource://gre/modules/NewTabUtils.jsm :: <TOP_LEVEL> :: line 223"  data: no]
+11:55:44     INFO -
+************************************************************
+11:55:44     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/dromaeo/cssquery-dojo.html (next:
+http://localhost/page_load_test/dromaeo/cssquery-ext.html)
+11:55:44     INFO -  RSS: Main: 145997824
+11:55:44     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/dromaeo/cssquery-ext.html (next:
+http://localhost/page_load_test/dromaeo/cssquery-jquery.html)
+11:55:44     INFO -  RSS: Main: 191938560
+11:55:44     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/dromaeo/cssquery-jquery.html (next:
+http://localhost/page_load_test/dromaeo/cssquery-mootools.html)
+11:55:44     INFO -  RSS: Main: 193949696
+11:55:44     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/dromaeo/cssquery-mootools.html (next:
+http://localhost/page_load_test/dromaeo/cssquery-prototype.html)
+11:55:44     INFO -  RSS: Main: 160821248
+11:55:44     INFO -  mozilla::widget::winrt::MetroApp::OnSuspending:
+IsMainThread:1 ThreadId:2D8
+11:55:44     INFO -  mozilla::widget::winrt::MetroApp::OnResuming:
+IsMainThread:1 ThreadId:2D8
+11:55:44     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/dromaeo/cssquery-prototype.html (next:
+http://localhost/page_load_test/dromaeo/cssquery-yui.html)
+11:55:44     INFO -  RSS: Main: 160231424
+11:55:44     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/dromaeo/cssquery-yui.html (next:
+http://localhost/page_load_test/dromaeo/cssquery-dojo.html)
+11:55:44     INFO -  RSS: Main: 206643200
+11:55:44     INFO -  __start_tp_report
+11:55:44     INFO -  _x_x_mozilla_page_load
+11:55:44     INFO -  _x_x_mozilla_page_load_details
+11:55:44     INFO -  |i|pagename|runs|
+11:55:44     INFO -
+|0;dojo.html;2828;2875;2876;2895;2930;4692;4707;4712;4717;4749;4668;4726;4726;4736;4737;3976;4034;4169;4179;4182;4170;4173;4181;4182;4185;3940;3999;4112;4140;4164;4021;4093;4124;4126;4140;3945;4001;4108;4129;4132;4573;4590;4613;4616;4624;4625;4763;4858;4899;4905;4620;4627;4656;4677;4677;3912;3984;4013;4041;4048;5000;5000;5002;5008;5012;4616;4725;4737;4767;4781;4853;4865;4867;4867;4874;4593;4714;4726;4812;4820;4808;4846;4848;4854;4854;3232;3303;3325;3333;3340;3065;3086;3127;3128;3135;4423;4490;4547;4548;4550;4570;4861;4874;4920;4926;4405;4552;4559;4565;4567;4050;4061;4103;4121;4125;4777;4923;4925;4928;4937;4809;4886;4891;4957;4964;4724;4958;4972;4973;4981;4688;4726;4816;4850;4866;4943;4945;4949;4949;4950;4574;4665;4679;4794;4799;4721;4773;4777;4789;4789;4525;4584;4638;4678;4689;4791;4805;4822;4834;4836;4567;4637;4676;4729;4739
+11:55:44     INFO -
+|1;ext.html;1176;1415.1696606786427;1458;1503;1626;32534;32813;33165;33494;33796;27377;27760;32122;32922;33985;8720;8818;8870;8903;9144;8653;8667;8908;8918;8982;8692;8845;8924;8958;8994;8811;8865;8896;9127;9141;8839;8876;8993;9262;9287;30120;30183;30942;30968;31320;2746;2771;3130;3239.089184060721;3323;24846;25062;25199;25586.575875486382;26249;3804;3907;3971;3975;4087;176867;180596;186778;192427;199302;39234;40433;40507;41368;43975;42707;44261;44404;45195;47908;11388;11467;11792;11950;12273;8875;9112;9114;9132;9162;13455;13576;13900;13968;14276;7043;7057;7234;7331;7341;807;899;950;955;957;23012;23374;23427;23444;23476;948;950;959;1014;1053;12182;12294;12299;12321;12351;283374;294876;300564;332547;344353;37692;38742;38761;39271;39709;1273;1303;1311;1422;1592;22850;22869;23077;23302;23362;33492;33506;33703;33779;33812;237284;249443;251366;251503;255111;24854;24999;25114;25132;25508;27816;28084;29118;29423;29700;23705;23705;23930;23948;25307;23636;23940;23994;24318;25023;25846;27106;27460;27716;27779;22785;23241;23431;23626;24084;21047;21176;21190;21221;21264
+11:55:44     INFO -
+|2;jquery.html;324.6753246753247;330;340.3193612774451;348;354;8085;8113;12993;13036;13580;11753;12434;12629;12693;12713;1977;2010;5385;5595;5656;5365;5549;5612;5689;5701;5300;5539;5601;5612;5614;5310;5382;5521;5552;5557;4545;4703;4759;4788;4794;14451;14988;15132;15199;15818;1462;1498;1531;1591;1625;9501;9523;9650;9655;9777;855;856;866;890;916;39348;39367;40806;40974;41958;5261;5781;5849;5856;5901;11305;11755;11840;12350;12373;5376;5379;5385;5397;5654;5330;5439;5474;5661;5725;3719;3826.173826173826;3916;3959;4074;1199;1206;1252;1253;1266;469.53046953046953;489.59365708622397;561;799;981;10101;10276;10283;10336;10376;513.4865134865134;536;538;542.4575424575424;546;5412;5504;5564;5621;5657;157080;160663;169895;170351;173805;38767;39568;39844;39900;40065;515;521;521.4785214785214;522;542;8523;8572;8619;8634;8970;17801;17961;18155;18317;18336;25257;26192;26204;26214;26238;3902;4397;4485;6669;7145;10150;10329;10552;10682;10748;7470;7631;7674;7888;9284;7227;7284;7292;7426.573426573426;7615;7681;7861;8001;8008;8086;6544;6903;6952;7330;7351;4393.606393606394;4407;4438;4442;9426
+11:55:44     INFO -
+|3;mootools.html;509.4905094905095;516;517;518.4815184815185;616;9335;9417;10826;10868;10985;10363;10388;10594;10636;10701;1646;1689;1903;1906;1909;2122;2164;2168;2235;2240;2128;2175;2198;2203;2252;2081;2092;2143;2143;2216;2025;2081;2087;2137;2142;9963;10125;10134;10136;10169;4913;4973;5097;5118;5125;3790;3875;3908;3980;4058;1052;1079;1111;1154;1177;15413;15521;15547;15705;16059;4721;4726;4746;4884;4925;9492;9531;9568;9569;9590;4659;4826;4839;4859;4873;3933;4469;4552;4554;4564;3217;3229;3297;3369;3458;969;1020;1049;1050;1080;1016;1026;1028;1028;1028;8375;8686;8981;9019;9051;414.5854145854146;427.57242757242756;429;431.56843156843155;433.56643356643355;6174;6205;6220;6240;6472;13277;13461.538461538461;13482;13651;13950;12744;13027;13224;13338;13374;8510;8574;8836;8911;9048;8199;8406;8476;8585;8614;10579;10647;10706;10803;10921;10948;10968;11253;11557;11597;7517;7631;8092;8143;8261;9139;9608;9667;9681;9768;8484;8582;8604;8733;8746;8269;8327;8342;8554;8593;8845;9193;9195;9232;9270;7740;7944;7965;7985;8015;7256;7351;8450;8462;8463
+11:55:44     INFO -
+|4;prototype.html;396;405;407;416.5834165834166;424.57542457542456;5108;5350;5377;5398;5458;5205;5284;5318;5414;5418;4193;4213;4358;4378;4380;4138;4243;4343;4351;4358;4163;4196;4211;4220;4223;4201;4262;4263;4273;4277;3849;3886;3930;3944;3946;5069;5070;5153;5217;5257;4929;4969;5019;5022;5023;5283;5343;5367;5406;5417;3925;3941;4007;4014;4018;5728;5901;5945;5947;5953;4398;4694;4696;4696;4745;4586;4753;4756;4777;4791;4902;4914;4976;5050;5059;5466;5491;5525;5539;5565;1610;1650;1669;1682;1685;1305;1340;1359;1362;1372;4978;5061;5139;5148;5379;5783;5849;5881;5912;5940;5217;5287;5335;5361;5369;3012;3042;3044;3090;3097;5629;5680;5685;5913;5921;5910;5968;5986;5986;6020;5855;5864;5936;5948;5954;5812;5812;5826;5828;5919;5631;5738;5746;5758;5769;5821;5923;5924;5938;5946;4211;4302;4357;4518;4526;5631;5667;5715;5803;5833;5494;5513;5544;5557;5568;5474;5547;5580;5584;5633;5412;5425;5434;5437;5518;5522;5646;5675;5681;5698;5520;5563;5602;5608;5609
+11:55:44     INFO -
+|5;yui.html;666.3336663336663;682;690;803;808;6927;7205;7408;7456;7574;6958;7069;7167;7238;7385;543;586;652;653;653.3466533466534;661.3386613386614;662;671.3286713286714;672;672.3276723276723;673;674;675;675.3246753246754;677.3226773226774;713;730.2697302697303;733;739.2607392607392;742;528.4715284715285;531.4685314685315;534.4655344655345;538;538.4615384615385;7220;7466;7510;7733;7896;8603;8762;9047;9168;9755;8767;8886;8942;8962;9036;3095;3177;3332;3376;3404;36535;36877;36891;37571;40588;7314;7362;7533;7578;7780;13008;13155;13328;14106;14247;5476;5511;5570;5621;5715;2975;3125;3148;3262;3363;2555;2695;2735;2744;2766;605.3946053946054;606;612.3876123876124;624;632.3676323676324;407;483;497;504;533;4334;4498;4541;4594;4602;482;493.5064935064935;497.5024975024975;506.4935064935065;514;2118;2175;2176;2192;2198;39768;40546;40821;40867;41391;35803;35950;36005;36696;36733;29950;30050;30258;30330;30691;3922;4010;4114;4160;4193;19778;19915;20003;20122;20548;26749;27646;29188.622754491018;29217;29232;6358;6487;6724;6758;6812;8854;8998;9146;9467;9877;6014;6098;6369;6431;6489;6090;6142;6389;6392;6462;5986;6057;6136;6183;6431;4280;4427;4619;4651;4699;5726;5786;5829;5832;6033
+11:55:44     INFO -  __end_tp_report
+11:55:44     INFO -  __start_cc_report
+11:55:44     INFO -  _x_x_mozilla_cycle_collect,222
+11:55:44     INFO -  __end_cc_report
+11:55:44     INFO -  __startTimestamp1382036144148__endTimestamp
+11:55:44     INFO -  [4D62180] MetroWidget::Destroy mWnd=C0032 type=0
+11:55:44     INFO -  [4D62310] MetroWidget::Destroy mWnd=0 type=0
+11:55:44     INFO -  mozilla::widget::winrt::MetroApp::ShutdownXPCOM:
+IsMainThread:1 ThreadId:2D8
+11:55:44     INFO -  mozilla::widget::winrt::FrameworkView::ShutdownXPCOM
+11:55:44     INFO -  mozilla::widget::winrt::MetroInput::~MetroInput
+11:55:44     INFO -  [4D61E60] MetroWidget::Destroy mWnd=0 type=4
+11:55:44     INFO -  [4D62180] MetroWidget::~MetroWidget
+11:55:44     INFO -  [4D62310] MetroWidget::~MetroWidget
+11:55:44     INFO -  [4D61E60] MetroWidget::~MetroWidget
+11:55:44     INFO -  mozilla::widget::winrt::MetroApp::CoreExit
+11:55:44     INFO -  XPCOM startup initialization complete
+11:55:44     INFO -  Exiting FrameworkView::Run()
+11:55:44     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+11:55:44     INFO -  Exiting CoreApplication::Run
+11:55:44     INFO -  INFO | metrotestharness.exe | Exiting.
+11:55:44     INFO -  INFO | metrotestharness.exe | Deleting
+C:\slave\test\build\application\firefox\tests.ini
+11:55:49     INFO -  DEBUG : Terminating: metrotestharness, plugin-container,
+crashreporter, dwwim
+11:55:49     INFO -  Completed test dromaeo_css:
+11:55:49     INFO -         Stopped Thu, 17 Oct 2013 11:55:49
+11:55:49     INFO -  Running test dromaeo_dom:
+11:55:49     INFO -         Started Thu, 17 Oct 2013 11:55:49
+11:55:49     INFO -  DEBUG : operating with platform_type : w8_
+11:55:49     INFO -  DEBUG : created profile
+11:55:49     INFO -  DEBUG : command line:
+C:\slave\test\build\application\firefox\metrotestharness -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpewig2e\profile
+http://localhost/getInfo.html
+11:55:49     INFO -  INFO | metrotestharness.exe | Launching browser...
+11:55:49     INFO -  INFO | metrotestharness.exe | App model
+id='E4CFE2E6B75AA3A3'
+11:55:49     INFO -  INFO | metrotestharness.exe | Harness process id: 2512
+11:55:49     INFO -  INFO | metrotestharness.exe | Using bin path:
+'C:\slave\test\build\application\firefox\firefox.exe'
+11:55:49     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to:
+'C:\slave\test\build\application\firefox\tests.ini'
+11:55:49     INFO -  INFO | metrotestharness.exe | Browser command line args:
+'C:\slave\test\build\application\firefox\firefox.exe -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpewig2e\profile
+http://localhost/getInfo.html'
+11:55:49     INFO -  INFO | metrotestharness.exe | Activation succeeded.
+11:55:49     INFO -  INFO | metrotestharness.exe | METRO_BROWSER_PROCESS=3956
+11:55:49     INFO -  INFO | metrotestharness.exe | Waiting on child process...
+11:55:51     INFO -  XRE_MetroCoreApplicationRun: IsMainThread:0 ThreadId:520
+11:55:51     INFO -  mozilla::widget::winrt::FrameworkView::FrameworkView
+11:55:51     INFO -  mozilla::widget::winrt::MetroApp::CreateView
+11:55:51     INFO -  mozilla::widget::winrt::FrameworkView::Initialize
+11:55:51     INFO -  mozilla::widget::winrt::FrameworkView::SetWindow
+11:55:51     INFO -  mozilla::widget::winrt::FrameworkView::SetDpi
+11:55:51     INFO -  mozilla::widget::winrt::FrameworkView::OnActivated
+11:55:51     INFO -  Activation argument kind: Launch
+11:55:51     INFO -  mozilla::widget::winrt::FrameworkView::Run
+11:55:51     INFO -  mozilla::widget::winrt::MetroApp::Run: IsMainThread:0
+ThreadId:F0
+11:55:51     INFO -  XPCOM startup initialization began
+11:55:51     INFO -  MetroAppShell::Init
+11:55:51     INFO -  MetroWidget::Create
+11:55:51     INFO -  eWindowType_invisible window requested, this doesn't
+actually exist!
+11:55:51     INFO -  MetroWidget::Create
+11:55:51     INFO -  mozilla::widget::winrt::MetroApp::SetBaseWidget:
+IsMainThread:1 ThreadId:F0
+11:55:51     INFO -  mozilla::widget::winrt::FrameworkView::SetWidget
+11:55:51     INFO -  MetroWidget::FindMetroWindow
+11:55:51     INFO -  ### Content.js loaded
+11:55:51     INFO -  ### FormHelper.js loaded
+11:55:51     INFO -  ### SelectionPrototype.js loaded
+11:55:51     INFO -  ### SelectionHandler.js loaded
+11:55:51     INFO -  ### ContextMenuHandler.js loaded
+11:55:51     INFO -  ### FindHandler.js loaded
+11:55:51     INFO -  ### ConsoleAPIObserver.js loaded
+11:55:51     INFO -  MetroAppShell::Run
+11:55:51     INFO -  mozilla::widget::winrt::FrameworkView::ActivateView
+11:55:51     INFO -  mozilla::widget::winrt::MetroInput::MetroInput
+11:55:51     INFO -  mozilla::widget::winrt::FrameworkView::AddEventHandlers
+hr=0
+11:55:51     INFO -  mozilla::widget::winrt::FrameworkView::SetupContracts
+11:55:51     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+11:55:51     INFO -  __browserInfo
+11:55:51     INFO -  browser_name:undefined
+11:55:51     INFO -  browser_version:27.0a1
+11:55:51     INFO -  buildID:20131015012729
+11:55:51     INFO -  __browserInfo__metricsScreen width/height:1600/1200
+11:55:51     INFO -     colo    rDepth:24
+11:55:51     INFO -     Browser inner width/height: 1600/1200
+11:55:51     INFO -  __metrics[4362630] MetroWidget::Destroy mWnd=80068 type=0
+11:55:51     INFO -
+************************************************************
+11:55:51     INFO -  * Call to xpconnect wrapped JSObject produced this error:
+*
+11:55:51     INFO -  [Exception... "'[JavaScript Error: "this._isGridBound is
+not a function" {file: "chrome://browser/content/bindings/urlbar.xml" line:
+731}]' when calling method: [nsIBrowserSearchInitObserver::onInitComplete]"
+nsresult: "0x80570021 (NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS)"  location:
+"JS frame :: resource://gre/components/nsSearchService.js :: onSuccess :: line
+3211"  data: yes]
+11:55:51     INFO -
+************************************************************
+11:55:51     INFO -  mozilla::widget::winrt::MetroApp::ShutdownXPCOM:
+IsMainThread:1 ThreadId:F0
+11:55:51     INFO -  mozilla::widget::winrt::FrameworkView::ShutdownXPCOM
+11:55:51     INFO -  mozilla::widget::winrt::MetroInput::~MetroInput
+11:55:51     INFO -  [4362310] MetroWidget::Destroy mWnd=0 type=4
+11:55:51     INFO -  [4362310] MetroWidget::~MetroWidget
+11:55:51     INFO -  [4362630] MetroWidget::~MetroWidget
+11:55:51     INFO -  mozilla::widget::winrt::MetroApp::CoreExit
+11:55:51     INFO -  XPCOM startup initialization complete
+11:55:51     INFO -  Exiting FrameworkView::Run()
+11:55:51     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+11:55:51     INFO -  Exiting CoreApplication::Run
+11:55:51     INFO -  INFO | metrotestharness.exe | Exiting.
+11:55:51     INFO -  INFO | metrotestharness.exe | Deleting
+C:\slave\test\build\application\firefox\tests.ini
+11:55:56     INFO -  browser_name:undefined
+11:55:56     INFO -  browser_version:27.0a1
+11:55:56     INFO -  buildID:20131015012729
+11:55:56     INFO -  DEBUG : initialized metrotestharness
+11:55:56     INFO -  DEBUG : command line:
+C:\slave\test\build\application\firefox\metrotestharness -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpewig2e\profile -tp
+file:\C:\slave\test\build\talos_repo\talos\page_load_test\dromaeo\dom.manifest
+-tpchrome -tpnoisy -tpcycles 1 -tppagecycles 1
+11:55:56     INFO -  INFO | metrotestharness.exe | Launching browser...
+11:55:56     INFO -  INFO | metrotestharness.exe | App model
+id='E4CFE2E6B75AA3A3'
+11:55:56     INFO -  INFO | metrotestharness.exe | Harness process id: 2504
+11:55:56     INFO -  INFO | metrotestharness.exe | Using bin path:
+'C:\slave\test\build\application\firefox\firefox.exe'
+11:55:56     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to:
+'C:\slave\test\build\application\firefox\tests.ini'
+11:55:56     INFO -  INFO | metrotestharness.exe | Browser command line args:
+'C:\slave\test\build\application\firefox\firefox.exe -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpewig2e\profile -tp
+file:\C:\slave\test\build\talos_repo\talos\page_load_test\dromaeo\dom.manifest
+-tpchrome -tpnoisy -tpcycles 1 -tppagecycles 1'
+11:55:56     INFO -  INFO | metrotestharness.exe | Activation succeeded.
+11:55:56     INFO -  INFO | metrotestharness.exe | METRO_BROWSER_PROCESS=4064
+11:55:56     INFO -  INFO | metrotestharness.exe | Waiting on child process...
+11:58:50     INFO -  XRE_MetroCoreApplicationRun: IsMainThread:0 ThreadId:8B0
+11:58:50     INFO -  mozilla::widget::winrt::FrameworkView::FrameworkView
+11:58:50     INFO -  mozilla::widget::winrt::MetroApp::CreateView
+11:58:50     INFO -  mozilla::widget::winrt::FrameworkView::Initialize
+11:58:50     INFO -  mozilla::widget::winrt::FrameworkView::SetWindow
+11:58:50     INFO -  mozilla::widget::winrt::FrameworkView::SetDpi
+11:58:50     INFO -  mozilla::widget::winrt::FrameworkView::OnActivated
+11:58:50     INFO -  Activation argument kind: Launch
+11:58:50     INFO -  mozilla::widget::winrt::FrameworkView::Run
+11:58:50     INFO -  mozilla::widget::winrt::MetroApp::Run: IsMainThread:0
+ThreadId:44C
+11:58:50     INFO -  XPCOM startup initialization began
+11:58:50     INFO -  MetroAppShell::Init
+11:58:50     INFO -  MetroWidget::Create
+11:58:50     INFO -  eWindowType_invisible window requested, this doesn't
+actually exist!
+11:58:50     INFO -  MetroWidget::Create
+11:58:50     INFO -  mozilla::widget::winrt::MetroApp::SetBaseWidget:
+IsMainThread:1 ThreadId:44C
+11:58:50     INFO -  mozilla::widget::winrt::FrameworkView::SetWidget
+11:58:50     INFO -  MetroWidget::FindMetroWindow
+11:58:50     INFO -  MetroWidget::Create
+11:58:50     INFO -  ### Content.js loaded
+11:58:50     INFO -  ### FormHelper.js loaded
+11:58:50     INFO -  ### SelectionPrototype.js loaded
+11:58:50     INFO -  ### SelectionHandler.js loaded
+11:58:50     INFO -  ### ContextMenuHandler.js loaded
+11:58:50     INFO -  ### FindHandler.js loaded
+11:58:50     INFO -  ### ConsoleAPIObserver.js loaded
+11:58:50     INFO -  ### Content.js loaded
+11:58:50     INFO -  ### FormHelper.js loaded
+11:58:50     INFO -  ### SelectionPrototype.js loaded
+11:58:50     INFO -  ### SelectionHandler.js loaded
+11:58:50     INFO -  ### ContextMenuHandler.js loaded
+11:58:50     INFO -  ### FindHandler.js loaded
+11:58:50     INFO -  ### ConsoleAPIObserver.js loaded
+11:58:50     INFO -  MetroAppShell::Run
+11:58:50     INFO -  mozilla::widget::winrt::FrameworkView::ActivateView
+11:58:50     INFO -  mozilla::widget::winrt::MetroInput::MetroInput
+11:58:50     INFO -  mozilla::widget::winrt::FrameworkView::AddEventHandlers
+hr=0
+11:58:50     INFO -  mozilla::widget::winrt::FrameworkView::SetupContracts
+11:58:50     INFO -  * delay load started...
+11:58:50     INFO -  * delay load complete.
+11:58:50     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+11:58:50     INFO -  ### Content.js loaded
+11:58:50     INFO -  ### FormHelper.js loaded
+11:58:50     INFO -  ### SelectionPrototype.js loaded
+11:58:50     INFO -  ### SelectionHandler.js loaded
+11:58:50     INFO -  ### ContextMenuHandler.js loaded
+11:58:50     INFO -  ### FindHandler.js loaded
+11:58:50     INFO -  ### ConsoleAPIObserver.js loaded
+11:58:50     INFO -  RSS: Main: 97325056
+11:58:50     INFO -  * delay load started...
+11:58:50     INFO -  * delay load complete.
+11:58:50     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/dromaeo/dom-attr.html (next:
+http://localhost/page_load_test/dromaeo/dom-modify.html)
+11:58:50     INFO -  RSS: Main: 147218432
+11:58:50     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/dromaeo/dom-modify.html (next:
+http://localhost/page_load_test/dromaeo/dom-query.html)
+11:58:50     INFO -  RSS: Main: 136003584
+11:58:50     INFO -
+************************************************************
+11:58:50     INFO -  * Call to xpconnect wrapped JSObject produced this error:
+*
+11:58:50     INFO -  [Exception... "Component returned failure code:
+0x8000ffff (NS_ERROR_UNEXPECTED) [nsIPrefBranch.getBoolPref]"  nsresult:
+"0x8000ffff (NS_ERROR_UNEXPECTED)"  location: "JS frame ::
+resource://gre/modules/NewTabUtils.jsm :: <TOP_LEVEL> :: line 223"  data: no]
+11:58:50     INFO -
+************************************************************
+11:58:50     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/dromaeo/dom-query.html (next:
+http://localhost/page_load_test/dromaeo/dom-traverse.html)
+11:58:50     INFO -  RSS: Main: 156905472
+11:58:50     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/dromaeo/dom-traverse.html (next:
+http://localhost/page_load_test/dromaeo/dom-attr.html)
+11:58:50     INFO -  RSS: Main: 125841408
+11:58:50     INFO -  __start_tp_report
+11:58:50     INFO -  _x_x_mozilla_page_load
+11:58:50     INFO -  _x_x_mozilla_page_load_details
+11:58:50     INFO -  |i|pagename|runs|
+11:58:50     INFO -
+|0;attr.html;1439;1483;1490;1501;1512;30018;30623;30739;30819;30932;380.6193806193806;381.2375249500998;384;384.2315369261477;384.61538461538464;564;567;592;592.4075924075925;594.4055944055945;419.5804195804196;422;422.1556886227545;425.1497005988024;425.57442557442556;540.4595404595404;541;542;543;543.4565434565435
+11:58:50     INFO -
+|1;modify.html;530.4695304695305;534;547;552;552;101.39165009940358;101.59362549800797;106.71936758893281;107.89210789210789;111.98428290766208;129.35323383084577;134.7305389221557;135.72854291417167;136.18290258449304;138.44621513944224;140;140.1590457256461;140.85914085914087;141.43426294820716;141.43426294820716;726;727.2727272727273;728;728.2717282717283;730;544;555;583;590.4095904095905;592.4075924075925
+11:58:50     INFO -
+|2;query.html;990;1005;1008;1011;1015;1721;1723;1734;1782;1783;76151;76218;76688;78157;78347;69478;76035;78514;78693;78809;77283;79711;79752;79773;79818;77861;80075;80171;80236;80856;101732;102881;104282;104452;104494;1040;1046;1056;1058;1061;1429;1431;1434;1434;1436
+11:58:50     INFO -
+|3;traverse.html;349;349.30139720558884;349.30139720558884;350;350.64935064935065;208.37487537387835;210.78921078921078;306.3872255489022;306.6933066933067;306.6933066933067;724;726;727;727.2727272727273;728;372;374;663;665;665.3346653346654;322.67732267732265;324;325;325;325.02492522432703
+11:58:50     INFO -  __end_tp_report
+11:58:50     INFO -  __start_cc_report
+11:58:50     INFO -  _x_x_mozilla_cycle_collect,198
+11:58:50     INFO -  __end_cc_report
+11:58:50     INFO -  __startTimestamp1382036330140__endTimestamp
+11:58:50     INFO -  [4B62180] MetroWidget::Destroy mWnd=90090 type=0
+11:58:50     INFO -  [4B62310] MetroWidget::Destroy mWnd=0 type=0
+11:58:50     INFO -  mozilla::widget::winrt::MetroApp::ShutdownXPCOM:
+IsMainThread:1 ThreadId:44C
+11:58:50     INFO -  mozilla::widget::winrt::FrameworkView::ShutdownXPCOM
+11:58:50     INFO -  mozilla::widget::winrt::MetroInput::~MetroInput
+11:58:50     INFO -  [4B61E60] MetroWidget::Destroy mWnd=0 type=4
+11:58:50     INFO -  [4B62310] MetroWidget::~MetroWidget
+11:58:50     INFO -  [4B62180] MetroWidget::~MetroWidget
+11:58:50     INFO -  [4B61E60] MetroWidget::~MetroWidget
+11:58:50     INFO -  mozilla::widget::winrt::MetroApp::CoreExit
+11:58:50     INFO -  XPCOM startup initialization complete
+11:58:50     INFO -  Exiting FrameworkView::Run()
+11:58:50     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+11:58:50     INFO -  Exiting CoreApplication::Run
+11:58:50     INFO -  INFO | metrotestharness.exe | Exiting.
+11:58:50     INFO -  INFO | metrotestharness.exe | Deleting
+C:\slave\test\build\application\firefox\tests.ini
+11:58:55     INFO -  DEBUG : Terminating: metrotestharness, plugin-container,
+crashreporter, dwwim
+11:58:55     INFO -  Completed test dromaeo_dom:
+11:58:55     INFO -         Stopped Thu, 17 Oct 2013 11:58:55
+11:58:55     INFO -  Running test kraken:
+11:58:55     INFO -         Started Thu, 17 Oct 2013 11:58:55
+11:58:55     INFO -  DEBUG : operating with platform_type : w8_
+11:58:55     INFO -  DEBUG : created profile
+11:58:55     INFO -  DEBUG : command line:
+C:\slave\test\build\application\firefox\metrotestharness -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpsz00qt\profile
+http://localhost/getInfo.html
+11:58:55     INFO -  INFO | metrotestharness.exe | Launching browser...
+11:58:55     INFO -  INFO | metrotestharness.exe | App model
+id='E4CFE2E6B75AA3A3'
+11:58:55     INFO -  INFO | metrotestharness.exe | Harness process id: 304
+11:58:55     INFO -  INFO | metrotestharness.exe | Using bin path:
+'C:\slave\test\build\application\firefox\firefox.exe'
+11:58:55     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to:
+'C:\slave\test\build\application\firefox\tests.ini'
+11:58:55     INFO -  INFO | metrotestharness.exe | Browser command line args:
+'C:\slave\test\build\application\firefox\firefox.exe -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpsz00qt\profile
+http://localhost/getInfo.html'
+11:58:55     INFO -  INFO | metrotestharness.exe | Activation succeeded.
+11:58:55     INFO -  INFO | metrotestharness.exe | METRO_BROWSER_PROCESS=2200
+11:58:55     INFO -  INFO | metrotestharness.exe | Waiting on child process...
+11:58:57     INFO -  XRE_MetroCoreApplicationRun: IsMainThread:0 ThreadId:FD4
+11:58:57     INFO -  mozilla::widget::winrt::FrameworkView::FrameworkView
+11:58:57     INFO -  mozilla::widget::winrt::MetroApp::CreateView
+11:58:57     INFO -  mozilla::widget::winrt::FrameworkView::Initialize
+11:58:57     INFO -  mozilla::widget::winrt::FrameworkView::SetWindow
+11:58:57     INFO -  mozilla::widget::winrt::FrameworkView::SetDpi
+11:58:57     INFO -  mozilla::widget::winrt::FrameworkView::OnActivated
+11:58:57     INFO -  Activation argument kind: Launch
+11:58:57     INFO -  mozilla::widget::winrt::FrameworkView::Run
+11:58:57     INFO -  mozilla::widget::winrt::MetroApp::Run: IsMainThread:0
+ThreadId:E48
+11:58:57     INFO -  XPCOM startup initialization began
+11:58:57     INFO -  MetroAppShell::Init
+11:58:57     INFO -  MetroWidget::Create
+11:58:57     INFO -  eWindowType_invisible window requested, this doesn't
+actually exist!
+11:58:57     INFO -  MetroWidget::Create
+11:58:57     INFO -  mozilla::widget::winrt::MetroApp::SetBaseWidget:
+IsMainThread:1 ThreadId:E48
+11:58:57     INFO -  mozilla::widget::winrt::FrameworkView::SetWidget
+11:58:57     INFO -  MetroWidget::FindMetroWindow
+11:58:57     INFO -  ### Content.js loaded
+11:58:57     INFO -  ### FormHelper.js loaded
+11:58:57     INFO -  ### SelectionPrototype.js loaded
+11:58:57     INFO -  ### SelectionHandler.js loaded
+11:58:57     INFO -  ### ContextMenuHandler.js loaded
+11:58:57     INFO -  ### FindHandler.js loaded
+11:58:57     INFO -  ### ConsoleAPIObserver.js loaded
+11:58:57     INFO -  MetroAppShell::Run
+11:58:57     INFO -  mozilla::widget::winrt::FrameworkView::ActivateView
+11:58:57     INFO -  mozilla::widget::winrt::MetroInput::MetroInput
+11:58:57     INFO -  mozilla::widget::winrt::FrameworkView::AddEventHandlers
+hr=0
+11:58:57     INFO -  mozilla::widget::winrt::FrameworkView::SetupContracts
+11:58:57     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+11:58:57     INFO -  __browserInfo
+11:58:57     INFO -  browser_name:undefined
+11:58:57     INFO -  browser_version:27.0a1
+11:58:57     INFO -  buildID:20131015012729
+11:58:57     INFO -  __browserInfo__metricsScreen wid   th/height:1600/1200
+11:58:57     INFO -     colorDepth:24
+11:58:57     INFO -     Browser inner width/height: 1600/1200
+11:58:57     INFO -  __metrics[4262630] MetroWidget::Destroy mWnd=C0034 type=0
+11:58:57     INFO -  mozilla::widget::winrt::MetroApp::ShutdownXPCOM:
+IsMainThread:1 ThreadId:E48
+11:58:57     INFO -  mozilla::widget::winrt::FrameworkView::ShutdownXPCOM
+11:58:57     INFO -  mozilla::widget::winrt::MetroInput::~MetroInput
+11:58:57     INFO -  [4262310] MetroWidget::Destroy mWnd=0 type=4
+11:58:57     INFO -  [4262310] MetroWidget::~MetroWidget
+11:58:57     INFO -  [4262630] MetroWidget::~MetroWidget
+11:58:57     INFO -  mozilla::widget::winrt::MetroApp::CoreExit
+11:58:57     INFO -  XPCOM startup initialization complete
+11:58:57     INFO -  Exiting FrameworkView::Run()
+11:58:57     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+11:58:57     INFO -  Exiting CoreApplication::Run
+11:58:57     INFO -  INFO | metrotestharness.exe | Exiting.
+11:58:57     INFO -  INFO | metrotestharness.exe | Deleting
+C:\slave\test\build\application\firefox\tests.ini
+11:59:02     INFO -  browser_name:undefined
+11:59:02     INFO -  browser_version:27.0a1
+11:59:02     INFO -  buildID:20131015012729
+11:59:02     INFO -  DEBUG : initialized metrotestharness
+11:59:02     INFO -  DEBUG : command line:
+C:\slave\test\build\application\firefox\metrotestharness -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpsz00qt\profile -tp
+file:\C:\slave\test\build\talos_repo\talos\page_load_test\kraken\kraken.manifest
+-tpchrome -tpnoisy -tpcycles 1 -tppagecycles 1
+11:59:02     INFO -  INFO | metrotestharness.exe | Launching browser...
+11:59:02     INFO -  INFO | metrotestharness.exe | App model
+id='E4CFE2E6B75AA3A3'
+11:59:02     INFO -  INFO | metrotestharness.exe | Harness process id: 244
+11:59:02     INFO -  INFO | metrotestharness.exe | Using bin path:
+'C:\slave\test\build\application\firefox\firefox.exe'
+11:59:02     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to:
+'C:\slave\test\build\application\firefox\tests.ini'
+11:59:02     INFO -  INFO | metrotestharness.exe | Browser command line args:
+'C:\slave\test\build\application\firefox\firefox.exe -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpsz00qt\profile -tp
+file:\C:\slave\test\build\talos_repo\talos\page_load_test\kraken\kraken.manifest
+-tpchrome -tpnoisy -tpcycles 1 -tppagecycles 1'
+11:59:02     INFO -  INFO | metrotestharness.exe | Activation succeeded.
+11:59:02     INFO -  INFO | metrotestharness.exe | METRO_BROWSER_PROCESS=2164
+11:59:02     INFO -  INFO | metrotestharness.exe | Waiting on child process...
+12:00:27     INFO -  XRE_MetroCoreApplicationRun: IsMainThread:0 ThreadId:F90
+12:00:27     INFO -  mozilla::widget::winrt::FrameworkView::FrameworkView
+12:00:27     INFO -  mozilla::widget::winrt::MetroApp::CreateView
+12:00:27     INFO -  mozilla::widget::winrt::FrameworkView::Initialize
+12:00:27     INFO -  mozilla::widget::winrt::FrameworkView::SetWindow
+12:00:27     INFO -  mozilla::widget::winrt::FrameworkView::SetDpi
+12:00:27     INFO -  mozilla::widget::winrt::FrameworkView::OnActivated
+12:00:27     INFO -  Activation argument kind: Launch
+12:00:27     INFO -  mozilla::widget::winrt::FrameworkView::Run
+12:00:27     INFO -  mozilla::widget::winrt::MetroApp::Run: IsMainThread:0
+ThreadId:BAC
+12:00:27     INFO -  XPCOM startup initialization began
+12:00:27     INFO -  MetroAppShell::Init
+12:00:27     INFO -  MetroWidget::Create
+12:00:27     INFO -  eWindowType_invisible window requested, this doesn't
+actually exist!
+12:00:27     INFO -  MetroWidget::Create
+12:00:27     INFO -  mozilla::widget::winrt::MetroApp::SetBaseWidget:
+IsMainThread:1 ThreadId:BAC
+12:00:27     INFO -  mozilla::widget::winrt::FrameworkView::SetWidget
+12:00:27     INFO -  MetroWidget::FindMetroWindow
+12:00:27     INFO -  MetroWidget::Create
+12:00:27     INFO -  ### Content.js loaded
+12:00:27     INFO -  ### FormHelper.js loaded
+12:00:27     INFO -  ### SelectionPrototype.js loaded
+12:00:27     INFO -  ### SelectionHandler.js loaded
+12:00:27     INFO -  ### ContextMenuHandler.js loaded
+12:00:27     INFO -  ### FindHandler.js loaded
+12:00:27     INFO -  ### ConsoleAPIObserver.js loaded
+12:00:27     INFO -  ### Content.js loaded
+12:00:27     INFO -  ### FormHelper.js loaded
+12:00:27     INFO -  ### SelectionPrototype.js loaded
+12:00:27     INFO -  ### SelectionHandler.js loaded
+12:00:27     INFO -  ### ContextMenuHandler.js loaded
+12:00:27     INFO -  ### FindHandler.js loaded
+12:00:27     INFO -  ### ConsoleAPIObserver.js loaded
+12:00:27     INFO -  MetroAppShell::Run
+12:00:27     INFO -  mozilla::widget::winrt::FrameworkView::ActivateView
+12:00:27     INFO -  mozilla::widget::winrt::MetroInput::MetroInput
+12:00:27     INFO -  mozilla::widget::winrt::FrameworkView::AddEventHandlers
+hr=0
+12:00:27     INFO -  mozilla::widget::winrt::FrameworkView::SetupContracts
+12:00:27     INFO -  * delay load started...
+12:00:27     INFO -  * delay load complete.
+12:00:27     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+12:00:27     INFO -  ### Content.js loaded
+12:00:27     INFO -  ### FormHelper.js loaded
+12:00:27     INFO -  ### SelectionPrototype.js loaded
+12:00:27     INFO -  ### SelectionHandler.js loaded
+12:00:27     INFO -  ### ContextMenuHandler.js loaded
+12:00:27     INFO -  ### FindHandler.js loaded
+12:00:27     INFO -  ### ConsoleAPIObserver.js loaded
+12:00:27     INFO -  RSS: Main: 97574912
+12:00:27     INFO -  * delay load started...
+12:00:27     INFO -  * delay load complete.
+12:00:27     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=ai-astar (next:
+http://localhost/page_load_test/kraken/driver.html?testName=audio-beat-detection)
+12:00:27     INFO -  RSS: Main: 159780864
+12:00:27     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=audio-beat-detection
+(next: http://localhost/page_load_test/kraken/driver.html?testName=audio-dft)
+12:00:27     INFO -  RSS: Main: 154529792
+12:00:27     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=audio-dft (next:
+http://localhost/page_load_test/kraken/driver.html?testName=audio-fft)
+12:00:27     INFO -  RSS: Main: 186486784
+12:00:27     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=audio-fft (next:
+http://localhost/page_load_test/kraken/driver.html?testName=audio-oscillator)
+12:00:27     INFO -  RSS: Main: 156889088
+12:00:27     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=audio-oscillator
+(next:
+http://localhost/page_load_test/kraken/driver.html?testName=imaging-gaussian-blur)
+12:00:27     INFO -  RSS: Main: 151699456
+12:00:27     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=imaging-gaussian-blur
+(next:
+http://localhost/page_load_test/kraken/driver.html?testName=imaging-darkroom)
+12:00:27     INFO -  RSS: Main: 179511296
+12:00:27     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=imaging-darkroom
+(next:
+http://localhost/page_load_test/kraken/driver.html?testName=imaging-desaturate)
+12:00:27     INFO -  RSS: Main: 182059008
+12:00:27     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=imaging-desaturate
+(next:
+http://localhost/page_load_test/kraken/driver.html?testName=json-parse-financial)
+12:00:27     INFO -  RSS: Main: 173248512
+12:00:27     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=json-parse-financial
+(next:
+http://localhost/page_load_test/kraken/driver.html?testName=json-stringify-tinderbox)
+12:00:27     INFO -  RSS: Main: 172965888
+12:00:27     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=json-stringify-tinderbox
+(next:
+http://localhost/page_load_test/kraken/driver.html?testName=stanford-crypto-aes)
+12:00:27     INFO -  RSS: Main: 174145536
+12:00:27     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=stanford-crypto-aes
+(next:
+http://localhost/page_load_test/kraken/driver.html?testName=stanford-crypto-ccm)
+12:00:46     INFO -  RSS: Main: 177946624
+12:00:46     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=stanford-crypto-ccm
+(next:
+http://localhost/page_load_test/kraken/driver.html?testName=stanford-crypto-pbkdf2)
+12:00:46     INFO -  RSS: Main: 204615680
+12:00:46     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=stanford-crypto-pbkdf2
+(next:
+http://localhost/page_load_test/kraken/driver.html?testName=stanford-crypto-sha256-iterative)
+12:00:46     INFO -  RSS: Main: 210456576
+12:00:46     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/kraken/driver.html?testName=stanford-crypto-sha256-iterative
+(next: http://localhost/page_load_test/kraken/driver.html?testName=ai-astar)
+12:00:46     INFO -  RSS: Main: 208986112
+12:00:46     INFO -  __start_tp_report
+12:00:46     INFO -  _x_x_mozilla_page_load
+12:00:46     INFO -  _x_x_mozilla_page_load_details
+12:00:46     INFO -  |i|pagename|runs|
+12:00:46     INFO -  |0;ai-astar;128;127;127;126;292;126;127;127;129;126
+12:00:46     INFO -
+|1;audio-beat-detection;132;133;132;167;131;135;133;241;230;135
+12:00:46     INFO -  |2;audio-dft;156;155;153;155;154;154;155;156;156;156
+12:00:46     INFO -  |3;audio-fft;90;92;92;115;89;93;92;113;93;90
+12:00:46     INFO -  |4;audio-oscillator;96;97;116;99;96;119;98;96;98;92
+12:00:46     INFO -
+|5;imaging-gaussian-blur;156;156;163;164;162;162;163;164;163;162
+12:00:46     INFO -
+|6;imaging-darkroom;137;137;137;136;137;137;136;136;137;136
+12:00:46     INFO -
+|7;imaging-desaturate;117;117;117;130;117;116;116;120;117;117
+12:00:46     INFO -  |8;json-parse-financial;74;74;73;77;72;72;73;73;73;76
+12:00:46     INFO -  |9;json-stringify-tinderbox;66;65;65;81;65;66;66;66;66;82
+12:00:46     INFO -
+|10;stanford-crypto-aes;121;123;126;120;119;122;144;121;123;120
+12:00:46     INFO -
+|11;stanford-crypto-ccm;114;146;116;114;115;121;114;116;127;115
+12:00:46     INFO -
+|12;stanford-crypto-pbkdf2;187;169;188;167;169;167;264;167;169;166
+12:00:46     INFO -
+|13;stanford-crypto-sha256-iterative;81;80;80;80;79;81;80;82;80;117
+12:00:46     INFO -  __end_tp_report
+12:00:46     INFO -  __start_cc_report
+12:00:46     INFO -  _x_x_mozilla_cycle_collect,911
+12:00:46     INFO -  __end_cc_report
+12:00:46     INFO -  __startTimestamp1382036446325__endTimestamp
+12:00:46     INFO -  [4362180] MetroWidget::Destroy mWnd=9015E type=0
+12:00:46     INFO -  [4362310] MetroWidget::Destroy mWnd=0 type=0
+12:00:46     INFO -  mozilla::widget::winrt::MetroApp::ShutdownXPCOM:
+IsMainThread:1 ThreadId:BAC
+12:00:46     INFO -  mozilla::widget::winrt::FrameworkView::ShutdownXPCOM
+12:00:46     INFO -  mozilla::widget::winrt::MetroInput::~MetroInput
+12:00:46     INFO -  [4361E60] MetroWidget::Destroy mWnd=0 type=4
+12:00:46     INFO -  [4361E60] MetroWidget::~MetroWidget
+12:00:46     INFO -  [4362180] MetroWidget::~MetroWidget
+12:00:46     INFO -  [4362310] MetroWidget::~MetroWidget
+12:00:46     INFO -  mozilla::widget::winrt::MetroApp::CoreExit
+12:00:46     INFO -  XPCOM startup initialization complete
+12:00:46     INFO -  Exiting FrameworkView::Run()
+12:00:46     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+12:00:46     INFO -  Exiting CoreApplication::Run
+12:00:46     INFO -  INFO | metrotestharness.exe | Exiting.
+12:00:46     INFO -  INFO | metrotestharness.exe | Deleting
+C:\slave\test\build\application\firefox\tests.ini
+12:00:51     INFO -  DEBUG : Terminating: metrotestharness, plugin-container,
+crashreporter, dwwim
+12:00:52     INFO -  Completed test kraken:
+12:00:52     INFO -         Stopped Thu, 17 Oct 2013 12:00:52
+12:00:52     INFO -  Running test v8_7:
+12:00:52     INFO -         Started Thu, 17 Oct 2013 12:00:52
+12:00:52     INFO -  DEBUG : operating with platform_type : w8_
+12:00:52     INFO -  DEBUG : created profile
+12:00:52     INFO -  DEBUG : command line:
+C:\slave\test\build\application\firefox\metrotestharness -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpjc7qsl\profile
+http://localhost/getInfo.html
+12:00:52     INFO -  INFO | metrotestharness.exe | Launching browser...
+12:00:52     INFO -  INFO | metrotestharness.exe | App model
+id='E4CFE2E6B75AA3A3'
+12:00:52     INFO -  INFO | metrotestharness.exe | Harness process id: 4036
+12:00:52     INFO -  INFO | metrotestharness.exe | Using bin path:
+'C:\slave\test\build\application\firefox\firefox.exe'
+12:00:52     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to:
+'C:\slave\test\build\application\firefox\tests.ini'
+12:00:52     INFO -  INFO | metrotestharness.exe | Browser command line args:
+'C:\slave\test\build\application\firefox\firefox.exe -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpjc7qsl\profile
+http://localhost/getInfo.html'
+12:00:52     INFO -  INFO | metrotestharness.exe | Activation succeeded.
+12:00:52     INFO -  INFO | metrotestharness.exe | METRO_BROWSER_PROCESS=2832
+12:00:52     INFO -  INFO | metrotestharness.exe | Waiting on child process...
+12:00:54     INFO -  XRE_MetroCoreApplicationRun: IsMainThread:0 ThreadId:768
+12:00:54     INFO -  mozilla::widget::winrt::FrameworkView::FrameworkView
+12:00:54     INFO -  mozilla::widget::winrt::MetroApp::CreateView
+12:00:54     INFO -  mozilla::widget::winrt::FrameworkView::Initialize
+12:00:54     INFO -  mozilla::widget::winrt::FrameworkView::SetWindow
+12:00:54     INFO -  mozilla::widget::winrt::FrameworkView::SetDpi
+12:00:54     INFO -  mozilla::widget::winrt::FrameworkView::OnActivated
+12:00:54     INFO -  Activation argument kind: Launch
+12:00:54     INFO -  mozilla::widget::winrt::FrameworkView::Run
+12:00:54     INFO -  mozilla::widget::winrt::MetroApp::Run: IsMainThread:0
+ThreadId:8A8
+12:00:54     INFO -  XPCOM startup initialization began
+12:00:54     INFO -  MetroAppShell::Init
+12:00:54     INFO -  MetroWidget::Create
+12:00:54     INFO -  eWindowType_invisible window requested, this doesn't
+actually exist!
+12:00:54     INFO -  MetroWidget::Create
+12:00:54     INFO -  mozilla::widget::winrt::MetroApp::SetBaseWidget:
+IsMainThread:1 ThreadId:8A8
+12:00:54     INFO -  mozilla::widget::winrt::FrameworkView::SetWidget
+12:00:54     INFO -  MetroWidget::FindMetroWindow
+12:00:54     INFO -  WARNING: Reentrant call into process events detected,
+returning early.
+12:00:54     INFO -  WARNING: Reentrant call into process events detected,
+returning early.
+12:00:54     INFO -  ### Content.js loaded
+12:00:54     INFO -  ### FormHelper.js loaded
+12:00:54     INFO -  ### SelectionPrototype.js loaded
+12:00:54     INFO -  ### SelectionHandler.js loaded
+12:00:54     INFO -  ### ContextMenuHandler.js loaded
+12:00:54     INFO -  ### FindHandler.js loaded
+12:00:54     INFO -  ### ConsoleAPIObserver.js loaded
+12:00:54     INFO -  MetroAppShell::Run
+12:00:54     INFO -  mozilla::widget::winrt::FrameworkView::ActivateView
+12:00:54     INFO -  mozilla::widget::winrt::MetroInput::MetroInput
+12:00:54     INFO -  mozilla::widget::winrt::FrameworkView::AddEventHandlers
+hr=0
+12:00:54     INFO -  mozilla::widget::winrt::FrameworkView::SetupContracts
+12:00:54     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+12:00:54     INFO -  __browserInfo
+12:00:54     INFO -  browser_name:undefined
+12:00:54     INFO -  browser_version:27.0a1
+12:00:54     INFO -  buildID:20131015012729
+12:00:54     INFO -  __browserInfo__metricsScreen width/height:1600/1200
+12: 00:54     INFO -    colorDepth:24
+12:00:54     INFO -     Browser inner width/height: 1600/1200
+12:00:54     INFO -  __metrics[4662630] MetroWidget::Destroy mWnd=80248 type=0
+12:00:54     INFO -  mozilla::widget::winrt::MetroApp::ShutdownXPCOM:
+IsMainThread:1 ThreadId:8A8
+12:00:54     INFO -  mozilla::widget::winrt::FrameworkView::ShutdownXPCOM
+12:00:54     INFO -  mozilla::widget::winrt::MetroInput::~MetroInput
+12:00:54     INFO -  [4662310] MetroWidget::Destroy mWnd=0 type=4
+12:00:54     INFO -  [4662310] MetroWidget::~MetroWidget
+12:00:54     INFO -  [4662630] MetroWidget::~MetroWidget
+12:00:54     INFO -
+************************************************************
+12:00:54     INFO -  * Call to xpconnect wrapped JSObject produced this error:
+*
+12:00:54     INFO -  [Exception... "'[JavaScript Error: "this._isGridBound is
+not a function" {file: "chrome://browser/content/bindings/urlbar.xml" line:
+731}]' when calling method: [nsIBrowserSearchInitObserver::onInitComplete]"
+nsresult: "0x80570021 (NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS)"  location:
+"JS frame :: resource://gre/components/nsSearchService.js :: onSuccess :: line
+3211"  data: yes]
+12:00:54     INFO -
+************************************************************
+12:00:54     INFO -  mozilla::widget::winrt::MetroApp::CoreExit
+12:00:54     INFO -  XPCOM startup initialization complete
+12:00:54     INFO -  Exiting FrameworkView::Run()
+12:00:54     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+12:00:54     INFO -  Exiting CoreApplication::Run
+12:00:54     INFO -  INFO | metrotestharness.exe | Exiting.
+12:00:54     INFO -  INFO | metrotestharness.exe | Deleting
+C:\slave\test\build\application\firefox\tests.ini
+12:00:59     INFO -  browser_name:undefined
+12:00:59     INFO -  browser_version:27.0a1
+12:00:59     INFO -  buildID:20131015012729
+12:00:59     INFO -  DEBUG : initialized metrotestharness
+12:00:59     INFO -  DEBUG : command line:
+C:\slave\test\build\application\firefox\metrotestharness -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpjc7qsl\profile -tp
+file:\C:\slave\test\build\talos_repo\talos\page_load_test\v8_7\v8.manifest
+-tpchrome -tpnoisy -tpcycles 1 -tppagecycles 1
+12:00:59     INFO -  INFO | metrotestharness.exe | Launching browser...
+12:00:59     INFO -  INFO | metrotestharness.exe | App model
+id='E4CFE2E6B75AA3A3'
+12:00:59     INFO -  INFO | metrotestharness.exe | Harness process id: 3764
+12:00:59     INFO -  INFO | metrotestharness.exe | Using bin path:
+'C:\slave\test\build\application\firefox\firefox.exe'
+12:00:59     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to:
+'C:\slave\test\build\application\firefox\tests.ini'
+12:00:59     INFO -  INFO | metrotestharness.exe | Browser command line args:
+'C:\slave\test\build\application\firefox\firefox.exe -profile
+c:\users\cltbld~1.t-w\appdata\local\temp\tmpjc7qsl\profile -tp
+file:\C:\slave\test\build\talos_repo\talos\page_load_test\v8_7\v8.manifest
+-tpchrome -tpnoisy -tpcycles 1 -tppagecycles 1'
+12:00:59     INFO -  INFO | metrotestharness.exe | Activation succeeded.
+12:00:59     INFO -  INFO | metrotestharness.exe | METRO_BROWSER_PROCESS=2224
+12:00:59     INFO -  INFO | metrotestharness.exe | Waiting on child process...
+12:01:35     INFO -  XRE_MetroCoreApplicationRun: IsMainThread:0 ThreadId:76C
+12:01:35     INFO -  mozilla::widget::winrt::FrameworkView::FrameworkView
+12:01:35     INFO -  mozilla::widget::winrt::MetroApp::CreateView
+12:01:35     INFO -  mozilla::widget::winrt::FrameworkView::Initialize
+12:01:35     INFO -  mozilla::widget::winrt::FrameworkView::SetWindow
+12:01:35     INFO -  mozilla::widget::winrt::FrameworkView::SetDpi
+12:01:35     INFO -  mozilla::widget::winrt::FrameworkView::OnActivated
+12:01:35     INFO -  Activation argument kind: Launch
+12:01:35     INFO -  mozilla::widget::winrt::FrameworkView::Run
+12:01:35     INFO -  mozilla::widget::winrt::MetroApp::Run: IsMainThread:0
+ThreadId:F3C
+12:01:35     INFO -  XPCOM startup initialization began
+12:01:35     INFO -  MetroAppShell::Init
+12:01:35     INFO -  MetroWidget::Create
+12:01:35     INFO -  eWindowType_invisible window requested, this doesn't
+actually exist!
+12:01:35     INFO -  MetroWidget::Create
+12:01:35     INFO -  mozilla::widget::winrt::MetroApp::SetBaseWidget:
+IsMainThread:1 ThreadId:F3C
+12:01:35     INFO -  mozilla::widget::winrt::FrameworkView::SetWidget
+12:01:35     INFO -  MetroWidget::FindMetroWindow
+12:01:35     INFO -  MetroWidget::Create
+12:01:35     INFO -  ### Content.js loaded
+12:01:35     INFO -  ### FormHelper.js loaded
+12:01:35     INFO -  ### SelectionPrototype.js loaded
+12:01:35     INFO -  ### SelectionHandler.js loaded
+12:01:35     INFO -  ### ContextMenuHandler.js loaded
+12:01:35     INFO -  ### FindHandler.js loaded
+12:01:35     INFO -  ### ConsoleAPIObserver.js loaded
+12:01:35     INFO -  ### Content.js loaded
+12:01:35     INFO -  ### FormHelper.js loaded
+12:01:35     INFO -  ### SelectionPrototype.js loaded
+12:01:35     INFO -  ### SelectionHandler.js loaded
+12:01:35     INFO -  ### ContextMenuHandler.js loaded
+12:01:35     INFO -  ### FindHandler.js loaded
+12:01:35     INFO -  ### ConsoleAPIObserver.js loaded
+12:01:35     INFO -  MetroAppShell::Run
+12:01:35     INFO -  mozilla::widget::winrt::FrameworkView::ActivateView
+12:01:35     INFO -  mozilla::widget::winrt::MetroInput::MetroInput
+12:01:35     INFO -  mozilla::widget::winrt::FrameworkView::AddEventHandlers
+hr=0
+12:01:35     INFO -  mozilla::widget::winrt::FrameworkView::SetupContracts
+12:01:35     INFO -  * delay load started...
+12:01:35     INFO -  * delay load complete.
+12:01:35     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+12:01:35     INFO -  ### Content.js loaded
+12:01:35     INFO -  ### FormHelper.js loaded
+12:01:35     INFO -  ### SelectionPrototype.js loaded
+12:01:35     INFO -  ### SelectionHandler.js loaded
+12:01:35     INFO -  ### ContextMenuHandler.js loaded
+12:01:35     INFO -  ### FindHandler.js loaded
+12:01:35     INFO -  ### ConsoleAPIObserver.js loaded
+12:01:35     INFO -  RSS: Main: 97759232
+12:01:35     INFO -  * delay load started...
+12:01:35     INFO -  * delay load complete.
+12:01:35     INFO -  Cycle 1(1): loaded
+http://localhost/page_load_test/v8_7/run.html (next:
+http://localhost/page_load_test/v8_7/run.html)
+12:01:35     INFO -  RSS: Main: 387854336
+12:01:35     INFO -  __start_tp_report
+12:01:35     INFO -  _x_x_mozilla_page_load
+12:01:35     INFO -  _x_x_mozilla_page_load_details
+12:01:35     INFO -  |i|pagename|runs|
+12:01:35     INFO -  |0;Richards;178.89087656529517
+12:01:35     INFO -  |1;DeltaBlue;383.7298541826554
+12:01:35     INFO -  |2;Encrypt;357.0153516601214
+12:01:35     INFO -  |3;Decrypt;6289.308176100629
+12:01:35     INFO -  |4;RayTrace;2698.9247311827958
+12:01:35     INFO -  |5;Earley;852.5149190110827
+12:01:35     INFO -  |6;Boyer;11314.606741573034
+12:01:35     INFO -  |7;RegExp;39588.23529411765
+12:01:35     INFO -  |8;Splay;693.9625260235947
+12:01:35     INFO -  |9;NavierStokes;6724.832214765101
+12:01:35     INFO -  __end_tp_report
+12:01:35     INFO -  __startTimestamp1382036494760__endTimestamp
+12:01:35     INFO -  [4662180] MetroWidget::Destroy mWnd=F003A type=0
+12:01:35     INFO -  [4662310] MetroWidget::Destroy mWnd=0 type=0
+12:01:35     INFO -  mozilla::widget::winrt::MetroApp::ShutdownXPCOM:
+IsMainThread:1 ThreadId:F3C
+12:01:35     INFO -  mozilla::widget::winrt::FrameworkView::ShutdownXPCOM
+12:01:35     INFO -  mozilla::widget::winrt::MetroInput::~MetroInput
+12:01:35     INFO -  [4661E60] MetroWidget::Destroy mWnd=0 type=4
+12:01:35     INFO -  [4662310] MetroWidget::~MetroWidget
+12:01:35     INFO -  [4662180] MetroWidget::~MetroWidget
+12:01:35     INFO -  [4661E60] MetroWidget::~MetroWidget
+12:01:35     INFO -  mozilla::widget::winrt::MetroApp::CoreExit
+12:01:35     INFO -  XPCOM startup initialization complete
+12:01:35     INFO -  Exiting FrameworkView::Run()
+12:01:35     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+12:01:35     INFO -  Exiting CoreApplication::Run
+12:01:35     INFO -  INFO | metrotestharness.exe | Exiting.
+12:01:35     INFO -  INFO | metrotestharness.exe | Deleting
+C:\slave\test\build\application\firefox\tests.ini
+12:01:40     INFO -  DEBUG : Terminating: metrotestharness, plugin-container,
+crashreporter, dwwim
+12:01:40     INFO -  Completed test v8_7:
+12:01:40     INFO -         Stopped Thu, 17 Oct 2013 12:01:40
+12:01:40     INFO -  cycle time: 00:46:31
+12:01:40     INFO -  T-W864-IX-042:
+12:01:40     INFO -         Stopped Thu, 17 Oct 2013 12:01:40
+12:01:40     INFO -  INFO : Outputting talos results => {'results_urls':
+['http://graphs.mozilla.org/server/collect.cgi'], 'datazilla_urls':
+['https://datazilla.mozilla.org/talos']}
+12:01:40     INFO -  DEBUG : Working with test: dromaeo_css
+12:01:40     INFO -  Generating results file: dromaeo_css:
+12:01:40     INFO -         Started Thu, 17 Oct 2013 12:01:40
+12:01:40     INFO -  Generating results file: dromaeo_css:
+12:01:40     INFO -         Stopped Thu, 17 Oct 2013 12:01:40
+12:01:40     INFO -  DEBUG : Working with test: dromaeo_dom
+12:01:40     INFO -  Generating results file: dromaeo_dom:
+12:01:40     INFO -         Started Thu, 17 Oct 2013 12:01:40
+12:01:40     INFO -  Generating results file: dromaeo_dom:
+12:01:40     INFO -         Stopped Thu, 17 Oct 2013 12:01:40
+12:01:40     INFO -  DEBUG : Working with test: kraken
+12:01:40     INFO -  Generating results file: kraken:
+12:01:40     INFO -         Started Thu, 17 Oct 2013 12:01:40
+12:01:40     INFO -  INFO : javascript benchmark
+12:01:40     INFO -  Generating results file: kraken:
+12:01:40     INFO -         Stopped Thu, 17 Oct 2013 12:01:40
+12:01:40     INFO -  DEBUG : Working with test: v8_7
+12:01:40     INFO -  Generating results file: v8_7:
+12:01:40     INFO -         Started Thu, 17 Oct 2013 12:01:40
+12:01:40     INFO -  INFO : v8 benchmark
+12:01:40     INFO -  INFO :  Crypto: 17763.6484156
+12:01:40     INFO -  INFO :  DeltaBlue: 17230.3508
+12:01:40     INFO -  INFO :  EarlyBoyer: 21458.7943541
+12:01:40     INFO -  INFO :  NavierStokes: 22067.4650699
+12:01:40     INFO -  INFO :  RayTrace: 27417.9191235
+12:01:40     INFO -  INFO :  RegExp: 2301.15081724
+12:01:40     INFO -  INFO :  Richards: 19733.818
+12:01:40     INFO -  INFO :  Splay: 11742.8531
+12:01:40     INFO -  INFO : Score: 14647.6699914
+12:01:40     INFO -  Generating results file: v8_7:
+12:01:40     INFO -         Stopped Thu, 17 Oct 2013 12:01:40
+12:01:40     INFO -  INFO : Posting result 0 of 4 to
+http://graphs.mozilla.org/server/collect.cgi, attempt 0
+12:01:41     INFO -  DEBUG : process_Request line:
+dromaeo_cssgraph.html#tests=[[72,26,31]]
+12:01:4 1     INFO -  DEBUG : process_Request line: dromaeo_css4762.48graph.h
+tml#tests=[[72,26,31]]
+12:01:41     INFO -  INFO : Posting result 1 of 4 to
+http://graphs.mozilla.org/server/collect.cgi, attempt 0
+12:01:42     INFO -  DEBUG : process_Request line:
+dromaeo_domgraph.html#tests=[[73,26 ,31]]
+12:01:42     INFO -  DEBUG : process_Request line: dromaeo_dom61
+3.90graph.html#tests=[[73,26,31]]
+12:01:42     INFO -  INFO : Posting     result 2 of 4 to
+http://graphs.mozilla.org/server/collect.cgi, attempt 0
+12:01:42     INFO -  DEBUG : process_Request line:
+kraken1720.00graph.html#tests=[[232,26      ,31]]
+12:01:42     INFO -  INFO : Posting result 3 of 4 to
+http://graphs.mozilla.org/server/collect.cgi, attempt 0
+12:01:43     INFO -  DEBUG : process_Request line:
+v8_714647.67graph.html#tests=[[230,     26,31]]
+12:01:43     INFO -  RETURN: <a
+href='http://graphs.mozilla.org/graph.html#tests=[[72,26,31]]'>dromaeo_css:
+4762.48</a>
+12:01:43     INFO -  RETURN: <a
+href='http://graphs.mozilla.org/graph.html#tests=[[73,26,31]]'>dromaeo_dom:
+613.90</a>
+12:01:43     INFO -  RETURN: <a
+href='http://graphs.mozilla.org/graph.html#tests=[[232,26,31]]'>kraken:
+1720.00</a>
+12:01:43     INFO -  RETURN: <a
+href='http://graphs.mozilla.org/graph.html#tests=[[230,26,31]]'>v8_7:
+14647.67</a>
+12:01:43     INFO -  INFO : Outputting datazilla results to
+https://datazilla.mozilla.org/talos
+12:01:43     INFO -  INFO : datazilla: https//datazilla.mozilla.org/talos;
+oauth=False
+12:01:43     INFO -  INFO : Datazilla results at
+https://datazilla.mozilla.org?start=1381431703&stop=1382036503&product=undefined&repository=Cedar&os=win&os_version=6.2.9200&project=talos&graph_search=21793156b6ea&x86=false&test=v8_7
+12:01:43     INFO -  INFO : Datazilla results at
+https://datazilla.mozilla.org?start=1381431703&stop=1382036503&product=undefined&repository=Cedar&os=win&os_version=6.2.9200&project=talos&graph_search=21793156b6ea&x86=false&test=v8_7&test=dromaeo_css
+12:01:43     INFO -  INFO : Datazilla results at
+https://datazilla.mozilla.org?start=1381431703&stop=1382036503&product=undefined&repository=Cedar&os=win&os_version=6.2.9200&project=talos&graph_search=21793156b6ea&x86=false&test=v8_7&test=dromaeo_css&test=kraken
+12:01:43     INFO -  INFO : Datazilla results at
+https://datazilla.mozilla.org?start=1381431703&stop=1382036503&product=undefined&repository=Cedar&os=win&os_version=6.2.9200&project=talos&graph_search=21793156b6ea&x86=false&test=v8_7&test=dromaeo_css&test=kraken&test=dromaeo_dom
+12:01:43     INFO -  TinderboxPrint: TalosResult: {"datazilla": {"v8_7":
+{"url":
+"https://datazilla.mozilla.org?start=1381431703&stop=1382036503&product=undefined&repository=Cedar&os=win&os_version=6.2.9200&project=talos&graph_search=21793156b6ea&x86=false&test=v8_7"},
+"kraken": {"url":
+"https://datazilla.mozilla.org?start=1381431703&stop=1382036503&product=undefined&repository=Cedar&os=win&os_version=6.2.9200&project=talos&graph_search=21793156b6ea&x86=false&test=v8_7&test=dromaeo_css&test=kraken"},
+"dromaeo_css": {"url":
+"https://datazilla.mozilla.org?start=1381431703&stop=1382036503&product=undefined&repository=Cedar&os=win&os_version=6.2.9200&project=talos&graph_search=21793156b6ea&x86=false&test=v8_7&test=dromaeo_css"},
+"dromaeo_dom": {"url":
+"https://datazilla.mozilla.org?start=1381431703&stop=1382036503&product=undefined&repository=Cedar&os=win&os_version=6.2.9200&project=talos&graph_search=21793156b6ea&x86=false&test=v8_7&test=dromaeo_css&test=kraken&test=dromaeo_dom"}},
+"graphserver": {"v8_7": {"url":
+"http://graphs.mozilla.org/graph.html#tests=[[230,26,31]]", "result":
+"14647.67"}, "kraken": {"url":
+"http://graphs.mozilla.org/graph.html#tests=[[232,26,31]]", "result":
+"1720.00"}, "dromaeo_css": {"url":
+"http://graphs.mozilla.org/graph.html#tests=[[72,26,31]]", "result":
+"4762.48"}, "dromaeo_dom": {"url":
+"http://graphs.mozilla.org/graph.html#tests=[[73,26,31]]", "result":
+"613.90"}}}
+12:01:43     INFO - Return code: 0
+12:01:43     INFO - Running post-action listener: _resource_record_post_action
+12:01:43     INFO - Running post-run listener: _resource_record_post_run
+12:01:44     INFO - Total resource usage - Wall time: 2795s; CPU: 6.0%; Read
+bytes: 186064896; Write bytes: 389361152; Read time: 2565030; Write time:
+1615900
+12:01:44     INFO - install - Wall time: 1s; CPU: Can't collect data; Read
+bytes: 0; Write bytes: 0; Read time: 0; Write time: 0
+12:01:44     INFO - run-tests - Wall time: 2795s; CPU: 6.0%; Read bytes:
+186064896; Write bytes: 383532544; Read time: 2565030; Write time: 1609830
+12:01:44     INFO - Copying logs to upload dir...
+12:01:44     INFO - mkdir: C:\slave\test\build\upload\logs

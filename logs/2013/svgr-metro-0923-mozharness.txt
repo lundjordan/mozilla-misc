@@ -1,0 +1,1775 @@
+13:31:53     INFO - MultiFileLogger online at 20130923 13:31:53 in C:\slave\test
+13:31:53     INFO - Run as mozharness/scripts/talos_script.py --suite svgr-metro --add-option --webServer,localhost --branch-name Cedar --system-bits 32 --cfg talos/windows_config.py --download-symbols ondemand --use-talos-json --no-read-buildbot-config --test-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.tests.zip --installer-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.zip
+13:31:53     INFO - Downloading http://people.mozilla.org/~jlund/talos.json to C:\slave\test\build\talos.json
+13:31:53     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('http://people.mozilla.org/~jlund/talos.json', 'C:\\slave\\test\\build\\talos.json'), kwargs: {}, attempt #1
+13:31:53     INFO - Downloaded 6949 bytes.
+13:31:53     INFO - made it herehttp://people.mozilla.org/~jlund/talos.json
+13:31:53     INFO - self.talos_jsonC:\slave\test\build\talos.json
+13:31:53     INFO - {u'global': {u'talos_repo': u'http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/',
+13:31:53     INFO -              u'talos_revision': u'69bb62b25f11'},
+13:31:53     INFO -  u'suites': {u'chromez': {u'talos_options': [u'--mozAfterPaint',
+13:31:53     INFO -                                              u'--filter',
+13:31:53     INFO -                                              u'ignore_first:5',
+13:31:53     INFO -                                              u'--filter',
+13:31:53     INFO -                                              u'median'],
+13:31:53     INFO -                           u'tests': [u'tresize']},
+13:31:53     INFO -              u'dirtypaint': {u'talos_addons': [u'http://build.mozilla.org/talos/profiles/dirtyDBs.zip',
+13:31:53     INFO -                                                u'http://build.mozilla.org/talos/profiles/dirtyMaxDBs.zip'],
+13:31:53     INFO -                              u'talos_options': [u'--setPref',
+13:31:53     INFO -                                                 u'hangmonitor.timeout=0',
+13:31:53     INFO -                                                 u'--mozAfterPaint'],
+13:31:53     INFO -                              u'tests': [u'tspaint_places_generated_med',
+13:31:53     INFO -                                         u'tspaint_places_generated_max']},
+13:31:53     INFO -              u'dromaeojs': {u'tests': [u'dromaeo_css',
+13:31:53     INFO -                                        u'dromaeo_dom',
+13:31:53     INFO -                                        u'kraken:v8_7']},
+13:31:53     INFO -              u'dromaeojs-metro': {u'tests': [u'dromaeo_css',
+13:31:53     INFO -                                              u'dromaeo_dom',
+13:31:53     INFO -                                              u'kraken:v8_7']},
+13:31:53     INFO -              u'other': {u'talos_options': [u'--mozAfterPaint',
+13:31:53     INFO -                                            u'--filter',
+13:31:53     INFO -                                            u'ignore_first:5',
+13:31:53     INFO -                                            u'--filter',
+13:31:53     INFO -                                            u'median'],
+13:31:53     INFO -                         u'tests': [u'tscrollr',
+13:31:53     INFO -                                    u'a11yr',
+13:31:53     INFO -                                    u'ts_paint',
+13:31:53     INFO -                                    u'tpaint']},
+13:31:53     INFO -              u'other-metro': {u'talos_options': [u'--mozAfterPaint',
+13:31:53     INFO -                                                  u'--filter',
+13:31:53     INFO -                                                  u'ignore_first:5',
+13:31:53     INFO -                                                  u'--filter',
+13:31:53     INFO -                                                  u'median'],
+13:31:53     INFO -                               u'tests': [u'tscrollr', u'a11yr', u'ts_paint']},
+13:31:53     INFO -              u'rafx': {u'talos_options': [u'--filter',
+13:31:53     INFO -                                           u'ignore_first:5',
+13:31:53     INFO -                                           u'--filter',
+13:31:53     INFO -                                           u'median'],
+13:31:53     INFO -                        u'tests': [u'tscrollx', u'tsvgx', u'tcanvasmark']},
+13:31:53     INFO -              u'rafx-metro': {u'talos_options': [u'--filter',
+13:31:53     INFO -                                                 u'ignore_first:5',
+13:31:53     INFO -                                                 u'--filter',
+13:31:53     INFO -                                                 u'median'],
+13:31:53     INFO -                              u'tests': [u'tscrollx']},
+13:31:53     INFO -              u'svgr': {u'talos_options': [u'--filter',
+13:31:53     INFO -                                           u'ignore_first:5',
+13:31:53     INFO -                                           u'--filter',
+13:31:53     INFO -                                           u'median'],
+13:31:53     INFO -                        u'tests': [u'tsvgr', u'tsvgr_opacity']},
+13:31:53     INFO -              u'svgr-metro': {u'talos_options': [u'--filter',
+13:31:53     INFO -                                                 u'ignore_first:5',
+13:31:53     INFO -                                                 u'--filter',
+13:31:53     INFO -                                                 u'median'],
+13:31:53     INFO -                              u'tests': [u'tsvgx', u'tsvgr_opacity']},
+13:31:53     INFO -              u'tp5o': {u'pagesets_manifest_path': u'talos/page_load_test/tp5n/tp5o.manifest',
+13:31:53     INFO -                        u'pagesets_parent_dir_path': u'talos/page_load_test/',
+13:31:54     INFO -                        u'pagesets_url': u'http://build.mozilla.org/talos/zips/tp5n.zip',
+13:31:54     INFO -                        u'plugins': {u'32': u'http://build.mozilla.org/talos/zips/flash32_10_3_183_5.zip',
+13:31:54     INFO -                                     u'64': u'http://build.mozilla.org/talos/zips/flash64_11_0_d1_98.zip'},
+13:31:54     INFO -                        u'talos_options': [u'--mozAfterPaint',
+13:31:54     INFO -                                           u'--responsiveness',
+13:31:54     INFO -                                           u'--filter',
+13:31:54     INFO -                                           u'ignore_first:5',
+13:31:54     INFO -                                           u'--filter',
+13:31:54     INFO -                                           u'median',
+13:31:54     INFO -                                           u'--test_timeout',
+13:31:54     INFO -                                           u'3600'],
+13:31:54     INFO -                        u'tests': [u'tp5o']},
+13:31:54     INFO -              u'tp5o-metro': {u'pagesets_manifest_path': u'talos/page_load_test/tp5n/tp5o.manifest',
+13:31:54     INFO -                              u'pagesets_parent_dir_path': u'talos/page_load_test/',
+13:31:54     INFO -                              u'pagesets_url': u'http://build.mozilla.org/talos/zips/tp5n.zip',
+13:31:54     INFO -                              u'plugins': {u'32': u'http://build.mozilla.org/talos/zips/flash32_10_3_183_5.zip',
+13:31:54     INFO -                                           u'64': u'http://build.mozilla.org/talos/zips/flash64_11_0_d1_98.zip'},
+13:31:54     INFO -                              u'talos_options': [u'--mozAfterPaint',
+13:31:54     INFO -                                                 u'--responsiveness',
+13:31:54     INFO -                                                 u'--filter',
+13:31:54     INFO -                                                 u'ignore_first:5',
+13:31:54     INFO -                                                 u'--filter',
+13:31:54     INFO -                                                 u'median',
+13:31:54     INFO -                                                 u'--test_timeout',
+13:31:54     INFO -                                                 u'3600'],
+13:31:54     INFO -                              u'tests': [u'tp5o']},
+13:31:54     INFO -              u'tpn': {u'pagesets_manifest_path': u'talos/page_load_test/tp5n/tp5n.manifest',
+13:31:54     INFO -                       u'pagesets_parent_dir_path': u'talos/page_load_test/',
+13:31:54     INFO -                       u'pagesets_url': u'http://build.mozilla.org/talos/zips/tp5n.zip',
+13:31:54     INFO -                       u'plugins': {u'32': u'http://build.mozilla.org/talos/zips/flash32_10_3_183_5.zip',
+13:31:54     INFO -                                    u'64': u'http://build.mozilla.org/talos/zips/flash64_11_0_d1_98.zip'},
+13:31:54     INFO -                       u'talos_options': [u'--mozAfterPaint',
+13:31:54     INFO -                                          u'--responsiveness',
+13:31:54     INFO -                                          u'--filter',
+13:31:54     INFO -                                          u'ignore_first:5',
+13:31:54     INFO -                                          u'--filter',
+13:31:54     INFO -                                          u'median',
+13:31:54     INFO -                                          u'--test_timeout',
+13:31:54     INFO -                                          u'3600'],
+13:31:54     INFO -                       u'tests': [u'tp5n']},
+13:31:54     INFO -              u'tpn-metro': {u'pagesets_manifest_path': u'talos/page_load_test/tp5n/tp5n.manifest',
+13:31:54     INFO -                             u'pagesets_parent_dir_path': u'talos/page_load_test/',
+13:31:54     INFO -                             u'pagesets_url': u'http://build.mozilla.org/talos/zips/tp5n.zip',
+13:31:54     INFO -                             u'plugins': {u'32': u'http://build.mozilla.org/talos/zips/flash32_10_3_183_5.zip',
+13:31:54     INFO -                                          u'64': u'http://build.mozilla.org/talos/zips/flash64_11_0_d1_98.zip'},
+13:31:54     INFO -                             u'talos_options': [u'--mozAfterPaint',
+13:31:54     INFO -                                                u'--responsiveness',
+13:31:54     INFO -                                                u'--filter',
+13:31:54     INFO -                                                u'ignore_first:5',
+13:31:54     INFO -                                                u'--filter',
+13:31:54     INFO -                                                u'median',
+13:31:54     INFO -                                                u'--test_timeout',
+13:31:54     INFO -                                                u'3600'],
+13:31:54     INFO -                             u'tests': [u'tp5n']},
+13:31:54     INFO -              u'xperf': {u'pagesets_manifest_path': u'talos/page_load_test/tp5n/tp5n.manifest',
+13:31:54     INFO -                         u'pagesets_parent_dir_path': u'talos/page_load_test/',
+13:31:54     INFO -                         u'pagesets_url': u'http://build.mozilla.org/talos/zips/tp5n.zip',
+13:31:54     INFO -                         u'plugins': {u'32': u'http://build.mozilla.org/talos/zips/flash32_10_3_183_5.zip',
+13:31:54     INFO -                                      u'64': u'http://build.mozilla.org/talos/zips/flash64_11_0_d1_98.zip'},
+13:31:54     INFO -                         u'talos_options': [u'--mozAfterPaint',
+13:31:54     INFO -                                            u'--xperf_path',
+13:31:54     INFO -                                            u'"c:/Program Files/Microsoft Windows Performance Toolkit/xperf.exe"',
+13:31:54     INFO -                                            u'--filter',
+13:31:54     INFO -                                            u'ignore_first:5',
+13:31:54     INFO -                                            u'--filter',
+13:31:54     INFO -                                            u'median',
+13:31:54     INFO -                                            u'C:/slave/talos-data/talos/xperf.config'],
+13:31:54     INFO -                         u'tests': [u'tp5n']}},
+13:31:54     INFO -  u'talos.zip': {u'path': u'',
+13:31:54     INFO -                 u'url': u'http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/archive/talos.69bb62b25f11.zip'}}
+13:31:54     INFO - Dumping config to C:\slave\test\logs\localconfig.json.
+13:31:54     INFO - {'append_to_log': False,
+13:31:54     INFO -  'base_work_dir': 'C:\\slave\\test',
+13:31:54     INFO -  'branch': 'Cedar',
+13:31:54     INFO -  'buildbot_json_path': 'buildprops.json',
+13:31:54     INFO -  'config_files': ['talos/windows_config.py'],
+13:31:54     INFO -  'datazilla_urls': ['https://datazilla.mozilla.org/talos'],
+13:31:54     INFO -  'default_actions': ['clobber',
+13:31:54     INFO -                      'read-buildbot-config',
+13:31:54     INFO -                      'download-and-extract',
+13:31:54     INFO -                      'clone-talos',
+13:31:54     INFO -                      'create-virtualenv',
+13:31:54     INFO -                      'install',
+13:31:54     INFO -                      'run-tests'],
+13:31:54     INFO -  'distribute_url': 'http://repos/python/packages/distribute-0.6.26.tar.gz',
+13:31:54     INFO -  'download_symbols': 'ondemand',
+13:31:54     INFO -  'exes': {'easy_install': ['C:\\slave\\test\\build/venv/scripts/python',
+13:31:54     INFO -                            'C:\\slave\\test\\build/venv/scripts/easy_install-2.7-script.py'],
+13:31:54     INFO -           'hg': 'c:/mozilla-build/hg/hg',
+13:31:54     INFO -           'mozinstall': ['C:\\slave\\test\\build/venv/scripts/python',
+13:31:54     INFO -                          'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py'],
+13:31:54     INFO -           'python': 'c:/mozilla-build/python27/python.exe',
+13:31:54     INFO -           'virtualenv': ['c:/mozilla-build/python27/python.exe',
+13:31:54     INFO -                          'c:/mozilla-build/buildbotve/virtualenv.py']},
+13:31:54     INFO -  'find_links': ['http://repos/python/packages/'],
+13:31:54     INFO -  'installer_path': 'installer.exe',
+13:31:54     INFO -  'installer_url': 'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.zip',
+13:31:54     INFO -  'log_level': 'info',
+13:31:54     INFO -  'log_name': 'talos',
+13:31:54     INFO -  'log_to_console': True,
+13:31:54     INFO -  'metro_harness_dir': 'bin',
+13:31:54     INFO -  'metro_test_harness_exe': 'metrotestharness.exe',
+13:31:54     INFO -  'opt_config_files': [],
+13:31:54     INFO -  'pip_index': False,
+13:31:54     INFO -  'pip_url': 'http://repos/python/packages/pip-0.8.2.tar.gz',
+13:31:54     INFO -  'populate_webroot': True,
+13:31:54     INFO -  'pypi_url': 'http://repos/python/packages/',
+13:31:54     INFO -  'python_webserver': False,
+13:31:54     INFO -  'pywin32_url': 'http://repos/python/packages/pywin32-216.win32-py2.7.exe',
+13:31:54     INFO -  'results_url': 'http://graphs.mozilla.org/server/collect.cgi',
+13:31:54     INFO -  'suite': 'svgr-metro',
+13:31:54     INFO -  'system_bits': '32',
+13:31:54     INFO -  'talos_extra_options': ['--webServer', 'localhost'],
+13:31:54     INFO -  'talos_json_url': 'http://people.mozilla.org/~jlund/talos.json',
+13:31:54     INFO -  'talos_url': 'http://hg.mozilla.org/build/talos/archive/tip.tar.gz',
+13:31:54     INFO -  'test_url': 'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.tests.zip',
+13:31:54     INFO -  'tests': [],
+13:31:54     INFO -  'title': 'T-W864-IX-042',
+13:31:54     INFO -  'use_talos_json': True,
+13:31:54     INFO -  'virtualenv_modules': ['pywin32', 'talos', 'mozinstall'],
+13:31:54     INFO -  'virtualenv_path': 'C:\\slave\\test\\build/venv',
+13:31:54     INFO -  'virtualenv_python_dll': 'c:/mozilla-build/python27/python27.dll',
+13:31:54     INFO -  'volatile_config': {'actions': None,
+13:31:54     INFO -                      'add_actions': None,
+13:31:54     INFO -                      'no_actions': ['read-buildbot-config']},
+13:31:54     INFO -  'webroot': 'c:/slave/talos-data',
+13:31:54     INFO -  'webroot_extract_cmd': 'c:/mozilla-build/msys/bin/bash -c "PATH=/c/mozilla-build/msys/bin:$PATH tar zx --strip-components=1 -f \'%(tarball)s\' --wildcards \'**/talos/\'"',
+13:31:54     INFO -  'work_dir': 'build'}
+13:31:54     INFO - #####
+13:31:54     INFO - ##### Running clobber step.
+13:31:54     INFO - #####
+13:31:54     INFO - Running pre-action listener: _resource_record_pre_action
+13:31:54     INFO - Running main action method: clobber
+13:31:54     INFO - rmtree: C:\slave\test\build
+13:31:54     INFO - Using _rmtree_windows ...
+13:31:54     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('C:\\slave\\test\\build',), kwargs: {}, attempt #1
+13:33:05     INFO - Running post-action listener: _resource_record_post_action
+13:33:05     INFO - #####
+13:33:05     INFO - ##### Skipping read-buildbot-config step.
+13:33:05     INFO - #####
+13:33:05     INFO - #####
+13:33:05     INFO - ##### Running download-and-extract step.
+13:33:05     INFO - #####
+13:33:05     INFO - Running pre-action listener: _resource_record_pre_action
+13:33:05     INFO - Running main action method: download_and_extract
+13:33:05     INFO - mkdir: C:\slave\test\build
+13:33:05     INFO - Downloading http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.tests.zip to C:\slave\test\build\firefox-27.0a1.en-US.win32.tests.zip
+13:33:05     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.tests.zip', 'C:\\slave\\test\\build\\firefox-27.0a1.en-US.win32.tests.zip'), kwargs: {}, attempt #1
+13:33:07     INFO - Downloaded 86802341 bytes.
+13:33:07     INFO - mkdir: C:\slave\test\build\tests
+13:33:07     INFO - Running command: ['unzip', '-q', '-o', 'C:\\slave\\test\\build\\firefox-27.0a1.en-US.win32.tests.zip'] in C:\slave\test\build\tests
+13:33:07     INFO - Copy/paste: unzip -q -o C:\slave\test\build\firefox-27.0a1.en-US.win32.tests.zip
+13:34:20     INFO - Return code: 0
+13:34:20     INFO - Dumping config to C:\slave\test\logs\treeconfig.json.
+13:34:20     INFO - {'append_to_log': False,
+13:34:20     INFO -  'base_work_dir': 'C:\\slave\\test',
+13:34:20     INFO -  'branch': 'Cedar',
+13:34:20     INFO -  'buildbot_json_path': 'buildprops.json',
+13:34:20     INFO -  'config_files': ['talos/windows_config.py'],
+13:34:20     INFO -  'datazilla_urls': ['https://datazilla.mozilla.org/talos'],
+13:34:20     INFO -  'default_actions': ['clobber',
+13:34:20     INFO -                      'read-buildbot-config',
+13:34:20     INFO -                      'download-and-extract',
+13:34:20     INFO -                      'clone-talos',
+13:34:20     INFO -                      'create-virtualenv',
+13:34:20     INFO -                      'install',
+13:34:20     INFO -                      'run-tests'],
+13:34:20     INFO -  'distribute_url': 'http://repos/python/packages/distribute-0.6.26.tar.gz',
+13:34:20     INFO -  'download_symbols': 'ondemand',
+13:34:20     INFO -  'exes': {'easy_install': ['C:\\slave\\test\\build/venv/scripts/python',
+13:34:20     INFO -                            'C:\\slave\\test\\build/venv/scripts/easy_install-2.7-script.py'],
+13:34:20     INFO -           'hg': 'c:/mozilla-build/hg/hg',
+13:34:20     INFO -           'mozinstall': ['C:\\slave\\test\\build/venv/scripts/python',
+13:34:20     INFO -                          'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py'],
+13:34:20     INFO -           'python': 'c:/mozilla-build/python27/python.exe',
+13:34:20     INFO -           'virtualenv': ['c:/mozilla-build/python27/python.exe',
+13:34:20     INFO -                          'c:/mozilla-build/buildbotve/virtualenv.py']},
+13:34:20     INFO -  'find_links': ['http://repos/python/packages/'],
+13:34:20     INFO -  'installer_path': 'installer.exe',
+13:34:20     INFO -  'installer_url': 'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.zip',
+13:34:20     INFO -  'log_level': 'info',
+13:34:20     INFO -  'log_name': 'talos',
+13:34:20     INFO -  'log_to_console': True,
+13:34:20     INFO -  'metro_harness_dir': 'bin',
+13:34:20     INFO -  'metro_test_harness_exe': 'metrotestharness.exe',
+13:34:20     INFO -  'opt_config_files': [],
+13:34:20     INFO -  'pip_index': False,
+13:34:20     INFO -  'pip_url': 'http://repos/python/packages/pip-0.8.2.tar.gz',
+13:34:20     INFO -  'populate_webroot': True,
+13:34:20     INFO -  'pypi_url': 'http://repos/python/packages/',
+13:34:20     INFO -  'python_webserver': False,
+13:34:20     INFO -  'pywin32_url': 'http://repos/python/packages/pywin32-216.win32-py2.7.exe',
+13:34:20     INFO -  'results_url': 'http://graphs.mozilla.org/server/collect.cgi',
+13:34:20     INFO -  'suite': 'svgr-metro',
+13:34:20     INFO -  'system_bits': '32',
+13:34:20     INFO -  'talos_extra_options': ['--webServer', 'localhost'],
+13:34:20     INFO -  'talos_json_url': 'http://people.mozilla.org/~jlund/talos.json',
+13:34:20     INFO -  'talos_url': 'http://hg.mozilla.org/build/talos/archive/tip.tar.gz',
+13:34:20     INFO -  'test_url': 'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.tests.zip',
+13:34:20     INFO -  'tests': [],
+13:34:20     INFO -  'title': 'T-W864-IX-042',
+13:34:20     INFO -  'use_talos_json': True,
+13:34:20     INFO -  'virtualenv_modules': ['pywin32', 'talos', 'mozinstall'],
+13:34:20     INFO -  'virtualenv_path': 'C:\\slave\\test\\build/venv',
+13:34:20     INFO -  'virtualenv_python_dll': 'c:/mozilla-build/python27/python27.dll',
+13:34:20     INFO -  'volatile_config': {'actions': None,
+13:34:20     INFO -                      'add_actions': None,
+13:34:20     INFO -                      'no_actions': ['read-buildbot-config']},
+13:34:20     INFO -  'webroot': 'c:/slave/talos-data',
+13:34:20     INFO -  'webroot_extract_cmd': 'c:/mozilla-build/msys/bin/bash -c "PATH=/c/mozilla-build/msys/bin:$PATH tar zx --strip-components=1 -f \'%(tarball)s\' --wildcards \'**/talos/\'"',
+13:34:20     INFO -  'work_dir': 'build'}
+13:34:20     INFO - Downloading http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.zip to C:\slave\test\build\firefox-27.0a1.en-US.win32.zip
+13:34:20     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.zip', 'C:\\slave\\test\\build\\firefox-27.0a1.en-US.win32.zip'), kwargs: {}, attempt #1
+13:34:21     INFO - Downloaded 34534580 bytes.
+13:34:21     INFO - Setting buildbot property build_url to http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.zip
+13:34:21     INFO - Writing buildbot properties ['build_url'] to C:\slave\test\properties\build_url
+13:34:21     INFO - Writing to file C:\slave\test\properties\build_url
+13:34:21     INFO - Contents:
+13:34:21     INFO -  build_url:http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.zip
+13:34:21     INFO - Running post-action listener: _resource_record_post_action
+13:34:21     INFO - #####
+13:34:21     INFO - ##### Running clone-talos step.
+13:34:21     INFO - #####
+13:34:21     INFO - Running pre-action listener: _resource_record_pre_action
+13:34:21     INFO - Running main action method: clone_talos
+13:34:21     INFO - Populating webroot c:/slave/talos-data...
+13:34:21     INFO - rmtree: c:/slave/talos-data\talos
+13:34:21     INFO - Using _rmtree_windows ...
+13:34:21     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('c:/slave/talos-data\\talos',), kwargs: {}, attempt #1
+13:34:25     INFO - retry: Calling <bound method Talos._get_revision of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: (<mozharness.base.vcs.mercurial.MercurialVCS object at 0x0296CDD0>, 'C:\\slave\\test\\build\\talos_repo'), kwargs: {}, attempt #1
+13:34:25     INFO - Setting C:\slave\test\build\talos_repo to http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/ revision 69bb62b25f11.
+13:34:25     INFO - Cloning http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/ to C:\slave\test\build\talos_repo.
+13:34:25     INFO - Running command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'clone', u'http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/', 'C:\\slave\\test\\build\\talos_repo']
+13:34:25     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge clone http://hg.mozilla.org/users/jlund_mozilla.com/build-talos/ C:\slave\test\build\talos_repo
+13:34:37     INFO -  requesting all changes
+13:34:37     INFO -  adding changesets
+13:34:37     INFO -  adding manifests
+13:34:37     INFO -  adding file changes
+13:34:37     INFO -  added 699 changesets with 3170 changes to 1588 files (+1 heads)
+13:34:37     INFO -  updating to branch default
+13:34:37     INFO -  600 files updated, 0 files merged, 0 files removed, 0 files unresolved
+13:34:37     INFO - Return code: 0
+13:34:37     INFO - Updating C:\slave\test\build\talos_repo.
+13:34:37     INFO - Getting output from command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'branch'] in C:\slave\test\build\talos_repo
+13:34:37     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge branch
+13:34:37     INFO - Reading from file tmpfile_stdout
+13:34:37     INFO - Output received:
+13:34:37     INFO -  default
+13:34:37     INFO - Using _rmtree_windows ...
+13:34:37     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x0296CDD0>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+13:34:37     INFO - Using _rmtree_windows ...
+13:34:37     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x0296CDD0>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+13:34:37     INFO - Running command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'update', '-C'] in C:\slave\test\build\talos_repo
+13:34:37     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge update -C
+13:34:38     INFO -  0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+13:34:38     INFO - Return code: 0
+13:34:38     INFO - Getting output from command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'parent', '--template', '{node|short}'] in C:\slave\test\build\talos_repo
+13:34:38     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge parent --template {node|short}
+13:34:38     INFO - Reading from file tmpfile_stdout
+13:34:38     INFO - Output received:
+13:34:38     INFO -  3ded2a2e76e6
+13:34:38     INFO - Using _rmtree_windows ...
+13:34:38     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x0296CDD0>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+13:34:38     INFO - Using _rmtree_windows ...
+13:34:38     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x0296CDD0>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+13:34:38     INFO - Updating C:\slave\test\build\talos_repo revision 69bb62b25f11.
+13:34:38     INFO - Running command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'update', '-C', '-r', u'69bb62b25f11'] in C:\slave\test\build\talos_repo
+13:34:38     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge update -C -r 69bb62b25f11
+13:34:38     INFO -  1 files updated, 0 files merged, 0 files removed, 0 files unresolved
+13:34:38     INFO - Return code: 0
+13:34:38     INFO - Getting output from command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'parent', '--template', '{node|short}'] in C:\slave\test\build\talos_repo
+13:34:38     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge parent --template {node|short}
+13:34:38     INFO - Reading from file tmpfile_stdout
+13:34:38     INFO - Output received:
+13:34:38     INFO -  69bb62b25f11
+13:34:38     INFO - Using _rmtree_windows ...
+13:34:38     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x0296CDD0>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+13:34:38     INFO - Using _rmtree_windows ...
+13:34:38     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x0296CDD0>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+13:34:38     INFO - copying tree: C:\slave\test\build\talos_repo\talos to c:/slave/talos-data\talos
+13:34:38     INFO - rmtree: c:/slave/talos-data\talos
+13:34:38     INFO - Using _rmtree_windows ...
+13:34:38     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('c:/slave/talos-data\\talos',), kwargs: {}, attempt #1
+13:34:39     INFO - Running post-action listener: _resource_record_post_action
+13:34:39     INFO - #####
+13:34:39     INFO - ##### Running create-virtualenv step.
+13:34:39     INFO - #####
+13:34:39     INFO - Running pre-action listener: _resource_record_pre_action
+13:34:39     INFO - Running main action method: create_virtualenv
+13:34:39     INFO - ['pywin32', {'talos': 'C:\\slave\\test\\build\\talos_repo'}, 'mozinstall']
+13:34:39     INFO - Creating virtualenv C:\slave\test\build/venv
+13:34:39     INFO - mkdir: C:\slave\test\build\venv\Scripts
+13:34:39     INFO - Copying c:/mozilla-build/python27/python27.dll to C:\slave\test\build\venv\Scripts\python27.dll
+13:34:39  WARNING - Can't copy c:/mozilla-build/python27/python27.dll to C:\slave\test\build\venv\Scripts\python27.dll: [Errno 2] No such file or directory: 'c:/mozilla-build/python27/python27.dll'!
+13:34:39     INFO - Downloading http://repos/python/packages/distribute-0.6.26.tar.gz to C:\slave\test\build\distribute-0.6.26.tar.gz
+13:34:39     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('http://repos/python/packages/distribute-0.6.26.tar.gz', 'C:\\slave\\test\\build\\distribute-0.6.26.tar.gz'), kwargs: {}, attempt #1
+13:34:39     INFO - Downloaded 621193 bytes.
+13:34:39     INFO - Downloading http://repos/python/packages/pip-0.8.2.tar.gz to C:\slave\test\build\pip-0.8.2.tar.gz
+13:34:39     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('http://repos/python/packages/pip-0.8.2.tar.gz', 'C:\\slave\\test\\build\\pip-0.8.2.tar.gz'), kwargs: {}, attempt #1
+13:34:39     INFO - Downloaded 106126 bytes.
+13:34:39     INFO - Running command: ['c:/mozilla-build/python27/python.exe', 'c:/mozilla-build/buildbotve/virtualenv.py', '--no-site-packages', '--distribute', 'C:\\slave\\test\\build/venv'] in C:\slave\test\build
+13:34:39     INFO - Copy/paste: c:/mozilla-build/python27/python.exe c:/mozilla-build/buildbotve/virtualenv.py --no-site-packages --distribute C:\slave\test\build/venv
+13:34:40     INFO -  New python executable in C:\slave\test\build/venv\Scripts\python.exe
+13:34:41     INFO -  Installing distribute......................................................................................................................................................................................done.
+13:34:43     INFO - Return code: 0
+13:34:43     INFO - Installing pywin32 into virtualenv C:\slave\test\build/venv
+13:34:43     INFO - Running command: ['C:\\slave\\test\\build/venv/scripts/python', 'C:\\slave\\test\\build/venv/scripts/easy_install-2.7-script.py', '--find-links', 'http://repos/python/packages/', 'http://repos/python/packages/pywin32-216.win32-py2.7.exe'] in C:\slave\test\build
+13:34:43     INFO - Copy/paste: C:\slave\test\build/venv/scripts/python C:\slave\test\build/venv/scripts/easy_install-2.7-script.py --find-links http://repos/python/packages/ http://repos/python/packages/pywin32-216.win32-py2.7.exe
+13:34:43     INFO -  install_dir C:\slave\test\build\venv\Lib\site-packages\
+13:34:43     INFO -  Downloading http://repos/python/packages/pywin32-216.win32-py2.7.exe
+13:34:43     INFO -  Processing pywin32-216.win32-py2.7.exe
+13:34:45     INFO -  pywintypes: module references __file__
+13:34:45     INFO -  win32evtlogutil: module references __file__
+13:34:45     INFO -  win32serviceutil: module references __file__
+13:34:45     INFO -  win32timezone: module references __file__
+13:34:45     INFO -  Demos.win32rcparser_demo: module references __file__
+13:34:45     INFO -  Demos.security.sspi.validate_password: module references __file__
+13:34:45     INFO -  isapi.install: module references __file__
+13:34:45     INFO -  isapi.samples.advanced: module references __file__
+13:34:45     INFO -  isapi.samples.test: module references __file__
+13:34:45     INFO -  isapi.test.setup: module references __file__
+13:34:45     INFO -  pywin.framework.scriptutils: module references __file__
+13:34:45     INFO -  pywin.framework.startup: module references __path__
+13:34:45     INFO -  pywin.scintilla.config: module references __path__
+13:34:45     INFO -  pywin.scintilla.control: module references __file__
+13:34:45     INFO -  pywin.scintilla.IDLEenvironment: module references __file__
+13:34:45     INFO -  scripts.regsetup: module references __file__
+13:34:45     INFO -  scripts.setup_d: module references __file__
+13:34:45     INFO -  test.testall: module references __file__
+13:34:45     INFO -  test.test_clipboard: module references __file__
+13:34:45     INFO -  test.test_win32api: module references __file__
+13:34:45     INFO -  test.test_win32rcparser: module references __file__
+13:34:45     INFO -  C:\slave\test\build\venv\lib\site-packages\distribute-0.6.14-py2.7.egg\setuptools\command\bdist_egg.py:427: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+13:34:45     INFO -    symbols = dict.fromkeys(iter_symbols(code))
+13:34:45     INFO -  test.test_win32trace: module references __file__
+13:34:45     INFO -  win32com.__init__: module references __path__
+13:34:45     INFO -  win32com.server.register: module references __file__
+13:34:45     INFO -  win32com.server.register: module references __path__
+13:34:45     INFO -  win32com.test.GenTestScripts: module references __path__
+13:34:45     INFO -  win32com.test.pippo_server: module references __file__
+13:34:45     INFO -  win32com.test.testall: module references __file__
+13:34:45     INFO -  win32com.test.testAXScript: module references __path__
+13:34:45     INFO -  win32com.test.testDictionary: module references __file__
+13:34:45     INFO -  win32com.test.testPippo: module references __file__
+13:34:45     INFO -  win32com.test.testPyComTest: module references __file__
+13:34:45     INFO -  win32com.test.testServers: module references __file__
+13:34:45     INFO -  win32com.test.util: module references __file__
+13:34:45     INFO -  win32comext.adsi.__init__: module references __path__
+13:34:45     INFO -  win32comext.authorization.__init__: module references __path__
+13:34:45     INFO -  win32comext.axcontrol.__init__: module references __path__
+13:34:45     INFO -  win32comext.axdebug.codecontainer: module references __file__
+13:34:45     INFO -  win32comext.axdebug.debugger: module references __file__
+13:34:45     INFO -  win32comext.axdebug.__init__: module references __path__
+13:34:45     INFO -  win32comext.axscript.__init__: module references __path__
+13:34:45     INFO -  win32comext.bits.__init__: module references __path__
+13:34:45     INFO -  win32comext.directsound.__init__: module references __path__
+13:34:45     INFO -  win32comext.directsound.test.ds_test: module references __file__
+13:34:45     INFO -  win32comext.internet.__init__: module references __path__
+13:34:45     INFO -  win32comext.mapi.__init__: module references __path__
+13:34:45     INFO -  win32comext.shell.__init__: module references __path__
+13:34:45     INFO -  win32comext.shell.demos.servers.empty_volume_cache: module references __file__
+13:34:45     INFO -  win32comext.shell.demos.servers.folder_view: module references __file__
+13:34:45     INFO -  win32comext.taskscheduler.__init__: module references __path__
+13:34:45     INFO -  creating 'c:\users\cltbld~1.t-w\appdata\local\temp\easy_install-lus660\pywin32-216-py2.7-win32.egg' and adding 'c:\users\cltbld~1.t-w\appdata\local\temp\easy_install-lus660\pywin32-216-py2.7-win32.egg.tmp' to it
+13:34:46     INFO -  creating c:\slave\test\build\venv\lib\site-packages\pywin32-216-py2.7-win32.egg
+13:34:46     INFO -  Extracting pywin32-216-py2.7-win32.egg to c:\slave\test\build\venv\lib\site-packages
+13:34:48     INFO -  Adding pywin32 216 to easy-install.pth file
+13:34:48     INFO -  Installing pywin32_postinstall.py script to C:\slave\test\build\venv\Scripts
+13:34:48     INFO -  Installing pywin32_postinstall.pyc script to C:\slave\test\build\venv\Scripts
+13:34:48     INFO -  Installing pywin32_testall.py script to C:\slave\test\build\venv\Scripts
+13:34:48     INFO -  Installing pywin32_testall.pyc script to C:\slave\test\build\venv\Scripts
+13:34:48     INFO -  Installed c:\slave\test\build\venv\lib\site-packages\pywin32-216-py2.7-win32.egg
+13:34:48     INFO -  Processing dependencies for pywin32==216
+13:34:48     INFO -  Finished processing dependencies for pywin32==216
+13:34:53     INFO - Return code: 0
+13:34:53     INFO - Installing talos into virtualenv C:\slave\test\build/venv
+13:34:53     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--pypi-url', 'http://repos/python/packages/', '--no-index', '--find-links', 'http://repos/python/packages/', 'C:\\slave\\test\\build\\talos_repo'] in C:\slave\test\build
+13:34:53     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --pypi-url http://repos/python/packages/ --no-index --find-links http://repos/python/packages/ C:\slave\test\build\talos_repo
+13:34:59     INFO -  Ignoring indexes: http://repos/python/packages/
+13:34:59     INFO -  Unpacking c:\slave\test\build\talos_repo
+13:34:59     INFO -    Running setup.py egg_info for package from file:///c%7C%5Cslave%5Ctest%5Cbuild%5Ctalos_repo
+13:34:59     INFO -  Downloading/unpacking PyYAML (from talos)
+13:35:00     INFO -    Running setup.py egg_info for package PyYAML
+13:35:00     INFO -  Downloading/unpacking mozlog (from talos)
+13:35:00     INFO -    Downloading mozlog-1.2.tar.gz
+13:35:00     INFO -    Running setup.py egg_info for package mozlog
+13:35:00     INFO -  Downloading/unpacking mozcrash==0.5 (from talos)
+13:35:00     INFO -    Downloading mozcrash-0.5.tar.gz
+13:35:00     INFO -    Running setup.py egg_info for package mozcrash
+13:35:00     INFO -  Downloading/unpacking mozdevice==0.19 (from talos)
+13:35:00     INFO -    Running setup.py egg_info for package mozdevice
+13:35:00     INFO -  Downloading/unpacking mozhttpd==0.5 (from talos)
+13:35:00     INFO -    Downloading mozhttpd-0.5.tar.gz
+13:35:00     INFO -    Running setup.py egg_info for package mozhttpd
+13:35:00     INFO -  Downloading/unpacking mozinfo==0.4 (from talos)
+13:35:00     INFO -    Downloading mozinfo-0.4.tar.gz
+13:35:00     INFO -    Running setup.py egg_info for package mozinfo
+13:35:00     INFO -  Downloading/unpacking datazilla==1.4 (from talos)
+13:35:00     INFO -    Downloading datazilla-1.4.tar.gz
+13:35:00     INFO -    Running setup.py egg_info for package datazilla
+13:35:00     INFO -  Downloading/unpacking mozprocess==0.8 (from talos)
+13:35:00     INFO -    Downloading mozprocess-0.8.tar.gz
+13:35:00     INFO -    Running setup.py egg_info for package mozprocess
+13:35:00     INFO -  Downloading/unpacking httplib2 (from talos)
+13:35:20     INFO -    Running setup.py egg_info for package httplib2
+13:35:20     INFO -  Downloading/unpacking oauth2 (from talos)
+13:35:20     INFO -    Downloading oauth2-1.5.211.tar.gz
+13:35:20     INFO -    Running setup.py egg_info for package oauth2
+13:35:20     INFO -  Downloading/unpacking mozfile>=0.3 (from mozcrash==0.5->talos)
+13:35:20     INFO -    Downloading mozfile-0.9.tar.gz
+13:35:20     INFO -    Running setup.py egg_info for package mozfile
+13:35:20     INFO -  Installing collected packages: datazilla, httplib2, mozcrash, mozdevice, mozfile, mozhttpd, mozinfo, mozlog, mozprocess, oauth2, PyYAML, talos
+13:35:20     INFO -    Running setup.py install for datazilla
+13:35:20     INFO -    Running setup.py install for httplib2
+13:35:20     INFO -    Running setup.py install for mozcrash
+13:35:20     INFO -    Running setup.py install for mozdevice
+13:35:20     INFO -      Installing dm-script.py script to C:\slave\test\build\venv\Scripts
+13:35:20     INFO -      Installing dm.exe script to C:\slave\test\build\venv\Scripts
+13:35:20     INFO -    Running setup.py install for mozfile
+13:35:20     INFO -    Running setup.py install for mozhttpd
+13:35:20     INFO -      Installing mozhttpd-script.py script to C:\slave\test\build\venv\Scripts
+13:35:20     INFO -      Installing mozhttpd.exe script to C:\slave\test\build\venv\Scripts
+13:35:20     INFO -    Running setup.py install for mozinfo
+13:35:20     INFO -      Installing mozinfo-script.py script to C:\slave\test\build\venv\Scripts
+13:35:20     INFO -      Installing mozinfo.exe script to C:\slave\test\build\venv\Scripts
+13:35:20     INFO -    Running setup.py install for mozlog
+13:35:20     INFO -    Running setup.py install for mozprocess
+13:35:20     INFO -    Running setup.py install for oauth2
+13:35:20     INFO -    Running setup.py install for PyYAML
+13:35:20     INFO -      checking if libyaml is compilable
+13:35:20     INFO -      Unable to find vcvarsall.bat
+13:35:20     INFO -      skipping build_ext
+13:35:20     INFO -    Running setup.py install for talos
+13:35:20     INFO -      Installing PerfConfigurator-script.py script to C:\slave\test\build\venv\Scripts
+13:35:20     INFO -      Installing PerfConfigurator.exe script to C:\slave\test\build\venv\Scripts
+13:35:20     INFO -      Installing talos-script.py script to C:\slave\test\build\venv\Scripts
+13:35:20     INFO -      Installing talos.exe script to C:\slave\test\build\venv\Scripts
+13:35:20     INFO -      Installing talos-results-script.py script to C:\slave\test\build\venv\Scripts
+13:35:20     INFO -      Installing talos-results.exe script to C:\slave\test\build\venv\Scripts
+13:35:20     INFO -  Successfully installed datazilla httplib2 mozcrash mozdevice mozfile mozhttpd mozinfo mozlog mozprocess oauth2 PyYAML talos
+13:35:20     INFO -  Cleaning up...
+13:35:20     INFO - Return code: 0
+13:35:20     INFO - Installing mozinstall into virtualenv C:\slave\test\build/venv
+13:35:20     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--pypi-url', 'http://repos/python/packages/', '--no-index', '--find-links', 'http://repos/python/packages/', 'mozinstall'] in C:\slave\test\build
+13:35:20     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --pypi-url http://repos/python/packages/ --no-index --find-links http://repos/python/packages/ mozinstall
+13:35:21     INFO -  Ignoring indexes: http://repos/python/packages/
+13:35:21     INFO -  Downloading/unpacking mozinstall
+13:35:21     INFO -    Downloading mozInstall-1.6.tar.gz
+13:35:21     INFO -    Running setup.py egg_info for package mozinstall
+13:35:21     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozinfo>=0.4 in c:\slave\test\build\venv\lib\site-packages (from mozinstall)
+13:35:21     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozfile in c:\slave\test\build\venv\lib\site-packages (from mozinstall)
+13:35:21     INFO -  Installing collected packages: mozinstall
+13:35:21     INFO -    Running setup.py install for mozinstall
+13:35:21     INFO -      Installing moz_remove_from_system-script.py script to C:\slave\test\build\venv\Scripts
+13:35:21     INFO -      Installing moz_remove_from_system.exe script to C:\slave\test\build\venv\Scripts
+13:35:21     INFO -      Installing mozuninstall-script.py script to C:\slave\test\build\venv\Scripts
+13:35:21     INFO -      Installing mozuninstall.exe script to C:\slave\test\build\venv\Scripts
+13:35:21     INFO -      Installing mozinstall-script.py script to C:\slave\test\build\venv\Scripts
+13:35:21     INFO -      Installing mozinstall.exe script to C:\slave\test\build\venv\Scripts
+13:35:21     INFO -      Installing moz_add_to_system-script.py script to C:\slave\test\build\venv\Scripts
+13:35:21     INFO -      Installing moz_add_to_system.exe script to C:\slave\test\build\venv\Scripts
+13:35:21     INFO -  Successfully installed mozinstall
+13:35:21     INFO -  Cleaning up...
+13:35:21     INFO - Return code: 0
+13:35:21     INFO - Installing psutil==0.7.1 into virtualenv C:\slave\test\build/venv
+13:35:21     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--pypi-url', 'http://repos/python/packages/', '--no-index', '--find-links', 'http://repos/python/packages/', 'psutil==0.7.1'] in C:\slave\test\build
+13:35:21     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --pypi-url http://repos/python/packages/ --no-index --find-links http://repos/python/packages/ psutil==0.7.1
+13:35:21     INFO -  Ignoring indexes: http://repos/python/packages/
+13:35:21     INFO -  Downloading/unpacking psutil==0.7.1
+13:35:21     INFO -    Running setup.py egg_info for package psutil
+13:35:21     INFO -  Installing collected packages: psutil
+13:35:21     INFO -    Running setup.py install for psutil
+13:35:21     INFO -      building '_psutil_mswindows' extension
+13:35:21     INFO -      error: Unable to find vcvarsall.bat
+13:35:21     INFO -      Complete output from command C:\slave\test\build\venv\Scripts\python.exe -c "import setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)" install --single-version-externally-managed --record c:\users\cltbld~1.t-w\appdata\local\temp\pip-jbrglq-record\install-record.txt --install-headers C:\slave\test\build\venv\include\site\python2.7:
+13:35:21     INFO -      running install
+13:35:21     INFO -  running build
+13:35:21     INFO -  running build_py
+13:35:21     INFO -  creating build
+13:35:21     INFO -  creating build\lib.win32-2.7
+13:35:21     INFO -  creating build\lib.win32-2.7\psutil
+13:35:21     INFO -  copying psutil\error.py -> build\lib.win32-2.7\psutil
+13:35:21     INFO -  copying psutil\_common.py -> build\lib.win32-2.7\psutil
+13:35:21     INFO -  copying psutil\_compat.py -> build\lib.win32-2.7\psutil
+13:35:21     INFO -  copying psutil\_error.py -> build\lib.win32-2.7\psutil
+13:35:21     INFO -  copying psutil\_psbsd.py -> build\lib.win32-2.7\psutil
+13:35:21     INFO -  copying psutil\_pslinux.py -> build\lib.win32-2.7\psutil
+13:35:21     INFO -  copying psutil\_psmswindows.py -> build\lib.win32-2.7\psutil
+13:35:21     INFO -  copying psutil\_psosx.py -> build\lib.win32-2.7\psutil
+13:35:21     INFO -  copying psutil\_psposix.py -> build\lib.win32-2.7\psutil
+13:35:21     INFO -  copying psutil\__init__.py -> build\lib.win32-2.7\psutil
+13:35:21     INFO -  running build_ext
+13:35:21     INFO -  building '_psutil_mswindows' extension
+13:35:21     INFO -  error: Unable to find vcvarsall.bat
+13:35:21     INFO -  ----------------------------------------
+13:35:21     INFO -  Command C:\slave\test\build\venv\Scripts\python.exe -c "import setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)" install --single-version-externally-managed --record c:\users\cltbld~1.t-w\appdata\local\temp\pip-jbrglq-record\install-record.txt --install-headers C:\slave\test\build\venv\include\site\python2.7 failed with error code 1
+13:35:21     INFO -  Storing complete log in C:\Users\cltbld.T-W864-IX-042\AppData\Roaming\pip\pip.log
+13:35:21     INFO - Return code: 1
+13:35:21  WARNING - Unable to install optional package psutil==0.7.1.
+13:35:21     INFO - Installing mozsystemmonitor==0.0.0 into virtualenv C:\slave\test\build/venv
+13:35:21     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--pypi-url', 'http://repos/python/packages/', '--no-index', '--find-links', 'http://repos/python/packages/', 'mozsystemmonitor==0.0.0'] in C:\slave\test\build
+13:35:21     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --pypi-url http://repos/python/packages/ --no-index --find-links http://repos/python/packages/ mozsystemmonitor==0.0.0
+13:35:22     INFO -  Ignoring indexes: http://repos/python/packages/
+13:35:22     INFO -  Downloading/unpacking mozsystemmonitor==0.0.0
+13:35:22     INFO -    Downloading mozsystemmonitor-0.0.tar.gz
+13:35:22     INFO -    Running setup.py egg_info for package mozsystemmonitor
+13:35:22     INFO -  Downloading/unpacking psutil>=0.7.1 (from mozsystemmonitor==0.0.0)
+13:35:22     INFO -    Running setup.py egg_info for package psutil
+13:35:22     INFO -  Installing collected packages: mozsystemmonitor, psutil
+13:35:22     INFO -    Running setup.py install for mozsystemmonitor
+13:35:22     INFO -    Running setup.py install for psutil
+13:35:22     INFO -      building '_psutil_mswindows' extension
+13:35:22     INFO -      error: Unable to find vcvarsall.bat
+13:35:22     INFO -      Complete output from command C:\slave\test\build\venv\Scripts\python.exe -c "import setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)" install --single-version-externally-managed --record c:\users\cltbld~1.t-w\appdata\local\temp\pip-i0yszy-record\install-record.txt --install-headers C:\slave\test\build\venv\include\site\python2.7:
+13:35:22     INFO -      running install
+13:35:22     INFO -  running build
+13:35:22     INFO -  running build_py
+13:35:22     INFO -  running build_ext
+13:35:22     INFO -  building '_psutil_mswindows' extension
+13:35:22     INFO -  error: Unable to find vcvarsall.bat
+13:35:22     INFO -  ----------------------------------------
+13:35:22     INFO -  Command C:\slave\test\build\venv\Scripts\python.exe -c "import setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)" install --single-version-externally-managed --record c:\users\cltbld~1.t-w\appdata\local\temp\pip-i0yszy-record\install-record.txt --install-headers C:\slave\test\build\venv\include\site\python2.7 failed with error code 1
+13:35:22     INFO -  Storing complete log in C:\Users\cltbld.T-W864-IX-042\AppData\Roaming\pip\pip.log
+13:35:22     INFO - Return code: 1
+13:35:22  WARNING - Unable to install optional package mozsystemmonitor==0.0.0.
+13:35:22     INFO - Done creating virtualenv C:\slave\test\build/venv.
+13:35:22     INFO - Getting output from command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'freeze']
+13:35:22     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip freeze
+13:35:22     INFO - Reading from file tmpfile_stdout
+13:35:22     INFO - Using _rmtree_windows ...
+13:35:22     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+13:35:22     INFO - Using _rmtree_windows ...
+13:35:22     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+13:35:22     INFO - Current package versions:
+13:35:22     INFO -   PyYAML == 3.10
+13:35:22     INFO -   oauth2 == 1.5.211
+13:35:22     INFO -   mozInstall == 1.6
+13:35:22     INFO -   mozlog == 1.2
+13:35:22     INFO -   mozfile == 0.9
+13:35:22     INFO -   mozprocess == 0.8
+13:35:22     INFO -   distribute == 0.6.14
+13:35:22     INFO -   talos == 0.0
+13:35:22     INFO -   mozhttpd == 0.5
+13:35:22     INFO -   mozsystemmonitor == 0.0
+13:35:22     INFO -   mozdevice == 0.19
+13:35:22     INFO -   mozinfo == 0.4
+13:35:22     INFO -   mozcrash == 0.5
+13:35:22     INFO -   datazilla == 1.4
+13:35:22     INFO -   pywin32 == 216
+13:35:22     INFO -   httplib2 == 0.7.4
+13:35:22     INFO - Running post-action listener: _resource_record_post_action
+13:35:22     INFO - Running post-action listener: _start_resource_monitoring
+13:35:22     INFO - Starting resource monitoring.
+13:35:22     INFO - #####
+13:35:22     INFO - ##### Running install step.
+13:35:22     INFO - #####
+13:35:22     INFO - Running pre-action listener: _resource_record_pre_action
+13:35:22     INFO - Running main action method: install
+13:35:22     INFO - Getting output from command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'freeze']
+13:35:22     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip freeze
+13:35:23     INFO - Reading from file tmpfile_stdout
+13:35:23     INFO - Using _rmtree_windows ...
+13:35:23     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+13:35:23     INFO - Using _rmtree_windows ...
+13:35:23     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+13:35:23     INFO - Detecting whether we're running mozinstall >=1.0...
+13:35:23     INFO - Getting output from command: ['C:\\slave\\test\\build/venv/scripts/python', 'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py', '-h']
+13:35:23     INFO - Copy/paste: C:\slave\test\build/venv/scripts/python C:\slave\test\build/venv/scripts/mozinstall-script.py -h
+13:35:23     INFO - Reading from file tmpfile_stdout
+13:35:23     INFO - Output received:
+13:35:23     INFO -  Usage: mozinstall-script.py [options] installer
+13:35:23     INFO -  Options:
+13:35:23     INFO -    -h, --help            show this help message and exit
+13:35:23     INFO -    -d DEST, --destination=DEST
+13:35:23     INFO -                          Directory to install application into. [default:
+13:35:23     INFO -                          "C:\slave\test"]
+13:35:23     INFO -    --app=APP             Application being installed. [default: firefox]
+13:35:23     INFO - Using _rmtree_windows ...
+13:35:23     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+13:35:23     INFO - Using _rmtree_windows ...
+13:35:23     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+13:35:23     INFO - mkdir: C:\slave\test\build\application
+13:35:23     INFO - Getting output from command: ['C:\\slave\\test\\build/venv/scripts/python', 'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py', 'C:\\slave\\test\\build\\firefox-27.0a1.en-US.win32.zip', '--destination', 'C:\\slave\\test\\build\\application']
+13:35:23     INFO - Copy/paste: C:\slave\test\build/venv/scripts/python C:\slave\test\build/venv/scripts/mozinstall-script.py C:\slave\test\build\firefox-27.0a1.en-US.win32.zip --destination C:\slave\test\build\application
+13:35:24     INFO - Reading from file tmpfile_stdout
+13:35:24     INFO - Output received:
+13:35:24     INFO -  C:\slave\test\build\application\firefox\firefox.exe
+13:35:24     INFO - Using _rmtree_windows ...
+13:35:24     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+13:35:24     INFO - Using _rmtree_windows ...
+13:35:24     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x02271A10>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+13:35:24     INFO - Running post-action listener: _resource_record_post_action
+13:35:24     INFO - #####
+13:35:24     INFO - ##### Running run-tests step.
+13:35:24     INFO - #####
+13:35:24     INFO - Running pre-action listener: _resource_record_pre_action
+13:35:24     INFO - Running main action method: run_tests
+13:35:24     INFO - Triggering Metro Browser Immersive Mode
+13:35:24     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\python', '--version']
+13:35:24     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\python --version
+13:35:24     INFO -  Python 2.7.3
+13:35:24     INFO - Return code: 0
+13:35:24     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\talos', '--noisy', '--debug', '-v', '--executablePath', 'C:\\slave\\test\\build\\application\\firefox\\firefox', '--title', 'T-W864-IX-042', '--symbolsPath', 'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.crashreporter-symbols.zip', '--activeTests', u'tsvgx:tsvgr_opacity', '--results_url', 'http://graphs.mozilla.org/server/collect.cgi', '--output', 'talos.yml', '--branchName', 'Cedar', '--datazilla-url', 'https://datazilla.mozilla.org/talos', '--metro-immersive-path', 'C:\\slave\\test\\build\\tests\\bin\\metrotestharness.exe', u'--filter', u'ignore_first:5', u'--filter', u'median', '--webServer', 'localhost'] in C:\slave\test\build
+13:35:24     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\talos --noisy --debug -v --executablePath C:\slave\test\build\application\firefox\firefox --title T-W864-IX-042 --symbolsPath http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.crashreporter-symbols.zip --activeTests tsvgx:tsvgr_opacity --results_url http://graphs.mozilla.org/server/collect.cgi --output talos.yml --branchName Cedar --datazilla-url https://datazilla.mozilla.org/talos --metro-immersive-path C:\slave\test\build\tests\bin\metrotestharness.exe --filter ignore_first:5 --filter median --webServer localhost
+13:35:24     INFO -  DEBUG : using testdate: 1379968524
+13:35:24     INFO -  DEBUG : actual date: 1379968524
+13:35:24     INFO -  INFO : browserInfo: 'C:\slave\test\build\tests\bin\application.ini' does not exist
+13:35:24     INFO -   - outputName = talos.yml
+13:35:24     INFO -  basetest:
+13:35:24     INFO -    cycles: 1
+13:35:24     INFO -    linux_counters: []
+13:35:24     INFO -    mac_counters: []
+13:35:24     INFO -    profile_path: ${talos}/base_profile
+13:35:24     INFO -    resolution: 1
+13:35:24     INFO -    responsiveness: false
+13:35:24     INFO -    rss: false
+13:35:24     INFO -    shutdown: false
+13:35:24     INFO -    timeout: 3600
+13:35:24     INFO -    tpchrome: true
+13:35:24     INFO -    tpcycles: 10
+13:35:24     INFO -    tploadaboutblank: false
+13:35:24     INFO -    tpmozafterpaint: false
+13:35:24     INFO -    tpnoisy: true
+13:35:24     INFO -    tppagecycles: 1
+13:35:24     INFO -    tprender: false
+13:35:24     INFO -    w7_counters: []
+13:35:24     INFO -    win_counters: []
+13:35:24     INFO -    xperf_counters: []
+13:35:24     INFO -  bcontroller_config: ${talos}/bcontroller.yml
+13:35:24     INFO -  branch_name: Cedar
+13:35:24     INFO -  browser_log: browser_output.txt
+13:35:24     INFO -  browser_path: C:\slave\test\build\application\firefox\firefox
+13:35:24     INFO -  browser_wait: 5
+13:35:24     INFO -  buildid: testbuildid
+13:35:24     INFO -  datazilla_urls:
+13:35:24     INFO -  - https://datazilla.mozilla.org/talos
+13:35:24     INFO -  develop: false
+13:35:24     INFO -  deviceport: 20701
+13:35:24     INFO -  dirs: {}
+13:35:24     INFO -  env:
+13:35:24     INFO -    NO_EM_RESTART: '1'
+13:35:24     INFO -  error_filename: C:\slave\test\build\browser_failures.txt
+13:35:24     INFO -  extensions:
+13:35:24     INFO -  - ${talos}/pageloader
+13:35:24     INFO -  extra_args: ''
+13:35:24     INFO -  filters:
+13:35:24     INFO -  - - ignore_first
+13:35:24     INFO -    - - 5
+13:35:24     INFO -  - - median
+13:35:24     INFO -    - []
+13:35:24     INFO -  immersive_mode_path: C:\slave\test\build\tests\bin\metrotestharness.exe
+13:35:24     INFO -  init_url: http://localhost/getInfo.html
+13:35:24     INFO -  preferences:
+13:35:24     INFO -    app.update.enabled: false
+13:35:24     INFO -    browser.EULA.override: true
+13:35:24     INFO -    browser.bookmarks.max_backups: 0
+13:35:24     INFO -    browser.cache.disk.smart_size.enabled: false
+13:35:24     INFO -    browser.cache.disk.smart_size.first_run: false
+13:35:24     INFO -    browser.chrome.dynamictoolbar: false
+13:35:24     INFO -    browser.display.overlaynavbuttons: false
+13:35:24     INFO -    browser.dom.window.dump.enabled: true
+13:35:24     INFO -    browser.link.open_newwindow: 2
+13:35:24     INFO -    browser.safebrowsing.gethashURL: http://127.0.0.1/safebrowsing-dummy/gethash
+13:35:24     INFO -    browser.safebrowsing.keyURL: http://127.0.0.1/safebrowsing-dummy/newkey
+13:35:24     INFO -    browser.safebrowsing.updateURL: http://127.0.0.1/safebrowsing-dummy/update
+13:35:24     INFO -    browser.shell.checkDefaultBrowser: false
+13:35:24     INFO -    browser.warnOnQuit: false
+13:35:24     INFO -    dom.allow_scripts_to_close_windows: true
+13:35:24     INFO -    dom.disable_open_during_load: false
+13:35:24     INFO -    dom.disable_window_flip: true
+13:35:24     INFO -    dom.disable_window_move_resize: true
+13:35:24     INFO -    dom.max_chrome_script_run_time: 0
+13:35:24     INFO -    dom.max_script_run_time: 0
+13:35:24     INFO -    extensions.autoDisableScopes: 10
+13:35:24     INFO -    extensions.blocklist.enabled: false
+13:35:24     INFO -    extensions.blocklist.url: http://127.0.0.1/extensions-dummy/blocklistURL
+13:35:24     INFO -    extensions.checkCompatibility: false
+13:35:24     INFO -    extensions.enabledScopes: 5
+13:35:24     INFO -    extensions.getAddons.get.url: http://127.0.0.1/extensions-dummy/repositoryGetURL
+13:35:24     INFO -    extensions.getAddons.getWithPerformance.url: http://127.0.0.1/extensions-dummy/repositoryGetWithPerformanceURL
+13:35:24     INFO -    extensions.getAddons.maxResults: 0
+13:35:24     INFO -    extensions.getAddons.search.browseURL: http://127.0.0.1/extensions-dummy/repositoryBrowseURL
+13:35:24     INFO -    extensions.getAddons.search.url: http://127.0.0.1/extensions-dummy/repositorySearchURL
+13:35:24     INFO -    extensions.hotfix.url: http://127.0.0.1/extensions-dummy/hotfixURL
+13:35:24     INFO -    extensions.update.background.url: http://127.0.0.1/extensions-dummy/updateBackgroundURL
+13:35:24     INFO -    extensions.update.enabled: false
+13:35:24     INFO -    extensions.update.notifyUser: false
+13:35:24     INFO -    extensions.update.url: http://127.0.0.1/extensions-dummy/updateURL
+13:35:24     INFO -    extensions.webservice.discoverURL: http://127.0.0.1/extensions-dummy/discoveryURL
+13:35:24     INFO -    hangmonitor.timeout: 0
+13:35:24     INFO -    network.proxy.http: localhost
+13:35:24     INFO -    network.proxy.http_port: 80
+13:35:24     INFO -    network.proxy.type: 1
+13:35:24     INFO -    plugins.update.url: http://127.0.0.1/plugins-dummy/updateCheckURL
+13:35:24     INFO -    security.enable_java: false
+13:35:24     INFO -    security.fileuri.strict_origin_policy: false
+13:35:24     INFO -    security.turn_off_all_security_so_that_viruses_can_take_over_this_computer: true
+13:35:24     INFO -    toolkit.telemetry.notifiedOptOut: 999
+13:35:24     INFO -    toolkit.telemetry.prompted: 999
+13:35:24     INFO -  remote: false
+13:35:24     INFO -  results_urls:
+13:35:24     INFO -  - http://graphs.mozilla.org/server/collect.cgi
+13:35:24     INFO -  symbols_path: http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1379934624/firefox-27.0a1.en-US.win32.crashreporter-symbols.zip
+13:35:24     INFO -  test_timeout: 1200
+13:35:24     INFO -  tests:
+13:35:24     INFO -  - filters:
+13:35:24     INFO -    - - ignore_first
+13:35:24     INFO -      - - 5
+13:35:24     INFO -    - - median
+13:35:24     INFO -      - []
+13:35:24     INFO -    name: tsvgx
+13:35:24     INFO -    preferences:
+13:35:24     INFO -      docshell.event_starvation_delay_hint: 1
+13:35:24     INFO -      layout.frame_rate: 0
+13:35:24     INFO -    tpcycles: 1
+13:35:24     INFO -    tpmanifest: ${talos}/page_load_test/svgx/svgx.manifest
+13:35:24     INFO -    tppagecycles: 25
+13:35:24     INFO -  - filters:
+13:35:24     INFO -    - - ignore_first
+13:35:24     INFO -      - - 5
+13:35:24     INFO -    - - median
+13:35:24     INFO -      - []
+13:35:24     INFO -    name: tsvgr_opacity
+13:35:24     INFO -    tpcycles: 1
+13:35:24     INFO -    tpmanifest: ${talos}/page_load_test/svg_opacity/svg_opacity.manifest
+13:35:24     INFO -    tppagecycles: 25
+13:35:24     INFO -  title: T-W864-IX-042
+13:35:24     INFO -  webserver: localhost
+13:35:24     INFO -  T-W864-IX-042:
+13:35:24     INFO -         Started Mon, 23 Sep 2013 13:35:24
+13:35:24     INFO -  Running test tsvgx:
+13:35:24     INFO -         Started Mon, 23 Sep 2013 13:35:24
+13:35:24     INFO -  DEBUG : operating with platform_type : w8_
+13:35:24     INFO -  DEBUG : created profile
+13:35:29     INFO -  DEBUG : initialized metrotestharness.exe
+13:35:34     INFO -  DEBUG : command line: '"C:\slave\test\build\tests\bin\metrotestharness.exe" -firefoxpath C:\slave\test\build\application\firefox\firefox.exe -profile c:\\\users\\\cltbld~1.t-w\\\appdata\\\local\\\temp\\\tmpxr6sou\\\profile -tp file:\C:\slave\test\build\venv\lib\site-packages\talos\page_load_test\svgx\svgx.manifest -tpchrome -tpnoisy -tpcycles 1 -tppagecycles 25'
+13:35:40     INFO -  INFO : INFO | metrotestharness.exe | Launching browser...
+13:35:40     INFO -  INFO | metrotestharness.exe | App model id='E4CFE2E6B75AA3A3'
+13:35:40     INFO -  INFO | metrotestharness.exe | Harness process id: 2220
+13:35:40     INFO -  INFO | metrotestharness.exe | Using bin path: 'C:\slave\test\build\application\firefox\firefox.exe'
+13:35:40     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to: 'C:\slave\test\build\application\firefox\tests.ini'
+13:35:40     INFO -  INFO | metrotestharness.exe | Browser command line args: 'C:\slave\test\build\application\firefox\firefox.exe -profile c:\\\users\\\cltbld~1.t-w\\\appdata\\\local\\\temp\\\tmpxr6sou\\\profile -tp file:\C:\slave\test\build\venv\lib\site-packages\talos\page_load_test\svgx\svgx.manifest -tpchrome -tpnoisy -tpcycles 1 -tppagecycles 25'
+13:35:40     INFO -  INFO | metrotestharness.exe | Activation succeeded.
+13:35:40     INFO -  INFO | metrotestharness.exe | METRO_BROWSER_PROCESS=2296
+13:35:40     INFO -  INFO | metrotestharness.exe | Waiting on child process...
+13:36:01     INFO -  INFO : XRE_MetroCoreApplicationRun: IsMainThread:0 ThreadId:360
+13:36:01     INFO -  mozilla::widget::winrt::FrameworkView::FrameworkView
+13:36:01     INFO -  mozilla::widget::winrt::MetroApp::CreateView
+13:36:01     INFO -  mozilla::widget::winrt::FrameworkView::Initialize
+13:36:01     INFO -  mozilla::widget::winrt::FrameworkView::SetWindow
+13:36:01     INFO -  mozilla::widget::winrt::FrameworkView::SetDpi
+13:36:01     INFO -  mozilla::widget::winrt::FrameworkView::OnActivated
+13:36:01     INFO -  Activation argument kind: Launch
+13:36:01     INFO -  mozilla::widget::winrt::FrameworkView::Run
+13:36:01     INFO -  mozilla::widget::winrt::MetroApp::Run: IsMainThread:0 ThreadId:D18
+13:36:01     INFO -  XPCOM startup initialization began
+13:36:01     INFO -  MetroAppShell::Init
+13:36:01     INFO -  MetroWidget::Create
+13:36:01     INFO -  eWindowType_invisible window requested, this doesn't actually exist!
+13:36:01     INFO -  args.useBrowserChrome and is isImmersive() are true
+13:36:01     INFO -  MetroWidget::Create
+13:36:01     INFO -  mozilla::widget::winrt::MetroApp::SetBaseWidget: IsMainThread:1 ThreadId:D18
+13:36:01     INFO -  mozilla::widget::winrt::FrameworkView::SetWidget
+13:36:01     INFO -  MetroWidget::FindMetroWindow
+13:36:01     INFO -  made it to line after: cmdLine.preventDefault = true;
+13:36:01     INFO -  MetroWidget::Create
+13:36:01     INFO -  ### Content.js loaded
+13:36:01     INFO -  ### FormHelper.js loaded
+13:36:01     INFO -  ### SelectionPrototype.js loaded
+13:36:01     INFO -  ### SelectionHandler.js loaded
+13:36:01     INFO -  ### ContextMenuHandler.js loaded
+13:36:01     INFO -  ### FindHandler.js loaded
+13:36:01     INFO -  ### ConsoleAPIObserver.js loaded
+13:36:01     INFO -  ### Content.js loaded
+13:36:01     INFO -  ### FormHelper.js loaded
+13:36:01     INFO -  ### SelectionPrototype.js loaded
+13:36:01     INFO -  ### SelectionHandler.js loaded
+13:36:01     INFO -  ### ContextMenuHandler.js loaded
+13:36:01     INFO -  ### FindHandler.js loaded
+13:36:01     INFO -  ### ConsoleAPIObserver.js loaded
+13:36:01     INFO -  MetroAppShell::Run
+13:36:01     INFO -  mozilla::widget::winrt::FrameworkView::ActivateView
+13:36:01     INFO -  mozilla::widget::winrt::MetroInput::MetroInput
+13:36:01     INFO -  mozilla::widget::winrt::FrameworkView::AddEventHandlers hr=0
+13:36:01     INFO -  mozilla::widget::winrt::FrameworkView::SetupContracts
+13:36:01     INFO -  * delay load started...
+13:36:01     INFO -  * delay load complete.
+13:36:01     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+13:36:01     INFO -  JLUND done waiting 5 seconds...
+13:36:01     INFO -  JLUND isImmersive(): true
+13:36:01     INFO -  JLUND toplevelwin: [xpconnect wrapped nsISupports]
+13:36:01     INFO -  JLUND toplevelwin wrappedJSObject: [object Object]
+13:36:01     INFO -  ### Content.js loaded
+13:36:01     INFO -  ### FormHelper.js loaded
+13:36:01     INFO -  ### SelectionPrototype.js loaded
+13:36:01     INFO -  ### SelectionHandler.js loaded
+13:36:01     INFO -  ### ContextMenuHandler.js loaded
+13:36:01     INFO -  ### FindHandler.js loaded
+13:36:01     INFO -  ### ConsoleAPIObserver.js loaded
+13:36:01     INFO -  JLUND waiting 5 seconds...
+13:36:01     INFO -  RSS: Main: 99590144
+13:36:01     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:01     INFO -  * delay load started...
+13:36:01     INFO -  * delay load complete.
+13:36:01     INFO -  RSS: Main: 114925568
+13:36:01     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:01     INFO -  RSS: Main: 116850688
+13:36:01     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:01     INFO -  RSS: Main: 117608448
+13:36:01     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:01     INFO -  RSS: Main: 116973568
+13:36:01     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:01     INFO -  RSS: Main: 117080064
+13:36:01     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:01     INFO -  RSS: Main: 117420032
+13:36:01     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:01     INFO -  RSS: Main: 118587392
+13:36:01     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:01     INFO -  RSS: Main: 118624256
+13:36:01     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:01     INFO -  RSS: Main: 109907968
+13:36:01     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:01     INFO -  RSS: Main: 117063680
+13:36:01     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:01     INFO -  RSS: Main: 117772288
+13:36:01     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:01     INFO -  RSS: Main: 117776384
+13:36:01     INFO -  Cycle 1(13): loaded http://localhost/page
+13:36:24     INFO -  INFO : _load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:24     INFO -  RSS: Main: 118157312
+13:36:24     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:24     INFO -  RSS: Main: 118841344
+13:36:24     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:24     INFO -  RSS: Main: 110100480
+13:36:24     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:24     INFO -  RSS: Main: 117116928
+13:36:24     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:24     INFO -  RSS: Main: 117772288
+13:36:24     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:24     INFO -  RSS: Main: 118509568
+13:36:24     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:24     INFO -  RSS: Main: 117968896
+13:36:24     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:24     INFO -  RSS: Main: 118587392
+13:36:24     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:24     INFO -  RSS: Main: 118571008
+13:36:24     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:24     INFO -  RSS: Main: 118247424
+13:36:24     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:24     INFO -  RSS: Main: 119111680
+13:36:24     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:24     INFO -  RSS: Main: 118607872
+13:36:24     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svgx/gearflowers.svg (next: http://localhost/page_load_test/svgx/composite-scale.svg)
+13:36:24     INFO -  RSS: Main: 116994048
+13:36:24     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:24     INFO -  RSS: Main: 123645952
+13:36:24     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:24     INFO -  RSS: Main: 123527168
+13:36:24     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:24     INFO -  RSS: Main: 123527168
+13:36:24     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:24     INFO -  RSS: Main: 123559936
+13:36:24     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:24     INFO -  RSS: Main: 123645952
+13:36:24     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:24     INFO -  RSS: Main: 123551744
+13:36:24     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:24     INFO -  RSS: Main: 123576320
+13:36:24     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:24     INFO -  RSS: Main: 123600896
+13:36:24     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:24     INFO -  RSS: Main: 123576320
+13:36:24     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:24     INFO -  RSS: Main: 123572224
+13:36:24     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:24     INFO -  RSS: Main: 123555840
+13:36:24     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:24     INFO -  RSS: Main: 123736064
+13:36:24     INFO -  Cy
+13:36:36     INFO -  INFO : cle 1(13): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:36     INFO -  RSS: Main: 123838464
+13:36:36     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:36     INFO -  RSS: Main: 123813888
+13:36:36     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:36     INFO -  RSS: Main: 123842560
+13:36:36     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:36     INFO -  RSS: Main: 123895808
+13:36:36     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:36     INFO -  RSS: Main: 123875328
+13:36:36     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:36     INFO -  RSS: Main: 123809792
+13:36:36     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:36     INFO -  RSS: Main: 123842560
+13:36:36     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:36     INFO -  RSS: Main: 123809792
+13:36:36     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:36     INFO -  RSS: Main: 123834368
+13:36:36     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:36     INFO -  RSS: Main: 123850752
+13:36:36     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:36     INFO -  RSS: Main: 123817984
+13:36:36     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:36     INFO -  RSS: Main: 123871232
+13:36:36     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svgx/composite-scale.svg (next: http://localhost/page_load_test/svgx/composite-scale-opacity.svg)
+13:36:36     INFO -  RSS: Main: 123809792
+13:36:36     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:36     INFO -  RSS: Main: 124030976
+13:36:36     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:36     INFO -  RSS: Main: 124006400
+13:36:36     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:36     INFO -  RSS: Main: 124059648
+13:36:36     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:36     INFO -  RSS: Main: 124096512
+13:36:36     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:36     INFO -  RSS: Main: 124137472
+13:36:36     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:36     INFO -  RSS: Main: 124100608
+13:36:36     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:36     INFO -  RSS: Main: 124186624
+13:36:36     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:36     INFO -  RSS: Main: 124215296
+13:36:36     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:36     INFO -  RSS: Main: 124215296
+13:36:36     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:36     INFO -  RSS: Main: 116510720
+13:36:36     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.
+13:36:47     INFO -  INFO : svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 114462720
+13:36:47     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 114954240
+13:36:47     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 114978816
+13:36:47     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 115200000
+13:36:47     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 115257344
+13:36:47     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 115437568
+13:36:47     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 115572736
+13:36:47     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 115843072
+13:36:47     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 116051968
+13:36:47     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 116092928
+13:36:47     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 116334592
+13:36:47     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 116330496
+13:36:47     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 116547584
+13:36:47     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 116510720
+13:36:47     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svgx/composite-scale-opacity.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate.svg)
+13:36:47     INFO -  RSS: Main: 116772864
+13:36:47     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:47     INFO -  RSS: Main: 115666944
+13:36:47     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:47     INFO -  RSS: Main: 116002816
+13:36:47     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:47     INFO -  RSS: Main: 118358016
+13:36:47     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:47     INFO -  RSS: Main: 118599680
+13:36:47     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:47     INFO -  RSS: Main: 118784000
+13:36:47     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:47     INFO -  RSS: Main: 119336960
+13:36:47     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:47     INFO -  RSS: Main: 118484992
+13:36:47     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:47     INFO -  RSS: Main: 118734848
+13:36:47     INFO -  Cycle 1(9):
+13:36:59     INFO -  INFO : loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 118947840
+13:36:59     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119189504
+13:36:59     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119439360
+13:36:59     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119672832
+13:36:59     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119918592
+13:36:59     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119918592
+13:36:59     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119963648
+13:36:59     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119914496
+13:36:59     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119123968
+13:36:59     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119373824
+13:36:59     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119574528
+13:36:59     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119783424
+13:36:59     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119812096
+13:36:59     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119787520
+13:36:59     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119783424
+13:36:59     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119844864
+13:36:59     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svgx/composite-scale-rotate.svg (next: http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg)
+13:36:59     INFO -  RSS: Main: 119836672
+13:36:59     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:36:59     INFO -  RSS: Main: 118099968
+13:36:59     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:36:59     INFO -  RSS: Main: 118419456
+13:36:59     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:36:59     INFO -  RSS: Main: 118362112
+13:36:59     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:36:59     INFO -  RSS: Main: 118362112
+13:36:59     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:36:59     INFO -  RSS: Main: 118362112
+13:36:59     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.
+13:37:20     INFO -  INFO : svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118493184
+13:37:20     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118579200
+13:37:20     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118657024
+13:37:20     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118624256
+13:37:20     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118636544
+13:37:20     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118644736
+13:37:20     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118640640
+13:37:20     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118665216
+13:37:20     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118657024
+13:37:20     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118550528
+13:37:20     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118550528
+13:37:20     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118497280
+13:37:20     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118628352
+13:37:20     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118689792
+13:37:20     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118636544
+13:37:20     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118661120
+13:37:20     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118624256
+13:37:20     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118636544
+13:37:20     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118661120
+13:37:20     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svgx/composite-scale-rotate-opacity.svg (next: http://localhost/page_load_test/svgx/hixie-001.xml)
+13:37:20     INFO -  RSS: Main: 118706176
+13:37:20     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:37:20     INFO -  RSS: Main: 119787520
+13:37:20     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:37:20     INFO -  RSS: Main: 119803904
+13:37:20     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:37:20     INFO -  RSS: Main: 119787520
+13:37:20     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:37:20     INFO -  RSS: Main: 119603200
+13:37:20     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002
+13:38:23     INFO -  INFO : .xml)
+13:38:23     INFO -  RSS: Main: 115150848
+13:38:23     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 115056640
+13:38:23     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 114860032
+13:38:23     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 115195904
+13:38:23     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 115126272
+13:38:23     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 115130368
+13:38:23     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 114909184
+13:38:23     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 118124544
+13:38:23     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 117993472
+13:38:23     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 118247424
+13:38:23     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 118394880
+13:38:23     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 118202368
+13:38:23     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 118362112
+13:38:23     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 118358016
+13:38:23     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 118374400
+13:38:23     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 118079488
+13:38:23     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 118448128
+13:38:23     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 118702080
+13:38:23     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 118460416
+13:38:23     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 118714368
+13:38:23     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svgx/hixie-001.xml (next: http://localhost/page_load_test/svgx/hixie-002.xml)
+13:38:23     INFO -  RSS: Main: 118677504
+13:38:23     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:38:23     INFO -  RSS: Main: 118534144
+13:38:23     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:38:23     INFO -  RSS: Main: 118767616
+13:38:23     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:38:23     INFO -  RSS: Main: 118771712
+13:38:23     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:38:23     INFO -  RSS: Main: 118824960
+13:38:23     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:38:23     INFO -  RSS: Main: 118861824
+13:38:23     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:38:23     INFO -  RSS: Main: 118935552
+13:38:23     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xm
+13:39:18     INFO -  INFO : l)
+13:39:18     INFO -  RSS: Main: 119058432
+13:39:18     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 119005184
+13:39:18     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 118951936
+13:39:18     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 118902784
+13:39:18     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 118820864
+13:39:18     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 118886400
+13:39:18     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 119783424
+13:39:18     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 119820288
+13:39:18     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 119894016
+13:39:18     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 120000512
+13:39:18     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 119943168
+13:39:18     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 120016896
+13:39:18     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 119934976
+13:39:18     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 119586816
+13:39:18     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 120217600
+13:39:18     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 119914496
+13:39:18     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 119996416
+13:39:18     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 120283136
+13:39:18     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svgx/hixie-002.xml (next: http://localhost/page_load_test/svgx/hixie-003.xml)
+13:39:18     INFO -  RSS: Main: 120479744
+13:39:18     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:39:18     INFO -  RSS: Main: 120979456
+13:39:18     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:39:18     INFO -  RSS: Main: 120950784
+13:39:18     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:39:18     INFO -  RSS: Main: 120967168
+13:39:18     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:39:18     INFO -  RSS: Main: 120950784
+13:39:18     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:39:18     INFO -  RSS: Main: 121094144
+13:39:18     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:39:18     INFO -  RSS: Main: 121094144
+13:39:18     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:39:18     INFO -  RSS: Main: 121098240
+13:39:18     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:39:18     INFO -  RSS: Main: 121085952
+13:39:18     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  INFO : RSS: Main: 121245696
+13:40:01     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 121221120
+13:40:01     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 121229312
+13:40:01     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 121229312
+13:40:01     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 118112256
+13:40:01     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 118349824
+13:40:01     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 118673408
+13:40:01     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 119144448
+13:40:01     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 119439360
+13:40:01     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 117960704
+13:40:01     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 118308864
+13:40:01     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 118718464
+13:40:01     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 119201792
+13:40:01     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 119844864
+13:40:01     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 118665216
+13:40:01     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 118894592
+13:40:01     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svgx/hixie-003.xml (next: http://localhost/page_load_test/svgx/hixie-004.xml)
+13:40:01     INFO -  RSS: Main: 119398400
+13:40:01     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:01     INFO -  RSS: Main: 122503168
+13:40:01     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:01     INFO -  RSS: Main: 122597376
+13:40:01     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:01     INFO -  RSS: Main: 122580992
+13:40:01     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:01     INFO -  RSS: Main: 122585088
+13:40:01     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:01     INFO -  RSS: Main: 122671104
+13:40:01     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:01     INFO -  RSS: Main: 122753024
+13:40:01     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:01     INFO -  RSS: Main: 123162624
+13:40:01     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:01     INFO -  RSS: Main: 123146240
+13:40:01     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:01     INFO -  RSS: Main: 123158528
+13:40:01     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:01     INFO -  RSS: Main: 123170816
+13:40:01     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:01     INFO -  R
+13:40:54     INFO -  INFO : SS: Main: 123293696
+13:40:54     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 123293696
+13:40:54     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 123162624
+13:40:54     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 123396096
+13:40:54     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 123416576
+13:40:54     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 123662336
+13:40:54     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 123740160
+13:40:54     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 123895808
+13:40:54     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 124084224
+13:40:54     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 124059648
+13:40:54     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 124080128
+13:40:54     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 124076032
+13:40:54     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 124108800
+13:40:54     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 124145664
+13:40:54     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svgx/hixie-004.xml (next: http://localhost/page_load_test/svgx/hixie-005.xml)
+13:40:54     INFO -  RSS: Main: 124121088
+13:40:54     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:40:54     INFO -  RSS: Main: 128774144
+13:40:54     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:40:54     INFO -  RSS: Main: 129159168
+13:40:54     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:40:54     INFO -  RSS: Main: 129527808
+13:40:54     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:40:54     INFO -  RSS: Main: 119955456
+13:40:54     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:40:54     INFO -  RSS: Main: 121270272
+13:40:54     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:40:54     INFO -  RSS: Main: 121597952
+13:40:54     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:40:54     INFO -  RSS: Main: 122044416
+13:40:54     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:40:54     INFO -  RSS: Main: 122548224
+13:40:54     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:40:54     INFO -  RSS: Main: 121360384
+13:40:54     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:40:54     INFO -  RSS: Main: 122105856
+13:40:54     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:40:54     INFO -  RSS: Main: 122744832
+13:40:54     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:40:54     INFO -  RSS: Main: 121581568
+13:40:54     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:40:54     INFO -  RS
+13:41:56     INFO -  INFO : S: Main: 122245120
+13:41:56     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:41:56     INFO -  RSS: Main: 122908672
+13:41:56     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:41:56     INFO -  RSS: Main: 123400192
+13:41:56     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:41:56     INFO -  RSS: Main: 121729024
+13:41:56     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:41:56     INFO -  RSS: Main: 121851904
+13:41:56     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:41:56     INFO -  RSS: Main: 122208256
+13:41:56     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:41:56     INFO -  RSS: Main: 122560512
+13:41:56     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:41:56     INFO -  RSS: Main: 122945536
+13:41:56     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:41:56     INFO -  RSS: Main: 123305984
+13:41:56     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:41:56     INFO -  RSS: Main: 123568128
+13:41:56     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:41:56     INFO -  RSS: Main: 121606144
+13:41:56     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:41:56     INFO -  RSS: Main: 121872384
+13:41:56     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svgx/hixie-005.xml (next: http://localhost/page_load_test/svgx/hixie-006.xml)
+13:41:56     INFO -  RSS: Main: 122298368
+13:41:56     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 123019264
+13:41:56     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 123273216
+13:41:56     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 122204160
+13:41:56     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 123224064
+13:41:56     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 123760640
+13:41:56     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 121925632
+13:41:56     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 122363904
+13:41:56     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 123219968
+13:41:56     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 121241600
+13:41:56     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 122454016
+13:41:56     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 122675200
+13:41:56     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 123236352
+13:41:56     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 122408960
+13:41:56     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS: Main: 123199488
+13:41:56     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:41:56     INFO -  RSS
+13:42:42     INFO -  INFO : : Main: 123883520
+13:42:42     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:42:42     INFO -  RSS: Main: 123109376
+13:42:42     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:42:42     INFO -  RSS: Main: 123760640
+13:42:42     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:42:42     INFO -  RSS: Main: 122351616
+13:42:42     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:42:42     INFO -  RSS: Main: 122621952
+13:42:42     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:42:42     INFO -  RSS: Main: 122736640
+13:42:42     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:42:42     INFO -  RSS: Main: 122843136
+13:42:42     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:42:42     INFO -  RSS: Main: 123371520
+13:42:42     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:42:42     INFO -  RSS: Main: 123363328
+13:42:42     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:42:42     INFO -  RSS: Main: 123756544
+13:42:42     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svgx/hixie-006.xml (next: http://localhost/page_load_test/svgx/hixie-007.xml)
+13:42:42     INFO -  RSS: Main: 124010496
+13:42:42     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 125968384
+13:42:42     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 127119360
+13:42:42     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 127414272
+13:42:42     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 127881216
+13:42:42     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 128032768
+13:42:42     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 128233472
+13:42:42     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 127676416
+13:42:42     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 127832064
+13:42:42     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 127954944
+13:42:42     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 127913984
+13:42:42     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 128024576
+13:42:42     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 127987712
+13:42:42     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 126410752
+13:42:42     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 126308352
+13:42:42     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 126464000
+13:42:42     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:42     INFO -  RSS: Main: 126713856
+13:42:42     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_lo
+13:42:54     INFO -  INFO : ad_test/svgx/gearflowers.svg)
+13:42:54     INFO -  RSS: Main: 126251008
+13:42:54     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:54     INFO -  RSS: Main: 126259200
+13:42:54     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:54     INFO -  RSS: Main: 126427136
+13:42:54     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:54     INFO -  RSS: Main: 126251008
+13:42:54     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:54     INFO -  RSS: Main: 126308352
+13:42:54     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:54     INFO -  RSS: Main: 126459904
+13:42:54     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:54     INFO -  RSS: Main: 126242816
+13:42:54     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:54     INFO -  RSS: Main: 126496768
+13:42:54     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svgx/hixie-007.xml (next: http://localhost/page_load_test/svgx/gearflowers.svg)
+13:42:54     INFO -  RSS: Main: 126357504
+13:42:54     INFO -  __start_tp_report
+13:42:54     INFO -  _x_x_mozilla_page_load
+13:42:54     INFO -  _x_x_mozilla_page_load_details
+13:42:54     INFO -  |i|pagename|runs|
+13:42:54     INFO -  |0;gearflowers.svg;676;951;840;914;847;858;886;863;1243;920;860;853;872;940;1217;961;940;1093;1059;1165;1162;1144;1160;1167;1490
+13:42:54     INFO -  |1;composite-scale.svg;366;104;162;124;169;122;203;118;169;117;121;170;168;242;145;131;134;151;147;151;155;154;151;254;153
+13:42:54     INFO -  |2;composite-scale-opacity.svg;159;197;173;192;175;217;209;224;176;196;175;231;148;197;192;197;141;210;206;211;211;191;192;270;193
+13:42:54     INFO -  |3;composite-scale-rotate.svg;235;143;192;175;176;174;184;139;233;125;204;139;176;177;179;177;199;177;184;194;173;174;175;159;195
+13:42:54     INFO -  |4;composite-scale-rotate-opacity.svg;211;227;220;256;252;285;233;257;248;281;218;217;232;273;219;266;254;282;218;260;254;284;254;229;251
+13:42:54     INFO -  |5;hixie-001.xml;1609;1616;1486;1709;1715;1680;1707;1725;1726;1698;1678;1702;1714;1676;1696;1719;1727;1735;1724;1547;1714;1698;1748;1670;1886
+13:42:54     INFO -  |6;hixie-002.xml;1778;1864;1695;1748;1708;1734;1697;1613;1346;1402;1682;1714;2076;1701;1706;1698;1726;1532;1697;1723;1718;1696;1699;1691;1711
+13:42:54     INFO -  |7;hixie-003.xml;1052;1036;969;979;981;949;908;968;989;1055;1004;1033;1095;1067;1007;1031;1009;1009;1047;1003;984;1074;1029;1069;1004
+13:42:54     INFO -  |8;hixie-004.xml;1173;1022;1048;1017;1053;1020;1035;1017;1017;1002;1054;1101;1033;1020;986;1034;1012;1034;969;1036;1022;986;1044;1514;1070
+13:42:54     INFO -  |9;hixie-005.xml;1667;1689;1664;1901;1610;1572;1601;1620;1881;1528;1555;1815;1561;1607;1670;1931;1580;1615;1575;1636;1635;1598;1771;1548;1595
+13:42:54     INFO -  |10;hixie-006.xml;1561;1597;1838;1504;1541;1838;1561;1523;1892;1567;1485;1575;1860;1540;1519;1522;1531;1834;1560;1645;1571;1610;1626;1642;1573
+13:42:54     INFO -  |11;hixie-007.xml;761;731;727;719;711;717;721;718;719;743;721;725;737;735;705;748;726;786;717;728;732;731;730;737;726
+13:42:54     INFO -  __end_tp_report
+13:42:54     INFO -  __start_cc_report
+13:42:54     INFO -  _x_x_mozilla_cycle_collect,7586
+13:42:54     INFO -  __end_cc_report
+13:42:54     INFO -  __startTimestamp1379968973232__endTimestamp
+13:42:54     INFO -  [26CA240] MetroWidget::Destroy mWnd=2024C type=0
+13:42:54     INFO -  [26CA8C0] MetroWidget::Destroy mWnd=0 type=0
+13:42:54     INFO -  mozilla::widget::winrt::MetroApp::ShutdownXPCOM: IsMainThread:1 ThreadId:D18
+13:42:54     INFO -  mozilla::widget::winrt::FrameworkView::ShutdownXPCOM
+13:42:54     INFO -  mozilla::widget::winrt::MetroInput::~MetroInput
+13:42:54     INFO -  [26C9880] MetroWidget::Destroy mWnd=0 type=4
+13:42:54     INFO -  [26C9880] MetroWidget::~MetroWidget
+13:42:54     INFO -  [26CA240] MetroWidget::~MetroWidget
+13:42:54     INFO -  [26CA8C0] MetroWidget::~MetroWidget
+13:42:54     INFO -  mozilla::widget::winrt::MetroApp::CoreExit
+13:42:54     INFO -  XPCOM startup initialization complete
+13:42:54     INFO -  Exiting FrameworkView::Run()
+13:42:54     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+13:42:54     INFO -  Exiting CoreApplication::Run
+13:42:54     INFO -  INFO | metrotestharness.exe | Exiting.
+13:42:54     INFO -  INFO | metrotestharness.exe | Deleting C:\slave\test\build\application\firefox\tests.ini
+13:42:55     INFO -  INFO : __startBeforeLaunchTimestamp1379968534526__endBeforeLaunchTimestamp
+13:42:55     INFO -  __startAfterTerminationTimestamp1379968974025__endAfterTerminationTimestamp
+13:43:00     INFO -  DEBUG : Terminating: metrotestharness.exe, plugin-container, crashreporter, dwwim
+13:43:00     INFO -     Screen width/height:1600/1200
+13:43:00     INFO -     colorDepth:24
+13:43:00     INFO -     Browser inner width/height: 1600/1200
+13:43:00     INFO -  browser_name:undefined
+13:43:00     INFO -  browser_version:27.0a1
+13:43:00     INFO -  buildID:20130923041024
+13:43:00     INFO -  Completed test tsvgx:
+13:43:00     INFO -         Stopped Mon, 23 Sep 2013 13:43:00
+13:43:00     INFO -  Running test tsvgr_opacity:
+13:43:00     INFO -         Started Mon, 23 Sep 2013 13:43:00
+13:43:00     INFO -  DEBUG : operating with platform_type : w8_
+13:43:00     INFO -  DEBUG : created profile
+13:43:04     INFO -  DEBUG : initialized metrotestharness.exe
+13:43:09     INFO -  DEBUG : command line: '"C:\slave\test\build\tests\bin\metrotestharness.exe" -firefoxpath C:\slave\test\build\application\firefox\firefox.exe -profile c:\\\users\\\cltbld~1.t-w\\\appdata\\\local\\\temp\\\tmpehzqke\\\profile -tp file:\C:\slave\test\build\venv\lib\site-packages\talos\page_load_test\svg_opacity\svg_opacity.manifest -tpchrome -tpnoisy -tpcycles 1 -tppagecycles 25'
+13:43:15     INFO -  INFO : INFO | metrotestharness.exe | Launching browser...
+13:43:15     INFO -  INFO | metrotestharness.exe | App model id='E4CFE2E6B75AA3A3'
+13:43:15     INFO -  INFO | metrotestharness.exe | Windows focus rights hand off failed (HRESULT=0x80070005). Ignoring.
+13:43:15     INFO -  INFO | metrotestharness.exe | Harness process id: 3396
+13:43:15     INFO -  INFO | metrotestharness.exe | Using bin path: 'C:\slave\test\build\application\firefox\firefox.exe'
+13:43:15     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to: 'C:\slave\test\build\application\firefox\tests.ini'
+13:43:15     INFO -  INFO | metrotestharness.exe | Browser command line args: 'C:\slave\test\build\application\firefox\firefox.exe -profile c:\\\users\\\cltbld~1.t-w\\\appdata\\\local\\\temp\\\tmpehzqke\\\profile -tp file:\C:\slave\test\build\venv\lib\site-packages\talos\page_load_test\svg_opacity\svg_opacity.manifest -tpchrome -tpnoisy -tpcycles 1 -tppagecycles 25'
+13:43:15     INFO -  INFO | metrotestharness.exe | Activation succeeded.
+13:43:15     INFO -  INFO | metrotestharness.exe | METRO_BROWSER_PROCESS=1044
+13:43:15     INFO -  INFO | metrotestharness.exe | Waiting on child process...
+13:43:30     INFO -  INFO : XRE_MetroCoreApplicationRun: IsMainThread:0 ThreadId:8F4
+13:43:30     INFO -  mozilla::widget::winrt::FrameworkView::FrameworkView
+13:43:30     INFO -  mozilla::widget::winrt::MetroApp::CreateView
+13:43:30     INFO -  mozilla::widget::winrt::FrameworkView::Initialize
+13:43:30     INFO -  mozilla::widget::winrt::FrameworkView::SetWindow
+13:43:30     INFO -  mozilla::widget::winrt::FrameworkView::SetDpi
+13:43:30     INFO -  mozilla::widget::winrt::FrameworkView::OnActivated
+13:43:30     INFO -  Activation argument kind: Launch
+13:43:30     INFO -  mozilla::widget::winrt::FrameworkView::Run
+13:43:30     INFO -  mozilla::widget::winrt::MetroApp::Run: IsMainThread:0 ThreadId:490
+13:43:30     INFO -  XPCOM startup initialization began
+13:43:30     INFO -  MetroAppShell::Init
+13:43:30     INFO -  MetroWidget::Create
+13:43:30     INFO -  eWindowType_invisible window requested, this doesn't actually exist!
+13:43:30     INFO -  args.useBrowserChrome and is isImmersive() are true
+13:43:30     INFO -  MetroWidget::Create
+13:43:30     INFO -  mozilla::widget::winrt::MetroApp::SetBaseWidget: IsMainThread:1 ThreadId:490
+13:43:30     INFO -  mozilla::widget::winrt::FrameworkView::SetWidget
+13:43:30     INFO -  MetroWidget::FindMetroWindow
+13:43:30     INFO -  made it to line after: cmdLine.preventDefault = true;
+13:43:30     INFO -  MetroWidget::Create
+13:43:30     INFO -  ### Content.js loaded
+13:43:30     INFO -  ### FormHelper.js loaded
+13:43:30     INFO -  ### SelectionPrototype.js loaded
+13:43:30     INFO -  ### SelectionHandler.js loaded
+13:43:30     INFO -  ### ContextMenuHandler.js loaded
+13:43:30     INFO -  ### FindHandler.js loaded
+13:43:30     INFO -  ### ConsoleAPIObserver.js loaded
+13:43:30     INFO -  ### Content.js loaded
+13:43:30     INFO -  ### FormHelper.js loaded
+13:43:30     INFO -  ### SelectionPrototype.js loaded
+13:43:30     INFO -  ### SelectionHandler.js loaded
+13:43:30     INFO -  ### ContextMenuHandler.js loaded
+13:43:30     INFO -  ### FindHandler.js loaded
+13:43:30     INFO -  ### ConsoleAPIObserver.js loaded
+13:43:30     INFO -  MetroAppShell::Run
+13:43:30     INFO -  mozilla::widget::winrt::FrameworkView::ActivateView
+13:43:30     INFO -  mozilla::widget::winrt::MetroInput::MetroInput
+13:43:30     INFO -  mozilla::widget::winrt::FrameworkView::AddEventHandlers hr=0
+13:43:30     INFO -  mozilla::widget::winrt::FrameworkView::SetupContracts
+13:43:30     INFO -  * delay load started...
+13:43:30     INFO -  * delay load complete.
+13:43:30     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+13:43:30     INFO -  JLUND done waiting 5 seconds...
+13:43:30     INFO -  JLUND isImmersive(): true
+13:43:30     INFO -  JLUND toplevelwin: [xpconnect wrapped nsISupports]
+13:43:30     INFO -  JLUND toplevelwin wrappedJSObject: [object Object]
+13:43:30     INFO -  ### Content.js loaded
+13:43:30     INFO -  ### FormHelper.js loaded
+13:43:30     INFO -  ### SelectionPrototype.js loaded
+13:43:30     INFO -  ### SelectionHandler.js loaded
+13:43:30     INFO -  ### ContextMenuHandler.js loaded
+13:43:30     INFO -  ### FindHandler.js loaded
+13:43:30     INFO -  ### ConsoleAPIObserver.js loaded
+13:43:30     INFO -  JLUND waiting 5 seconds...
+13:43:30     INFO -  RSS: Main: 98029568
+13:43:30     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:43:30     INFO -  * delay load started...
+13:43:30     INFO -  * delay load complete.
+13:43:30     INFO -  RSS: Main: 107012096
+13:43:30     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:43:30     INFO -  RSS: Main: 110055424
+13:43:30     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:43:30     INFO -  RSS: Main: 110120960
+13:43:30     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:43:30     INFO -  RSS: Main: 109027328
+13:43:30     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:43:30     INFO -  RSS: Main: 109047808
+13:43:30     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:43:30     INFO -  RSS: Main: 109117440
+13:43:30     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:43:30     INFO -  RSS: Main: 109121536
+13:43:30     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:43:30     INFO -  RSS: Main: 109129728
+13:43:30     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:43:30     INFO -  RSS: Main: 109146112
+13:43:30     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (nex
+13:44:01     INFO -  INFO : t: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 109281280
+13:44:01     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 109514752
+13:44:01     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 109527040
+13:44:01     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 108744704
+13:44:01     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 108814336
+13:44:01     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 108933120
+13:44:01     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 108945408
+13:44:01     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 109043712
+13:44:01     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 109047808
+13:44:01     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 109080576
+13:44:01     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 109248512
+13:44:01     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 109416448
+13:44:01     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 109555712
+13:44:01     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 109559808
+13:44:01     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 109608960
+13:44:01     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 109649920
+13:44:01     INFO -  Cycle 1(1): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 123019264
+13:44:01     INFO -  Cycle 1(2): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 124375040
+13:44:01     INFO -  Cycle 1(3): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 124928000
+13:44:01     INFO -  Cycle 1(4): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:44:01     INFO -  RSS: Main: 124993536
+13:44:01     INFO -  Cycle 1(5): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500
+13:45:09     INFO -  INFO : .svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 125472768
+13:45:09     INFO -  Cycle 1(6): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 125423616
+13:45:09     INFO -  Cycle 1(7): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 125632512
+13:45:09     INFO -  Cycle 1(8): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 125734912
+13:45:09     INFO -  Cycle 1(9): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 125337600
+13:45:09     INFO -  Cycle 1(10): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 125087744
+13:45:09     INFO -  Cycle 1(11): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 125063168
+13:45:09     INFO -  Cycle 1(12): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 125833216
+13:45:09     INFO -  Cycle 1(13): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 125612032
+13:45:09     INFO -  Cycle 1(14): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 126128128
+13:45:09     INFO -  Cycle 1(15): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 126271488
+13:45:09     INFO -  Cycle 1(16): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 126078976
+13:45:09     INFO -  Cycle 1(17): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 126328832
+13:45:09     INFO -  Cycle 1(18): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 125984768
+13:45:09     INFO -  Cycle 1(19): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 126271488
+13:45:09     INFO -  Cycle 1(20): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 126685184
+13:45:09     INFO -  Cycle 1(21): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 126480384
+13:45:09     INFO -  Cycle 1(22): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 126918656
+13:45:09     INFO -  Cycle 1(23): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 126660608
+13:45:09     INFO -  Cycle 1(24): loaded http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:09     INFO -  RSS: Main: 127066112
+13:45:09     INFO -  Cycle 1(25): loaded http://localhost/page_load_test/svg_opacity/smal
+13:45:10     INFO -  INFO : l-group-opacity-2500.svg (next: http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+13:45:10     INFO -  RSS: Main: 126009344
+13:45:10     INFO -  __start_tp_report
+13:45:10     INFO -  _x_x_mozilla_page_load
+13:45:10     INFO -  _x_x_mozilla_page_load_details
+13:45:10     INFO -  |i|pagename|runs|
+13:45:10     INFO -  |0;big-optimizable-group-opacity-2500.svg;436;684;659;694;682;662;609;674;638;628;737;662;702;662;702;719;626;674;637;641;696;665;680;672;639
+13:45:10     INFO -  |1;small-group-opacity-2500.svg;2107;2846;2769;2845;2842;2852;2855;2800;2882;2831;2797;2888;2881;2851;2753;2863;2378;2789;2859;2884;2792;2860;2852;2852;2884
+13:45:10     INFO -  __end_tp_report
+13:45:10     INFO -  __start_cc_report
+13:45:10     INFO -  _x_x_mozilla_cycle_collect,1440
+13:45:10     INFO -  __end_cc_report
+13:45:10     INFO -  __startTimestamp1379969108960__endTimestamp
+13:45:10     INFO -  [27CA240] MetroWidget::Destroy mWnd=40252 type=0
+13:45:10     INFO -  [27CA8C0] MetroWidget::Destroy mWnd=0 type=0
+13:45:10     INFO -  mozilla::widget::winrt::MetroApp::ShutdownXPCOM: IsMainThread:1 ThreadId:490
+13:45:10     INFO -  mozilla::widget::winrt::FrameworkView::ShutdownXPCOM
+13:45:10     INFO -  mozilla::widget::winrt::MetroInput::~MetroInput
+13:45:10     INFO -  [27C9880] MetroWidget::Destroy mWnd=0 type=4
+13:45:10     INFO -  [27CA240] MetroWidget::~MetroWidget
+13:45:10     INFO -  [27C9880] MetroWidget::~MetroWidget
+13:45:10     INFO -  [27CA8C0] MetroWidget::~MetroWidget
+13:45:10     INFO -  mozilla::widget::winrt::MetroApp::CoreExit
+13:45:10     INFO -  XPCOM startup initialization complete
+13:45:10     INFO -  Exiting FrameworkView::Run()
+13:45:10     INFO -  mozilla::widget::winrt::FrameworkView::OnWindowActivated
+13:45:10     INFO -  Exiting CoreApplication::Run
+13:45:10     INFO -  INFO | metrotestharness.exe | Exiting.
+13:45:10     INFO -  INFO | metrotestharness.exe | Deleting C:\slave\test\build\application\firefox\tests.ini
+13:45:11     INFO -  INFO : __startBeforeLaunchTimestamp1379968989750__endBeforeLaunchTimestamp
+13:45:11     INFO -  __startAfterTerminationTimestamp1379969109836__endAfterTerminationTimestamp
+13:45:16     INFO -  DEBUG : Terminating: metrotestharness.exe, plugin-container, crashreporter, dwwim
+13:45:16     INFO -     Screen width/height:1600/1200
+13:45:16     INFO -     colorDepth:24
+13:45:16     INFO -     Browser inner width/height: 1600/1200
+13:45:16     INFO -  browser_name:undefined
+13:45:16     INFO -  browser_version:27.0a1
+13:45:16     INFO -  buildID:20130923041024
+13:45:16     INFO -  Completed test tsvgr_opacity:
+13:45:16     INFO -         Stopped Mon, 23 Sep 2013 13:45:16
+13:45:16     INFO -  cycle time: 00:09:52
+13:45:16     INFO -  T-W864-IX-042:
+13:45:16     INFO -         Stopped Mon, 23 Sep 2013 13:45:16
+13:45:16     INFO -  INFO : Outputting talos results => {'results_urls': ['http://graphs.mozilla.org/server/collect.cgi'], 'datazilla_urls': ['https://datazilla.mozilla.org/talos']}
+13:45:16     INFO -  DEBUG : Working with test: tsvgx
+13:45:16     INFO -  Generating results file: tsvgx:
+13:45:16     INFO -         Started Mon, 23 Sep 2013 13:45:16
+13:45:16     INFO -  Generating results file: tsvgx:
+13:45:16     INFO -         Stopped Mon, 23 Sep 2013 13:45:16
+13:45:16     INFO -  DEBUG : Working with test: tsvgr_opacity
+13:45:16     INFO -  Generating results file: tsvgr_opacity:
+13:45:16     INFO -         Started Mon, 23 Sep 2013 13:45:16
+13:45:16     INFO -  Generating results file: tsvgr_opacity:
+13:45:16     INFO -         Stopped Mon, 23 Sep 2013 13:45:16
+13:45:16     INFO -  INFO : Posting result 0 of 2 to http://graphs.mozilla.org/server/collect.cgi, attempt 0
+13:45:16     INFO -  DEBUG : process_Request line: tsvgx    graph.html#tests=[[281,26,31]]
+13:45:16     INFO -  DEBUG : process_Request line: tsvgx    857.00  graph.html#tests=[[281,26,31]]
+13:45:16     INFO -  INFO : Posting result 1 of 2 to http://graphs.mozilla.org/server/collect.cgi, attempt 0
+13:45:16     INFO -  DEBUG : process_Request line: tsvgr_opacity    graph.html#tests=[[225,26,31]]
+13:45:16     INFO -  DEBUG : process_Request line: tsvgr_opacity    663.50  graph.html#tests=[[225,26,31]]
+13:45:16     INFO -  INFO : Outputting datazilla results to https://datazilla.mozilla.org/talos
+13:45:16     INFO -  INFO : datazilla: https//datazilla.mozilla.org/talos; oauth=False
+13:45:17     INFO -  INFO : Datazilla results at https://datazilla.mozilla.org/talos/summary/Cedar/NULL?product=undefined&branch_version=27.0a1
+13:45:17     INFO -  RETURN: <a href='http://graphs.mozilla.org/graph.html#tests=[[281,26,31]]'>tsvgx: 857.00</a>
+13:45:17     INFO -  RETURN: <a href='http://graphs.mozilla.org/graph.html#tests=[[225,26,31]]'>tsvgr_opacity: 663.50</a>
+13:45:17     INFO -  Datazilla response is: {"status": "well-formed json stored", "url": "https://datazilla.mozilla.org/talos/refdata/objectstore/json_blob/2823586", "size": 997}
+13:45:17     INFO -  Datazilla response is: {"status": "well-formed json stored", "url": "https://datazilla.mozilla.org/talos/refdata/objectstore/json_blob/2823587", "size": 3069}
+13:45:17     INFO -  TinderboxPrint: TalosResult: {"datazilla": {"tsvgr_opacity": {"url": "https://datazilla.mozilla.org/talos/summary/Cedar/NULL?product=undefined&branch_version=27.0a1"}, "tsvgx": {"url": "https://datazilla.mozilla.org/talos/summary/Cedar/NULL?product=undefined&branch_version=27.0a1"}}, "graphserver": {"tsvgr_opacity": {"url": "http://graphs.mozilla.org/graph.html#tests=[[225,26,31]]", "result": "663.50"}, "tsvgx": {"url": "http://graphs.mozilla.org/graph.html#tests=[[281,26,31]]", "result": "857.00"}}}
+13:45:17     INFO - Return code: 0
+13:45:17     INFO - Running post-action listener: _resource_record_post_action
+13:45:17     INFO - Running post-run listener: _resource_record_post_run
+13:45:17     INFO - Copying logs to upload dir...
+13:45:17     INFO - mkdir: C:\slave\test\build\upload\logs

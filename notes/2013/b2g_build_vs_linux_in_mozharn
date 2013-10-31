@@ -1,0 +1,95 @@
+08:14:45     INFO - Reading buildbot build properties...
+08:14:45     INFO - {
+08:14:45     INFO -     "properties": {
+08:14:45     INFO -         "basedir": "/builds/slave/b2g_m-cen_emulator-d_dep-00000", 
+08:14:45     INFO -         "base_mirror_urls": [
+08:14:45     INFO -             "http://hg-internal.dmz.scl3.mozilla.com"
+08:14:45     INFO -         ], 
+08:14:45     INFO -         "buildnumber": 13, 
+08:14:45     INFO -         "slavename": "bld-centos6-hp-018", 
+08:14:45     INFO -         "buildername": "b2g_mozilla-central_emulator-debug_dep", 
+08:14:45     INFO -         "platform": "emulator-debug", 
+08:14:45     INFO -         "master": "http://buildbot-master58.srv.releng.usw2.mozilla.com:8001/", 
+08:14:45     INFO -         "branch": "mozilla-central", 
+08:14:45     INFO -         "revision": "4a3509325a0fa8d8d51abd2f9b2b1940d0be371f", 
+08:14:45     INFO -         "upload_ssh_user": "ffxbld", 
+08:14:45     INFO -         "product": "b2g", 
+08:14:45     INFO -         "repository": "", 
+08:14:45     INFO -         "base_bundle_urls": [
+08:14:45     INFO -             "http://ftp.mozilla.org/pub/mozilla.org/firefox/bundles"
+08:14:45     INFO -         ], 
+08:14:45     INFO -         "buildid": "20130913081308", 
+08:14:45     INFO -         "upload_ssh_key": "ffxbld_dsa", 
+08:14:45     INFO -         "scheduler": "b2g_mozilla-central-b2g", 
+08:14:45     INFO -         "script_repo_revision": "production", 
+08:14:45     INFO -         "project": "", 
+08:14:45     INFO -         "hgurl": "http://hg.mozilla.org/", 
+08:14:45     INFO -         "mock_target": null, 
+08:14:45     INFO -         "upload_ssh_server": "stage.mozilla.org", 
+08:14:45     INFO -         "builduid": "ad61ca5f118c45dcacb03bfd747d183d", 
+08:14:45     INFO -         "repo_path": "mozilla-central"
+08:14:45     INFO -     }, 
+08:14:45     INFO -     "sourcestamp": {
+08:14:45     INFO -         "repository": "", 
+08:14:45     INFO -         "hasPatch": false, 
+08:14:45     INFO -         "project": "", 
+08:14:45     INFO -         "branch": "mozilla-central", 
+08:14:45     INFO -         "changes": [
+08:14:45     INFO -             {
+08:14:45     INFO -                 "category": null, 
+08:14:45     INFO -                 "files": [
+08:14:45     INFO -                     {
+08:14:45     INFO -                         "url": null, 
+08:14:45     INFO -                         "name": "b2g/config/mako/config.json"
+08:14:45     INFO -                     }, 
+08:14:45     INFO -                     {
+08:14:45     INFO -                         "url": null, 
+08:14:45     INFO -                         "name": "b2g/config/mako/releng-mako.tt"
+08:14:45     INFO -                     }
+08:14:45     INFO -                 ], 
+08:14:45     INFO -                 "repository": "", 
+08:14:45     INFO -                 "rev": "4a3509325a0fa8d8d51abd2f9b2b1940d0be371f", 
+08:14:45     INFO -                 "who": "jhopkins@mozilla.com", 
+08:14:45     INFO -                 "when": 1379085174, 
+08:14:45     INFO -                 "number": 2830402, 
+08:14:45     INFO -                 "comments": "Bug 910134 - generate nexus4 builds for B2G. r=catlee", 
+08:14:45     INFO -                 "project": "", 
+08:14:45     INFO -                 "at": "Fri 13 Sep 2013 08:12:54", 
+08:14:45     INFO -                 "branch": "mozilla-central", 
+08:14:45     INFO -                 "revlink": "http://hg.mozilla.org/mozilla-central/rev/4a3509325a0fa8d8d51abd2f9b2b1940d0be371f", 
+08:14:45     INFO -                 "properties": [], 
+08:14:45     INFO -                 "revision": "4a3509325a0fa8d8d51abd2f9b2b1940d0be371f"
+08:14:45     INFO -             }
+08:14:45     INFO -         ], 
+08:14:45     INFO -         "revision": "4a3509325a0fa8d8d51abd2f9b2b1940d0be371f"
+08:14:45     INFO -     }
+08:14:45     INFO - }
+
+
+
+16:13:00     INFO - Running main action method: read_buildbot_config
+16:13:00     INFO - {
+16:13:00     INFO -     "properties": {
+16:13:00     INFO -         "buildnumber": 54, 
+16:13:00     INFO -         "product": "firefox", 
+16:13:00     INFO -         "script_repo_revision": "default", 
+16:13:00     INFO -         "repository": "", 
+16:13:00     INFO -         "buildername": "Linux mozilla-central_dep", 
+16:13:00     INFO -         "basedir": "/builds/slave/m-cen-lx_dep-00000000000000000", 
+16:13:00     INFO -         "project": "", 
+16:13:00     INFO -         "platform": "linux", 
+16:13:00     INFO -         "master": "http://dev-master01.build.scl1.mozilla.com:8037/", 
+16:13:00     INFO -         "branch": "mozilla-central", 
+16:13:00     INFO -         "repo_path": "mozilla-central", 
+16:13:00     INFO -         "slavename": "dev-linux64-ec2-jlund2", 
+16:13:00     INFO -         "revision": null
+16:13:00     INFO -     }, 
+16:13:00     INFO -     "sourcestamp": {
+16:13:00     INFO -         "repository": "", 
+16:13:00     INFO -         "hasPatch": false, 
+16:13:00     INFO -         "project": "", 
+16:13:00     INFO -         "branch": null, 
+16:13:00     INFO -         "changes": [], 
+16:13:00     INFO -         "revision": null
+16:13:00     INFO -     }
+16:13:00     INFO - }

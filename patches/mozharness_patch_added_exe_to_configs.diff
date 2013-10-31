@@ -1,0 +1,44 @@
+diff --git a/configs/unittests/linux_unittest.py b/configs/unittests/linux_unittest.py
+index 8dae68d..5d04962 100644
+--- a/configs/unittests/linux_unittest.py
++++ b/configs/unittests/linux_unittest.py
+@@ -92,5 +92,10 @@ config = {
+                 },
+         ],
+ 
++        "exes": {
++            'python': '/tools/buildbot/bin/python',
++            'virtualenv': ['/tools/buildbot/bin/python', '/tools/misc-python/virtualenv.py'],
++        },
++
+ }
+ 
+diff --git a/configs/unittests/mac_unittest.py b/configs/unittests/mac_unittest.py
+index 3448af0..7ac8323 100644
+--- a/configs/unittests/mac_unittest.py
++++ b/configs/unittests/mac_unittest.py
+@@ -91,4 +91,9 @@ config = {
+                 },
+         ],
+ 
++        "exes": {
++            'python': '/tools/buildbot/bin/python',
++            'virtualenv': ['/tools/buildbot/bin/python', '/tools/misc-python/virtualenv.py'],
++        },
++
+ }
+diff --git a/configs/unittests/win_unittest.py b/configs/unittests/win_unittest.py
+index d38851a..1887a4f 100644
+--- a/configs/unittests/win_unittest.py
++++ b/configs/unittests/win_unittest.py
+@@ -92,5 +92,10 @@ config = {
+                 },
+         ],
+ 
++        "exes": {
++            'python': '/tools/buildbot/bin/python',
++            'virtualenv': ['/tools/buildbot/bin/python', '/tools/misc-python/virtualenv.py'],
++        },
++
+ }
+ 

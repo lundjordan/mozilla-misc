@@ -1,0 +1,50 @@
+Releng Questions:
+
+    “We are in need of a 3 hour [IT] downtime for this saturday, Sept 28. Which
+    means a 5 hour tree-closure accounting for closure+bringup”  -- downtime
+    duties/roles, tree-closures?
+
+
+Python Questions
+    In python how can I see the code flow between files/src? How can I run
+    code and see what's being called when?
+
+Buildbot
+    How many Schedule Masters do we have? 4?
+
+    How does l10n work from top to bottom?
+
+    Trychooser?
+
+    what are rev build differences? rev1? rev2?
+
+    what are dep builds?
+
+    what are blocklist builders or what is enable_blocklist_updates
+
+Puppet
+    Major Files?
+
+Nagios
+    Major Files?
+
+Mozharness
+
+Tools
+    Major Files?
+
+Talos
+    Do we (releng) maintain much in the talos repo?
+
+Cloud Tools (AWS)
+    Major Files?
+
+Autoland
+    Major Files?
+
+Balrog
+    Major Files?
+
+Work Flow
+
+Testing

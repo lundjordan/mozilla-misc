@@ -1,0 +1,15 @@
+diff --git a/scripts/desktop_unittest.py b/scripts/desktop_unittest.py
+index 74f84e6..4b5036b 100755
+--- a/scripts/desktop_unittest.py
++++ b/scripts/desktop_unittest.py
+@@ -365,7 +365,9 @@ in the config file under: preflight_run_cmd_suites""",
+         global_test_options = self._query_global_options(**global_options)
+ 
+         if category_options:
+-            global_test_options += category_options
++            abs_base_cmd = base_cmd + global_test_options + category_options
++        else:
++            abs_base_cmd = base_cmd + global_test_options
+ 
+         abs_base_cmd = base_cmd + global_test_options
+         suites = self._query_specified_suites(suite_category)

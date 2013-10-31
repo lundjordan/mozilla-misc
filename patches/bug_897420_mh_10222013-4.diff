@@ -1,0 +1,98 @@
+diff --git a/configs/talos/windows_config.py b/configs/talos/windows_config.py
+index b9c904c..b6ec7cb 100644
+--- a/configs/talos/windows_config.py
++++ b/configs/talos/windows_config.py
+@@ -1,7 +1,7 @@
+ import os
+ import socket
+ 
+-PYTHON = 'c:/mozilla-build/python27/python'
++PYTHON = 'c:/mozilla-build/python27/python.exe'
+ PYTHON_DLL = 'c:/mozilla-build/python27/python27.dll'
+ VENV_PATH = os.path.join(os.getcwd(), 'build/venv')
+ 
+@@ -45,4 +45,7 @@ config = {
+     "populate_webroot": True,
+     # Srsly gly? Ys
+     "webroot_extract_cmd": r'''c:/mozilla-build/msys/bin/bash -c "PATH=/c/mozilla-build/msys/bin:$PATH tar zx --strip-components=1 -f '%(tarball)s' --wildcards '**/talos/'"''',
++
++    "metro_harness_dir": "bin",
++    "metro_test_harness_exe": "metrotestharness.exe",
+ }
+diff --git a/mozharness/mozilla/testing/talos.py b/mozharness/mozilla/testing/talos.py
+index 9ef193c..0f10bed 100755
+--- a/mozharness/mozilla/testing/talos.py
++++ b/mozharness/mozilla/testing/talos.py
+@@ -131,12 +131,17 @@ class Talos(TestingMixin, MercurialScript):
+ 
+         self.workdir = self.query_abs_dirs()['abs_work_dir'] # convenience
+ 
++        # if suite ends with '-metro' then we are running tests against the
++        # metrotestharness.exe
++        self.metro_immersive = self.config.get('suite').endswith('-metro')
++
+         # results output
+         self.results_url = self.config.get('results_url')
+         if self.results_url is None:
+             # use a results_url by default based on the class name in the working directory
+             self.results_url = 'file://%s' % os.path.join(self.workdir, self.__class__.__name__.lower() + '.txt')
+         self.installer_url = self.config.get("installer_url")
++        self.test_url = self.config.get('test_url')
+         self.talos_json_url = self.config.get("talos_json_url")
+         self.talos_json = self.config.get("talos_json")
+         self.talos_json_config = self.config.get("talos_json_config")
+@@ -152,6 +157,21 @@ class Talos(TestingMixin, MercurialScript):
+         if 'run-tests' in self.actions:
+             self.preflight_run_tests()
+ 
++    def query_abs_dirs(self):
++        c = self.config
++        if self.abs_dirs:
++            return self.abs_dirs
++        abs_dirs = super(Talos, self).query_abs_dirs()
++        dirs = {}
++        dirs['abs_test_dir'] = os.path.join(abs_dirs['abs_work_dir'],
++                                            'tests')
++        dirs['abs_metro_harness_dir'] = os.path.join(dirs['abs_test_dir'],
++                                                     c.get('metro_harness_dir',
++                                                           ''))
++        abs_dirs.update(dirs)
++        self.abs_dirs = abs_dirs
++        return self.abs_dirs
++
+     def query_talos_json_url(self):
+         """Hacky, but I haven't figured out a better way to get the
+         talos json url before we install the build.
+@@ -498,6 +518,24 @@ class Talos(TestingMixin, MercurialScript):
+         if not self.query_tests():
+             self.fatal("No tests specified; please specify --tests")
+ 
++    def install(self):
++        """decorates TestingMixin.install() to handle win metro browser"""
++        c = self.config
++        dirs = self.query_abs_dirs()
++        super(Talos, self).install()
++        if self.metro_immersive:
++            self.info("Triggering Metro Browser Immersive Mode")
++            # overwrite self.binary_path set from TestingMixin.install()
++            abs_app_dir = os.path.split(self.binary_path)[0]
++            orig_metro_path = os.path.join(dirs['abs_metro_harness_dir'],
++                                           c.get('metro_test_harness_exe'))
++            new_metro_path = os.path.join(abs_app_dir,
++                                          c.get('metro_test_harness_exe'))
++            self.copyfile(orig_metro_path, new_metro_path)
++            self.binary_path = new_metro_path
++            if not os.path.exists(self.binary_path):
++                self.fatal("metrotestharness executable could not be found")
++
+     def run_tests(self, args=None, **kw):
+         """run Talos tests"""
+ 
+@@ -513,6 +551,7 @@ class Talos(TestingMixin, MercurialScript):
+         parser = TalosOutputParser(config=self.config, log_obj=self.log_obj,
+                                    error_list=TalosErrorList)
+         self.return_code = self.run_command(command, cwd=self.workdir,
++                                            output_timeout=1800,
+                                             output_parser=parser)
+         if parser.minidump_output:
+             self.info("Looking at the minidump files for debugging purposes...")

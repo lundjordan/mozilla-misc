@@ -1,0 +1,10 @@
+diff --git a/status/errors.py b/status/errors.py
+index 33bd296..c8d5848 100644
+--- a/status/errors.py
++++ b/status/errors.py
+@@ -32,4 +32,4 @@ talos_hgweb_errors = ((re.compile("ERROR 500: Internal Server Error"), RETRY),
+                       (re.compile("ERROR: We tried to download the talos.json file but something failed"), RETRY),
+                      )
+ 
+-tegra_errors = ((re.compile("Automation error: Error"), FAILURE),)
++tegra_errors = ((re.compile("Automation error: Error"), RETRY),)

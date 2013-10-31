@@ -1,0 +1,11 @@
+1) re: mozharness/base/vcs/mercurial.py
+        location: lines 442-453
+        # non shared repos 
+        from my minimal understanding, it seems:
+            if the repo dir exists:
+                call pull()
+            else:
+                mkdir repo dir
+
+            call clone() either way??
+

@@ -1,0 +1,5 @@
+# create a CSV similar to this one
+# make sure you specify 'staging-pers' for staging masters
+nickname,fqdn,http_port,pb_port,datacenter,pool
+dev-jlund-build,dev-master01.build.scl1.mozilla.com,8037,9037,sjc1,staging-pers
+dev-jlund-test,dev-master01.build.scl1.mozilla.com,8038,9038,sjc1,staging-pers

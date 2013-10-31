@@ -1,0 +1,849 @@
+10:08:55     INFO - MultiFileLogger online at 20131021 10:08:55 in C:\slave\test
+10:08:55     INFO - Run as scripts/scripts/talos_script.py --suite tp5o-metro --add-option --webServer,localhost --branch-name Cedar --system-bits 32 --cfg talos/windows_config.py --download-symbols ondemand --use-talos-json --no-read-buildbot-config --test-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.tests.zip --installer-url http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip
+10:08:55     INFO - Downloading http://people.mozilla.org/~jlund/talos.json to C:\slave\test\build\talos.json
+10:08:55     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('http://people.mozilla.org/~jlund/talos.json', 'C:\\slave\\test\\build\\talos.json'), kwargs: {}, attempt #1
+10:08:55     INFO - Downloaded 4078 bytes.
+10:08:55     INFO - made it herehttp://people.mozilla.org/~jlund/talos.json
+10:08:55     INFO - self.talos_jsonC:\slave\test\build\talos.json
+10:08:55     INFO - {u'global': {u'talos_repo': u'http://hg.mozilla.org/users/jmaher_mozilla.com/tpain',
+10:08:55     INFO -              u'talos_revision': u'a750995e0986'},
+10:08:55     INFO -  u'mobile-suites': {u'remote-tcanvasmark': {u'talos_options': [u'--noChrome'],
+10:08:55     INFO -                                             u'tests': [u'tcanvasmark']},
+10:08:55     INFO -                     u'remote-tp4m_nochrome': {u'tests': [u'tp4m']},
+10:08:55     INFO -                     u'remote-trobocheck2': {u'talos_options': [u'--fennecIDs',
+10:08:55     INFO -                                                                u'../fennec_ids.txt'],
+10:08:55     INFO -                                             u'tests': [u'tcheck2']},
+10:08:55     INFO -                     u'remote-trobopan': {u'talos_options': [u'--fennecIDs',
+10:08:55     INFO -                                                             u'../fennec_ids.txt'],
+10:08:55     INFO -                                          u'tests': [u'trobopan']},
+10:08:55     INFO -                     u'remote-troboprovider': {u'talos_options': [u'--fennecIDs',
+10:08:55     INFO -                                                                  u'../fennec_ids.txt'],
+10:08:55     INFO -                                               u'tests': [u'tprovider']},
+10:08:55     INFO -                     u'remote-tspaint': {u'tests': [u'ts_paint']},
+10:08:55     INFO -                     u'remote-tsvgx': {u'talos_options': [u'--noChrome'],
+10:08:55     INFO -                                       u'tests': [u'tsvgx']}},
+10:08:55     INFO -  u'suites': {u'chromez': {u'tests': [u'tresize', u'tcanvasmark']},
+10:08:55     INFO -              u'dirtypaint': {u'talos_addons': [u'http://talos-bundles.pvt.build.mozilla.org/profiles/dirtyDBs.zip',
+10:08:55     INFO -                                                u'http://talos-bundles.pvt.build.mozilla.org/profiles/dirtyMaxDBs.zip'],
+10:08:55     INFO -                              u'tests': [u'tspaint_places_generated_med',
+10:08:55     INFO -                                         u'tspaint_places_generated_max']},
+10:08:55     INFO -              u'dromaeojs': {u'tests': [u'dromaeo_css',
+10:08:55     INFO -                                        u'dromaeo_dom',
+10:08:55     INFO -                                        u'kraken',
+10:08:55     INFO -                                        u'v8_7']},
+10:08:55     INFO -              u'dromaeojs-metro': {u'tests': [u'dromaeo_css',
+10:08:55     INFO -                                              u'dromaeo_dom',
+10:08:55     INFO -                                              u'kraken',
+10:08:55     INFO -                                              u'v8_7']},
+10:08:55     INFO -              u'other': {u'tests': [u'a11yr', u'ts_paint', u'tpaint']},
+10:08:55     INFO -              u'other-metro': {u'tests': [u'a11yr', u'ts_paint']},
+10:08:55     INFO -              u'svgr': {u'tests': [u'tsvgx',
+10:08:55     INFO -                                   u'tsvgr_opacity',
+10:08:55     INFO -                                   u'tart',
+10:08:55     INFO -                                   u'tscrollx']},
+10:08:55     INFO -              u'svgr-metro': {u'tests': [u'tsvgx', u'tsvgr_opacity']},
+10:08:55     INFO -              u'tp5o': {u'pagesets_manifest_path': u'talos/page_load_test/tp5n/tp5o.manifest',
+10:08:55     INFO -                        u'pagesets_parent_dir_path': u'talos/page_load_test/',
+10:08:55     INFO -                        u'pagesets_url': u'http://talos-bundles.pvt.build.mozilla.org/zips/tp5n.zip',
+10:08:55     INFO -                        u'plugins': {u'32': u'http://talos-bundles.pvt.build.mozilla.org/zips/flash32_10_3_183_5.zip',
+10:08:55     INFO -                                     u'64': u'http://talos-bundles.pvt.build.mozilla.org/zips/flash64_11_0_d1_98.zip'},
+10:08:55     INFO -                        u'tests': [u'tp5o']},
+10:08:55     INFO -              u'tp5o-metro': {u'pagesets_manifest_path': u'talos/page_load_test/tp5n/tp5o.manifest',
+10:08:55     INFO -                              u'pagesets_parent_dir_path': u'talos/page_load_test/',
+10:08:55     INFO -                              u'pagesets_url': u'http://talos-bundles.pvt.build.mozilla.org/zips/tp5n.zip',
+10:08:55     INFO -                              u'plugins': {u'32': u'http://talos-bundles.pvt.build.mozilla.org/zips/flash32_10_3_183_5.zip',
+10:08:55     INFO -                                           u'64': u'http://talos-bundles.pvt.build.mozilla.org/zips/flash64_11_0_d1_98.zip'},
+10:08:55     INFO -                              u'tests': [u'tp5o']},
+10:08:55     INFO -              u'xperf': {u'pagesets_manifest_path': u'talos/page_load_test/tp5n/tp5n.manifest',
+10:08:55     INFO -                         u'pagesets_parent_dir_path': u'talos/page_load_test/',
+10:08:55     INFO -                         u'pagesets_url': u'http://talos-bundles.pvt.build.mozilla.org/zips/tp5n.zip',
+10:08:55     INFO -                         u'plugins': {u'32': u'http://talos-bundles.pvt.build.mozilla.org/zips/flash32_10_3_183_5.zip',
+10:08:55     INFO -                                      u'64': u'http://talos-bundles.pvt.build.mozilla.org/zips/flash64_11_0_d1_98.zip'},
+10:08:55     INFO -                         u'talos_options': [u'--xperf_path',
+10:08:55     INFO -                                            u'"c:/Program Files/Microsoft Windows Performance Toolkit/xperf.exe"',
+10:08:55     INFO -                                            u'C:/slave/talos-data/talos/xperf.config'],
+10:08:55     INFO -                         u'tests': [u'tp5n']}},
+10:08:55     INFO -  u'talos.zip': {u'path': u'',
+10:08:55     INFO -                 u'url': u'http://hg.mozilla.org/users/jmaher_mozilla.com/tpain/archive/a750995e0986.zip'}}
+10:08:55     INFO - Dumping config to C:\slave\test\logs\localconfig.json.
+10:08:55     INFO - {'append_to_log': False,
+10:08:55     INFO -  'base_work_dir': 'C:\\slave\\test',
+10:08:55     INFO -  'branch': 'Cedar',
+10:08:55     INFO -  'buildbot_json_path': 'buildprops.json',
+10:08:55     INFO -  'config_files': ('talos/windows_config.py',),
+10:08:55     INFO -  'datazilla_urls': ('https://datazilla.mozilla.org/talos',),
+10:08:55     INFO -  'default_actions': ('clobber',
+10:08:55     INFO -                      'read-buildbot-config',
+10:08:55     INFO -                      'download-and-extract',
+10:08:55     INFO -                      'clone-talos',
+10:08:55     INFO -                      'create-virtualenv',
+10:08:55     INFO -                      'install',
+10:08:55     INFO -                      'run-tests'),
+10:08:55     INFO -  'download_symbols': 'ondemand',
+10:08:55     INFO -  'exes': {'easy_install': ('C:\\slave\\test\\build/venv/scripts/python',
+10:08:55     INFO -                            'C:\\slave\\test\\build/venv/scripts/easy_install-2.7-script.py'),
+10:08:55     INFO -           'hg': 'c:/mozilla-build/hg/hg',
+10:08:55     INFO -           'mozinstall': ('C:\\slave\\test\\build/venv/scripts/python',
+10:08:55     INFO -                          'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py'),
+10:08:55     INFO -           'python': 'c:/mozilla-build/python27/python.exe',
+10:08:55     INFO -           'virtualenv': ('c:/mozilla-build/python27/python.exe',
+10:08:56     INFO -                          'c:/mozilla-build/buildbotve/virtualenv.py')},
+10:08:56     INFO -  'find_links': ('http://pypi.pvt.build.mozilla.org/pub',
+10:08:56     INFO -                 'http://pypi.pub.build.mozilla.org/pub'),
+10:08:56     INFO -  'installer_path': 'installer.exe',
+10:08:56     INFO -  'installer_url': 'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip',
+10:08:56     INFO -  'log_level': 'info',
+10:08:56     INFO -  'log_name': 'talos',
+10:08:56     INFO -  'log_to_console': True,
+10:08:56     INFO -  'metro_harness_dir': 'bin',
+10:08:56     INFO -  'metro_test_harness_exe': 'metrotestharness.exe',
+10:08:56     INFO -  'opt_config_files': (),
+10:08:56     INFO -  'pip_index': False,
+10:08:56     INFO -  'populate_webroot': True,
+10:08:56     INFO -  'python_webserver': False,
+10:08:56     INFO -  'results_url': 'http://graphs.mozilla.org/server/collect.cgi',
+10:08:56     INFO -  'suite': 'tp5o-metro',
+10:08:56     INFO -  'system_bits': '32',
+10:08:56     INFO -  'talos_extra_options': ('--webServer', 'localhost'),
+10:08:56     INFO -  'talos_json_url': 'http://people.mozilla.org/~jlund/talos.json',
+10:08:56     INFO -  'talos_url': 'http://hg.mozilla.org/build/talos/archive/tip.tar.gz',
+10:08:56     INFO -  'test_url': 'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.tests.zip',
+10:08:56     INFO -  'tests': (),
+10:08:56     INFO -  'title': 'T-W864-IX-042',
+10:08:56     INFO -  'use_talos_json': True,
+10:08:56     INFO -  'virtualenv_modules': ('pywin32', 'talos', 'mozinstall'),
+10:08:56     INFO -  'virtualenv_path': 'C:\\slave\\test\\build/venv',
+10:08:56     INFO -  'virtualenv_python_dll': 'c:/mozilla-build/python27/python27.dll',
+10:08:56     INFO -  'volatile_config': {'actions': None,
+10:08:56     INFO -                      'add_actions': None,
+10:08:56     INFO -                      'no_actions': ('read-buildbot-config',)},
+10:08:56     INFO -  'webroot': 'c:/slave/talos-data',
+10:08:56     INFO -  'webroot_extract_cmd': 'c:/mozilla-build/msys/bin/bash -c "PATH=/c/mozilla-build/msys/bin:$PATH tar zx --strip-components=1 -f \'%(tarball)s\' --wildcards \'**/talos/\'"',
+10:08:56     INFO -  'work_dir': 'build'}
+10:08:56     INFO - #####
+10:08:56     INFO - ##### Running clobber step.
+10:08:56     INFO - #####
+10:08:56     INFO - Running pre-action listener: _resource_record_pre_action
+10:08:56     INFO - Running main action method: clobber
+10:08:56     INFO - rmtree: C:\slave\test\build
+10:08:56     INFO - Using _rmtree_windows ...
+10:08:56     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('C:\\slave\\test\\build',), kwargs: {}, attempt #1
+10:09:55     INFO - Running post-action listener: _resource_record_post_action
+10:09:55     INFO - #####
+10:09:55     INFO - ##### Skipping read-buildbot-config step.
+10:09:55     INFO - #####
+10:09:55     INFO - #####
+10:09:55     INFO - ##### Running download-and-extract step.
+10:09:55     INFO - #####
+10:09:55     INFO - Running pre-action listener: _resource_record_pre_action
+10:09:55     INFO - Running main action method: download_and_extract
+10:09:55     INFO - mkdir: C:\slave\test\build
+10:09:55     INFO - Downloading http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.tests.zip to C:\slave\test\build\firefox-27.0a1.en-US.win32.tests.zip
+10:09:55     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.tests.zip', 'C:\\slave\\test\\build\\firefox-27.0a1.en-US.win32.tests.zip'), kwargs: {}, attempt #1
+10:10:30     INFO - Downloaded 86849503 bytes.
+10:10:30     INFO - mkdir: C:\slave\test\build\tests
+10:10:30     INFO - Running command: ['unzip', '-q', '-o', 'C:\\slave\\test\\build\\firefox-27.0a1.en-US.win32.tests.zip'] in C:\slave\test\build\tests
+10:10:30     INFO - Copy/paste: unzip -q -o C:\slave\test\build\firefox-27.0a1.en-US.win32.tests.zip
+10:11:39     INFO - Return code: 0
+10:11:39     INFO - Dumping config to C:\slave\test\logs\treeconfig.json.
+10:11:39     INFO - {'append_to_log': False,
+10:11:39     INFO -  'base_work_dir': 'C:\\slave\\test',
+10:11:39     INFO -  'branch': 'Cedar',
+10:11:39     INFO -  'buildbot_json_path': 'buildprops.json',
+10:11:39     INFO -  'config_files': ('talos/windows_config.py',),
+10:11:39     INFO -  'datazilla_urls': ('https://datazilla.mozilla.org/talos',),
+10:11:39     INFO -  'default_actions': ('clobber',
+10:11:39     INFO -                      'read-buildbot-config',
+10:11:39     INFO -                      'download-and-extract',
+10:11:39     INFO -                      'clone-talos',
+10:11:39     INFO -                      'create-virtualenv',
+10:11:39     INFO -                      'install',
+10:11:39     INFO -                      'run-tests'),
+10:11:39     INFO -  'download_symbols': 'ondemand',
+10:11:39     INFO -  'exes': {'easy_install': ('C:\\slave\\test\\build/venv/scripts/python',
+10:11:39     INFO -                            'C:\\slave\\test\\build/venv/scripts/easy_install-2.7-script.py'),
+10:11:39     INFO -           'hg': 'c:/mozilla-build/hg/hg',
+10:11:39     INFO -           'mozinstall': ('C:\\slave\\test\\build/venv/scripts/python',
+10:11:39     INFO -                          'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py'),
+10:11:39     INFO -           'python': 'c:/mozilla-build/python27/python.exe',
+10:11:39     INFO -           'virtualenv': ('c:/mozilla-build/python27/python.exe',
+10:11:39     INFO -                          'c:/mozilla-build/buildbotve/virtualenv.py')},
+10:11:39     INFO -  'find_links': ('http://pypi.pvt.build.mozilla.org/pub',
+10:11:39     INFO -                 'http://pypi.pub.build.mozilla.org/pub'),
+10:11:39     INFO -  'installer_path': 'installer.exe',
+10:11:39     INFO -  'installer_url': 'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip',
+10:11:39     INFO -  'log_level': 'info',
+10:11:39     INFO -  'log_name': 'talos',
+10:11:39     INFO -  'log_to_console': True,
+10:11:39     INFO -  'metro_harness_dir': 'bin',
+10:11:39     INFO -  'metro_test_harness_exe': 'metrotestharness.exe',
+10:11:39     INFO -  'opt_config_files': (),
+10:11:39     INFO -  'pip_index': False,
+10:11:39     INFO -  'populate_webroot': True,
+10:11:39     INFO -  'python_webserver': False,
+10:11:39     INFO -  'results_url': 'http://graphs.mozilla.org/server/collect.cgi',
+10:11:39     INFO -  'suite': 'tp5o-metro',
+10:11:39     INFO -  'system_bits': '32',
+10:11:39     INFO -  'talos_extra_options': ('--webServer', 'localhost'),
+10:11:39     INFO -  'talos_json_url': 'http://people.mozilla.org/~jlund/talos.json',
+10:11:39     INFO -  'talos_url': 'http://hg.mozilla.org/build/talos/archive/tip.tar.gz',
+10:11:39     INFO -  'test_url': 'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.tests.zip',
+10:11:39     INFO -  'tests': (),
+10:11:39     INFO -  'title': 'T-W864-IX-042',
+10:11:39     INFO -  'use_talos_json': True,
+10:11:39     INFO -  'virtualenv_modules': ('pywin32', 'talos', 'mozinstall'),
+10:11:39     INFO -  'virtualenv_path': 'C:\\slave\\test\\build/venv',
+10:11:39     INFO -  'virtualenv_python_dll': 'c:/mozilla-build/python27/python27.dll',
+10:11:39     INFO -  'volatile_config': {'actions': None,
+10:11:39     INFO -                      'add_actions': None,
+10:11:39     INFO -                      'no_actions': ('read-buildbot-config',)},
+10:11:39     INFO -  'webroot': 'c:/slave/talos-data',
+10:11:39     INFO -  'webroot_extract_cmd': 'c:/mozilla-build/msys/bin/bash -c "PATH=/c/mozilla-build/msys/bin:$PATH tar zx --strip-components=1 -f \'%(tarball)s\' --wildcards \'**/talos/\'"',
+10:11:39     INFO -  'work_dir': 'build'}
+10:11:39     INFO - Downloading http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip to C:\slave\test\build\firefox-27.0a1.en-US.win32.zip
+10:11:39     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip', 'C:\\slave\\test\\build\\firefox-27.0a1.en-US.win32.zip'), kwargs: {}, attempt #1
+10:11:42     INFO - Downloaded 35582600 bytes.
+10:11:42     INFO - Setting buildbot property build_url to http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip
+10:11:42     INFO - Writing buildbot properties ['build_url'] to C:\slave\test\properties\build_url
+10:11:42     INFO - Writing to file C:\slave\test\properties\build_url
+10:11:42     INFO - Contents:
+10:11:42     INFO -  build_url:http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.zip
+10:11:42     INFO - Running post-action listener: _resource_record_post_action
+10:11:42     INFO - #####
+10:11:42     INFO - ##### Running clone-talos step.
+10:11:42     INFO - #####
+10:11:42     INFO - Running pre-action listener: _resource_record_pre_action
+10:11:42     INFO - Running main action method: clone_talos
+10:11:42     INFO - Populating webroot c:/slave/talos-data...
+10:11:42     INFO - rmtree: c:/slave/talos-data\talos
+10:11:42     INFO - Using _rmtree_windows ...
+10:11:42     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('c:/slave/talos-data\\talos',), kwargs: {}, attempt #1
+10:12:18     INFO - retry: Calling <bound method Talos._get_revision of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: (<mozharness.base.vcs.mercurial.MercurialVCS object at 0x02895E90>, 'C:\\slave\\test\\build\\talos_repo'), kwargs: {}, attempt #1
+10:12:18     INFO - Setting C:\slave\test\build\talos_repo to http://hg.mozilla.org/users/jmaher_mozilla.com/tpain revision a750995e0986.
+10:12:18     INFO - Cloning http://hg.mozilla.org/users/jmaher_mozilla.com/tpain to C:\slave\test\build\talos_repo.
+10:12:18     INFO - Running command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'clone', u'http://hg.mozilla.org/users/jmaher_mozilla.com/tpain', 'C:\\slave\\test\\build\\talos_repo']
+10:12:18     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge clone http://hg.mozilla.org/users/jmaher_mozilla.com/tpain C:\slave\test\build\talos_repo
+10:12:32     INFO -  requesting all changes
+10:12:32     INFO -  adding changesets
+10:12:32     INFO -  adding manifests
+10:12:32     INFO -  adding file changes
+10:12:32     INFO -  added 815 changesets with 3399 changes to 1590 files (+1 heads)
+10:12:32     INFO -  updating to branch default
+10:12:32     INFO -  600 files updated, 0 files merged, 0 files removed, 0 files unresolved
+10:12:32     INFO - Return code: 0
+10:12:32     INFO - Updating C:\slave\test\build\talos_repo.
+10:12:32     INFO - Getting output from command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'branch'] in C:\slave\test\build\talos_repo
+10:12:32     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge branch
+10:12:32     INFO - Reading from file tmpfile_stdout
+10:12:32     INFO - Output received:
+10:12:32     INFO -  default
+10:12:32     INFO - Using _rmtree_windows ...
+10:12:32     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x02895E90>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+10:12:32     INFO - Using _rmtree_windows ...
+10:12:32     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x02895E90>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+10:12:32     INFO - Running command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'update', '-C'] in C:\slave\test\build\talos_repo
+10:12:32     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge update -C
+10:12:33     INFO -  0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+10:12:33     INFO - Return code: 0
+10:12:33     INFO - Getting output from command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'parent', '--template', '{node|short}'] in C:\slave\test\build\talos_repo
+10:12:33     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge parent --template {node|short}
+10:12:33     INFO - Reading from file tmpfile_stdout
+10:12:33     INFO - Output received:
+10:12:33     INFO -  e740612d82dc
+10:12:33     INFO - Using _rmtree_windows ...
+10:12:33     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x02895E90>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+10:12:33     INFO - Using _rmtree_windows ...
+10:12:33     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x02895E90>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+10:12:33     INFO - Updating C:\slave\test\build\talos_repo revision a750995e0986.
+10:12:33     INFO - Running command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'update', '-C', '-r', u'a750995e0986'] in C:\slave\test\build\talos_repo
+10:12:33     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge update -C -r a750995e0986
+10:12:33     INFO -  15 files updated, 0 files merged, 0 files removed, 0 files unresolved
+10:12:33     INFO - Return code: 0
+10:12:33     INFO - Getting output from command: ['c:/mozilla-build/hg/hg', '--config', 'ui.merge=internal:merge', 'parent', '--template', '{node|short}'] in C:\slave\test\build\talos_repo
+10:12:33     INFO - Copy/paste: c:/mozilla-build/hg/hg --config ui.merge=internal:merge parent --template {node|short}
+10:12:33     INFO - Reading from file tmpfile_stdout
+10:12:33     INFO - Output received:
+10:12:33     INFO -  a750995e0986
+10:12:33     INFO - Using _rmtree_windows ...
+10:12:33     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x02895E90>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+10:12:33     INFO - Using _rmtree_windows ...
+10:12:33     INFO - retry: Calling <bound method MercurialVCS._rmtree_windows of <mozharness.base.vcs.mercurial.MercurialVCS object at 0x02895E90>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+10:12:33     INFO - copying tree: C:\slave\test\build\talos_repo\talos to c:/slave/talos-data\talos
+10:12:33     INFO - rmtree: c:/slave/talos-data\talos
+10:12:33     INFO - Using _rmtree_windows ...
+10:12:33     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('c:/slave/talos-data\\talos',), kwargs: {}, attempt #1
+10:12:34     INFO - Downloading pageset...
+10:12:34     INFO - Downloading http://talos-bundles.pvt.build.mozilla.org/zips/tp5n.zip to C:\slave\test\build\tp5n.zip
+10:12:34     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: (u'http://talos-bundles.pvt.build.mozilla.org/zips/tp5n.zip', u'C:\\slave\\test\\build\\tp5n.zip'), kwargs: {}, attempt #1
+10:12:49     INFO - Downloaded 81756007 bytes.
+10:12:49     INFO - Running command: ['unzip', '-q', '-o', u'C:\\slave\\test\\build\\tp5n.zip'] in c:/slave/talos-data\talos/page_load_test/
+10:12:49     INFO - Copy/paste: unzip -q -o C:\slave\test\build\tp5n.zip
+10:13:12     INFO - Return code: 0
+10:13:12     INFO - mkdir: C:\slave\test\build\talos_repo\talos/page_load_test/tp5n
+10:13:12     INFO - Copying c:/slave/talos-data\talos/page_load_test/tp5n/tp5o.manifest to C:\slave\test\build\talos_repo\talos/page_load_test/tp5n/tp5o.manifest
+10:13:12     INFO - Downloading plugin...
+10:13:12     INFO - Downloading http://talos-bundles.pvt.build.mozilla.org/zips/flash32_10_3_183_5.zip to C:\slave\test\build\flash32_10_3_183_5.zip
+10:13:12     INFO - retry: Calling <bound method Talos._download_file of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: (u'http://talos-bundles.pvt.build.mozilla.org/zips/flash32_10_3_183_5.zip', u'C:\\slave\\test\\build\\flash32_10_3_183_5.zip'), kwargs: {}, attempt #1
+10:13:14     INFO - Downloaded 18109405 bytes.
+10:13:14     INFO - Running command: ['unzip', '-q', '-o', u'C:\\slave\\test\\build\\flash32_10_3_183_5.zip'] in c:/slave/talos-data\talos\base_profile
+10:13:14     INFO - Copy/paste: unzip -q -o C:\slave\test\build\flash32_10_3_183_5.zip
+10:13:15     INFO - Return code: 0
+10:13:15     INFO - Running post-action listener: _resource_record_post_action
+10:13:15     INFO - #####
+10:13:15     INFO - ##### Running create-virtualenv step.
+10:13:15     INFO - #####
+10:13:15     INFO - Running pre-action listener: _resource_record_pre_action
+10:13:15     INFO - Running main action method: create_virtualenv
+10:13:15     INFO - [{'global_options': ['--without-libyaml'], 'name': 'PyYAML', 'url': None},
+10:13:15     INFO -  'pywin32',
+10:13:15     INFO -  {'global_options': [],
+10:13:15     INFO -   'name': 'talos',
+10:13:15     INFO -   'url': 'C:\\slave\\test\\build\\talos_repo'},
+10:13:15     INFO -  'mozinstall']
+10:13:15     INFO - Creating virtualenv C:\slave\test\build/venv
+10:13:15     INFO - mkdir: C:\slave\test\build\venv\Scripts
+10:13:15     INFO - Copying c:/mozilla-build/python27/python27.dll to C:\slave\test\build\venv\Scripts\python27.dll
+10:13:15  WARNING - Can't copy c:/mozilla-build/python27/python27.dll to C:\slave\test\build\venv\Scripts\python27.dll: [Errno 2] No such file or directory: 'c:/mozilla-build/python27/python27.dll'!
+10:13:15     INFO - Running command: ['c:/mozilla-build/python27/python.exe', 'c:/mozilla-build/buildbotve/virtualenv.py', '--no-site-packages', '--distribute', 'C:\\slave\\test\\build/venv'] in C:\slave\test\build
+10:13:15     INFO - Copy/paste: c:/mozilla-build/python27/python.exe c:/mozilla-build/buildbotve/virtualenv.py --no-site-packages --distribute C:\slave\test\build/venv
+10:13:16     INFO -  New python executable in C:\slave\test\build/venv\Scripts\python.exe
+10:13:17     INFO -  Installing distribute......................................................................................................................................................................................done.
+10:13:19     INFO - Return code: 0
+10:13:19     INFO - Installing PyYAML into virtualenv C:\slave\test\build/venv
+10:13:19     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--download-cache', 'C:\\slave\\test\\build/venv\\cache', '--no-index', '--global-option', '--without-libyaml', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', 'PyYAML'] in C:\slave\test\build
+10:13:19     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --download-cache C:\slave\test\build/venv\cache --no-index --global-option --without-libyaml --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub PyYAML
+10:13:19     INFO -  Ignoring indexes: http://pypi.python.org/simple/
+10:13:19     INFO -  Downloading/unpacking PyYAML
+10:13:19     INFO -  Creating supposed download cache at C:\slave\test\build/venv\cache
+10:13:21     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fpyyaml-3.10.tar.gz
+10:13:21     INFO -    Running setup.py egg_info for package PyYAML
+10:13:21     INFO -  Installing collected packages: PyYAML
+10:13:21     INFO -    Running setup.py install for PyYAML
+10:13:21     INFO -  Successfully installed PyYAML
+10:13:21     INFO -  Cleaning up...
+10:13:21     INFO - Return code: 0
+10:13:21     INFO - Installing pywin32 into virtualenv C:\slave\test\build/venv
+10:13:21     INFO - Running command: ['C:\\slave\\test\\build/venv/scripts/python', 'C:\\slave\\test\\build/venv/scripts/easy_install-2.7-script.py', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', 'pywin32'] in C:\slave\test\build
+10:13:21     INFO - Copy/paste: C:\slave\test\build/venv/scripts/python C:\slave\test\build/venv/scripts/easy_install-2.7-script.py --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub pywin32
+10:13:21     INFO -  install_dir C:\slave\test\build\venv\Lib\site-packages\
+10:13:21     INFO -  Searching for pywin32
+10:13:21     INFO -  Reading http://pypi.pub.build.mozilla.org/pub
+10:13:21     INFO -  Best match: pywin32 216
+10:13:21     INFO -  Downloading http://pypi.pub.build.mozilla.org/pub/pywin32-216.win32-py2.7.exe
+10:13:22     INFO -  Processing pywin32-216.win32-py2.7.exe
+10:13:23     INFO -  pywintypes: module references __file__
+10:13:23     INFO -  win32evtlogutil: module references __file__
+10:13:23     INFO -  win32serviceutil: module references __file__
+10:13:23     INFO -  win32timezone: module references __file__
+10:13:23     INFO -  Demos.win32rcparser_demo: module references __file__
+10:13:23     INFO -  Demos.security.sspi.validate_password: module references __file__
+10:13:23     INFO -  isapi.install: module references __file__
+10:13:23     INFO -  isapi.samples.advanced: module references __file__
+10:13:23     INFO -  isapi.samples.test: module references __file__
+10:13:23     INFO -  isapi.test.setup: module references __file__
+10:13:23     INFO -  pywin.framework.scriptutils: module references __file__
+10:13:23     INFO -  pywin.framework.startup: module references __path__
+10:13:23     INFO -  pywin.scintilla.config: module references __path__
+10:13:23     INFO -  pywin.scintilla.control: module references __file__
+10:13:23     INFO -  pywin.scintilla.IDLEenvironment: module references __file__
+10:13:23     INFO -  scripts.regsetup: module references __file__
+10:13:23     INFO -  scripts.setup_d: module references __file__
+10:13:23     INFO -  test.testall: module references __file__
+10:13:23     INFO -  test.test_clipboard: module references __file__
+10:13:23     INFO -  test.test_win32api: module references __file__
+10:13:23     INFO -  test.test_win32rcparser: module references __file__
+10:13:23     INFO -  C:\slave\test\build\venv\lib\site-packages\distribute-0.6.14-py2.7.egg\setuptools\command\bdist_egg.py:427: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+10:13:23     INFO -    symbols = dict.fromkeys(iter_symbols(code))
+10:13:23     INFO -  test.test_win32trace: module references __file__
+10:13:23     INFO -  win32com.__init__: module references __path__
+10:13:23     INFO -  win32com.server.register: module references __file__
+10:13:23     INFO -  win32com.server.register: module references __path__
+10:13:23     INFO -  win32com.test.GenTestScripts: module references __path__
+10:13:23     INFO -  win32com.test.pippo_server: module references __file__
+10:13:23     INFO -  win32com.test.testall: module references __file__
+10:13:23     INFO -  win32com.test.testAXScript: module references __path__
+10:13:23     INFO -  win32com.test.testDictionary: module references __file__
+10:13:23     INFO -  win32com.test.testPippo: module references __file__
+10:13:23     INFO -  win32com.test.testPyComTest: module references __file__
+10:13:23     INFO -  win32com.test.testServers: module references __file__
+10:13:23     INFO -  win32com.test.util: module references __file__
+10:13:23     INFO -  win32comext.adsi.__init__: module references __path__
+10:13:23     INFO -  win32comext.authorization.__init__: module references __path__
+10:13:23     INFO -  win32comext.axcontrol.__init__: module references __path__
+10:13:23     INFO -  win32comext.axdebug.codecontainer: module references __file__
+10:13:23     INFO -  win32comext.axdebug.debugger: module references __file__
+10:13:23     INFO -  win32comext.axdebug.__init__: module references __path__
+10:13:23     INFO -  win32comext.axscript.__init__: module references __path__
+10:13:23     INFO -  win32comext.bits.__init__: module references __path__
+10:13:23     INFO -  win32comext.directsound.__init__: module references __path__
+10:13:23     INFO -  win32comext.directsound.test.ds_test: module references __file__
+10:13:23     INFO -  win32comext.internet.__init__: module references __path__
+10:13:23     INFO -  win32comext.mapi.__init__: module references __path__
+10:13:23     INFO -  win32comext.shell.__init__: module references __path__
+10:13:23     INFO -  win32comext.shell.demos.servers.empty_volume_cache: module references __file__
+10:13:23     INFO -  win32comext.shell.demos.servers.folder_view: module references __file__
+10:13:23     INFO -  win32comext.taskscheduler.__init__: module references __path__
+10:13:23     INFO -  creating 'c:\users\cltbld~1.t-w\appdata\local\temp\easy_install-qna4on\pywin32-216-py2.7-win32.egg' and adding 'c:\users\cltbld~1.t-w\appdata\local\temp\easy_install-qna4on\pywin32-216-py2.7-win32.egg.tmp' to it
+10:13:24     INFO -  creating c:\slave\test\build\venv\lib\site-packages\pywin32-216-py2.7-win32.egg
+10:13:24     INFO -  Extracting pywin32-216-py2.7-win32.egg to c:\slave\test\build\venv\lib\site-packages
+10:13:26     INFO -  Adding pywin32 216 to easy-install.pth file
+10:13:26     INFO -  Installing pywin32_postinstall.py script to C:\slave\test\build\venv\Scripts
+10:13:26     INFO -  Installing pywin32_postinstall.pyc script to C:\slave\test\build\venv\Scripts
+10:13:26     INFO -  Installing pywin32_testall.py script to C:\slave\test\build\venv\Scripts
+10:13:26     INFO -  Installing pywin32_testall.pyc script to C:\slave\test\build\venv\Scripts
+10:13:26     INFO -  Installed c:\slave\test\build\venv\lib\site-packages\pywin32-216-py2.7-win32.egg
+10:13:26     INFO -  Processing dependencies for pywin32
+10:13:26     INFO -  Finished processing dependencies for pywin32
+10:13:29     INFO - Return code: 0
+10:13:29     INFO - Installing talos into virtualenv C:\slave\test\build/venv
+10:13:29     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--download-cache', 'C:\\slave\\test\\build/venv\\cache', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', 'C:\\slave\\test\\build\\talos_repo'] in C:\slave\test\build
+10:13:29     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --download-cache C:\slave\test\build/venv\cache --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub C:\slave\test\build\talos_repo
+10:13:34     INFO -  Ignoring indexes: http://pypi.python.org/simple/
+10:13:34     INFO -  Unpacking c:\slave\test\build\talos_repo
+10:13:34     INFO -    Running setup.py egg_info for package from file:///c%7C%5Cslave%5Ctest%5Cbuild%5Ctalos_repo
+10:13:34     INFO -  Requirement already satisfied (use --upgrade to upgrade): PyYAML in c:\slave\test\build\venv\lib\site-packages (from talos)
+10:13:34     INFO -  Downloading/unpacking mozlog (from talos)
+10:13:34     INFO -    Downloading mozlog-1.2.tar.gz
+10:13:34     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozlog-1.2.tar.gz
+10:13:34     INFO -    Running setup.py egg_info for package mozlog
+10:13:34     INFO -  Downloading/unpacking mozcrash==0.5 (from talos)
+10:13:34     INFO -    Downloading mozcrash-0.5.tar.gz
+10:13:34     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozcrash-0.5.tar.gz
+10:13:34     INFO -    Running setup.py egg_info for package mozcrash
+10:13:34     INFO -  Downloading/unpacking mozdevice==0.19 (from talos)
+10:13:34     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozdevice-0.19.tar.gz
+10:13:34     INFO -    Running setup.py egg_info for package mozdevice
+10:13:34     INFO -  Downloading/unpacking mozhttpd==0.5 (from talos)
+10:13:34     INFO -    Downloading mozhttpd-0.5.tar.gz
+10:13:34     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozhttpd-0.5.tar.gz
+10:13:34     INFO -    Running setup.py egg_info for package mozhttpd
+10:13:34     INFO -  Downloading/unpacking mozinfo==0.4 (from talos)
+10:13:34     INFO -    Downloading mozinfo-0.4.tar.gz
+10:13:34     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozinfo-0.4.tar.gz
+10:13:34     INFO -    Running setup.py egg_info for package mozinfo
+10:13:34     INFO -  Downloading/unpacking datazilla==1.4 (from talos)
+10:13:34     INFO -    Downloading datazilla-1.4.tar.gz
+10:13:34     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fdatazilla-1.4.tar.gz
+10:13:34     INFO -    Running setup.py egg_info for package datazilla
+10:13:34     INFO -  Downloading/unpacking mozprocess==0.8 (from talos)
+10:13:34     INFO -    Downloading mozprocess-0.8.tar.gz
+10:13:34     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozprocess-0.8.tar.gz
+10:13:34     INFO -    Running setup.py egg_info for package mozprocess
+10:13:34     INFO -  Downloading/unpacking httplib2 (from talos)
+10:13:54     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fhttplib2-0.7.4.tar.gz
+10:13:54     INFO -    Running setup.py egg_info for package httplib2
+10:13:54     INFO -  Downloading/unpacking oauth2 (from talos)
+10:13:54     INFO -    Downloading oauth2-1.5.211.tar.gz
+10:13:54     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2foauth2-1.5.211.tar.gz
+10:13:54     INFO -    Running setup.py egg_info for package oauth2
+10:13:54     INFO -  Downloading/unpacking mozfile>=0.3 (from mozcrash==0.5->talos)
+10:13:54     INFO -    Downloading mozfile-0.9.tar.gz
+10:13:54     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozfile-0.9.tar.gz
+10:13:54     INFO -    Running setup.py egg_info for package mozfile
+10:13:54     INFO -  Installing collected packages: datazilla, httplib2, mozcrash, mozdevice, mozfile, mozhttpd, mozinfo, mozlog, mozprocess, oauth2, talos
+10:13:54     INFO -    Running setup.py install for datazilla
+10:13:54     INFO -    Running setup.py install for httplib2
+10:13:54     INFO -    Running setup.py install for mozcrash
+10:13:54     INFO -    Running setup.py install for mozdevice
+10:13:54     INFO -      Installing dm-script.py script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing dm.exe script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -    Running setup.py install for mozfile
+10:13:54     INFO -    Running setup.py install for mozhttpd
+10:13:54     INFO -      Installing mozhttpd-script.py script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing mozhttpd.exe script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -    Running setup.py install for mozinfo
+10:13:54     INFO -      Installing mozinfo-script.py script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing mozinfo.exe script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -    Running setup.py install for mozlog
+10:13:54     INFO -    Running setup.py install for mozprocess
+10:13:54     INFO -    Running setup.py install for oauth2
+10:13:54     INFO -    Running setup.py install for talos
+10:13:54     INFO -      Installing PerfConfigurator-script.py script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing PerfConfigurator.exe script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing talos-script.py script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing talos.exe script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing talos-results-script.py script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing talos-results.exe script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -  Successfully installed datazilla httplib2 mozcrash mozdevice mozfile mozhttpd mozinfo mozlog mozprocess oauth2 talos
+10:13:54     INFO -  Cleaning up...
+10:13:54     INFO - Return code: 0
+10:13:54     INFO - Installing mozinstall into virtualenv C:\slave\test\build/venv
+10:13:54     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--download-cache', 'C:\\slave\\test\\build/venv\\cache', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', 'mozinstall'] in C:\slave\test\build
+10:13:54     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --download-cache C:\slave\test\build/venv\cache --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub mozinstall
+10:13:54     INFO -  Ignoring indexes: http://pypi.python.org/simple/
+10:13:54     INFO -  Downloading/unpacking mozinstall
+10:13:54     INFO -    Downloading mozInstall-1.6.tar.gz
+10:13:54     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozinstall-1.6.tar.gz
+10:13:54     INFO -    Running setup.py egg_info for package mozinstall
+10:13:54     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozinfo>=0.4 in c:\slave\test\build\venv\lib\site-packages (from mozinstall)
+10:13:54     INFO -  Requirement already satisfied (use --upgrade to upgrade): mozfile in c:\slave\test\build\venv\lib\site-packages (from mozinstall)
+10:13:54     INFO -  Installing collected packages: mozinstall
+10:13:54     INFO -    Running setup.py install for mozinstall
+10:13:54     INFO -      Installing moz_remove_from_system-script.py script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing moz_remove_from_system.exe script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing mozuninstall-script.py script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing mozuninstall.exe script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing mozinstall-script.py script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing mozinstall.exe script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing moz_add_to_system-script.py script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -      Installing moz_add_to_system.exe script to C:\slave\test\build\venv\Scripts
+10:13:54     INFO -  Successfully installed mozinstall
+10:13:54     INFO -  Cleaning up...
+10:13:54     INFO - Return code: 0
+10:13:54     INFO - Installing psutil==0.7.1 into virtualenv C:\slave\test\build/venv
+10:13:54     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--download-cache', 'C:\\slave\\test\\build/venv\\cache', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', 'psutil==0.7.1'] in C:\slave\test\build
+10:13:54     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --download-cache C:\slave\test\build/venv\cache --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub psutil==0.7.1
+10:13:55     INFO -  Ignoring indexes: http://pypi.python.org/simple/
+10:13:55     INFO -  Downloading/unpacking psutil==0.7.1
+10:13:55     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fpsutil-0.7.1.tar.gz
+10:13:55     INFO -    Running setup.py egg_info for package psutil
+10:13:55     INFO -  Installing collected packages: psutil
+10:13:55     INFO -    Running setup.py install for psutil
+10:13:55     INFO -      building '_psutil_mswindows' extension
+10:13:55     INFO -      error: Unable to find vcvarsall.bat
+10:13:55     INFO -      Complete output from command C:\slave\test\build\venv\Scripts\python.exe -c "import setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)" install --single-version-externally-managed --record c:\users\cltbld~1.t-w\appdata\local\temp\pip-4rkzg0-record\install-record.txt --install-headers C:\slave\test\build\venv\include\site\python2.7:
+10:13:55     INFO -      running install
+10:13:55     INFO -  running build
+10:13:55     INFO -  running build_py
+10:13:55     INFO -  creating build
+10:13:55     INFO -  creating build\lib.win32-2.7
+10:13:55     INFO -  creating build\lib.win32-2.7\psutil
+10:13:55     INFO -  copying psutil\error.py -> build\lib.win32-2.7\psutil
+10:13:55     INFO -  copying psutil\_common.py -> build\lib.win32-2.7\psutil
+10:13:55     INFO -  copying psutil\_compat.py -> build\lib.win32-2.7\psutil
+10:13:55     INFO -  copying psutil\_error.py -> build\lib.win32-2.7\psutil
+10:13:55     INFO -  copying psutil\_psbsd.py -> build\lib.win32-2.7\psutil
+10:13:55     INFO -  copying psutil\_pslinux.py -> build\lib.win32-2.7\psutil
+10:13:55     INFO -  copying psutil\_psmswindows.py -> build\lib.win32-2.7\psutil
+10:13:55     INFO -  copying psutil\_psosx.py -> build\lib.win32-2.7\psutil
+10:13:55     INFO -  copying psutil\_psposix.py -> build\lib.win32-2.7\psutil
+10:13:55     INFO -  copying psutil\__init__.py -> build\lib.win32-2.7\psutil
+10:13:55     INFO -  running build_ext
+10:13:55     INFO -  building '_psutil_mswindows' extension
+10:13:55     INFO -  error: Unable to find vcvarsall.bat
+10:13:55     INFO -  ----------------------------------------
+10:13:55     INFO -  Command C:\slave\test\build\venv\Scripts\python.exe -c "import setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)" install --single-version-externally-managed --record c:\users\cltbld~1.t-w\appdata\local\temp\pip-4rkzg0-record\install-record.txt --install-headers C:\slave\test\build\venv\include\site\python2.7 failed with error code 1
+10:13:55     INFO -  Storing complete log in C:\Users\cltbld.T-W864-IX-042\AppData\Roaming\pip\pip.log
+10:13:55     INFO - Return code: 1
+10:13:55  WARNING - Unable to install optional package psutil==0.7.1.
+10:13:55     INFO - Installing mozsystemmonitor==0.0.0 into virtualenv C:\slave\test\build/venv
+10:13:55     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'install', '--download-cache', 'C:\\slave\\test\\build/venv\\cache', '--no-index', '--find-links', 'http://pypi.pvt.build.mozilla.org/pub', '--find-links', 'http://pypi.pub.build.mozilla.org/pub', 'mozsystemmonitor==0.0.0'] in C:\slave\test\build
+10:13:55     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip install --download-cache C:\slave\test\build/venv\cache --no-index --find-links http://pypi.pvt.build.mozilla.org/pub --find-links http://pypi.pub.build.mozilla.org/pub mozsystemmonitor==0.0.0
+10:13:56     INFO -  Ignoring indexes: http://pypi.python.org/simple/
+10:13:56     INFO -  Downloading/unpacking mozsystemmonitor==0.0.0
+10:13:56     INFO -    Downloading mozsystemmonitor-0.0.tar.gz
+10:13:56     INFO -    Storing download in cache at c:\slave\test\build\venv\cache\http%3a%2f%2fpypi.pvt.build.mozilla.org%2fpub%2fmozsystemmonitor-0.0.tar.gz
+10:13:56     INFO -    Running setup.py egg_info for package mozsystemmonitor
+10:13:56     INFO -  Downloading/unpacking psutil>=0.7.1 (from mozsystemmonitor==0.0.0)
+10:13:56     INFO -    Running setup.py egg_info for package psutil
+10:13:56     INFO -  Installing collected packages: mozsystemmonitor, psutil
+10:13:56     INFO -    Running setup.py install for mozsystemmonitor
+10:13:56     INFO -    Running setup.py install for psutil
+10:13:56     INFO -      building '_psutil_mswindows' extension
+10:13:56     INFO -      error: Unable to find vcvarsall.bat
+10:13:56     INFO -      Complete output from command C:\slave\test\build\venv\Scripts\python.exe -c "import setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)" install --single-version-externally-managed --record c:\users\cltbld~1.t-w\appdata\local\temp\pip-olhmaj-record\install-record.txt --install-headers C:\slave\test\build\venv\include\site\python2.7:
+10:13:56     INFO -      running install
+10:13:56     INFO -  running build
+10:13:56     INFO -  running build_py
+10:13:56     INFO -  running build_ext
+10:13:56     INFO -  building '_psutil_mswindows' extension
+10:13:56     INFO -  error: Unable to find vcvarsall.bat
+10:13:56     INFO -  ----------------------------------------
+10:13:56     INFO -  Command C:\slave\test\build\venv\Scripts\python.exe -c "import setuptools;__file__='C:\\slave\\test\\build\\venv\\build\\psutil\\setup.py';execfile(__file__)" install --single-version-externally-managed --record c:\users\cltbld~1.t-w\appdata\local\temp\pip-olhmaj-record\install-record.txt --install-headers C:\slave\test\build\venv\include\site\python2.7 failed with error code 1
+10:13:56     INFO -  Storing complete log in C:\Users\cltbld.T-W864-IX-042\AppData\Roaming\pip\pip.log
+10:13:56     INFO - Return code: 1
+10:13:56  WARNING - Unable to install optional package mozsystemmonitor==0.0.0.
+10:13:56     INFO - Done creating virtualenv C:\slave\test\build/venv.
+10:13:56     INFO - Getting output from command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'freeze']
+10:13:56     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip freeze
+10:13:56     INFO - Reading from file tmpfile_stdout
+10:13:56     INFO - Using _rmtree_windows ...
+10:13:56     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+10:13:56     INFO - Using _rmtree_windows ...
+10:13:56     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+10:13:56     INFO - Current package versions:
+10:13:56     INFO -   PyYAML == 3.10
+10:13:56     INFO -   oauth2 == 1.5.211
+10:13:56     INFO -   mozInstall == 1.6
+10:13:56     INFO -   mozlog == 1.2
+10:13:56     INFO -   mozfile == 0.9
+10:13:56     INFO -   mozprocess == 0.8
+10:13:56     INFO -   distribute == 0.6.14
+10:13:56     INFO -   talos == 0.0
+10:13:56     INFO -   mozhttpd == 0.5
+10:13:56     INFO -   mozsystemmonitor == 0.0
+10:13:56     INFO -   mozdevice == 0.19
+10:13:56     INFO -   mozinfo == 0.4
+10:13:56     INFO -   mozcrash == 0.5
+10:13:56     INFO -   datazilla == 1.4
+10:13:56     INFO -   pywin32 == 216
+10:13:56     INFO -   httplib2 == 0.7.4
+10:13:56     INFO - Getting output from command: ['C:\\slave\\test\\build\\venv\\Scripts\\python', '-c', 'from distutils.sysconfig import get_python_lib; print(get_python_lib())']
+10:13:56     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"
+10:13:56     INFO - Reading from file tmpfile_stdout
+10:13:56     INFO - Output received:
+10:13:56     INFO -  C:\slave\test\build\venv\Lib\site-packages
+10:13:56     INFO - Using _rmtree_windows ...
+10:13:56     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+10:13:56     INFO - Using _rmtree_windows ...
+10:13:56     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+10:13:56     INFO - Copying c:/slave/talos-data\talos/page_load_test/tp5n/tp5o.manifest to C:\slave\test\build\venv\Lib\site-packages\talos/page_load_test/tp5n/tp5o.manifest
+10:13:56     INFO - Running post-action listener: _resource_record_post_action
+10:13:56     INFO - Running post-action listener: _start_resource_monitoring
+10:13:56     INFO - Starting resource monitoring.
+10:13:56     INFO - #####
+10:13:56     INFO - ##### Running install step.
+10:13:56     INFO - #####
+10:13:56     INFO - Running pre-action listener: _resource_record_pre_action
+10:13:56     INFO - Running main action method: install
+10:13:56     INFO - Getting output from command: ['C:\\slave\\test\\build\\venv\\Scripts\\pip', 'freeze']
+10:13:56     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\pip freeze
+10:13:56     INFO - Reading from file tmpfile_stdout
+10:13:56     INFO - Using _rmtree_windows ...
+10:13:56     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+10:13:56     INFO - Using _rmtree_windows ...
+10:13:56     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+10:13:56     INFO - Detecting whether we're running mozinstall >=1.0...
+10:13:56     INFO - Getting output from command: ['C:\\slave\\test\\build/venv/scripts/python', 'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py', '-h']
+10:13:56     INFO - Copy/paste: C:\slave\test\build/venv/scripts/python C:\slave\test\build/venv/scripts/mozinstall-script.py -h
+10:13:56     INFO - Reading from file tmpfile_stdout
+10:13:56     INFO - Output received:
+10:13:56     INFO -  Usage: mozinstall-script.py [options] installer
+10:13:56     INFO -  Options:
+10:13:56     INFO -    -h, --help            show this help message and exit
+10:13:56     INFO -    -d DEST, --destination=DEST
+10:13:56     INFO -                          Directory to install application into. [default:
+10:13:56     INFO -                          "C:\slave\test"]
+10:13:56     INFO -    --app=APP             Application being installed. [default: firefox]
+10:13:56     INFO - Using _rmtree_windows ...
+10:13:56     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+10:13:56     INFO - Using _rmtree_windows ...
+10:13:56     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+10:13:56     INFO - mkdir: C:\slave\test\build\application
+10:13:56     INFO - Getting output from command: ['C:\\slave\\test\\build/venv/scripts/python', 'C:\\slave\\test\\build/venv/scripts/mozinstall-script.py', 'C:\\slave\\test\\build\\firefox-27.0a1.en-US.win32.zip', '--destination', 'C:\\slave\\test\\build\\application']
+10:13:56     INFO - Copy/paste: C:\slave\test\build/venv/scripts/python C:\slave\test\build/venv/scripts/mozinstall-script.py C:\slave\test\build\firefox-27.0a1.en-US.win32.zip --destination C:\slave\test\build\application
+10:13:57     INFO - Reading from file tmpfile_stdout
+10:13:57     INFO - Output received:
+10:13:57     INFO -  C:\slave\test\build\application\firefox\firefox.exe
+10:13:57     INFO - Using _rmtree_windows ...
+10:13:57     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('tmpfile_stderr',), kwargs: {}, attempt #1
+10:13:57     INFO - Using _rmtree_windows ...
+10:13:57     INFO - retry: Calling <bound method Talos._rmtree_windows of <mozharness.mozilla.testing.talos.Talos object at 0x021E1A10>> with args: ('tmpfile_stdout',), kwargs: {}, attempt #1
+10:13:57     INFO - Triggering Metro Browser Immersive Mode
+10:13:57     INFO - Copying C:\slave\test\build\tests\bin\metrotestharness.exe to C:\slave\test\build\application\firefox\metrotestharness.exe
+10:13:57     INFO - Running post-action listener: _resource_record_post_action
+10:13:57     INFO - #####
+10:13:57     INFO - ##### Running run-tests step.
+10:13:57     INFO - #####
+10:13:57     INFO - Running pre-action listener: _resource_record_pre_action
+10:13:57     INFO - Running main action method: run_tests
+10:13:57     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\python', '--version']
+10:13:57     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\python --version
+10:13:57     INFO -  Python 2.7.3
+10:13:57     INFO - Return code: 0
+10:13:57     INFO - Running command: ['C:\\slave\\test\\build\\venv\\Scripts\\python', '-u', 'C:\\slave\\test\\build\\talos_repo\\talos\\run_tests.py', '--noisy', '--debug', '-v', '--executablePath', 'C:\\slave\\test\\build\\application\\firefox\\metrotestharness', '--title', 'T-W864-IX-042', '--symbolsPath', 'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.crashreporter-symbols.zip', '--activeTests', u'tp5o', '--results_url', 'http://graphs.mozilla.org/server/collect.cgi', '--output', 'talos.yml', '--branchName', 'Cedar', '--datazilla-url', 'https://datazilla.mozilla.org/talos', '--webServer', 'localhost'] in C:\slave\test\build
+10:13:57     INFO - Copy/paste: C:\slave\test\build\venv\Scripts\python -u C:\slave\test\build\talos_repo\talos\run_tests.py --noisy --debug -v --executablePath C:\slave\test\build\application\firefox\metrotestharness --title T-W864-IX-042 --symbolsPath http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.crashreporter-symbols.zip --activeTests tp5o --results_url http://graphs.mozilla.org/server/collect.cgi --output talos.yml --branchName Cedar --datazilla-url https://datazilla.mozilla.org/talos --webServer localhost
+10:13:57     INFO - Calling ['C:\\slave\\test\\build\\venv\\Scripts\\python', '-u', 'C:\\slave\\test\\build\\talos_repo\\talos\\run_tests.py', '--noisy', '--debug', '-v', '--executablePath', 'C:\\slave\\test\\build\\application\\firefox\\metrotestharness', '--title', 'T-W864-IX-042', '--symbolsPath', 'http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.crashreporter-symbols.zip', '--activeTests', u'tp5o', '--results_url', 'http://graphs.mozilla.org/server/collect.cgi', '--output', 'talos.yml', '--branchName', 'Cedar', '--datazilla-url', 'https://datazilla.mozilla.org/talos', '--webServer', 'localhost'] with output_timeout 3600
+10:13:57     INFO -   - outputName = talos.yml
+10:13:57     INFO -  basetest:
+10:13:57     INFO -    cleanup: null
+10:13:57     INFO -    cycles: 1
+10:13:57     INFO -    linux_counters: []
+10:13:57     INFO -    mac_counters: []
+10:13:57     INFO -    profile_path: ${talos}/base_profile
+10:13:57     INFO -    resolution: 1
+10:13:57     INFO -    responsiveness: false
+10:13:57     INFO -    rss: false
+10:13:57     INFO -    setup: null
+10:13:57     INFO -    shutdown: false
+10:13:57     INFO -    timeout: 3600
+10:13:57     INFO -    tpchrome: true
+10:13:57     INFO -    tpcycles: 10
+10:13:57     INFO -    tploadaboutblank: false
+10:13:57     INFO -    tpmozafterpaint: false
+10:13:57     INFO -    tpnoisy: true
+10:13:57     INFO -    tppagecycles: 1
+10:13:57     INFO -    tprender: false
+10:13:57     INFO -    w7_counters: []
+10:13:57     INFO -    win_counters: []
+10:13:57     INFO -    xperf_counters: []
+10:13:57     INFO -  bcontroller_config: ${talos}/bcontroller.yml
+10:13:57     INFO -  branch_name: Cedar
+10:13:57     INFO -  browser_log: browser_output.txt
+10:13:57     INFO -  browser_path: C:\slave\test\build\application\firefox\metrotestharness
+10:13:57     INFO -  browser_wait: 5
+10:13:57     INFO -  buildid: testbuildid
+10:13:57     INFO -  datazilla_urls:
+10:13:57     INFO -  - https://datazilla.mozilla.org/talos
+10:13:57     INFO -  develop: false
+10:13:57     INFO -  deviceport: 20701
+10:13:57     INFO -  dirs: {}
+10:13:57     INFO -  env:
+10:13:57     INFO -    NO_EM_RESTART: '1'
+10:13:57     INFO -  error_filename: C:\slave\test\build\browser_failures.txt
+10:13:57     INFO -  extensions:
+10:13:57     INFO -  - ${talos}/pageloader
+10:13:57     INFO -  extra_args: ''
+10:13:57     INFO -  filters:
+10:13:57     INFO -  - - ignore_max
+10:13:57     INFO -    - []
+10:13:57     INFO -  - - median
+10:13:57     INFO -    - []
+10:13:57     INFO -  init_url: http://localhost/getInfo.html
+10:13:57     INFO -  preferences:
+10:13:57     INFO -    app.update.enabled: false
+10:13:57     INFO -    browser.EULA.override: true
+10:13:57     INFO -    browser.bookmarks.max_backups: 0
+10:13:57     INFO -    browser.cache.disk.smart_size.enabled: false
+10:13:57     INFO -    browser.cache.disk.smart_size.first_run: false
+10:13:57     INFO -    browser.chrome.dynamictoolbar: false
+10:13:57     INFO -    browser.display.overlaynavbuttons: false
+10:13:57     INFO -    browser.dom.window.dump.enabled: true
+10:13:57     INFO -    browser.link.open_newwindow: 2
+10:13:57     INFO -    browser.safebrowsing.gethashURL: http://127.0.0.1/safebrowsing-dummy/gethash
+10:13:57     INFO -    browser.safebrowsing.keyURL: http://127.0.0.1/safebrowsing-dummy/newkey
+10:13:57     INFO -    browser.safebrowsing.updateURL: http://127.0.0.1/safebrowsing-dummy/update
+10:13:57     INFO -    browser.shell.checkDefaultBrowser: false
+10:13:57     INFO -    browser.warnOnQuit: false
+10:13:57     INFO -    dom.allow_scripts_to_close_windows: true
+10:13:57     INFO -    dom.disable_open_during_load: false
+10:13:57     INFO -    dom.disable_window_flip: true
+10:13:57     INFO -    dom.disable_window_move_resize: true
+10:13:57     INFO -    dom.max_chrome_script_run_time: 0
+10:13:57     INFO -    dom.max_script_run_time: 0
+10:13:57     INFO -    dom.send_after_paint_to_content: true
+10:13:57     INFO -    extensions.autoDisableScopes: 10
+10:13:57     INFO -    extensions.blocklist.enabled: false
+10:13:57     INFO -    extensions.blocklist.url: http://127.0.0.1/extensions-dummy/blocklistURL
+10:13:57     INFO -    extensions.checkCompatibility: false
+10:13:57     INFO -    extensions.enabledScopes: 5
+10:13:57     INFO -    extensions.getAddons.get.url: http://127.0.0.1/extensions-dummy/repositoryGetURL
+10:13:57     INFO -    extensions.getAddons.getWithPerformance.url: http://127.0.0.1/extensions-dummy/repositoryGetWithPerformanceURL
+10:13:57     INFO -    extensions.getAddons.maxResults: 0
+10:13:57     INFO -    extensions.getAddons.search.browseURL: http://127.0.0.1/extensions-dummy/repositoryBrowseURL
+10:13:57     INFO -    extensions.getAddons.search.url: http://127.0.0.1/extensions-dummy/repositorySearchURL
+10:13:57     INFO -    extensions.hotfix.url: http://127.0.0.1/extensions-dummy/hotfixURL
+10:13:57     INFO -    extensions.update.background.url: http://127.0.0.1/extensions-dummy/updateBackgroundURL
+10:13:57     INFO -    extensions.update.enabled: false
+10:13:57     INFO -    extensions.update.notifyUser: false
+10:13:57     INFO -    extensions.update.url: http://127.0.0.1/extensions-dummy/updateURL
+10:13:57     INFO -    extensions.webservice.discoverURL: http://127.0.0.1/extensions-dummy/discoveryURL
+10:13:57     INFO -    hangmonitor.timeout: 0
+10:13:57     INFO -    network.proxy.http: localhost
+10:13:57     INFO -    network.proxy.http_port: 80
+10:13:57     INFO -    network.proxy.type: 1
+10:13:57     INFO -    plugins.update.url: http://127.0.0.1/plugins-dummy/updateCheckURL
+10:13:57     INFO -    security.enable_java: false
+10:13:57     INFO -    security.fileuri.strict_origin_policy: false
+10:13:57     INFO -    security.turn_off_all_security_so_that_viruses_can_take_over_this_computer: true
+10:13:57     INFO -    toolkit.telemetry.notifiedOptOut: 999
+10:13:57     INFO -    toolkit.telemetry.prompted: 999
+10:13:57     INFO -  remote: false
+10:13:57     INFO -  results_urls:
+10:13:57     INFO -  - http://graphs.mozilla.org/server/collect.cgi
+10:13:57     INFO -  symbols_path: http://stage.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/mozilla-central-win32/1381825649/firefox-27.0a1.en-US.win32.crashreporter-symbols.zip
+10:13:57     INFO -  test_name_extension: _paint
+10:13:57     INFO -  test_timeout: 1200
+10:13:57     INFO -  tests:
+10:13:57     INFO -  - filters:
+10:13:57     INFO -    - - ignore_first
+10:13:57     INFO -      - - 5
+10:13:57     INFO -    - - median
+10:13:57     INFO -      - []
+10:13:57     INFO -    linux_counters:
+10:13:57     INFO -    - Private Bytes
+10:13:57     INFO -    - XRes
+10:13:57     INFO -    - Main_RSS
+10:13:57     INFO -    mac_counters:
+10:13:57     INFO -    - Private Bytes
+10:13:57     INFO -    - Main_RSS
+10:13:57     INFO -    name: tp5o
+10:13:57     INFO -    resolution: 20
+10:13:57     INFO -    rss: true
+10:13:57     INFO -    shutdown: true
+10:13:57     INFO -    timeout: 1800
+10:13:57     INFO -    tpcycles: 1
+10:13:57     INFO -    tpmanifest: ${talos}/page_load_test/tp5n/tp5o.manifest
+10:13:57     INFO -    tpmozafterpaint: true
+10:13:57     INFO -    tppagecycles: 25
+10:13:57     INFO -    w7_counters:
+10:13:57     INFO -    - Main_RSS
+10:13:57     INFO -    - Private Bytes
+10:13:57     INFO -    - '% Processor Time'
+10:13:57     INFO -    - Modified Page List Bytes
+10:13:57     INFO -    win_counters:
+10:13:57     INFO -    - Main_RSS
+10:13:57     INFO -    - Private Bytes
+10:13:57     INFO -    - '% Processor Time'
+10:13:57     INFO -    xperf_counters:
+10:13:57     INFO -    - main_startup_fileio
+10:13:57     INFO -    - main_startup_netio
+10:13:57     INFO -    - main_normal_fileio
+10:13:57     INFO -    - main_normal_netio
+10:13:57     INFO -    - nonmain_startup_fileio
+10:13:57     INFO -    - nonmain_normal_fileio
+10:13:57     INFO -    - nonmain_normal_netio
+10:13:57     INFO -    - mainthread_readcount
+10:13:57     INFO -    - mainthread_readbytes
+10:13:57     INFO -    - mainthread_writecount
+10:13:57     INFO -    - mainthread_writebytes
+10:13:57     INFO -  title: T-W864-IX-042
+10:13:57     INFO -  webserver: localhost
+10:13:57     INFO -  DEBUG : using testdate: 1382375637
+10:13:57     INFO -  DEBUG : actual date: 1382375637
+10:13:57     INFO -  INFO : Reading 'browser_version' from C:\slave\test\build\application\firefox\application.ini => 27.0a1
+10:13:57     INFO -  INFO : Reading 'browser_name' from C:\slave\test\build\application\firefox\application.ini => Firefox
+10:13:58     INFO -  INFO : Reading 'repository' from C:\slave\test\build\application\firefox\application.ini => http://hg.mozilla.org/mozilla-central
+10:13:58     INFO -  INFO : Reading 'sourcestamp' from C:\slave\test\build\application\firefox\application.ini => 21793156b6ea
+10:13:58     INFO -  T-W864-IX-042:
+10:13:58     INFO -         Started Mon, 21 Oct 2013 10:13:57
+10:13:58     INFO -  Running test tp5o:
+10:13:58     INFO -         Started Mon, 21 Oct 2013 10:13:57
+10:13:58     INFO -  DEBUG : operating with platform_type : w8_
+10:13:58     INFO -  DEBUG : created profile
+10:13:58     INFO -  DEBUG : command line: C:\slave\test\build\application\firefox\metrotestharness -profile c:\users\cltbld~1.t-w\appdata\local\temp\tmpj8uf1l\profile http://localhost/getInfo.html
+10:13:58     INFO -  INFO | metrotestharness.exe | Launching browser...
+10:13:58     INFO -  INFO | metrotestharness.exe | App model id='E4CFE2E6B75AA3A3'
+10:13:58     INFO -  INFO | metrotestharness.exe | Harness process id: 2192
+10:13:58     INFO -  INFO | metrotestharness.exe | Using bin path: 'C:\slave\test\build\application\firefox\firefox.exe'
+10:13:58     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to: 'C:\slave\test\build\application\firefox\tests.ini'
+10:13:58     INFO -  INFO | metrotestharness.exe | Browser command line args: 'C:\slave\test\build\application\firefox\firefox.exe -profile c:\users\cltbld~1.t-w\appdata\local\temp\tmpj8uf1l\profile http://localhost/getInfo.html'
+10:13:58     INFO -  FAIL-SHOULD-RETRY | metrotestharness.exe | ActivateApplication result 80070005
+10:13:58     INFO -  INFO | metrotestharness.exe | Deleting C:\slave\test\build\application\firefox\tests.ini
+10:14:03     INFO -  INFO : Could not find __metrics(.*)__metrics in browser_log: browser_output.txt
+10:14:03     INFO -  INFO : Raw results:INFO | metrotestharness.exe | Launching browser...
+10:14:03     INFO -  INFO | metrotestharness.exe | App model id='E4CFE2E6B75AA3A3'
+10:14:03     INFO -  INFO | metrotestharness.exe | Harness process id: 2192
+10:14:03     INFO -  INFO | metrotestharness.exe | Using bin path: 'C:\slave\test\build\application\firefox\firefox.exe'
+10:14:03     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to: 'C:\slave\test\build\application\firefox\tests.ini'
+10:14:03     INFO -  INFO | metrotestharness.exe | Browser command line args: 'C:\slave\test\build\application\firefox\firefox.exe -profile c:\users\cltbld~1.t-w\appdata\local\temp\tmpj8uf1l\profile http://localhost/getInfo.html'
+10:14:03     INFO -  FAIL-SHOULD-RETRY | metrotestharness.exe | ActivateApplication result 80070005
+10:14:03     INFO -  INFO | metrotestharness.exe | Deleting C:\slave\test\build\application\firefox\tests.ini
+10:14:03     INFO -  INFO : Initialization of new profile failed
+10:14:03     INFO -  INFO : INFO | metrotestharness.exe | Launching browser...
+10:14:03     INFO -  INFO | metrotestharness.exe | App model id='E4CFE2E6B75AA3A3'
+10:14:03     INFO -  INFO | metrotestharness.exe | Harness process id: 2192
+10:14:03     INFO -  INFO | metrotestharness.exe | Using bin path: 'C:\slave\test\build\application\firefox\firefox.exe'
+10:14:03     INFO -  INFO | metrotestharness.exe | Writing out tests.ini to: 'C:\slave\test\build\application\firefox\tests.ini'
+10:14:03     INFO -  INFO | metrotestharness.exe | Browser command line args: 'C:\slave\test\build\application\firefox\firefox.exe -profile c:\users\cltbld~1.t-w\appdata\local\temp\tmpj8uf1l\profile http://localhost/getInfo.html'
+10:14:03     INFO -  FAIL-SHOULD-RETRY | metrotestharness.exe | ActivateApplication result 80070005
+10:14:03     INFO -  INFO | metrotestharness.exe | Deleting C:\slave\test\build\application\firefox\tests.ini
+10:14:03     INFO -  DEBUG : Terminating: metrotestharness, plugin-container, crashreporter, dwwim
+10:14:03     INFO -  Failed tp5o:
+10:14:03     INFO -         Stopped Mon, 21 Oct 2013 10:14:03
+10:14:03    ERROR -  Traceback (most recent call last):
+10:14:03     INFO -    File "C:\slave\test\build\talos_repo\talos\run_tests.py", line 287, in run_tests
+10:14:03     INFO -      talos_results.add(mytest.runTest(browser_config, test))
+10:14:03     INFO -    File "C:\slave\test\build\talos_repo\talos\ttest.py", line 302, in runTest
+10:14:03     INFO -      self.initializeProfile(profile_dir, browser_config)
+10:14:03     INFO -    File "C:\slave\test\build\talos_repo\talos\ttest.py", line 116, in initializeProfile
+10:14:03 CRITICAL -      raise talosError("failed to initialize browser")
+10:14:03 CRITICAL -  talosError: 'failed to initialize browser'
+10:14:03    ERROR - Return code: 2
+10:14:03     INFO - Running post-action listener: _resource_record_post_action
+10:14:03     INFO - Running post-run listener: _resource_record_post_run
+10:14:04     INFO - Total resource usage - Wall time: 6s; CPU: 3.0%; Read bytes: 372736; Write bytes: 20849664; Read time: 6550; Write time: 63610
+10:14:04     INFO - install - Wall time: 1s; CPU: Can't collect data; Read bytes: 0; Write bytes: 0; Read time: 0; Write time: 0
+10:14:04     INFO - run-tests - Wall time: 6s; CPU: 1.0%; Read bytes: 361472; Write bytes: 15500288; Read time: 4640; Write time: 58940
+10:14:04     INFO - Copying logs to upload dir...
+10:14:04     INFO - mkdir: C:\slave\test\build\upload\logs

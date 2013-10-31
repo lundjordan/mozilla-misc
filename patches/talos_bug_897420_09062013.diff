@@ -1,0 +1,32 @@
+diff --git a/talos/PerfConfigurator.py b/talos/PerfConfigurator.py
+index e70a023..cd2a905 100755
+--- a/talos/PerfConfigurator.py
++++ b/talos/PerfConfigurator.py
+@@ -36,6 +36,8 @@ class PerfConfigurator(Configuration):
+         ('browser_path', {'help': "path to executable we are testing",
+                           'flags': ['-e', '--executablePath']
+                           }),
++        ('immersive_mode_path', {'help': "launches tests in immersive browser",
++                                 'flags': ['--metro-immersive-path']}),
+         ('title', {'help': 'Title of the test run',
+                    'default': 'qm-pxp01',
+                    'flags': ['-t', '--title']}),
+diff --git a/talos/run_tests.py b/talos/run_tests.py
+index 4e6eda5..0a26d07 100755
+--- a/talos/run_tests.py
++++ b/talos/run_tests.py
+@@ -192,6 +192,14 @@ def run_tests(configurator):
+   # set browser_config
+   browser_config=configurator.browser_config()
+ 
++  # if immersive-mode: set up metro browser launch
++  if config.get('immersive_mode_path'):
++      # TODO assert win 8
++      # mozharness cuts off the exe but metrotestharness needs it?
++      appPath = '-firefoxpath %s.exe' % (browser_config['browser_path'],)
++      browser_config['extra_args'] += appPath
++      browser_config['browser_path'] = config.get('immersive_mode_path')
++
+   #set defaults
+   title = config.get('title', '')
+   testdate = config.get('testdate', '')

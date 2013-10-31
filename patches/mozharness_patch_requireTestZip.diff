@@ -1,0 +1,15 @@
+diff --git a/scripts/desktop_unittest.py b/scripts/desktop_unittest.py
+index 4058175..41921a9 100755
+--- a/scripts/desktop_unittest.py
++++ b/scripts/desktop_unittest.py
+@@ -109,8 +109,8 @@ in the config file under: preflight_run_cmd_suites""",
+                     'run-tests',
+                     ],
+                 require_config_file=require_config_file,
+-                config={'virtualenv_modules': self.virtualenv_modules}
+-                )
++                config={'virtualenv_modules': self.virtualenv_modules,
++                        'require_test_zip': True,})
+ 
+         c = self.config
+         self.global_test_options = []

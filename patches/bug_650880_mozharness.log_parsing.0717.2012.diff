@@ -1,0 +1,498 @@
+diff --git a/configs/unittests/linux_unittest.py b/configs/unittests/linux_unittest.py
+index 93f92d8..683effc 100644
+--- a/configs/unittests/linux_unittest.py
++++ b/configs/unittests/linux_unittest.py
+@@ -11,7 +11,6 @@ config = {
+     "installer_path" : INSTALLER_PATH,
+     "binary_path" : APP_NAME_DIR + "/" + BINARY_PATH,
+     "xpcshell_name" : XPCSHELL_NAME,
+-    # TODO find out if I need simple_json_url
+     "buildbot_json_path": "buildprops.json",
+     "simplejson_url": "http://build.mozilla.org/talos/zips/simplejson-2.2.1.tar.gz",
+     "repos": [{
+diff --git a/configs/unittests/mac_unittest.py b/configs/unittests/mac_unittest.py
+index 667a615..cce2b06 100644
+--- a/configs/unittests/mac_unittest.py
++++ b/configs/unittests/mac_unittest.py
+@@ -11,7 +11,6 @@ config = {
+     "installer_path" : INSTALLER_PATH,
+     "binary_path" : APP_NAME_DIR + "/" + BINARY_PATH,
+     "xpcshell_name" : XPCSHELL_NAME,
+-    # TODO find out if I need simple_json_url
+     "buildbot_json_path": "buildprops.json",
+     "simplejson_url": "http://build.mozilla.org/talos/zips/simplejson-2.2.1.tar.gz",
+     "repos": [{
+diff --git a/configs/unittests/win_unittest.py b/configs/unittests/win_unittest.py
+index 37ca0ac..34bb317 100644
+--- a/configs/unittests/win_unittest.py
++++ b/configs/unittests/win_unittest.py
+@@ -11,7 +11,6 @@ config = {
+     "installer_path" : INSTALLER_PATH,
+     "binary_path" : APP_NAME_DIR + "/" + BINARY_PATH,
+     "xpcshell_name" : XPCSHELL_NAME,
+-    # TODO find out if I need simple_json_url
+     "buildbot_json_path": "buildprops.json",
+     "simplejson_url": "http://build.mozilla.org/talos/zips/simplejson-2.2.1.tar.gz",
+     "virtualenv_path": 'c:/talos-slave/test/build/venv',
+diff --git a/mozharness/base/log.py b/mozharness/base/log.py
+index d60ced3..4035582 100755
+--- a/mozharness/base/log.py
++++ b/mozharness/base/log.py
+@@ -98,6 +98,7 @@ class LogMixin(object):
+ 
+ 
+ 
++
+ # OutputParser {{{1
+ class OutputParser(LogMixin):
+     """ Helper object to parse command output.
+@@ -119,23 +120,24 @@ buffered up to self.num_pre_context_lines (set to the largest
+ pre-context-line setting in error_list.)
+ """
+     def __init__(self, config=None, log_obj=None, error_list=None,
+-                 log_output=True):
++                 log_output=True, status_levels=None):
+         self.config = config
+         self.log_obj = log_obj
+         self.error_list = error_list
+         self.log_output = log_output
+         self.num_errors = 0
++        self.num_warnings = 0
+         # TODO context_lines.
+         # Not in use yet, but will be based off error_list.
+         self.context_buffer = []
+         self.num_pre_context_lines = 0
+         self.num_post_context_lines = 0
+-        # TODO set self.error_level to the worst error level hit
+-        # (WARNING, ERROR, CRITICAL, FATAL)
+-        # self.error_level = INFO
++        self.result_log_level = INFO
++        if status_levels:
++            self.result_status_level = status_levels[-1]
+ 
+-    def add_lines(self, output):
+-        if str(output) == output:
++    def add_lines(self, output, status_levels=None):
++        if isinstance(output, basestring):
+             output = [output]
+         for line in output:
+             if not line or line.isspace():
+@@ -154,24 +156,55 @@ pre-context-line setting in error_list.)
+                     self.warn("error_list: 'substr' and 'regex' not in %s" % \
+                               error_check)
+                 if match:
+-                    level = error_check.get('level', INFO)
++                    log_level = error_check.get('level', INFO)
+                     if self.log_output:
+                         message = ' %s' % line
+                         if error_check.get('explanation'):
+                             message += '\n %s' % error_check['explanation']
++                        if error_check.get('status_level'):
++                            status_level = error_check['status_level']
++                            if not status_levels:
++                                self.fatal("result_status requires status_levels" + \
++                                        "to determine worst status_level")
++                            self.result_status_level = self.worst_level(status_level,
++                                    self.result_status_level, levels=status_levels)
+                         if error_check.get('summary'):
+-                            self.add_summary(message, level=level)
++                            self.add_summary(message, level=log_level)
+                         else:
+-                            self.log(message, level=level)
+-                    if level in (ERROR, CRITICAL, FATAL):
++                            self.log(message, level=log_level)
++                    # TODO ask Aki
++                    # if level is FATAL then will any lines below ever happen? If its
++                    # fatal then self.log on the above line will return an exit
++                    # code I think. Therefor we do not count fatal in num_errors
++                    if log_level in (ERROR, CRITICAL, FATAL):
+                         self.num_errors += 1
+-                    # TODO set self.error_status (or something)
+-                    # that sets the worst error level hit.
+-                    break
++                    if log_level == WARNING:
++                        self.num_warnings += 1
++                    # TODO maybe I don't want to call worst_level on every line in
++                    # the log but instead keep track of each seperate {level}_num_count
++                    # then assign worst_level after parsing. worst_level would depend on which level
++                    # has a non 0 {level}_num_count and is the worst in hierarchy
++                    self.result_log_level = self.worst_level(log_level, self.result_log_level)
++                    # TODO I dont think we want to break now if I want to
++                    # capture worst status? Make sure this does not brake
++                    # anything else
++                    # break 
+             else:
+                 if self.log_output:
+                     self.info(' %s' % line)
+ 
++    def worst_level(self, target_level, existing_level, levels=None):
++        """returns the 'worst' level between the existing worst level and the level
++        being currently evaluated"""
++        if not levels:
++            # TODO again here should I be checking for FATAL?
++            levels = [FATAL, CRITICAL, ERROR, WARNING, INFO]
++        if target_level not in levels:
++            self.fatal("'%s' not in %s'." % (target_level, levels))
++        for l in levels:
++            if l in (target_level, existing_level):
++                return l
++
+ 
+ 
+ # BaseLogger {{{1
+diff --git a/mozharness/mozilla/buildbot.py b/mozharness/mozilla/buildbot.py
+index 034ea87..e9420c1 100755
+--- a/mozharness/mozilla/buildbot.py
++++ b/mozharness/mozilla/buildbot.py
+@@ -8,7 +8,7 @@
+ Ideally this will go away if and when we retire buildbot.
+ """
+ 
+-import os
++import os, re
+ import pprint
+ import sys
+ 
+@@ -32,6 +32,34 @@ TBPL_STATUS_DICT = {
+     TBPL_RETRY: WARNING,
+ }
+ 
++def create_tinderbox_summary(suite_name, pass_count, fail_count,
++        known_fail_count=False, crashed=False, leaked=False):
++    emphasize_fail_text = '<em class="testfail">%s</em>'
++
++    if pass_count < 0 or fail_count < 0 or \
++            (known_fail_count != None and known_fail_count < 0):
++        summary = emphasize_fail_text % 'T-FAIL'
++    elif pass_count == 0 and fail_count == 0 and \
++            (known_fail_count == None or known_fail_count == 0):
++        summary = emphasize_fail_text % 'T-FAIL'
++    else:
++        str_fail_count = str(fail_count)
++        if fail_count > 0:
++            str_fail_count = emphasize_fail_text % str_fail_count
++        summary = "%d/%s" % (pass_count, str_fail_count)
++        if known_fail_count != None:
++            summary += "/%d" % known_fail_count
++    # Format the crash status.
++    if crashed:
++        summary += "&nbsp;%s" % emphasize_fail_text % "CRASH"
++    # Format the leak status.
++    if leaked != False:
++        summary += "&nbsp;%s" % emphasize_fail_text % (
++                (leaked and "LEAK") or "L-FAIL")
++
++    # Return the summary.
++    return "TinderboxPrint: %s<br/>%s\n" % (suite_name, summary)
++
+ class BuildbotMixin(object):
+     buildbot_config = None
+     buildbot_properties = {}
+@@ -57,6 +85,45 @@ class BuildbotMixin(object):
+                 level = TBPL_STATUS_DICT[tbpl_status]
+             self.add_summary("# TBPL %s #" % tbpl_status, level=level)
+ 
++    def log_tinderbox_println(self, suite_name, output, full_re_substr, pass_name,
++            fail_name, known_fail_name=None):
++        """appends 'TinderboxPrint: foo, summary' to the output"""
++        full_re = re.compile(full_re_substr)
++        harness_errors_re = re.compile(r"TEST-UNEXPECTED-FAIL \| .* \| (Browser crashed \(minidump found\)|missing output line for total leaks!|negative leaks caught!|leaked \d+ bytes during test execution)")
++        pass_count, fail_count = -1, -1
++        known_fail_count = known_fail_name and -1
++        crashed, leaked = False, False
++
++        for line in output:
++            if not line or line.isspace():
++                continue
++            line = line.decode("utf-8").rstrip()
++            m = full_re.match(line)
++            if m:
++                r = m.group(2)
++                if r == pass_name:
++                    pass_count = int(m.group(3))
++                elif r == fail_name:
++                    fail_count = int(m.group(3))
++                # If otherIdent == None, then totals_re should not match it,
++                # so this test is fine as is.
++                elif r == known_fail_name:
++                    known_fail_count = int(m.group(3))
++                continue
++            m = harness_errors_re.match(line)
++            if m:
++                r = m.group(1)
++                if r == "Browser crashed (minidump found)":
++                    crashed = True
++                elif r == "missing output line for total leaks!":
++                    leaked = None
++                else:
++                    leaked = True
++                continue
++        summary = create_tinderbox_summary(suite_name, pass_count, fail_count,
++                known_fail_count, crashed, leaked)
++        self.info(summary)
++
+     def set_buildbot_property(self, prop_name, prop_value, write_to_file=False):
+         self.info("Setting buildbot property %s to %s" % (prop_name, prop_value))
+         self.buildbot_properties[prop_name] = prop_value
+diff --git a/mozharness/mozilla/testing/errors.py b/mozharness/mozilla/testing/errors.py
+new file mode 100644
+index 0000000..0ee4f93
+--- /dev/null
++++ b/mozharness/mozilla/testing/errors.py
+@@ -0,0 +1,65 @@
++#!/usr/bin/env python
++# ***** BEGIN LICENSE BLOCK *****
++# This Source Code Form is subject to the terms of the Mozilla Public
++# License, v. 2.0. If a copy of the MPL was not distributed with this file,
++# You can obtain one at http://mozilla.org/MPL/2.0/.
++# ***** END LICENSE BLOCK *****
++"""Mozilla error lists for running tests.
++
++Error lists are used to parse output in mozharness.base.log.OutputParser.
++
++Each line of output is matched against each substring or regular expression
++in the error list.  On a match, we determine the 'level' of that line,
++whether IGNORE, DEBUG, INFO, WARNING, ERROR, CRITICAL, or FATAL.
++
++"""
++
++import re
++
++from mozharness.base.log import WARNING
++from mozharness.mozilla.buildbot import TBPL_WARNING
++
++# ErrorLists {{{1
++
++BaseTestError = [
++    {'regex': re.compile(r'''TEST-UNEXPECTED'''), 'level' : WARNING,
++        'explanation' : "One or more unittests unexpectingly failed." + \
++                " This is a harness error", 'status_level' : TBPL_WARNING},
++]
++CategoryTestErrorList = {
++    'mochitest' : BaseTestError  + [
++        {'regex' : re.compile(r'''(\tFailed: [^0]|\d+ INFO Failed: [^0])'''),
++            'level' : WARNING, 'explanation' : "One or more unittests failed",
++            'status_level' : TBPL_WARNING}
++        ],
++    'reftest' : BaseTestError + [
++        {'regex' : re.compile(r'''^REFTEST INFO \| Unexpected: 0 \('''),
++            'level' : WARNING, 'explanation' : "One or more unittests failed",
++            'status_level' : TBPL_WARNING}
++        ],
++    'xpcshell' : BaseTestError + [
++        {'regex' : re.compile(r'''^INFO \| Failed: 0'''), 'level' : WARNING,
++                'explanation' : "One or more unittests failed",
++                'status_level' : TBPL_WARNING}
++        ],
++}
++TinderBoxPrint = {
++    "mochitest_summary" : {
++        'full_re_substr' : r'''(\d+ INFO (Passed|Failed|Todo):\ +(\d+)|\t(Passed|Failed|Todo): (\d+))''',
++        'pass_name' : "Passed",
++        'fail_name' : "Failed",
++        'known_fail_name' : "Todo",
++    },
++    "reftest_summary" : {
++        'full_re_substr' : r'''REFTEST INFO \| (Successful|Unexpected|Known problems): (\d+) \(''',
++        'success_name' : "Successful",
++        'pass_name' : "Unexpected",
++        'known_fail_name' : "known problems",
++    },
++    "xpcshell_summary" : {
++        'full_re_substr' : r'''INFO \| (Passed|Failed): (\d+)''',
++        'success_name' : "Passed",
++        'pass_name' : "Failed",
++        'known_fail_name' : None,
++    },
++}
+diff --git a/scripts/desktop_unittest.py b/scripts/desktop_unittest.py
+index abdedfd..896927d 100755
+--- a/scripts/desktop_unittest.py
++++ b/scripts/desktop_unittest.py
+@@ -16,11 +16,16 @@ import shutil, re
+ 
+ # load modules from parent dir
+ sys.path.insert(1, os.path.dirname(sys.path[0]))
++
+ from mozharness.base.errors import PythonErrorList, BaseErrorList
++from mozharness.mozilla.testing.errors import CategoryTestErrorList
++from mozharness.mozilla.testing.errors import TinderBoxPrint
++from mozharness.base.log import OutputParser
+ from mozharness.base.vcs.vcsbase import MercurialScript
+ from mozharness.mozilla.testing.testbase import TestingMixin, testing_config_options
+-from mozharness.mozilla.buildbot import TBPL_SUCCESS, TBPL_FAILURE, TBPL_WARNING
+-from mozharness.base.log import INFO, ERROR, WARNING
++from mozharness.base.log import WARNING
++from mozharness.mozilla.buildbot import TBPL_FAILURE, TBPL_EXCEPTION, TBPL_RETRY
++from mozharness.mozilla.buildbot import TBPL_SUCCESS, TBPL_WARNING, TBPL_STATUS_DICT
+ 
+ 
+ SUITE_CATEGORIES = ['mochitest', 'reftest', 'xpcshell']
+@@ -82,8 +87,8 @@ in the config file under: preflight_run_cmd_suites""",
+     ] + copy.deepcopy(testing_config_options)
+ 
+     error_list = [
+-            {'regex': re.compile(r'''^TEST-UNEXPECTED-FAIL'''), 'level': WARNING,
+-                'explanation' : "this unittest unexpectingly failed. This is a harness error"},
++        {'regex': re.compile(r'''^TEST-UNEXPECTED-FAIL'''), 'level': WARNING,
++            'explanation' : "this unittest unexpectingly failed. This is a harness error"},
+         {'regex': re.compile(r'''^\tFailed: [^0]'''), 'level': WARNING,
+                'explanation' : "1 or more unittests failed"},
+         {'regex': re.compile(r'''^\d+ INFO Failed: [^0]'''), 'level': WARNING,
+@@ -128,6 +133,7 @@ in the config file under: preflight_run_cmd_suites""",
+         self.installer_path = c.get('installer_path')
+         self.binary_path = c.get('binary_path')
+         self.symbols_url = c.get('symbols_url')
++        self.summaries = []
+ 
+     ###### helper methods
+ 
+@@ -237,7 +243,6 @@ in your config under %s_options""" % suite_category, suite_category)
+ 
+ 
+     def _query_specified_suites(self, category):
+-
+         # logic goes: if at least one '--{category}-suite' was given in the script
+         # then run only that(those) given suite(s). Elif, if no suites were
+         # specified and the --run-all-suites flag was given,
+@@ -245,18 +250,22 @@ in your config under %s_options""" % suite_category, suite_category)
+ 
+         c = self.config
+         all_suites = c.get('all_%s_suites' % (category))
+-        specified_suites = c.get('specified_%s_suites' % (category))
++        specified_suites = c.get('specified_%s_suites' % (category)) # list
+         suites = None
+ 
+         if specified_suites:
+             if 'all' in specified_suites:
+-                suites = [value for value in all_suites.values()]
++                # useful if you want a quick way of saying run all suites
++                # of a specific category.
++                suites = all_suites
+             else:
+-                suites = [all_suites[key] for key in \
+-                        all_suites.keys() if key in specified_suites]
++                # suites gets a dict of everything from all_suites where a key
++                # is also in specified_suites
++                suites = dict((key, all_suites.get(key)) for key in specified_suites \
++                        if key in all_suites.keys())
+         else:
+-            if c.get('run_all_suites'):
+-                suites = [value for value in all_suites.values()]
++            if c.get('run_all_suites'): # needed if you dont specify any suites
++                suites = all_suites
+ 
+         return suites
+ 
+@@ -331,25 +340,25 @@ in your config under %s_options""" % suite_category, suite_category)
+ These are often OS specific and disabling them may result in spurious test results!""")
+ 
+     def run_tests(self):
+-
+         self._run_category_suites('mochitest')
+         self._run_category_suites('reftest')
+         self._run_category_suites('xpcshell',
+                 preflight_run_method=self.preflight_xpcshell)
+ 
+-    def preflight_xpcshell(self):
++    def preflight_xpcshell(self, suites):
+         c = self.config
+         dirs = self.query_abs_dirs()
+ 
+-        self.mkdir_p(dirs['abs_app_plugins_dir'])
+-        self.info('copying %s to %s' % (os.path.join(dirs['abs_test_bin_dir'],
+-            c['xpcshell_name']), os.path.join(dirs['abs_app_dir'], c['xpcshell_name'])))
+-        shutil.copy2(os.path.join(dirs['abs_test_bin_dir'], c['xpcshell_name']),
+-            os.path.join(dirs['abs_app_dir'], c['xpcshell_name']))
+-        self.copytree(dirs['abs_test_bin_components_dir'],
+-                dirs['abs_app_components_dir'], overwrite='update')
+-        self.copytree(dirs['abs_test_bin_plugins_dir'], dirs['abs_app_plugins_dir'],
+-                overwrite='update')
++        if suites: # there are xpcshell suites to run
++            self.mkdir_p(dirs['abs_app_plugins_dir'])
++            self.info('copying %s to %s' % (os.path.join(dirs['abs_test_bin_dir'],
++                c['xpcshell_name']), os.path.join(dirs['abs_app_dir'], c['xpcshell_name'])))
++            shutil.copy2(os.path.join(dirs['abs_test_bin_dir'], c['xpcshell_name']),
++                os.path.join(dirs['abs_app_dir'], c['xpcshell_name']))
++            self.copytree(dirs['abs_test_bin_components_dir'],
++                    dirs['abs_app_components_dir'], overwrite='update')
++            self.copytree(dirs['abs_test_bin_plugins_dir'], dirs['abs_app_plugins_dir'],
++                    overwrite='update')
+ 
+     def _run_category_suites(self, suite_category, preflight_run_method=None):
+         """run suite(s) to a specific category"""
+@@ -359,40 +368,46 @@ These are often OS specific and disabling them may result in spurious test resul
+         suites = self._query_specified_suites(suite_category)
+ 
+         if preflight_run_method:
+-            preflight_run_method()
++            preflight_run_method(suites)
+ 
+         if suites:
+             self.info('#### Running %s suites' % suite_category)
+-            for num in range(len(suites)):
+-                cmd =  abs_base_cmd + suites[num]
+-                code = self.run_command(cmd,
+-                        cwd=dirs['abs_work_dir'],
+-                        error_list=self.error_list)
+-
+-                #### WIP warning colors not implemented
+-                tbpl_status = TBPL_SUCCESS
+-                level = INFO
+-                if code == 0:
+-                    status = "success"
+-                elif code == 1:
+-                    status = "test failures"
+-                    tbpl_status = TBPL_WARNING
+-                else:
+-                    status = "harness failure"
+-                    tbpl_status = TBPL_FAILURE
+-                    level = ERROR
+-                self.add_summary("The %s suite: %s test ran with return code \
+-                        %s: %s" % (suite_category, suites[num], code, status),
+-                        level=level)
+-                ####
+-
+-                # this if is in here since a developer will not be using
+-                # buildbot
+-                if 'read-buildbot-config' in self.actions:
+-                    self.buildbot_status(tbpl_status)
++            for suite in suites:
++                cmd =  abs_base_cmd + suites[suite]
++                output = self.get_output_from_command(cmd,
++                        cwd=dirs['abs_work_dir'], silent=True)
++                # TODO needed to split output line by line to assign write
++                # levels but str.split might be slow. Maybe write a generator?
++                self._parse_unittest(str.split(output, '\n'), suite_category, suite)
+         else:
+             self.debug('There were no suites to run for %s' % suite_category)
+ 
++    def _parse_unittest(self, output, suite_category, suite):
++        """parses unittest and adds tinderboxprint summary"""
++        c = self.config
++        suite_category_error_list = PythonErrorList
++        if CategoryTestErrorList.get(suite_category):
++            suite_category_error_list += CategoryTestErrorList[suite_category]
++        status_levels = [TBPL_RETRY, TBPL_EXCEPTION, TBPL_FAILURE,
++                TBPL_WARNING, TBPL_SUCCESS]
++
++        parser = OutputParser(config=c, log_obj=self.log_obj,
++                error_list=suite_category_error_list, status_levels=status_levels)
++        parser.add_lines(output)
++        result_log_level = TBPL_STATUS_DICT.get(parser.result_status_level,
++                parser.result_log_level)
++
++        suite_name = suite_category + '-' + suite
++        tbpl = TinderBoxPrint['%s_summary' % suite_category]
++        self.log_tinderbox_println(suite_name, output, tbpl['full_re_substr'],
++                tbpl['pass_name'], tbpl['fail_name'], tbpl['known_fail_name'])
++        self.buildbot_status(parser.result_status_level)
++
++        self.add_summary("The %s suite: %s ran with return status: %s" %
++                (suite_category, suite, parser.result_status_level),
++                level=result_log_level)
++
++
+ # main {{{1
+ if __name__ == '__main__':
+     desktop_unittest = DesktopUnittest()

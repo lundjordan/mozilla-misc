@@ -1,0 +1,80 @@
+# HG changeset patch
+# User lundjordan <jlund@mozilla.com>
+# Date 1338411922 14400
+# Node ID 9784bb94400827f79aa092be6a30ef26e644c8e4
+# Parent  6ea9a117289a011b9ca034a6bc3842d7d8b85044
+added syntax and style fixes / removed unused reboot variables
+
+diff --git a/mozilla-tests/config.py b/mozilla-tests/config.py
+--- a/mozilla-tests/config.py
++++ b/mozilla-tests/config.py
+@@ -1160,6 +1160,69 @@ for branch in ('mozilla-central', 'mozil
+                 'hg_bin': hg_bin,
+             })]
+ 
++###################### START OF MOZHARNESS UNITTEST CONFIGS
++#
++# Note this is only temporary.
++# It will add to all:
++# BRANCHES['mozilla-central']['platforms'][each_platform][slave_pf]['opt_unittest_suites']
++# with additional opt_unittest_suites so that mozharness unittests and factory.py tests
++# will both run in parallel. Once the mozharness script is tested and debugged, the below
++# mozharness configs will replace the above respective factory.py unittest
++# configs
++
++
++
++# each elem in mozharness_unittest_suites is ugly and confusing because it blends Buildbot
++# outputs with Mozharness inputs. The 'suite_name' and 'sub_categories' mimics
++# what buildbot (mainly misc) considers as 'suite_name' and 'suite'
++# respectively. 'suite_category' is used for an argument in mozharness's extra-args
++mozharness_unittest_suites = [
++    {'suite_name' : 'mozharn_mochitests-1/5', 'suite_category' : 'mochitests', 'sub_categories' : ['chunk1']},
++    {'suite_name' : 'mozharn_mochitests-2/5', 'suite_category' : 'mochitests', 'sub_categories' : ['chunk2']},
++    {'suite_name' : 'mozharn_mochitests-3/5', 'suite_category' : 'mochitests', 'sub_categories' : ['chunk3']},
++    {'suite_name' : 'mozharn_mochitests-4/5', 'suite_category' : 'mochitests', 'sub_categories' : ['chunk4']},
++    {'suite_name' : 'mozharn_mochitests-5/5', 'suite_category' : 'mochitests', 'sub_categories' : ['chunk5']},
++    {'suite_name' : 'mozharn_mochitests-other', 'suite_category' : 'mochitests', 'sub_categories' : \
++        ['browser-chrome', 'chrome', 'a11y', 'plugins']},
++    {'suite_name' : 'mozharn_reftest', 'suite_category' : 'reftests', 'sub_categories' : ['reftest']},
++    {'suite_name' : 'mozharn_jsreftest', 'suite_category' : 'reftests', 'sub_categories' : ['jsreftest']},
++    {'suite_name' : 'mozharn_crashtest', 'suite_category' : 'reftests', 'sub_categories' : ['crashtest']},
++    {'suite_name' : 'mozharn_xpcshell', 'suite_category' : 'xpcshell', 'sub_categories' : ['xpcshell']}
++]
++
++for branch in ['mozilla-central']:
++    for pf in PLATFORMS:
++        hg_bin = 'hg'
++        if 'android' in pf:
++            continue
++        if pf == "macosx" and slave_pf == "leopard-o":
++            continue
++        if pf.startswith("win"):
++            hg_bin = 'c:\\mozilla-build\\hg\\hg'
++            config_file = "test/win_unittest.py"
++        elif pf.startswith("mac"):
++            config_file = "test/mac_unittest.py"
++        else:
++            config_file = "test/linux_unittest.py"
++
++        for slave_pf in PLATFORMS[pf]['slave_platforms']:
++            for suite in mozharness_unittest_suites:
++                extra_args = ["--cfg", config_file]
++                for sub_category in suite['sub_categories']:
++                    extra_args += ["--%-suite" % suite['suite_category'], sub_category]
++                BRANCHES[branch]['platforms'][pf][slave_pf]['opt_unittest_suites'] += [
++                    (suite['suite_name'], {
++                        'mozharness_repo': MOZHARNESS_REPO,
++                        'script_path': 'scripts/desktop_unittest.py',
++                        'extra_args': extra_args,
++                        'reboot_command': [PLATFORMS[pf]['mozharness_python'],
++                            'build/tools/buildfarm/maintenance/count_and_reboot.py',
++                            '-f', '../reboot_count.txt',
++                            '-n', '1', '-z'],
++                        'hg_bin': hg_bin,
++                })]
++###################### END OF MOZHARNESS UNITTEST CONFIGS
++
+ ######## generic branch variables for project branches
+ for projectBranch in ACTIVE_PROJECT_BRANCHES:
+     branchConfig = PROJECT_BRANCHES[projectBranch]

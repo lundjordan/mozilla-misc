@@ -1,0 +1,52 @@
+diff --git a/talos/PerfConfigurator.py b/talos/PerfConfigurator.py
+index 2a27f19..57126b8 100755
+--- a/talos/PerfConfigurator.py
++++ b/talos/PerfConfigurator.py
+@@ -36,6 +36,8 @@ class PerfConfigurator(Configuration):
+         ('browser_path', {'help': "path to executable we are testing",
+                           'flags': ['-e', '--executablePath']
+                           }),
++        ('immersive_mode_path', {'help': "launches tests in immersive browser",
++                                 'flags': ['--metro-immersive-path']}),
+         ('title', {'help': 'Title of the test run',
+                    'default': 'qm-pxp01',
+                    'flags': ['-t', '--title']}),
+diff --git a/talos/pageloader/chrome/pageloader.js b/talos/pageloader/chrome/pageloader.js
+index efbd9c2..7cec5c3 100644
+--- a/talos/pageloader/chrome/pageloader.js
++++ b/talos/pageloader/chrome/pageloader.js
+@@ -102,6 +102,7 @@ function plInit() {
+     // In metro chrome runs, the browser window has our cmdline arguments. In
+     // every other case they are on window.
+     let toplevelwin = Services.wm.getMostRecentWindow("navigator:browser");
++
+     if (isImmersive() && toplevelwin.arguments[0].wrappedJSObject) {
+       args = toplevelwin.arguments[0].wrappedJSObject;
+       if (!args.useBrowserChrome) {
+@@ -272,6 +273,7 @@ function plInit() {
+     dumpLine("pageloader exception: " + e);
+     plStop(true);
+   }
++
+ }
+ 
+ function plPageFlags() {
+diff --git a/talos/run_tests.py b/talos/run_tests.py
+index 4e6eda5..0a26d07 100755
+--- a/talos/run_tests.py
++++ b/talos/run_tests.py
+@@ -192,6 +192,14 @@ def run_tests(configurator):
+   # set browser_config
+   browser_config=configurator.browser_config()
+ 
++  # if immersive-mode: set up metro browser launch
++  if config.get('immersive_mode_path'):
++      # TODO assert win 8
++      # mozharness cuts off the exe but metrotestharness needs it?
++      appPath = '-firefoxpath %s.exe' % (browser_config['browser_path'],)
++      browser_config['extra_args'] += appPath
++      browser_config['browser_path'] = config.get('immersive_mode_path')
++
+   #set defaults
+   title = config.get('title', '')
+   testdate = config.get('testdate', '')

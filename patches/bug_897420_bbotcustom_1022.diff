@@ -1,0 +1,33 @@
+diff -r c065405e16bf process/factory.py
+--- a/process/factory.py	Fri Oct 11 10:24:34 2013 -0400
++++ b/process/factory.py	Tue Oct 22 21:46:57 2013 -0700
+@@ -2040,7 +2040,8 @@
+                          retries=retries,
+                          branch=talosBranch,
+                          revision=WithProperties('%(got_revision)s'),
+-                         files=[WithProperties('%(packageUrl)s')],
++                         files=[WithProperties('%(packageUrl)s'),
++                                WithProperties('%(testsUrl)s')],
+                          user=WithProperties('%(who)s'),
+                          comments=WithProperties('%(comments:-)s'),
+                          sendchange_props=sendchange_props,
+@@ -2538,7 +2539,8 @@
+                              retries=retries,
+                              branch=talosBranch,
+                              revision=WithProperties("%(got_revision)s"),
+-                             files=[WithProperties('%(packageUrl)s')],
++                             files=[WithProperties('%(packageUrl)s'),
++                                    WithProperties('%(testsUrl)s')],
+                              user="sendchange",
+                              comments=WithProperties('%(comments:-)s'),
+                              sendchange_props=sendchange_props,
+@@ -2854,7 +2856,8 @@
+                          retries=retries,
+                          branch=talosBranch,
+                          revision=WithProperties("%(got_revision)s"),
+-                         files=[WithProperties('%(packageUrl)s')],
++                         files=[WithProperties('%(packageUrl)s'),
++                                WithProperties('%(testsUrl)s')],
+                          user="sendchange",
+                          comments=WithProperties('%(comments:-)s'),
+                          sendchange_props=sendchange_props,

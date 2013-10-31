@@ -1,0 +1,52 @@
+diff --git a/configs/unittests/linux_unittest.py b/configs/unittests/linux_unittest.py
+index 8391c5f..7ae4553 100644
+--- a/configs/unittests/linux_unittest.py
++++ b/configs/unittests/linux_unittest.py
+@@ -66,7 +66,7 @@ config = {
+     "all_reftest_suites": {
+         "reftest": ["tests/reftest/tests/layout/reftests/reftest.list"],
+         "crashtest": ["tests/reftest/tests/testing/crashtest/crashtests.list"],
+-        "jsreftest": ["--extra-profile-file=tests/jsreftest/tests/user.js", "tests/jsreftests/jstests.list"],
++        "jsreftest": ["--extra-profile-file=tests/jsreftest/tests/user.js", "tests/jsreftest/tests/jstests.list"],
+     },
+     "all_xpcshell_suites": {
+         "xpcshell": ["--manifest=tests/xpcshell/tests/all-test-dirs.list",
+diff --git a/configs/unittests/mac_unittest.py b/configs/unittests/mac_unittest.py
+index 140dfdf..da21398 100644
+--- a/configs/unittests/mac_unittest.py
++++ b/configs/unittests/mac_unittest.py
+@@ -65,7 +65,7 @@ config = {
+     "all_reftest_suites": {
+         "reftest": ["tests/reftest/tests/layout/reftests/reftest.list"],
+         "crashtest": ["tests/reftest/tests/testing/crashtest/crashtests.list"],
+-        "jsreftest": ["--extra-profile-file=tests/jsreftest/tests/user.js", "tests/jsreftests/jstests.list"],
++        "jsreftest": ["--extra-profile-file=tests/jsreftest/tests/user.js", "tests/jsreftest/tests/jstests.list"],
+     },
+     "all_xpcshell_suites": {
+         "xpcshell": ["--manifest=tests/xpcshell/tests/all-test-dirs.list",
+diff --git a/configs/unittests/win_unittest.py b/configs/unittests/win_unittest.py
+index 208f935..596d0e4 100644
+--- a/configs/unittests/win_unittest.py
++++ b/configs/unittests/win_unittest.py
+@@ -70,7 +70,7 @@ config = {
+     "all_reftest_suites": {
+         "reftest": ["tests/reftest/tests/layout/reftests/reftest.list"],
+         "crashtest": ["tests/reftest/tests/testing/crashtest/crashtests.list"],
+-        "jsreftest": ["--extra-profile-file=tests/jsreftest/tests/user.js", "tests/jsreftests/jstests.list"],
++        "jsreftest": ["--extra-profile-file=tests/jsreftest/tests/user.js", "tests/jsreftest/tests/jstests.list"],
+     },
+     "all_xpcshell_suites": {
+         "xpcshell": ["--manifest=tests/xpcshell/tests/all-test-dirs.list",
+diff --git a/mozharness/mozilla/testing/errors.py b/mozharness/mozilla/testing/errors.py
+index 9c971d6..f638cdd 100644
+--- a/mozharness/mozilla/testing/errors.py
++++ b/mozharness/mozilla/testing/errors.py
+@@ -35,7 +35,7 @@ TinderBoxPrintRe = {
+         'regex': re.compile(r'''INFO \| (Passed|Failed): (\d+)'''),
+         'pass_group': "Passed",
+         'fail_group': "Failed",
+-        'known_fail_group': "",
++        'known_fail_group': None,
+     },
+     "harness_error": {
+         'full_regex': re.compile(r"TEST-UNEXPECTED-FAIL \| .* \| (Browser crashed \(minidump found\)|missing output line for total leaks!|negative leaks caught!|leaked \d+ bytes during test execution)"),

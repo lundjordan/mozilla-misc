@@ -1,0 +1,28 @@
+diff --git a/mozilla-tests/config.py b/mozilla-tests/config.py
+index 12fe53c..0ac83e7 100644
+--- a/mozilla-tests/config.py
++++ b/mozilla-tests/config.py
+@@ -1004,43 +1004,44 @@ mozharness_unittest_suites = [
+     {'suite_name': 'mozharness_crashtest', 'suite_category': 'reftest', 'sub_categories': ['crashtest']},
+     {'suite_name': 'mozharness_xpcshell', 'suite_category': 'xpcshell', 'sub_categories': ['xpcshell']}
+ ]
+-for branch in ['cedar']:
++for branch in BRANCHES:
++    if BRANCHES[branch].get('mozharness_unittests'):
+
+ ######## generic branch variables for project branches
+diff --git a/mozilla/project_branches.py b/mozilla/project_branches.py
+index 51db3c0..d6c2850 100644
+--- a/mozilla/project_branches.py
++++ b/mozilla/project_branches.py
+@@ -230,7 +230,9 @@ PROJECT_BRANCHES = {
+             'macosx64-debug': {},
+         },
+     },
+-    'cedar': {},
++    'cedar': {
++        'mozharness_unittests': True,
++    },
+     # customizations for windows update service changes (bug 481815)
+     'elm': {
+         'enable_nightly': True,

@@ -1,0 +1,45 @@
+diff --git a/configs/unittests/linux_unittest.py b/configs/unittests/linux_unittest.py
+index dd8f45e..8dae68d 100644
+--- a/configs/unittests/linux_unittest.py
++++ b/configs/unittests/linux_unittest.py
+@@ -13,6 +13,10 @@ config = {
+         "installer_path" : INSTALLER_PATH,
+         "binary_path" : APP_NAME_DIR + "/" + BINARY_PATH,
+ 
++        # TODO find out if I need simple_json_url
++        "buildbot_json_path": "buildprops.json",
++        "simplejson_url": "http://build.mozilla.org/talos/zips/simplejson-2.2.1.tar.gz",
++
+         "repos": [{
+             "repo": "http://hg.mozilla.org/build/tools",
+             "revision": "default",
+diff --git a/configs/unittests/mac_unittest.py b/configs/unittests/mac_unittest.py
+index c522b22..3448af0 100644
+--- a/configs/unittests/mac_unittest.py
++++ b/configs/unittests/mac_unittest.py
+@@ -13,6 +13,10 @@ config = {
+         "installer_path" : INSTALLER_PATH,
+         "binary_path" : APP_NAME_DIR + "/" + BINARY_PATH,
+ 
++        # TODO find out if I need simple_json_url
++        "buildbot_json_path": "buildprops.json",
++        "simplejson_url": "http://build.mozilla.org/talos/zips/simplejson-2.2.1.tar.gz",
++
+         "repos": [{
+             "repo": "http://hg.mozilla.org/build/tools",
+             "revision": "default",
+diff --git a/configs/unittests/win_unittest.py b/configs/unittests/win_unittest.py
+index 4ef987e..d38851a 100644
+--- a/configs/unittests/win_unittest.py
++++ b/configs/unittests/win_unittest.py
+@@ -13,6 +13,10 @@ config = {
+         "installer_path" : INSTALLER_PATH,
+         "binary_path" : APP_NAME_DIR + "/" + BINARY_PATH,
+ 
++        # TODO find out if I need simple_json_url
++        "buildbot_json_path": "buildprops.json",
++        "simplejson_url": "http://build.mozilla.org/talos/zips/simplejson-2.2.1.tar.gz",
++
+         "repos": [{
+             "repo": "http://hg.mozilla.org/build/tools",
+             "revision": "default",

@@ -1,0 +1,477 @@
+INFO | metrotestharness.exe | Launching browser...
+INFO | metrotestharness.exe | App model id='E4CFE2E6B75AA3A3'
+INFO | metrotestharness.exe | Windows focus rights hand off failed
+(HRESULT=0x80070005). Ignoring.
+INFO | metrotestharness.exe | Harness process id: 2576
+INFO | metrotestharness.exe | Using bin path:
+'C:\slave\test\build\application\firefox\firefox.exe'
+INFO | metrotestharness.exe | Writing out tests.ini to:
+'C:\slave\test\build\application\firefox\tests.ini'
+INFO | metrotestharness.exe | Browser command line args:
+'C:\slave\test\build\application\firefox\firefox.exe -profile
+c:\\\users\\\cltbld~1.t-w\\\appdata\\\local\\\temp\\\tmpnbufoo\\\profile -tp
+file:\C:\slave\test\build\venv\lib\site-packages\talos\page_load_test\svg_opacity\svg_opacity.manifest
+-tpchrome -tpnoisy -tpcycles 1 -tppagecycles 25'
+INFO | metrotestharness.exe | Activation succeeded.
+INFO | metrotestharness.exe | METRO_BROWSER_PROCESS=3464
+INFO | metrotestharness.exe | Waiting on child process...
+XRE_MetroCoreApplicationRun: IsMainThread:0 ThreadId:BF8
+mozilla::widget::winrt::FrameworkView::FrameworkView
+mozilla::widget::winrt::MetroApp::CreateView
+mozilla::widget::winrt::FrameworkView::Initialize
+mozilla::widget::winrt::FrameworkView::SetWindow
+mozilla::widget::winrt::FrameworkView::SetDpi
+mozilla::widget::winrt::FrameworkView::OnActivated
+Activation argument kind: Launch
+mozilla::widget::winrt::FrameworkView::Run
+mozilla::widget::winrt::MetroApp::Run: IsMainThread:0 ThreadId:290
+XPCOM startup initialization began
+MetroAppShell::Init
+MetroWidget::Create
+eWindowType_invisible window requested, this doesn't actually exist!
+MetroWidget::GetDPI
+args.useBrowserChrome and is isImmersive() are true
+MetroWidget::Create
+mozilla::widget::winrt::MetroApp::SetBaseWidget: IsMainThread:1 ThreadId:290
+mozilla::widget::winrt::FrameworkView::SetWidget
+MetroWidget::FindMetroWindow
+MetroWidget::GetDPI
+made it to line after: cmdLine.preventDefault = true;
+MetroWidget::Create
+MetroWidget::GetDPI
+MetroWidget::GetDPI
+MetroWidget::GetDPI
+MetroWidget::GetDPI
+MetroWidget::GetDPI
+MetroWidget::GetDPI
+### Content.js loaded
+### FormHelper.js loaded
+### SelectionPrototype.js loaded
+### SelectionHandler.js loaded
+### ContextMenuHandler.js loaded
+### FindHandler.js loaded
+### ConsoleAPIObserver.js loaded
+MetroWidget::GetDPI
+MetroWidget::GetDPI
+### Content.js loaded
+### FormHelper.js loaded
+### SelectionPrototype.js loaded
+### SelectionHandler.js loaded
+### ContextMenuHandler.js loaded
+### FindHandler.js loaded
+### ConsoleAPIObserver.js loaded
+MetroWidget::GetDPI
+MetroWidget::GetDPI
+MetroWidget::GetDPI
+MetroAppShell::Run
+mozilla::widget::winrt::FrameworkView::ActivateView
+MetroWidget::GetDPI
+mozilla::widget::winrt::MetroInput::MetroInput
+mozilla::widget::winrt::FrameworkView::AddEventHandlers hr=0
+mozilla::widget::winrt::FrameworkView::SetupContracts
+* delay load started... 
+* delay load complete. 
+mozilla::widget::winrt::FrameworkView::OnWindowActivated
+MetroWidget::GetDPI
+MetroWidget::GetDPI
+MetroWidget::GetDPI
+JLUND done waiting 5 seconds...
+JLUND isImmersive(): true
+JLUND toplevelwin: [xpconnect wrapped nsISupports]
+JLUND toplevelwin wrappedJSObject: [object Object]
+### Content.js loaded
+### FormHelper.js loaded
+### SelectionPrototype.js loaded
+### SelectionHandler.js loaded
+### ContextMenuHandler.js loaded
+### FindHandler.js loaded
+### ConsoleAPIObserver.js loaded
+MetroWidget::GetDPI
+MetroWidget::GetDPI
+JLUND waiting 5 seconds...
+RSS: Main: 97837056
+
+MetroWidget::GetDPI
+Cycle 1(1): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+* delay load started... 
+* delay load complete. 
+RSS: Main: 106479616
+
+MetroWidget::GetDPI
+Cycle 1(2): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 109625344
+
+MetroWidget::GetDPI
+Cycle 1(3): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 107536384
+
+MetroWidget::GetDPI
+Cycle 1(4): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108486656
+
+MetroWidget::GetDPI
+Cycle 1(5): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 106680320
+
+MetroWidget::GetDPI
+Cycle 1(6): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108494848
+
+MetroWidget::GetDPI
+Cycle 1(7): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108539904
+
+MetroWidget::GetDPI
+Cycle 1(8): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108539904
+
+MetroWidget::GetDPI
+Cycle 1(9): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108634112
+
+MetroWidget::GetDPI
+Cycle 1(10): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108662784
+
+MetroWidget::GetDPI
+Cycle 1(11): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108040192
+
+MetroWidget::GetDPI
+Cycle 1(12): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108322816
+
+MetroWidget::GetDPI
+Cycle 1(13): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108294144
+
+MetroWidget::GetDPI
+Cycle 1(14): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108429312
+
+MetroWidget::GetDPI
+Cycle 1(15): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108449792
+
+MetroWidget::GetDPI
+Cycle 1(16): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108470272
+
+MetroWidget::GetDPI
+Cycle 1(17): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108593152
+
+MetroWidget::GetDPI
+Cycle 1(18): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108675072
+
+MetroWidget::GetDPI
+Cycle 1(19): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108707840
+
+MetroWidget::GetDPI
+Cycle 1(20): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108716032
+
+MetroWidget::GetDPI
+Cycle 1(21): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 108822528
+
+MetroWidget::GetDPI
+Cycle 1(22): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 109019136
+
+MetroWidget::GetDPI
+Cycle 1(23): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 109015040
+
+MetroWidget::GetDPI
+Cycle 1(24): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 109289472
+
+MetroWidget::GetDPI
+Cycle 1(25): loaded
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg)
+RSS: Main: 109461504
+
+MetroWidget::GetDPI
+Cycle 1(1): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 122052608
+
+MetroWidget::GetDPI
+Cycle 1(2): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 125112320
+
+MetroWidget::GetDPI
+Cycle 1(3): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 125710336
+
+MetroWidget::GetDPI
+Cycle 1(4): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 125337600
+
+MetroWidget::GetDPI
+Cycle 1(5): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 125243392
+
+MetroWidget::GetDPI
+Cycle 1(6): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 125345792
+
+MetroWidget::GetDPI
+Cycle 1(7): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 125894656
+
+MetroWidget::GetDPI
+Cycle 1(8): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 124780544
+
+MetroWidget::GetDPI
+Cycle 1(9): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 124620800
+
+MetroWidget::GetDPI
+Cycle 1(10): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 124678144
+
+MetroWidget::GetDPI
+Cycle 1(11): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 125173760
+
+MetroWidget::GetDPI
+Cycle 1(12): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 125366272
+
+MetroWidget::GetDPI
+Cycle 1(13): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 125255680
+
+MetroWidget::GetDPI
+Cycle 1(14): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 125648896
+
+MetroWidget::GetDPI
+Cycle 1(15): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 124874752
+
+MetroWidget::GetDPI
+Cycle 1(16): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 125546496
+
+MetroWidget::GetDPI
+Cycle 1(17): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 124719104
+
+MetroWidget::GetDPI
+Cycle 1(18): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 124940288
+
+MetroWidget::GetDPI
+Cycle 1(19): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 124870656
+
+MetroWidget::GetDPI
+Cycle 1(20): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 125222912
+
+MetroWidget::GetDPI
+Cycle 1(21): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 125149184
+
+MetroWidget::GetDPI
+Cycle 1(22): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 127905792
+
+MetroWidget::GetDPI
+Cycle 1(23): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 128106496
+
+MetroWidget::GetDPI
+Cycle 1(24): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 128454656
+
+MetroWidget::GetDPI
+Cycle 1(25): loaded
+http://localhost/page_load_test/svg_opacity/small-group-opacity-2500.svg
+(next:
+http://localhost/page_load_test/svg_opacity/big-optimizable-group-opacity-2500.svg)
+RSS: Main: 128188416
+
+__start_tp_report
+_x_x_mozilla_page_load
+_x_x_mozilla_page_load_details
+|i|pagename|runs|
+|0;big-optimizable-group-opacity-2500.svg;331;1181;702;689;635;706;645;686;673;703;621;727;698;662;618;668;668;704;628;704;707;706;722;623;704
+|1;small-group-opacity-2500.svg;2729;3401;3401;3366;3414;3415;3382;3323;3436;3417;3380;3396;3353;3396;3412;3411;3396;3366;3375;3424;3306;3392;3419;3421;3386
+__end_tp_report
+__start_cc_report
+_x_x_mozilla_cycle_collect,1404
+__end_cc_report
+__startTimestamp1378973489573__endTimestamp
+
+[BF20A0] MetroWidget::Destroy mWnd=5024E type=0
+[BF2580] MetroWidget::Destroy mWnd=0 type=0
+mozilla::widget::winrt::MetroApp::ShutdownXPCOM: IsMainThread:1 ThreadId:290
+mozilla::widget::winrt::FrameworkView::ShutdownXPCOM
+mozilla::widget::winrt::MetroInput::~MetroInput
+[BF1880] MetroWidget::Destroy mWnd=0 type=4
+[BF20A0] MetroWidget::~MetroWidget
+[BF2580] MetroWidget::~MetroWidget
+[BF1880] MetroWidget::~MetroWidget
+mozilla::widget::winrt::MetroApp::CoreExit
+XPCOM startup initialization complete
+Exiting FrameworkView::Run()
+mozilla::widget::winrt::FrameworkView::OnWindowActivated
+Exiting CoreApplication::Run
+INFO | metrotestharness.exe | Exiting.
+INFO | metrotestharness.exe | Deleting
+C:\slave\test\build\application\firefox\tests.ini
+__startBeforeLaunchTimestamp1378973355752__endBeforeLaunchTimestamp
+__startAfterTerminationTimestamp1378973490796__endAfterTerminationTimestamp
+
